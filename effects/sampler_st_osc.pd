@@ -1,0 +1,70 @@
+#N canvas 192 315 593 520 8;
+#X obj 212 186 * 1;
+#X obj 229 165 hsl 128 15 0 1 0 0 empty empty empty -2 -6 0 8 -262144
+-1 -1 0 1;
+#X floatatom 326 166 5 0 0 0 - - -;
+#X text 328 149 0.716;
+#X obj 263 187 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X obj 207 117 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X obj 291 98 OSCroute /set;
+#X obj 263 119 OSCroute /trig;
+#X obj 188 95 OSCroute /file;
+#X obj 205 140 OSCroute /start;
+#X obj 70 95 OSCroute /metro;
+#X obj 63 226 metro 500;
+#X obj 71 141 OSCroute /time;
+#X obj 19 120 OSCroute /on;
+#X obj 63 208 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 0 1
+;
+#X obj 56 162 OSCroute /set;
+#X obj 60 185 unpack f f;
+#X floatatom 146 196 5 0 0 0 - - -;
+#X obj 158 309 outlet~;
+#X obj 253 308 outlet~;
+#X obj 176 64 inlet;
+#X obj 188 213 ../effects/sampler_st;
+#X obj 293 188 hsl 128 15 0 1 0 0 empty empty empty -2 -6 0 8 -262144
+-1 -1 0 1;
+#X text 298 186 vol;
+#X floatatom 386 190 5 0 0 0 - - -;
+#X obj 234 36 hsl 128 15 0 200000 0 0 empty empty empty -2 -6 0 8 -262144
+-1 -1 0 1;
+#X floatatom 318 38 5 0 0 0 - - -;
+#X obj 373 162 OSCroute /vol;
+#X connect 0 0 21 1;
+#X connect 1 0 0 1;
+#X connect 1 0 2 0;
+#X connect 4 0 21 4;
+#X connect 6 0 21 6;
+#X connect 7 0 4 0;
+#X connect 8 0 5 0;
+#X connect 8 0 21 0;
+#X connect 9 0 21 1;
+#X connect 10 0 12 0;
+#X connect 10 0 13 0;
+#X connect 10 0 15 0;
+#X connect 11 0 4 0;
+#X connect 12 0 11 1;
+#X connect 12 0 17 0;
+#X connect 13 0 14 0;
+#X connect 14 0 11 0;
+#X connect 15 0 16 0;
+#X connect 16 0 14 0;
+#X connect 16 1 11 1;
+#X connect 16 1 17 0;
+#X connect 17 0 11 1;
+#X connect 20 0 6 0;
+#X connect 20 0 7 0;
+#X connect 20 0 8 0;
+#X connect 20 0 9 0;
+#X connect 20 0 10 0;
+#X connect 20 0 27 0;
+#X connect 21 0 18 0;
+#X connect 21 1 19 0;
+#X connect 22 0 21 5;
+#X connect 22 0 24 0;
+#X connect 25 0 0 0;
+#X connect 25 0 26 0;
+#X connect 27 0 22 0;

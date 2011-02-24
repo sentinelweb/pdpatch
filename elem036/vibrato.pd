@@ -1,0 +1,87 @@
+#N canvas 286 348 571 533 10;
+#X obj 64 370 vd~ \$0-del;
+#X obj 63 234 osc~;
+#X obj 63 322 *~;
+#X obj 97 321 hsl 128 15 0.01 300 1 0 empty empty empty -2 -8 0 10
+-262144 -1 -1 8100 1;
+#X floatatom 194 322 5 0 0 0 - - -;
+#X obj 66 216 hsl 128 15 0.1 20 1 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 10700 1;
+#X floatatom 163 217 5 0 0 0 - - -;
+#X text 71 216 sweep freq;
+#X obj 64 277 +~ 0.5;
+#X obj 109 279 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 63 298 *~ 0;
+#X text 66 198 sine;
+#X text 211 166 LFO waveform - the toggles add the signal;
+#X text 212 178 together.;
+#X obj 64 256 *~ 0.5;
+#X obj 29 448 *~ 1;
+#X obj 29 473 dac~;
+#X obj 66 448 hsl 128 15 0 10 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 1200 1;
+#X floatatom 163 448 5 0 0 0 - - -;
+#X text 75 449 vol;
+#N canvas 0 0 450 300 (subpatch) 0;
+#X array \$0-tab 235199 float 0;
+#X coords 0 1 235198 -1 200 140 1;
+#X restore 306 -33 graph;
+#X obj 212 144 soundfiler;
+#X obj 212 89 symbol \$0-tab;
+#X obj 220 70 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 28 55 metro 1000;
+#X obj 28 32 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1 1
+;
+#X obj 28 77 tabplay~ \$0-tab;
+#X obj 28 127 *~ 1;
+#X obj 65 107 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 29 108 *~ 0;
+#X msg 212 110 read -resize /media/disk1/media/samples/pfx/Bass_Stuff/90reg_e2.wav
+\$1;
+#X obj 28 418 +~;
+#X obj 66 395 *~ 0;
+#X obj 102 396 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 5600 1;
+#X floatatom 199 396 5 0 0 0 - - -;
+#X text 111 397 vol;
+#X obj 58 168 delwrite~ \$0-del 1000;
+#X text 8 -35 vibrato seem to be a special case of chorus;
+#X text 8 -22 there is no delay the delay is just modulated;
+#X text 9 -11 with a sinusoid:;
+#X text 9 1 - usually around ~6hz);
+#X text 9 12 - amplitude variable (5-20 ms);
+#X text 100 321 amplitude;
+#X text 201 217 <-- 4-15Hz;
+#X text 238 320 <-- 5-20Hz;
+#X connect 0 0 32 0;
+#X connect 1 0 14 0;
+#X connect 2 0 0 0;
+#X connect 3 0 2 1;
+#X connect 3 0 4 0;
+#X connect 5 0 6 0;
+#X connect 5 0 1 0;
+#X connect 8 0 10 0;
+#X connect 9 0 10 1;
+#X connect 10 0 2 0;
+#X connect 14 0 8 0;
+#X connect 15 0 16 0;
+#X connect 15 0 16 1;
+#X connect 17 0 15 1;
+#X connect 17 0 18 0;
+#X connect 22 0 30 0;
+#X connect 23 0 22 0;
+#X connect 24 0 26 0;
+#X connect 25 0 24 0;
+#X connect 26 0 29 0;
+#X connect 27 0 31 0;
+#X connect 27 0 36 0;
+#X connect 28 0 29 1;
+#X connect 29 0 27 0;
+#X connect 30 0 21 0;
+#X connect 31 0 15 0;
+#X connect 32 0 31 1;
+#X connect 33 0 34 0;
+#X connect 33 0 32 1;

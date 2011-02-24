@@ -1,0 +1,4 @@
+#N canvas 2514 338 450 300 10;
+#X obj 100 114 test_fft;
+#X obj 99 62 adc~;
+#X connect 1 0 0 0;

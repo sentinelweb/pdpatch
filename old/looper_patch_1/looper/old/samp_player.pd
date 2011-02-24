@@ -1,0 +1,120 @@
+#N canvas 382 84 645 415 10;
+#X obj 52 43 openpanel;
+#X obj 53 12 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X obj 31 94 soundfiler;
+#X msg 62 69 read -resize \$1 sample1;
+#X floatatom 80 145 10 0 0 0 - - -;
+#X obj 66 207 phasor~;
+#X obj 64 240 *~;
+#X floatatom 65 161 5 0 0 0 - - -;
+#X obj 80 121 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X text 94 243 multiply by sample rate.;
+#X obj 332 292 line~;
+#X obj 64 181 / 100;
+#X obj 380 130 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 0
+1;
+#X obj 380 153 metro 1000;
+#X obj 255 123 delay 1;
+#X obj 309 236 pack 5000 500;
+#X text 112 210 comment;
+#X obj 254 182 + 0;
+#X obj 62 357 outlet~;
+#X text 265 3 start;
+#X text 433 4 repeat;
+#X text 382 4 activate;
+#X obj 435 43 nbx 8 14 -1e+037 1e+037 0 0 empty empty empty 0 -6 0
+10 -262144 -1 -1 100 256;
+#X obj 254 215 nbx 8 14 -1e+037 1e+037 0 0 empty empty empty 0 -6 0
+10 -262144 -1 -1 0 256;
+#X obj 339 64 nbx 8 14 -1e+037 1e+037 0 0 empty empty empty 0 -6 0
+10 -262144 -1 -1 0 256;
+#X obj 292 46 nbx 8 14 -1e+037 1e+037 0 0 empty empty empty 0 -6 0
+10 -262144 -1 -1 0 256;
+#X obj 257 64 nbx 8 14 -1e+037 1e+037 0 0 empty empty empty 0 -6 0
+10 -262144 -1 -1 0 256;
+#X obj 383 186 / 1;
+#X obj 388 206 nbx 16 14 -1e+037 1e+037 0 0 empty empty empty 0 -6
+0 10 -262144 -1 -1 0 256;
+#X obj 511 -9 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 1 1
+;
+#X obj 511 15 metro 30;
+#X obj 492 15 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X floatatom 553 -11 5 0 0 0 - - -;
+#X obj 332 257 + 0;
+#X obj 447 152 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X obj 255 159 + 0;
+#X floatatom 387 81 10 0 0 0 - - -;
+#X obj 362 81 log;
+#X obj 350 102 /;
+#X floatatom 373 103 10 0 0 0 - - -;
+#X text 346 -8 samp rate;
+#X floatatom 484 80 10 0 0 0 - - -;
+#X obj 459 80 log;
+#X obj 447 101 /;
+#X floatatom 470 102 10 0 0 0 - - -;
+#X obj 571 14 loadbang;
+#X obj 86 8 inlet;
+#X obj 345 23 inlet;
+#X obj 252 25 inlet;
+#X obj 293 23 inlet;
+#X obj 383 23 inlet;
+#X obj 435 22 inlet;
+#X text 305 4 length;
+#X text 118 358 idea: make an envelope to reduce audible click in output
+;
+#X floatatom 372 273 10 0 0 0 - - -;
+#X connect 0 0 3 0;
+#X connect 1 0 0 0;
+#X connect 3 0 2 0;
+#X connect 4 0 6 1;
+#X connect 5 0 6 0;
+#X connect 6 0 18 0;
+#X connect 7 0 11 0;
+#X connect 8 0 4 0;
+#X connect 10 0 18 0;
+#X connect 11 0 5 0;
+#X connect 12 0 13 0;
+#X connect 13 0 14 0;
+#X connect 13 0 33 0;
+#X connect 13 0 34 0;
+#X connect 14 0 35 0;
+#X connect 15 0 10 0;
+#X connect 17 0 15 0;
+#X connect 17 0 23 0;
+#X connect 27 0 28 0;
+#X connect 27 0 15 1;
+#X connect 29 0 30 0;
+#X connect 30 0 31 0;
+#X connect 30 0 27 0;
+#X connect 32 0 30 1;
+#X connect 33 0 10 0;
+#X connect 33 0 54 0;
+#X connect 35 0 17 0;
+#X connect 37 0 36 0;
+#X connect 37 0 38 1;
+#X connect 38 0 39 0;
+#X connect 38 0 27 1;
+#X connect 42 0 41 0;
+#X connect 42 0 43 1;
+#X connect 43 0 44 0;
+#X connect 43 0 13 1;
+#X connect 45 0 29 0;
+#X connect 46 0 4 0;
+#X connect 47 0 24 0;
+#X connect 47 0 37 0;
+#X connect 47 0 38 0;
+#X connect 48 0 17 1;
+#X connect 48 0 26 0;
+#X connect 48 0 33 1;
+#X connect 49 0 25 0;
+#X connect 49 0 35 1;
+#X connect 49 0 27 0;
+#X connect 50 0 12 0;
+#X connect 51 0 22 0;
+#X connect 51 0 42 0;
+#X connect 51 0 43 0;
+#X coords 0 0 1 1 50 20 0;

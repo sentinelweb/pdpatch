@@ -1,0 +1,40 @@
+#N canvas 3 23 523 467 10;
+#X obj 145 228 noteout;
+#X obj 129 113 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 5100 0;
+#X floatatom 219 114 5 0 0 0 - - -;
+#X obj 102 150 + 0;
+#X obj 88 50 metro 250;
+#X obj 88 27 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+;
+#X obj 150 22 hsl 128 15 20 2000 1 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 10788 1;
+#X obj 201 55 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 100 1;
+#X floatatom 245 24 5 0 0 0 - - -;
+#X msg 294 24 500;
+#X msg 330 22 1000;
+#X text 212 229 connects via jack to hydrogen;
+#X obj 76 417 dac~;
+#X text 148 292 output of hydrogen comes in adc;
+#X obj 76 294 adc~ 1 2;
+#X floatatom 346 78 0 0 0 0 - - -;
+#X obj 346 104 bendout;
+#X obj 251 152 hsl 128 15 0 3000 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 9800 1;
+#X obj 143 185 makenote 64 500;
+#X connect 1 0 2 0;
+#X connect 1 0 3 1;
+#X connect 3 0 18 0;
+#X connect 4 0 3 0;
+#X connect 5 0 4 0;
+#X connect 6 0 4 1;
+#X connect 6 0 8 0;
+#X connect 9 0 6 0;
+#X connect 10 0 6 0;
+#X connect 14 0 12 0;
+#X connect 14 1 12 1;
+#X connect 15 0 16 0;
+#X connect 17 0 18 2;
+#X connect 18 0 0 0;
+#X connect 18 1 0 1;

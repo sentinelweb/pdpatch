@@ -1,0 +1,2 @@
+36366.8 268080 10.2031 0 506.967 73.4488 6 8110.7 F:/samples/SynthBitz/interfearfence.wav
+;

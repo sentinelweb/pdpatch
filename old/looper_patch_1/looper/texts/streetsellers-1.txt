@@ -1,0 +1,2 @@
+3.47424e+006 380130 45.764 0 1076.5 70 7 8611.37 F:/samples/streetsellers-all.wav
+;

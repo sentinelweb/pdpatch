@@ -1,0 +1,57 @@
+#N canvas 583 58 631 221 10;
+#X obj 107 68 textfile;
+#X obj 426 16 print set;
+#X obj 321 56 openpanel;
+#X obj 245 39 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X obj 321 37 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X obj 245 58 savepanel;
+#X obj 323 101 print read;
+#X obj 247 104 print write;
+#X msg 321 77 read \$1;
+#X msg 245 80 write \$1;
+#X msg 10 69 bang;
+#X msg 8 96 rewind;
+#X text 169 190 maybe use qlist;
+#X obj 43 125 hradio 15 1 0 8 empty empty empty 0 -6 0 8 -262144 -1
+-1 0;
+#X text 138 38 for input;
+#X obj 89 38 switch 4;
+#X obj 88 16 hradio 15 1 0 8 empty empty empty 0 -6 0 8 -262144 -1
+-1 0;
+#X obj 54 96 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X obj 52 69 delay 1;
+#X obj 105 98 param_view text;
+#X msg 233 16 set \$1 \$2 \$3 \$4 \$5 \$6 \$7 \$8 \$9;
+#X msg 139 157 0 0 0 0 0 0 0 0 s;
+#X text 140 142 reset sample;
+#X symbolatom 246 127 60 0 0 0 - - -;
+#X symbolatom 326 148 50 0 0 0 - - -;
+#X obj 195 35 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X msg 194 53 0;
+#X obj 43 146 gate 5;
+#X connect 0 0 27 1;
+#X connect 2 0 8 0;
+#X connect 2 0 24 0;
+#X connect 3 0 5 0;
+#X connect 4 0 2 0;
+#X connect 5 0 9 0;
+#X connect 5 0 23 0;
+#X connect 8 0 6 0;
+#X connect 8 0 0 0;
+#X connect 9 0 7 0;
+#X connect 9 0 0 0;
+#X connect 10 0 11 0;
+#X connect 10 0 18 0;
+#X connect 11 0 0 0;
+#X connect 13 0 27 0;
+#X connect 15 0 20 0;
+#X connect 16 0 15 0;
+#X connect 17 0 0 0;
+#X connect 18 0 17 0;
+#X connect 20 0 0 0;
+#X connect 20 0 1 0;
+#X connect 21 0 27 1;

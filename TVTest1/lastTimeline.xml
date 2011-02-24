@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<timelines version="1.0">
+<source>
+<objects>
+<object name="CommPos" super="">
+<imports>java.util.HashMap</imports>
+<code><![CDATA[static int[][][] locations = {// video, position, length
+	{{18900,450},	{2500,350},		{66282,1000},	{18900,1000},	{140519,1000},	{63631,1000},	{121960,1000},	{121960,1000}},
+	{{1025,950},	{5000,350},		{92795,1000},	{1325,1000},	{34366,1000},	{76300,1000},	{197700,1000},	{121960,1000}},
+	{{74336,750},	{121634,350},	{120634,1000},{39769,1000},	{103401,1000},	{114006,1000},	{151124,1000},	{121960,1000}},
+	{{60980,750},	{50000,350},	{113906,1000},	{60980,1000},	{110229,1000},	{66282,1000},	{176312,1000},	{121960,1000}}
+};
+static String[] tags = {"amazing","positive1","product","amazing1","positive2","negative","moneyback"}; 
+static HashMap<String,Integer> tagHash = new HashMap<String,Integer>();
+static {
+	for (int i=0;i<tags.length;i++) {
+		tagHash.put(tags[i],i);
+	}
+}
+public int getPos(Integer vid,String tag) {
+	return locations[vid][tagHash.get(tag)][0];
+}
+public int getLen(Integer vid,String tag) {
+	return locations[vid][tagHash.get(tag)][1];
+}
+public int getPosi(Integer vid,Integer tag) {
+	return locations[vid][tag][0];
+}]]></code>
+</object>
+</objects>
+</source>
+<description><![CDATA[seq1-x : sequenced words
+tl3tsp-x: vid3 3 notes(transpose) loops
+tloop-x: loop]]></description>
+<colors type="osc">
+<color for="" value="255:255:255"/>
+<color for="/v4/x" value="0:0:165"/>
+<color for="positive2" value="0:0:75"/>
+<color for="/v/film" value="0:0:225"/>
+<color for="/a{$e:vidctl:index:v:0}/file" value="0:180:0"/>
+<color for="/a2/l" value="0:60:60"/>
+<color for="/v{$}/film" value="210:210:210"/>
+<color for="/a{$1/loc" value="0:0:120"/>
+<color for="pos" value="0:90:90"/>
+<color for="/v{$e:vidctl:in}/film" value="0:195:195"/>
+<color for="/v{}/film" value="0:225:0"/>
+<color for="/v$/film" value="225:0:225"/>
+<color for="/v1/pos" value="0:0:150"/>
+<color for="/v{$e}/film" value="210:0:0"/>
+<color for="/a4/loc" value="105:0:0"/>
+<color for="/a2/etrig" value="0:0:60"/>
+<color for="/a1/file" value="240:0:0"/>
+<color for="positive" value="75:0:75"/>
+<color for="/a1/l" value="0:150:0"/>
+<color for="/v{/film" value="0:225:225"/>
+<color for="/a1/fi" value="0:255:0"/>
+<color for="/v{$e:}/film" value="210:0:210"/>
+<color for="/a1/loc" value="135:0:0"/>
+<color for="/v1/fil" value="225:225:225"/>
+<color for="/v{$e:vidctl:index}/film" value="180:180:180"/>
+<color for="/a$1/loc" value="120:0:120"/>
+<color for="/a2/trig" value="0:60:0"/>
+<color for="/" value="255:0:0"/>
+<color for="/a1/" value="0:255:255"/>
+<color for="/v2/x" value="165:0:0"/>
+<color for="/v1/x" value="165:165:165"/>
+<color for="/v3/x" value="165:0:165"/>
+<color for="/a2/lo" value="150:150:150"/>
+<color for="/a1$/loc" value="120:120:120"/>
+<color for="/v1/" value="0:240:240"/>
+<color for="/v1/p" value="150:0:150"/>
+<color for="amaz" value="0:105:105"/>
+<color for="/a1/trig" value="0:135:135"/>
+<color for="po" value="0:0:90"/>
+<color for="/a2/loc" value="150:0:0"/>
+<color for="/a1/fil" value="240:240:240"/>
+<color for="/a3/loc" value="105:105:105"/>
+<color for="/a{$1}/loc" value="0:120:120"/>
+<color for="/v{$e:vidctl:inde}/film" value="0:195:0"/>
+<color for="/a3/tsp" value="60:0:60"/>
+<color for="positiv" value="75:0:0"/>
+<color for="/v" value="240:0:240"/>
+<color for="/a1/lo" value="135:135:135"/>
+<color for="ama" value="0:0:105"/>
+<color for="/a3/ts" value="60:0:0"/>
+<color for="/a1/ptrig" value="45:0:45"/>
+<color for="/a12/loc" value="0:120:0"/>
+<color for="/a1/tri" value="0:0:135"/>
+<color for="/v{$e:vidctl:i}/film" value="0:0:195"/>
+<color for="/a3" value="0:75:75"/>
+<color for="/a1/pos" value="0:150:150"/>
+<color for="/a2/" value="0:165:0"/>
+<color for="/a2" value="0:165:165"/>
+<color for="posi" value="0:90:0"/>
+<color for="/v{$e:vidctl:index:}/film" value="180:0:0"/>
+<color for="/v1/film" value="225:0:0"/>
+<color for="/v{$e:vidctl:index:v}/film" value="180:0:180"/>
+<color for="/a2/ptrig" value="45:45:45"/>
+<color for="/v{$e:vidctl}/film" value="195:0:0"/>
+<color for="/v{$e:vi}/film" value="0:210:210"/>
+<color for="/v{$e:vidctl:index:v:}/film" value="0:0:180"/>
+<color for="/a1/etrig" value="0:135:0"/>
+<color for="/a1/tr" value="135:0:135"/>
+<color for="positi" value="75:75:75"/>
+<color for="a" value="90:0:0"/>
+<color for="/a1" value="0:0:255"/>
+<color for="/v{$e:v}/film" value="0:0:210"/>
+<color for="/v1/fi" value="0:240:0"/>
+<color for="amazing" value="90:90:90"/>
+<color for="/a2ptrig" value="45:0:0"/>
+<color for="/v{$e:vidctl:index:v:0}/film" value="0:180:180"/>
+<color for="/v1" value="0:0:240"/>
+<color for="/v{$e:vidc}/film" value="195:195:195"/>
+<color for="/a1$1/loc" value="120:0:0"/>
+<color for="/a3/" value="0:75:0"/>
+<color for="am" value="105:0:105"/>
+<color for="p" value="90:0:90"/>
+<color for="/a3/t" value="60:60:60"/>
+<color for="amazi" value="0:105:0"/>
+<color for="/v{$e:vidctl:}/film" value="195:0:195"/>
+<color for="/a" value="255:0:255"/>
+<color for="/v{$e:vid}/film" value="0:210:0"/>
+</colors>
+<colors type="expr">
+<color for="$e:vidctl:v1set:f" value="0:225:0"/>
+<color for="$e:vidpos:in:v" value="195:0:0"/>
+<color for="$e:vidt:load_audio:f" value="0:255:0"/>
+<color for="$e:vidpos:tag:v" value="0:210:0"/>
+<color for="$e:vidctl:load_audio:f" value="0:0:240"/>
+<color for="$e:vidpos:ind:v" value="195:0:195"/>
+<color for="$e:vidpos:tag:" value="0:210:210"/>
+<color for="$e:vidctlt:load_audio:f" value="240:0:240"/>
+<color for="$e:vidctl:inde" value="225:225:225"/>
+<color for="$e:vidpos:ta:f" value="210:0:210"/>
+<color for="$e:vidctl:index:v" value="0:0:225"/>
+<color for="$e:vidctt:load_audio:f" value="240:0:0"/>
+<color for="$e:vidpos:tag:f" value="0:0:210"/>
+<color for="$e:init:load_audio" value="255:255:255"/>
+<color for="$e:vit:load_audio:f" value="0:255:255"/>
+<color for="$e:vidct:load_audio:f" value="240:240:240"/>
+<color for="$e:vidpos:fire1:f" value="210:0:0"/>
+<color for="$e:init:load_audio:f" value="0:0:255"/>
+<color for="$e:vidpos:idx:v" value="0:195:195"/>
+<color for="$e:init:load_audio:" value="255:0:0"/>
+<color for="$e:vidctl:index:v " value="0:225:225"/>
+<color for="$e:vidpos:i:v" value="195:195:195"/>
+<color for="$e:vidpos:fire:f" value="210:210:210"/>
+<color for="$e:init:load_audio:v" value="255:0:255"/>
+<color for="$e:vidctl:index:" value="225:0:225"/>
+<color for="$e:vidctl:" value="0:240:240"/>
+<color for="$e:vidctl:in" value="0:240:0"/>
+<color for="$e:vidpos:id:v" value="0:0:195"/>
+<color for="$e:vidctl:index" value="225:0:0"/>
+</colors>
+<filters/>
+<midiKeys/>
+<midicontrols default="true" device="BCF2000" id="new">
+<midicontrol ctlstring_0="0 84 0 /m1/mix/ch4 1.0 0.0 n" size="1"/>
+<midicontrol ctlstring_0="0 83 0 /m1/mix/ch3 1.0 0.0 n" size="1"/>
+<midicontrol ctlstring_0="0 82 0 /m1/mix/ch2 1.0 0.0 n" size="1"/>
+<midicontrol ctlstring_0="0 81 0 /m1/mix/ch1 1.0 0.0 n" size="1"/>
+<midicontrol ctlstring_0="0 88 0 /a4/spd 2.7 -100.0 n" size="1"/>
+<midicontrol ctlstring_0="0 87 0 /a3/spd 2.7 -100.0 n" size="1"/>
+<midicontrol ctlstring_0="0 86 0 /a2/spd 2.7 -100.0 n" size="1"/>
+<midicontrol ctlstring_0="0 85 0 /a1/spd 2.7 -100.0 n" size="1"/>
+<midicontrol ctlstring_0="0 1 0 /a1/tsp 18.0 -1000.0 n" size="1"/>
+<midicontrol ctlstring_0="0 2 0 /a2/tsp 18.0 -1000.0 n" size="1"/>
+<midicontrol ctlstring_0="0 3 0 /a3/tsp 18.0 -1000.0 n" size="1"/>
+<midicontrol ctlstring_0="0 4 0 /a4/tsp 18.0 -1000.0 n" size="1"/>
+</midicontrols>
+<timeline beatLength="10" beatPerBar="4" color="255 0 0" currentEvent="0" displayEnd="8000" displayStart="0" followOnExpr="" height="100" id="init" lastSelEvent="0" oscIndex="0" pitch="1.0" playMode="" quantize="50" timeLineLength="8000" typeDisplay="false">
+<event active="true" eventTime="100" id="" oscIndex="0" oscMsgName="$e:vidctl:v1set:f" oscMsgName1="$e:vidctl:v2set:f" oscMsgName2="$e:vidctl:v3set:f" oscMsgName3="$e:vidctl:v4set:f" oscMsgNameLen="4" target="" targetData="" targetPlayMode="" value="" valueLen="0"/>
+<event active="true" eventTime="400" id="" oscIndex="0" oscMsgName="" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="$f:com=CommPos::n:" valueLen="0"/>
+</timeline>
+<timeline beatLength="10" beatPerBar="4" color="255 0 0" currentEvent="3" displayEnd="8000" displayStart="0" followOnExpr="" height="100" id="vidctl" lastSelEvent="3" oscIndex="0" pitch="1.0" playMode="" quantize="50" timeLineLength="8000" typeDisplay="false">
+<event active="true" eventTime="300" id="load_audio" oscIndex="0" oscMsgName="/a{$e:vidctl:index:v:0}/file" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="" valueLen="0"/>
+<event active="true" eventTime="500" id="load_video" oscIndex="1" oscMsgName="/v{$e:vidctl:index:v:0}/film" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="" valueLen="0"/>
+<event active="true" eventTime="750" id="index" oscIndex="0" oscMsgName="" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="4" valueLen="0"/>
+<event active="true" eventTime="1650" id="v1set" oscIndex="1" oscMsgName="/v1/x" oscMsgName1="/v1/y" oscMsgName2="/v1/wid" oscMsgName3="/v1/hgt" oscMsgName4="/v1/show" oscMsgName5="/v1/play" oscMsgName6="$e:vidctl:film1:f" oscMsgNameLen="7" target="" targetData="" targetPlayMode="" value="-2.5" value1="2" value2="2.5" value3="2" value4="1" value5="1" valueLen="6"/>
+<event active="true" eventTime="1800" id="v2set" oscIndex="1" oscMsgName="/v2/x" oscMsgName1="/v2/y" oscMsgName2="/v2/wid" oscMsgName3="/v2/hgt" oscMsgName4="/v2/show" oscMsgName5="/v2/play" oscMsgName6="$e:vidctl:film2:f" oscMsgNameLen="7" target="" targetData="" targetPlayMode="" value="2.5" value1="2" value2="2.5" value3="2.0" value4="1" value5="1" valueLen="6"/>
+<event active="true" eventTime="2000" id="v3set" oscIndex="1" oscMsgName="/v3/x" oscMsgName1="/v3/y" oscMsgName2="/v3/wid" oscMsgName3="/v3/hgt" oscMsgName4="/v3/show" oscMsgName5="/v3/play" oscMsgName6="$e:vidctl:film3:f" oscMsgNameLen="7" target="" targetData="" targetPlayMode="" value="-2.5" value1="-2" value2="2.5" value3="2.0" value4="1" value5="1" valueLen="6"/>
+<event active="true" eventTime="2200" id="v4set" oscIndex="1" oscMsgName="/v4/x" oscMsgName1="/v4/y" oscMsgName2="/v4/wid" oscMsgName3="/v4/hgt" oscMsgName4="/v4/show" oscMsgName5="/v4/play" oscMsgName6="$e:vidctl:film4:f" oscMsgNameLen="7" target="" targetData="" targetPlayMode="" value="2.5" value1="-2" value2="2.5" value3="2.0" value4="1" value5="1" valueLen="6"/>
+<event active="true" eventTime="2600" id="film1" oscIndex="0" oscMsgName="$e:vidctl:index:v" oscMsgName1="$e:vidctl:load_audio:f" oscMsgName2="$e:vidctl:load_video:f" oscMsgNameLen="3" target="" targetData="" targetPlayMode="" value="1" value1="/media/disk1/media/video/hope_shopping/mpg/ab_circle.wav 0" value2="/media/disk1/media/video/hope_shopping/mpg/ab_circle.mpgt" valueLen="3"/>
+<event active="true" eventTime="2800" id="film2" oscIndex="0" oscMsgName="$e:vidctl:index:v" oscMsgName1="$e:vidctl:load_audio:f" oscMsgName2="$e:vidctl:load_video:f" oscMsgNameLen="3" target="" targetData="" targetPlayMode="" value="2" value1="/media/disk1/media/video/hope_shopping/mpg/spacebag2.wav 0" value2="/media/disk1/media/video/hope_shopping/mpg/spacebag2.mpgt" valueLen="3"/>
+<event active="true" eventTime="2950" id="film3" oscIndex="0" oscMsgName="$e:vidctl:index:v" oscMsgName1="$e:vidctl:load_audio:f" oscMsgName2="$e:vidctl:load_video:f" oscMsgNameLen="3" target="" targetData="" targetPlayMode="" value="3" value1="/media/disk1/media/video/hope_shopping/mpg/total_core.wav 0" value2="/media/disk1/media/video/hope_shopping/mpg/total_core.mpgt" valueLen="3"/>
+<event active="true" eventTime="3100" id="film4" oscIndex="0" oscMsgName="$e:vidctl:index:v" oscMsgName1="$e:vidctl:load_audio:f" oscMsgName2="$e:vidctl:load_video:f" oscMsgNameLen="3" target="" targetData="" targetPlayMode="" value="4" value1="/media/disk1/media/video/hope_shopping/mpg/proactiv2.wav 0" value2="/media/disk1/media/video/hope_shopping/mpg/proactiv2.mpgt" valueLen="3"/>
+</timeline>
+<timeline beatLength="10" beatPerBar="4" color="255 0 0" currentEvent="15" displayEnd="8000" displayStart="0" followOnExpr="" height="100" id="vidpos" lastSelEvent="15" oscIndex="0" pitch="1.0" playMode="" quantize="50" timeLineLength="8000" typeDisplay="false">
+<event active="true" eventTime="0" id="" oscIndex="0" oscMsgName="/a1/loc" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="$f:com:getPos::[0,amazing]" valueLen="0"/>
+<event active="true" eventTime="150" id="pos2" oscIndex="0" oscMsgName="/a2/loc" oscMsgName1="/a1/loc" oscMsgName2="/a3/loc" oscMsgName3="/a4/loc" oscMsgNameLen="4" target="" targetData="" targetPlayMode="" value="1325" value1="18900" value2="74236" value3="60980" valueLen="4"/>
+<event active="true" eventTime="200" id="pos1" oscIndex="0" oscMsgName="/a2/loc" oscMsgName1="/a1/loc" oscMsgName2="/a3/loc" oscMsgName3="/a4/loc" oscMsgNameLen="4" target="" targetData="" targetPlayMode="" value="2500" value1="5000" value2="8000" value3="50000" valueLen="4"/>
+<event active="true" eventTime="400" id="pos3" oscIndex="0" oscMsgName="/a2/loc" oscMsgName1="/a1/loc" oscMsgName2="/a3/loc" oscMsgName3="/a4/loc" oscMsgNameLen="4" target="" targetData="" targetPlayMode="" value="92795" value1="66282" value2="120634" value3="114006" valueLen="4"/>
+<event active="true" eventTime="650" id="pos4" oscIndex="0" oscMsgName="/a2/loc" oscMsgName1="/a1/loc" oscMsgName2="/a3/loc" oscMsgName3="/a4/loc" oscMsgNameLen="4" target="" targetData="" targetPlayMode="" value="1325" value1="18900" value2="39769" value3="60980" valueLen="4"/>
+<event active="true" eventTime="950" id="pos5" oscIndex="0" oscMsgName="/a2/loc" oscMsgName1="/a1/loc" oscMsgName2="/a3/loc" oscMsgName3="/a4/loc" oscMsgNameLen="4" target="" targetData="" targetPlayMode="" value="34466" value1="140519" value2="103401" value3="110029" valueLen="4"/>
+<event active="true" eventTime="1250" id="pos6" oscIndex="0" oscMsgName="/a2/loc" oscMsgName1="/a1/loc" oscMsgName2="/a3/loc" oscMsgName3="/a4/loc" oscMsgNameLen="4" target="" targetData="" targetPlayMode="" value="76300" value1="63631" value2="114006" value3="66282" valueLen="4"/>
+<event active="true" eventTime="1600" id="pos7" oscIndex="0" oscMsgName="/a2/loc" oscMsgName1="/a1/loc" oscMsgName2="/a3/loc" oscMsgName3="/a4/loc" oscMsgNameLen="4" target="" targetData="" targetPlayMode="" value="197700" value1="121960" value2="151124" value3="176312" valueLen="4"/>
+<event active="true" eventTime="2050" id="" oscIndex="0" oscMsgName="/a1/loc" oscMsgName1="/a2/loc" oscMsgName2="/a3/loc" oscMsgName3="/a4/loc" oscMsgName4="/a1/len" oscMsgName5="/a2/len" oscMsgName6="/a3/len" oscMsgName7="/a4/len" oscMsgNameLen="8" target="" targetData="" targetPlayMode="" value="$f:com:getPos::[0,amazing]" value1="$f:com:getPos::[1,amazing]" value2="$f:com:getPos::[2,amazing]" value3="$f:com:getPos::[3,amazing]" value4="$f:com:getLen::[0,amazing]" value5="$f:com:getLen::[1,amazing]" value6="$f:com:getLen::[2,amazing]" value7="$f:com:getLen::[3,amazing]" valueLen="8"/>
+<event active="true" eventTime="2500" id="fir1" oscIndex="0" oscMsgName="/a1/loc" oscMsgName1="/a1/len" oscMsgName2="/a1/etrig" oscMsgNameLen="3" target="" targetData="" targetPlayMode="" value="$f:com:getPos::[0,$e:vidpos:tag:v:0]" value1="$f:com:getLen::[0,$e:vidpos:tag:v:0]" value2="1" valueLen="3"/>
+<event active="true" eventTime="2750" id="fire2" oscIndex="0" oscMsgName="/a2/loc" oscMsgName1="/a2/len" oscMsgName2="/a2/etrig" oscMsgNameLen="3" target="" targetData="" targetPlayMode="" value="$f:com:getPos::[1,$e:vidpos:tag:v:0]" value1="$f:com:getLen::[1,$e:vidpos:tag:v:0]" value2="1" valueLen="3"/>
+<event active="true" eventTime="3000" id="fire3" oscIndex="0" oscMsgName="/a3/loc" oscMsgName1="/a3/len" oscMsgName2="/a3/etrig" oscMsgNameLen="3" target="" targetData="" targetPlayMode="" value="$f:com:getPos::[2,$e:vidpos:tag:v:0]" value1="$f:com:getLen::[2,$e:vidpos:tag:v:0]" value2="1" valueLen="3"/>
+<event active="true" eventTime="3200" id="fire4" oscIndex="0" oscMsgName="/a4/loc" oscMsgName1="/a4/len" oscMsgName2="/a4/etrig" oscMsgNameLen="3" target="" targetData="" targetPlayMode="" value="$f:com:getPos::[3,$e:vidpos:tag:v:0]" value1="$f:com:getLen::[3,$e:vidpos:tag:v:0]" value2="1" valueLen="3"/>
+<event active="true" eventTime="3850" id="tag" oscIndex="0" oscMsgName="" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="positive2" valueLen="0"/>
+<event active="true" eventTime="4850" id="fire1i" oscIndex="0" oscMsgName="/a1/loc" oscMsgName1="/a1/etrig" oscMsgNameLen="2" target="" targetData="" targetPlayMode="" value="$f:com:getPosi::[0,$e:vidpos:idx:v:0]" value1="1" valueLen="2"/>
+<event active="true" eventTime="5100" id="fire2i" oscIndex="0" oscMsgName="/a2/loc" oscMsgName1="/a2/etrig" oscMsgNameLen="2" target="" targetData="" targetPlayMode="" value="$f:com:getPosi::[1,$e:vidpos:idx:v:0]" value1="1" valueLen="2"/>
+<event active="true" eventTime="5350" id="fire3i" oscIndex="0" oscMsgName="/a3/loc" oscMsgName1="/a3/etrig" oscMsgNameLen="2" target="" targetData="" targetPlayMode="" value="$f:com:getPosi::[2,$e:vidpos:idx:v:0]" value1="1" valueLen="2"/>
+<event active="true" eventTime="5550" id="fire4i" oscIndex="0" oscMsgName="/a4/loc" oscMsgName1="/a4/etrig" oscMsgNameLen="2" target="" targetData="" targetPlayMode="" value="$f:com:getPosi::[3,$e:vidpos:idx:v:0]" value1="1" valueLen="2"/>
+<event active="true" eventTime="5950" id="idx" oscIndex="0" oscMsgName="" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="4" valueLen="0"/>
+</timeline>
+<timeline beatLength="10" beatPerBar="4" color="255 0 0" currentEvent="10" displayEnd="8000" displayStart="0" followOnExpr="" height="100" id="seq1-0" lastSelEvent="10" oscIndex="0" pitch="1.0" playMode="" quantize="50" timeLineLength="8000" typeDisplay="false">
+<event active="true" eventTime="0" id="" oscIndex="0" oscMsgName="$e:vidpos:tag:v" oscMsgName1="$e:vidpos:fire1:f" oscMsgNameLen="2" target="" targetData="" targetPlayMode="" value="amazing" valueLen="0"/>
+<event active="true" eventTime="400" id="" oscIndex="0" oscMsgName="$e:vidpos:tag:v" oscMsgName1="$e:vidpos:fire4:f" oscMsgNameLen="2" target="" targetData="" targetPlayMode="" value="amazing" valueLen="0"/>
+<event active="true" eventTime="1000" id="" oscIndex="0" oscMsgName="$e:vidpos:tag:v" oscMsgName1="$e:vidpos:fire2:f" oscMsgNameLen="2" target="" targetData="" targetPlayMode="" value="amazing" valueLen="0"/>
+<event active="true" eventTime="1400" id="" oscIndex="0" oscMsgName="$e:vidpos:tag:v" oscMsgName1="$e:vidpos:fire3:f" oscMsgNameLen="2" target="" targetData="" targetPlayMode="" value="amazing" valueLen="0"/>
+<event active="true" eventTime="2000" id="" oscIndex="0" oscMsgName="$e:vidpos:tag:v" oscMsgName1="$e:vidpos:fire1:f" oscMsgNameLen="2" target="" targetData="" targetPlayMode="" value="amazing" valueLen="0"/>
+<event active="true" eventTime="2500" id="" oscIndex="0" oscMsgName="$e:vidpos:tag:v" oscMsgName1="$e:vidpos:fire3:f" oscMsgNameLen="2" target="" targetData="" targetPlayMode="" value="amazing" valueLen="0"/>
+<event active="true" eventTime="3000" id="" oscIndex="0" oscMsgName="$e:vidpos:tag:v" oscMsgName1="$e:vidpos:fire4:f" oscMsgNameLen="2" target="" targetData="" targetPlayMode="" value="amazing" valueLen="0"/>
+<event active="true" eventTime="3500" id="" oscIndex="0" oscMsgName="$e:vidpos:tag:v" oscMsgName1="$e:vidpos:fire3:f" oscMsgNameLen="2" target="" targetData="" targetPlayMode="" value="amazing" valueLen="0"/>
+<event active="true" eventTime="3750" id="" oscIndex="0" oscMsgName="$e:vidpos:tag:v" oscMsgName1="$e:vidpos:fire3:f" oscMsgNameLen="2" target="" targetData="" targetPlayMode="" value="amazing" valueLen="0"/>
+<event active="true" eventTime="4000" id="" oscIndex="0" oscMsgName="$e:vidpos:tag:v" oscMsgName1="$e:vidpos:fire3:f" oscMsgNameLen="2" target="" targetData="" targetPlayMode="" value="amazing" valueLen="0"/>
+<event active="true" eventTime="4500" id="" oscIndex="0" oscMsgName="$e:vidpos:tag:v" oscMsgName1="$e:vidpos:fire4:f" oscMsgNameLen="2" target="" targetData="" targetPlayMode="" value="amazing" valueLen="0"/>
+<event active="true" eventTime="5000" id="" oscIndex="0" oscMsgName="$e:vidpos:tag:v" oscMsgName1="$e:vidpos:fire4:f" oscMsgNameLen="2" target="" targetData="" targetPlayMode="" value="amazing" valueLen="0"/>
+<event active="true" eventTime="5500" id="" oscIndex="0" oscMsgName="$e:vidpos:tag:v" oscMsgName1="$e:vidpos:fire1:f" oscMsgNameLen="2" target="" targetData="" targetPlayMode="" value="amazing" valueLen="0"/>
+<event active="true" eventTime="6000" id="" oscIndex="0" oscMsgName="$e:vidpos:tag:v" oscMsgName1="$e:vidpos:fire2:f" oscMsgNameLen="2" target="" targetData="" targetPlayMode="" value="amazing" valueLen="0"/>
+<event active="true" eventTime="6500" id="" oscIndex="0" oscMsgName="$e:vidpos:tag:v" oscMsgName1="$e:vidpos:fire4:f" oscMsgNameLen="2" target="" targetData="" targetPlayMode="" value="amazing" valueLen="0"/>
+<event active="true" eventTime="6750" id="" oscIndex="0" oscMsgName="$e:vidpos:tag:v" oscMsgName1="$e:vidpos:fire4:f" oscMsgNameLen="2" target="" targetData="" targetPlayMode="" value="amazing" valueLen="0"/>
+<event active="true" eventTime="7000" id="" oscIndex="0" oscMsgName="$e:vidpos:tag:v" oscMsgName1="$e:vidpos:fire4:f" oscMsgNameLen="2" target="" targetData="" targetPlayMode="" value="amazing" valueLen="0"/>
+<event active="true" eventTime="7500" id="" oscIndex="0" oscMsgName="$e:vidpos:tag:v" oscMsgName1="$e:vidpos:fire2:f" oscMsgNameLen="2" target="" targetData="" targetPlayMode="" value="amazing" valueLen="0"/>
+</timeline>
+<timeline beatLength="10" beatPerBar="4" color="255 0 0" currentEvent="4" displayEnd="8000" displayStart="0" followOnExpr="" height="100" id="seq1-1" lastSelEvent="4" oscIndex="0" pitch="1.0" playMode="" quantize="50" timeLineLength="8000" typeDisplay="false">
+<event active="true" eventTime="0" id="" oscIndex="0" oscMsgName="$e:vidpos:tag:v" oscMsgName1="$e:vidpos:fire1:f" oscMsgNameLen="2" target="" targetData="" targetPlayMode="" value="product" valueLen="0"/>
+<event active="true" eventTime="400" id="" oscIndex="0" oscMsgName="$e:vidpos:tag:v" oscMsgName1="$e:vidpos:fire4:f" oscMsgNameLen="2" target="" targetData="" targetPlayMode="" value="product" valueLen="0"/>
+<event active="true" eventTime="1000" id="" oscIndex="0" oscMsgName="$e:vidpos:tag:v" oscMsgName1="$e:vidpos:fire2:f" oscMsgNameLen="2" target="" targetData="" targetPlayMode="" value="product" valueLen="0"/>
+<event active="true" eventTime="1400" id="" oscIndex="0" oscMsgName="$e:vidpos:tag:v" oscMsgName1="$e:vidpos:fire3:f" oscMsgNameLen="2" target="" targetData="" targetPlayMode="" value="amazing" valueLen="0"/>
+<event active="true" eventTime="2000" id="" oscIndex="0" oscMsgName="$e:vidpos:tag:v" oscMsgName1="$e:vidpos:fire1:f" oscMsgNameLen="2" target="" targetData="" targetPlayMode="" value="product" valueLen="0"/>
+<event active="true" eventTime="2500" id="" oscIndex="0" oscMsgName="$e:vidpos:tag:v" oscMsgName1="$e:vidpos:fire3:f" oscMsgNameLen="2" target="" targetData="" targetPlayMode="" value="product" valueLen="0"/>
+<event active="true" eventTime="3000" id="" oscIndex="0" oscMsgName="$e:vidpos:tag:v" oscMsgName1="$e:vidpos:fire4:f" oscMsgNameLen="2" target="" targetData="" targetPlayMode="" value="product" valueLen="0"/>
+<event active="true" eventTime="3500" id="" oscIndex="0" oscMsgName="$e:vidpos:tag:v" oscMsgName1="$e:vidpos:fire3:f" oscMsgNameLen="2" target="" targetData="" targetPlayMode="" value="product" valueLen="0"/>
+<event active="true" eventTime="3750" id="" oscIndex="0" oscMsgName="$e:vidpos:tag:v" oscMsgName1="$e:vidpos:fire3:f" oscMsgNameLen="2" target="" targetData="" targetPlayMode="" value="product" valueLen="0"/>
+<event active="true" eventTime="4000" id="" oscIndex="0" oscMsgName="$e:vidpos:tag:v" oscMsgName1="$e:vidpos:fire3:f" oscMsgNameLen="2" target="" targetData="" targetPlayMode="" value="product" valueLen="0"/>
+<event active="true" eventTime="4500" id="" oscIndex="0" oscMsgName="$e:vidpos:tag:v" oscMsgName1="$e:vidpos:fire4:f" oscMsgNameLen="2" target="" targetData="" targetPlayMode="" value="amazing" valueLen="0"/>
+<event active="true" eventTime="5000" id="" oscIndex="0" oscMsgName="$e:vidpos:tag:v" oscMsgName1="$e:vidpos:fire4:f" oscMsgNameLen="2" target="" targetData="" targetPlayMode="" value="product" valueLen="0"/>
+<event active="true" eventTime="5500" id="" oscIndex="0" oscMsgName="$e:vidpos:tag:v" oscMsgName1="$e:vidpos:fire1:f" oscMsgNameLen="2" target="" targetData="" targetPlayMode="" value="product" valueLen="0"/>
+<event active="true" eventTime="6000" id="" oscIndex="0" oscMsgName="$e:vidpos:tag:v" oscMsgName1="$e:vidpos:fire2:f" oscMsgNameLen="2" target="" targetData="" targetPlayMode="" value="product" valueLen="0"/>
+<event active="true" eventTime="6500" id="" oscIndex="0" oscMsgName="$e:vidpos:tag:v" oscMsgName1="$e:vidpos:fire4:f" oscMsgNameLen="2" target="" targetData="" targetPlayMode="" value="product" valueLen="0"/>
+<event active="true" eventTime="6750" id="" oscIndex="0" oscMsgName="$e:vidpos:tag:v" oscMsgName1="$e:vidpos:fire4:f" oscMsgNameLen="2" target="" targetData="" targetPlayMode="" value="product" valueLen="0"/>
+<event active="true" eventTime="7000" id="" oscIndex="0" oscMsgName="$e:vidpos:tag:v" oscMsgName1="$e:vidpos:fire4:f" oscMsgNameLen="2" target="" targetData="" targetPlayMode="" value="product" valueLen="0"/>
+<event active="true" eventTime="7500" id="" oscIndex="0" oscMsgName="$e:vidpos:tag:v" oscMsgName1="$e:vidpos:fire2:f" oscMsgNameLen="2" target="" targetData="" targetPlayMode="" value="product" valueLen="0"/>
+</timeline>
+<timeline beatLength="10" beatPerBar="4" color="255 0 0" currentEvent="-1" displayEnd="8000" displayStart="0" followOnExpr="" height="100" id="seq1-2" lastSelEvent="-1" oscIndex="0" pitch="1.0" playMode="" quantize="50" timeLineLength="8000" typeDisplay="false">
+<event active="true" eventTime="0" id="" oscIndex="0" oscMsgName="$e:vidpos:tag:v" oscMsgName1="$e:vidpos:fire1:f" oscMsgNameLen="2" target="" targetData="" targetPlayMode="" value="positive2" valueLen="0"/>
+<event active="true" eventTime="400" id="" oscIndex="0" oscMsgName="$e:vidpos:tag:v" oscMsgName1="$e:vidpos:fire4:f" oscMsgNameLen="2" target="" targetData="" targetPlayMode="" value="positive2" valueLen="0"/>
+<event active="true" eventTime="1000" id="" oscIndex="0" oscMsgName="$e:vidpos:tag:v" oscMsgName1="$e:vidpos:fire2:f" oscMsgNameLen="2" target="" targetData="" targetPlayMode="" value="positive2" valueLen="0"/>
+<event active="true" eventTime="1400" id="" oscIndex="0" oscMsgName="$e:vidpos:tag:v" oscMsgName1="$e:vidpos:fire3:f" oscMsgNameLen="2" target="" targetData="" targetPlayMode="" value="positive2" valueLen="0"/>
+<event active="true" eventTime="2000" id="" oscIndex="0" oscMsgName="$e:vidpos:tag:v" oscMsgName1="$e:vidpos:fire1:f" oscMsgNameLen="2" target="" targetData="" targetPlayMode="" value="positive2" valueLen="0"/>
+<event active="true" eventTime="2500" id="" oscIndex="0" oscMsgName="$e:vidpos:tag:v" oscMsgName1="$e:vidpos:fire3:f" oscMsgNameLen="2" target="" targetData="" targetPlayMode="" value="positive2" valueLen="0"/>
+<event active="true" eventTime="3000" id="" oscIndex="0" oscMsgName="$e:vidpos:tag:v" oscMsgName1="$e:vidpos:fire4:f" oscMsgNameLen="2" target="" targetData="" targetPlayMode="" value="positive2" valueLen="0"/>
+<event active="true" eventTime="3500" id="" oscIndex="0" oscMsgName="$e:vidpos:tag:v" oscMsgName1="$e:vidpos:fire3:f" oscMsgNameLen="2" target="" targetData="" targetPlayMode="" value="positive2" valueLen="0"/>
+<event active="true" eventTime="3750" id="" oscIndex="0" oscMsgName="$e:vidpos:tag:v" oscMsgName1="$e:vidpos:fire3:f" oscMsgNameLen="2" target="" targetData="" targetPlayMode="" value="positive2" valueLen="0"/>
+<event active="true" eventTime="4000" id="" oscIndex="0" oscMsgName="$e:vidpos:tag:v" oscMsgName1="$e:vidpos:fire3:f" oscMsgNameLen="2" target="" targetData="" targetPlayMode="" value="positive2" valueLen="0"/>
+<event active="true" eventTime="4500" id="" oscIndex="0" oscMsgName="$e:vidpos:tag:v" oscMsgName1="$e:vidpos:fire4:f" oscMsgNameLen="2" target="" targetData="" targetPlayMode="" value="positive2" valueLen="0"/>
+<event active="true" eventTime="5000" id="" oscIndex="0" oscMsgName="$e:vidpos:tag:v" oscMsgName1="$e:vidpos:fire4:f" oscMsgNameLen="2" target="" targetData="" targetPlayMode="" value="positive2" valueLen="0"/>
+<event active="true" eventTime="5500" id="" oscIndex="0" oscMsgName="$e:vidpos:tag:v" oscMsgName1="$e:vidpos:fire1:f" oscMsgNameLen="2" target="" targetData="" targetPlayMode="" value="positive2" valueLen="0"/>
+<event active="true" eventTime="6000" id="" oscIndex="0" oscMsgName="$e:vidpos:tag:v" oscMsgName1="$e:vidpos:fire2:f" oscMsgNameLen="2" target="" targetData="" targetPlayMode="" value="positive2" valueLen="0"/>
+<event active="true" eventTime="6500" id="" oscIndex="0" oscMsgName="$e:vidpos:tag:v" oscMsgName1="$e:vidpos:fire4:f" oscMsgNameLen="2" target="" targetData="" targetPlayMode="" value="positive2" valueLen="0"/>
+<event active="true" eventTime="6750" id="" oscIndex="0" oscMsgName="$e:vidpos:tag:v" oscMsgName1="$e:vidpos:fire4:f" oscMsgNameLen="2" target="" targetData="" targetPlayMode="" value="positive2" valueLen="0"/>
+<event active="true" eventTime="7000" id="" oscIndex="0" oscMsgName="$e:vidpos:tag:v" oscMsgName1="$e:vidpos:fire4:f" oscMsgNameLen="2" target="" targetData="" targetPlayMode="" value="positive2" valueLen="0"/>
+<event active="true" eventTime="7500" id="" oscIndex="0" oscMsgName="$e:vidpos:tag:v" oscMsgName1="$e:vidpos:fire2:f" oscMsgNameLen="2" target="" targetData="" targetPlayMode="" value="positive2" valueLen="0"/>
+</timeline>
+<timeline beatLength="10" beatPerBar="4" color="255 0 0" currentEvent="4" displayEnd="2000" displayStart="0" followOnExpr="" height="100" id="tloop1" lastSelEvent="4" oscIndex="0" pitch="1.0" playMode="" quantize="50" timeLineLength="2000" typeDisplay="false">
+<event active="true" eventTime="0" id="" oscIndex="0" oscMsgName="$e:vidpos:idx:v" oscMsgName1="$e:vidpos:fire1i:f" oscMsgNameLen="2" target="" targetData="" targetPlayMode="" value="$e:this:idx:v:0" valueLen="0"/>
+<event active="true" eventTime="500" id="" oscIndex="0" oscMsgName="$e:vidpos:idx:v" oscMsgName1="$e:vidpos:fire1i:f" oscMsgNameLen="2" target="" targetData="" targetPlayMode="" value="$e:this:idx:v:0" valueLen="0"/>
+<event active="false" eventTime="1000" id="" oscIndex="0" oscMsgName="$e:vidpos:idx:v" oscMsgName1="$e:vidpos:fire1i:f" oscMsgNameLen="2" target="" targetData="" targetPlayMode="" value="$e:this:idx:v:0" valueLen="0"/>
+<event active="true" eventTime="1500" id="" oscIndex="0" oscMsgName="$e:vidpos:idx:v" oscMsgName1="$e:vidpos:fire1i:f" oscMsgNameLen="2" target="" targetData="" targetPlayMode="" value="$e:this:idx:v:0" valueLen="0"/>
+<event active="false" eventTime="1650" id="idx" oscIndex="0" oscMsgName="" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="1" valueLen="0"/>
+</timeline>
+<timeline beatLength="10" beatPerBar="4" color="255 0 0" currentEvent="3" displayEnd="2000" displayStart="0" followOnExpr="" height="100" id="tloop1-1" lastSelEvent="3" oscIndex="0" pitch="1.0" playMode="l" quantize="50" timeLineLength="2000" typeDisplay="false">
+<event active="true" eventTime="0" id="" oscIndex="0" oscMsgName="/a1/ptrig" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="1" valueLen="0"/>
+<event active="false" eventTime="500" id="" oscIndex="0" oscMsgName="/a1/ptrig" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="1" valueLen="0"/>
+<event active="true" eventTime="1000" id="" oscIndex="0" oscMsgName="/a1/ptrig" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="1" valueLen="0"/>
+<event active="false" eventTime="1300" id="" oscIndex="0" oscMsgName="/a1/ptrig" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="1" valueLen="0"/>
+<event active="false" eventTime="1650" id="" oscIndex="0" oscMsgName="/a2/loc" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="133891" valueLen="0"/>
+</timeline>
+<timeline beatLength="10" beatPerBar="4" color="255 0 0" currentEvent="4" displayEnd="2000" displayStart="0" followOnExpr="" height="100" id="tloop2" lastSelEvent="4" oscIndex="0" pitch="1.0" playMode="" quantize="50" timeLineLength="2000" typeDisplay="false">
+<event active="true" eventTime="0" id="" oscIndex="0" oscMsgName="$e:vidpos:idx:v" oscMsgName1="$e:vidpos:fire2i:f" oscMsgNameLen="2" target="" targetData="" targetPlayMode="" value="$e:this:idx:v:0" valueLen="0"/>
+<event active="true" eventTime="500" id="" oscIndex="0" oscMsgName="$e:vidpos:idx:v" oscMsgName1="$e:vidpos:fire2i:f" oscMsgNameLen="2" target="" targetData="" targetPlayMode="" value="$e:this:idx:v:0" valueLen="0"/>
+<event active="true" eventTime="1000" id="" oscIndex="0" oscMsgName="$e:vidpos:idx:v" oscMsgName1="$e:vidpos:fire2i:f" oscMsgNameLen="2" target="" targetData="" targetPlayMode="" value="$e:this:idx:v:0" valueLen="0"/>
+<event active="false" eventTime="1500" id="" oscIndex="0" oscMsgName="$e:vidpos:idx:v" oscMsgName1="$e:vidpos:fire2i:f" oscMsgNameLen="2" target="" targetData="" targetPlayMode="" value="$e:this:idx:v:0" valueLen="0"/>
+<event active="false" eventTime="1650" id="idx" oscIndex="0" oscMsgName="" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="4" valueLen="0"/>
+</timeline>
+<timeline beatLength="10" beatPerBar="4" color="255 0 0" currentEvent="1" displayEnd="2000" displayStart="0" followOnExpr="" height="100" id="tloop2-1" lastSelEvent="1" oscIndex="0" pitch="1.0" playMode="l" quantize="50" timeLineLength="2000" typeDisplay="false">
+<event active="true" eventTime="0" id="" oscIndex="0" oscMsgName="/a2/ptrig" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="1" valueLen="0"/>
+<event active="true" eventTime="500" id="" oscIndex="0" oscMsgName="/a2/ptrig" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="1" valueLen="0"/>
+<event active="true" eventTime="1000" id="" oscIndex="0" oscMsgName="/a2/ptrig" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="1" valueLen="0"/>
+<event active="false" eventTime="1500" id="" oscIndex="0" oscMsgName="/a2/ptrig" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="1" valueLen="0"/>
+<event active="false" eventTime="1650" id="" oscIndex="0" oscMsgName="/a2/loc" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="133891" valueLen="0"/>
+</timeline>
+<timeline beatLength="10" beatPerBar="4" color="255 0 0" currentEvent="2" displayEnd="2000" displayStart="0" followOnExpr="" height="100" id="tloop3" lastSelEvent="2" oscIndex="0" pitch="1.0" playMode="l" quantize="50" timeLineLength="2000" typeDisplay="false">
+<event active="true" eventTime="0" id="" oscIndex="0" oscMsgName="$e:vidpos:idx:v" oscMsgName1="$e:vidpos:fire3i:f" oscMsgNameLen="2" target="" targetData="" targetPlayMode="" value="$e:this:idx:v:0" valueLen="0"/>
+<event active="true" eventTime="500" id="" oscIndex="0" oscMsgName="$e:vidpos:idx:v" oscMsgName1="$e:vidpos:fire3i:f" oscMsgNameLen="2" target="" targetData="" targetPlayMode="" value="$e:this:idx:v:0" valueLen="0"/>
+<event active="true" eventTime="1000" id="" oscIndex="0" oscMsgName="$e:vidpos:idx:v" oscMsgName1="$e:vidpos:fire3i:f" oscMsgNameLen="2" target="" targetData="" targetPlayMode="" value="$e:this:idx:v:0" valueLen="0"/>
+<event active="true" eventTime="1500" id="" oscIndex="0" oscMsgName="$e:vidpos:idx:v" oscMsgName1="$e:vidpos:fire3i:f" oscMsgNameLen="2" target="" targetData="" targetPlayMode="" value="$e:this:idx:v:0" valueLen="0"/>
+<event active="false" eventTime="1650" id="idx" oscIndex="0" oscMsgName="" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="4" valueLen="0"/>
+</timeline>
+<timeline beatLength="10" beatPerBar="4" color="255 0 0" currentEvent="3" displayEnd="2000" displayStart="0" followOnExpr="" height="100" id="tl3tsp-0" lastSelEvent="3" oscIndex="0" pitch="1.0" playMode="" quantize="50" timeLineLength="2000" typeDisplay="false">
+<event active="true" eventTime="0" id="" oscIndex="0" oscMsgName="/a3/tsp" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="-750" valueLen="0"/>
+<event active="true" eventTime="500" id="" oscIndex="0" oscMsgName="/a3/tsp" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="-250" valueLen="0"/>
+<event active="true" eventTime="1000" id="" oscIndex="0" oscMsgName="/a3/tsp" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="-400" valueLen="0"/>
+<event active="true" eventTime="1500" id="" oscIndex="0" oscMsgName="/a3/tsp" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="-500" valueLen="0"/>
+<event active="false" eventTime="1650" id="idx" oscIndex="0" oscMsgName="" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="4" valueLen="0"/>
+</timeline>
+<timeline beatLength="10" beatPerBar="4" color="255 0 0" currentEvent="0" displayEnd="2000" displayStart="0" followOnExpr="" height="100" id="tl3tsp-1" lastSelEvent="0" oscIndex="0" pitch="1.0" playMode="" quantize="50" timeLineLength="2000" typeDisplay="false">
+<event active="true" eventTime="0" id="" oscIndex="0" oscMsgName="/a3/tsp" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="-950" valueLen="0"/>
+<event active="true" eventTime="500" id="" oscIndex="0" oscMsgName="/a3/tsp" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="-450" valueLen="0"/>
+<event active="true" eventTime="1000" id="" oscIndex="0" oscMsgName="/a3/tsp" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="-100" valueLen="0"/>
+<event active="true" eventTime="1500" id="" oscIndex="0" oscMsgName="/a3/tsp" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="-700" valueLen="0"/>
+<event active="false" eventTime="1650" id="idx" oscIndex="0" oscMsgName="" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="4" valueLen="0"/>
+</timeline>
+<timeline beatLength="10" beatPerBar="4" color="255 0 0" currentEvent="3" displayEnd="2000" displayStart="0" followOnExpr="" height="100" id="tl3tsp-2" lastSelEvent="3" oscIndex="0" pitch="1.0" playMode="l" quantize="50" timeLineLength="2000" typeDisplay="false">
+<event active="true" eventTime="0" id="" oscIndex="0" oscMsgName="/a3/tsp" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="200" valueLen="0"/>
+<event active="true" eventTime="500" id="" oscIndex="0" oscMsgName="/a3/tsp" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="-450" valueLen="0"/>
+<event active="true" eventTime="1000" id="" oscIndex="0" oscMsgName="/a3/tsp" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="-250" valueLen="0"/>
+<event active="true" eventTime="1500" id="" oscIndex="0" oscMsgName="/a3/tsp" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="-750" valueLen="0"/>
+<event active="false" eventTime="1650" id="idx" oscIndex="0" oscMsgName="" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="4" valueLen="0"/>
+</timeline>
+<timeline beatLength="10" beatPerBar="4" color="255 0 0" currentEvent="1" displayEnd="2000" displayStart="0" followOnExpr="" height="100" id="tl3tsp-3" lastSelEvent="1" oscIndex="0" pitch="1.0" playMode="" quantize="50" timeLineLength="2000" typeDisplay="false">
+<event active="true" eventTime="0" id="" oscIndex="0" oscMsgName="/a3/tsp" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="-350" valueLen="0"/>
+<event active="true" eventTime="500" id="" oscIndex="0" oscMsgName="/a3/tsp" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="-950" valueLen="0"/>
+<event active="true" eventTime="1000" id="" oscIndex="0" oscMsgName="/a3/tsp" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="-250" valueLen="0"/>
+<event active="true" eventTime="1500" id="" oscIndex="0" oscMsgName="/a3/tsp" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="100" valueLen="0"/>
+<event active="false" eventTime="1650" id="idx" oscIndex="0" oscMsgName="" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="4" valueLen="0"/>
+</timeline>
+<timeline beatLength="10" beatPerBar="4" color="255 0 0" currentEvent="-1" displayEnd="2000" displayStart="0" followOnExpr="" height="100" id="tloop4" lastSelEvent="-1" oscIndex="0" pitch="1.0" playMode="" quantize="50" timeLineLength="2000" typeDisplay="false">
+<event active="true" eventTime="0" id="" oscIndex="0" oscMsgName="$e:vidpos:idx:v" oscMsgName1="$e:vidpos:fire4i:f" oscMsgNameLen="2" target="" targetData="" targetPlayMode="" value="$e:this:idx:v:0" valueLen="0"/>
+<event active="true" eventTime="500" id="" oscIndex="0" oscMsgName="$e:vidpos:idx:v" oscMsgName1="$e:vidpos:fire4i:f" oscMsgNameLen="2" target="" targetData="" targetPlayMode="" value="$e:this:idx:v:0" valueLen="0"/>
+<event active="true" eventTime="1000" id="" oscIndex="0" oscMsgName="$e:vidpos:idx:v" oscMsgName1="$e:vidpos:fire4i:f" oscMsgNameLen="2" target="" targetData="" targetPlayMode="" value="$e:this:idx:v:0" valueLen="0"/>
+<event active="true" eventTime="1500" id="" oscIndex="0" oscMsgName="$e:vidpos:idx:v" oscMsgName1="$e:vidpos:fire4i:f" oscMsgNameLen="2" target="" targetData="" targetPlayMode="" value="$e:this:idx:v:0" valueLen="0"/>
+<event active="false" eventTime="1650" id="idx" oscIndex="0" oscMsgName="" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="1" valueLen="0"/>
+</timeline>
+<timeline beatLength="10" beatPerBar="4" color="255 0 0" currentEvent="0" displayEnd="8000" displayStart="0" followOnExpr="" height="100" id="vidpos-1" lastSelEvent="0" oscIndex="0" pitch="1.0" playMode="" quantize="50" timeLineLength="8000" typeDisplay="false">
+<event active="true" eventTime="0" id="" oscIndex="0" oscMsgName="/a1/loc" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="$f:com:getPos::[0,amazing]" valueLen="0"/>
+<event active="true" eventTime="150" id="pos2" oscIndex="0" oscMsgName="/a2/loc" oscMsgName1="/a1/loc" oscMsgName2="/a3/loc" oscMsgName3="/a4/loc" oscMsgNameLen="4" target="" targetData="" targetPlayMode="" value="1325" value1="18900" value2="74236" value3="60980" valueLen="4"/>
+<event active="true" eventTime="200" id="pos1" oscIndex="0" oscMsgName="/a2/loc" oscMsgName1="/a1/loc" oscMsgName2="/a3/loc" oscMsgName3="/a4/loc" oscMsgNameLen="4" target="" targetData="" targetPlayMode="" value="2500" value1="5000" value2="8000" value3="50000" valueLen="4"/>
+<event active="true" eventTime="400" id="pos3" oscIndex="0" oscMsgName="/a2/loc" oscMsgName1="/a1/loc" oscMsgName2="/a3/loc" oscMsgName3="/a4/loc" oscMsgNameLen="4" target="" targetData="" targetPlayMode="" value="92795" value1="66282" value2="120634" value3="114006" valueLen="4"/>
+<event active="true" eventTime="650" id="pos4" oscIndex="0" oscMsgName="/a2/loc" oscMsgName1="/a1/loc" oscMsgName2="/a3/loc" oscMsgName3="/a4/loc" oscMsgNameLen="4" target="" targetData="" targetPlayMode="" value="1325" value1="18900" value2="39769" value3="60980" valueLen="4"/>
+<event active="true" eventTime="950" id="pos5" oscIndex="0" oscMsgName="/a2/loc" oscMsgName1="/a1/loc" oscMsgName2="/a3/loc" oscMsgName3="/a4/loc" oscMsgNameLen="4" target="" targetData="" targetPlayMode="" value="34466" value1="140519" value2="103401" value3="110029" valueLen="4"/>
+<event active="true" eventTime="1250" id="pos6" oscIndex="0" oscMsgName="/a2/loc" oscMsgName1="/a1/loc" oscMsgName2="/a3/loc" oscMsgName3="/a4/loc" oscMsgNameLen="4" target="" targetData="" targetPlayMode="" value="76300" value1="63631" value2="114006" value3="66282" valueLen="4"/>
+<event active="true" eventTime="1600" id="pos7" oscIndex="0" oscMsgName="/a2/loc" oscMsgName1="/a1/loc" oscMsgName2="/a3/loc" oscMsgName3="/a4/loc" oscMsgNameLen="4" target="" targetData="" targetPlayMode="" value="197700" value1="121960" value2="151124" value3="176312" valueLen="4"/>
+<event active="true" eventTime="2050" id="" oscIndex="0" oscMsgName="/a1/loc" oscMsgName1="/a2/loc" oscMsgName2="/a3/loc" oscMsgName3="/a4/loc" oscMsgName4="/a1/len" oscMsgName5="/a2/len" oscMsgName6="/a3/len" oscMsgName7="/a4/len" oscMsgNameLen="8" target="" targetData="" targetPlayMode="" value="$f:com:getPos::[0,amazing]" value1="$f:com:getPos::[1,amazing]" value2="$f:com:getPos::[2,amazing]" value3="$f:com:getPos::[3,amazing]" value4="$f:com:getLen::[0,amazing]" value5="$f:com:getLen::[1,amazing]" value6="$f:com:getLen::[2,amazing]" value7="$f:com:getLen::[3,amazing]" valueLen="8"/>
+<event active="true" eventTime="2500" id="fire1" oscIndex="0" oscMsgName="/a1/loc" oscMsgName1="/a1/len" oscMsgName2="/a1/etrig" oscMsgNameLen="3" target="" targetData="" targetPlayMode="" value="$f:com:getPos::[0,$e:vidpos:tag:v:0]" value1="$f:com:getLen::[0,$e:vidpos:tag:v:0]" value2="1" valueLen="3"/>
+<event active="true" eventTime="2750" id="fire2" oscIndex="0" oscMsgName="/a2/loc" oscMsgName1="/a2/len" oscMsgName2="/a2/etrig" oscMsgNameLen="3" target="" targetData="" targetPlayMode="" value="$f:com:getPos::[1,$e:vidpos:tag:v:0]" value1="$f:com:getLen::[1,$e:vidpos:tag:v:0]" value2="1" valueLen="3"/>
+<event active="true" eventTime="3000" id="fire3" oscIndex="0" oscMsgName="/a3/loc" oscMsgName1="/a3/len" oscMsgName2="/a3/etrig" oscMsgNameLen="3" target="" targetData="" targetPlayMode="" value="$f:com:getPos::[2,$e:vidpos:tag:v:0]" value1="$f:com:getLen::[2,$e:vidpos:tag:v:0]" value2="1" valueLen="3"/>
+<event active="true" eventTime="3200" id="fire4" oscIndex="0" oscMsgName="/a4/loc" oscMsgName1="/a4/len" oscMsgName2="/a4/etrig" oscMsgNameLen="3" target="" targetData="" targetPlayMode="" value="$f:com:getPos::[3,$e:vidpos:tag:v:0]" value1="$f:com:getLen::[3,$e:vidpos:tag:v:0]" value2="1" valueLen="3"/>
+<event active="true" eventTime="3850" id="tag" oscIndex="0" oscMsgName="" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="moneyback" valueLen="0"/>
+<event active="true" eventTime="4250" id="idx" oscIndex="0" oscMsgName="" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="moneyback" valueLen="0"/>
+</timeline>
+<view visible="seq1-2,tloop3,tloop2,tloop4,init,vidctl,vidpos,tloop2-1,tloop1-1"/>
+</timelines>

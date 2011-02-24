@@ -1,0 +1,17 @@
+#N canvas 672 194 493 417 10;
+#X obj 11 71 gemwin;
+#X msg 26 32 0 \, destroy;
+#X text 12 353 args: x-pos \, y-pos \, x-size \, y-size \, label \,
+fontsize;
+#X msg 11 2 create \, 1;
+#X obj 213 274 prvu~ 100;
+#X obj 11 228 adc~;
+#X obj 11 275 prvu~ 100;
+#X obj 11 321 gem_vu 0 0 1 0.75 3;
+#X obj 213 322 gem_vu 1 0 1.3 1 violin 14;
+#X connect 1 0 0 0;
+#X connect 3 0 0 0;
+#X connect 4 0 8 0;
+#X connect 5 0 6 0;
+#X connect 5 1 4 0;
+#X connect 6 0 7 0;

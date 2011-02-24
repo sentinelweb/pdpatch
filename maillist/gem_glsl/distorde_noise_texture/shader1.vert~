@@ -1,0 +1,9 @@
+uniform float K1,K2,K3,K4, freq;
+void main()
+{	
+	gl_TexCoord[0] = gl_MultiTexCoord0;
+	gl_Position = ftransform();		
+//	gl_Position = gl_Vertex;
+	
+}
+

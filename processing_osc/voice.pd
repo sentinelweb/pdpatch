@@ -1,0 +1,180 @@
+#N canvas 694 263 717 481 10;
+#X obj 26 87 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X obj 127 86 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X obj 14 12 dumpOSC 10001;
+#X obj 131 351 *~ 1;
+#X obj 90 183 ../openlab_radio/multi_osc;
+#X obj 153 327 hsl 128 15 0 1 0 0 empty empty empty -2 -6 0 8 -262144
+-1 -1 8890 1;
+#X obj 261 437 dac~;
+#X obj 91 204 ../openlab_radio/envelope;
+#X obj 46 85 OSCroute /f1;
+#X obj 47 113 unpack f f f;
+#X obj 47 136 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X obj 146 86 OSCroute /env1;
+#X obj 127 109 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X obj 146 109 OSCroute /osc1;
+#X obj 256 89 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X obj 357 88 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X obj 319 266 *~ 1;
+#X obj 320 185 ../openlab_radio/multi_osc;
+#X obj 341 231 hsl 128 15 0 1 0 0 empty empty empty -2 -6 0 8 -262144
+-1 -1 8890 1;
+#X obj 321 206 ../openlab_radio/envelope;
+#X obj 277 115 unpack f f f;
+#X obj 277 138 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X obj 357 111 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X obj 276 87 OSCroute /f2;
+#X obj 376 88 OSCroute /env2;
+#X obj 376 111 OSCroute /osc2;
+#X obj 471 88 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X obj 572 87 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X obj 534 265 *~ 1;
+#X obj 535 184 ../openlab_radio/multi_osc;
+#X obj 556 230 hsl 128 15 0 1 0 0 empty empty empty -2 -6 0 8 -262144
+-1 -1 7620 1;
+#X obj 536 205 ../openlab_radio/envelope;
+#X obj 492 114 unpack f f f;
+#X obj 492 137 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X obj 572 110 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X obj 492 86 OSCroute /f3;
+#X obj 591 87 OSCroute /env3;
+#X obj 591 110 OSCroute /osc3;
+#X obj 356 297 hsl 128 15 0 127 0 0 empty empty empty -2 -6 0 8 -262144
+-1 -1 5000 1;
+#X obj 355 317 hsl 128 15 0 100 0 0 empty empty empty -2 -6 0 8 -262144
+-1 -1 3175 1;
+#X obj 354 337 hsl 128 15 1 400 1 0 empty empty empty -2 -6 0 8 -262144
+-1 -1 5267 1;
+#X obj 354 391 hsl 128 15 0 127 0 0 empty empty empty -2 -6 0 8 -262144
+-1 -1 11600 1;
+#X text 364 389 volume;
+#X text 355 335 offset;
+#X text 360 316 LFO Freq;
+#X text 354 295 depth;
+#X obj 353 355 hsl 128 15 0 127 0 0 empty empty empty -2 -6 0 8 -262144
+-1 -1 7000 1;
+#X text 358 354 feedback;
+#X obj 353 373 hsl 128 15 0 127 0 0 empty empty empty -2 -6 0 8 -262144
+-1 -1 2900 1;
+#X text 356 371 feedback delay;
+#X floatatom 450 298 5 0 0 0 - - -;
+#X floatatom 451 317 5 0 0 0 - - -;
+#X floatatom 450 338 5 0 0 0 - - -;
+#X floatatom 451 357 5 0 0 0 - - -;
+#X floatatom 452 372 5 0 0 0 - - -;
+#X floatatom 450 390 5 0 0 0 - - -;
+#X obj 348 411 ../openlab_radio/flanger;
+#X obj 538 352 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X obj 537 301 OSCroute /flg2;
+#X obj 536 322 unpack f f f f f f;
+#X obj 536 396 line;
+#X msg 536 374 \$1 50;
+#X obj 572 396 line;
+#X msg 572 374 \$1 50;
+#X obj 611 396 line;
+#X msg 611 374 \$1 50;
+#X obj 648 395 line;
+#X msg 648 373 \$1 50;
+#X obj 596 441 line;
+#X msg 596 419 \$1 50;
+#X obj 633 440 line;
+#X msg 633 418 \$1 50;
+#X connect 2 0 8 0;
+#X connect 2 0 11 0;
+#X connect 2 0 13 0;
+#X connect 2 0 23 0;
+#X connect 2 0 24 0;
+#X connect 2 0 25 0;
+#X connect 2 0 35 0;
+#X connect 2 0 36 0;
+#X connect 2 0 37 0;
+#X connect 2 0 58 0;
+#X connect 3 0 6 0;
+#X connect 3 0 6 1;
+#X connect 4 0 7 0;
+#X connect 5 0 3 1;
+#X connect 7 0 3 0;
+#X connect 8 0 0 0;
+#X connect 8 0 9 0;
+#X connect 9 0 4 0;
+#X connect 9 0 10 0;
+#X connect 10 0 7 1;
+#X connect 11 0 1 0;
+#X connect 11 0 7 2;
+#X connect 13 0 12 0;
+#X connect 13 0 4 1;
+#X connect 16 0 56 0;
+#X connect 17 0 19 0;
+#X connect 18 0 16 1;
+#X connect 19 0 16 0;
+#X connect 20 0 17 0;
+#X connect 20 0 21 0;
+#X connect 20 1 18 0;
+#X connect 21 0 19 1;
+#X connect 23 0 14 0;
+#X connect 23 0 20 0;
+#X connect 24 0 15 0;
+#X connect 24 0 19 2;
+#X connect 25 0 22 0;
+#X connect 25 0 17 1;
+#X connect 28 0 3 0;
+#X connect 29 0 31 0;
+#X connect 30 0 28 1;
+#X connect 31 0 28 0;
+#X connect 32 0 29 0;
+#X connect 32 0 33 0;
+#X connect 32 1 30 0;
+#X connect 33 0 31 1;
+#X connect 35 0 26 0;
+#X connect 35 0 32 0;
+#X connect 36 0 27 0;
+#X connect 36 0 31 2;
+#X connect 37 0 34 0;
+#X connect 37 0 29 1;
+#X connect 38 0 50 0;
+#X connect 38 0 56 2;
+#X connect 39 0 51 0;
+#X connect 39 0 56 1;
+#X connect 40 0 52 0;
+#X connect 40 0 56 3;
+#X connect 41 0 55 0;
+#X connect 41 0 56 6;
+#X connect 46 0 53 0;
+#X connect 46 0 56 4;
+#X connect 48 0 54 0;
+#X connect 48 0 56 5;
+#X connect 56 0 3 0;
+#X connect 58 0 59 0;
+#X connect 59 0 57 0;
+#X connect 59 0 61 0;
+#X connect 59 1 63 0;
+#X connect 59 2 65 0;
+#X connect 59 3 67 0;
+#X connect 59 4 69 0;
+#X connect 59 5 71 0;
+#X connect 60 0 38 0;
+#X connect 61 0 60 0;
+#X connect 62 0 39 0;
+#X connect 63 0 62 0;
+#X connect 64 0 40 0;
+#X connect 65 0 64 0;
+#X connect 66 0 46 0;
+#X connect 67 0 66 0;
+#X connect 68 0 48 0;
+#X connect 69 0 68 0;
+#X connect 70 0 41 0;
+#X connect 71 0 70 0;

@@ -1,0 +1,89 @@
+#N canvas 1280 399 430 478 10;
+#X floatatom 52 101 5 0 0 0 - - -;
+#X floatatom 103 100 5 0 0 0 - - -;
+#X obj 55 358 *~ 1;
+#X obj 63 165 poly 4 1;
+#X obj 63 191 pack 0 0 0;
+#X obj 62 210 route 1 2 3 4;
+#X obj 56 388 *~ 1;
+#X obj 63 13 notein 1;
+#X obj 24 33 inlet;
+#X obj 124 36 inlet;
+#X text 70 35 note;
+#X text 174 37 vel;
+#X obj 54 443 outlet~;
+#X obj 118 444 outlet~;
+#X obj 255 175 hsl 128 15 0.1 100 1 0 empty empty empty -2 -8 0 10
+-262144 -1 -1 0 1;
+#X floatatom 346 174 5 0 0 0 - - -;
+#X obj 286 225 hsl 128 15 0.01 100 1 0 empty empty empty -2 -8 0 10
+-262144 -1 -1 0 1;
+#X floatatom 379 223 5 0 0 0 - - -;
+#X obj 271 80 hsl 128 15 1 1000 1 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 4233 1;
+#X floatatom 363 81 5 0 0 0 - - -;
+#X obj 54 261 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 101 261 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 126 260 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 80 260 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 163 288 midi.inst.2.synth;
+#X obj 269 31 loadbang;
+#X msg 270 59 10;
+#X obj 291 117 + 10;
+#X obj 273 143 + 5;
+#X obj 18 290 midi.inst.2.synth;
+#X obj 210 314 midi.inst.2.synth;
+#X obj 70 317 midi.inst.2.synth;
+#X msg 140 136 stop;
+#X obj 141 118 bng 15 250 50 0 empty stop empty 17 7 0 10 -262144 -1
+-1;
+#X connect 0 0 3 0;
+#X connect 1 0 3 1;
+#X connect 2 0 6 0;
+#X connect 3 0 4 0;
+#X connect 3 1 4 1;
+#X connect 3 2 4 2;
+#X connect 4 0 5 0;
+#X connect 5 0 20 0;
+#X connect 5 0 29 0;
+#X connect 5 1 23 0;
+#X connect 5 1 31 0;
+#X connect 5 2 21 0;
+#X connect 5 2 24 0;
+#X connect 5 3 22 0;
+#X connect 5 3 30 0;
+#X connect 6 0 12 0;
+#X connect 6 0 13 0;
+#X connect 7 0 0 0;
+#X connect 7 1 1 0;
+#X connect 8 0 0 0;
+#X connect 9 0 1 0;
+#X connect 14 0 15 0;
+#X connect 14 0 24 1;
+#X connect 14 0 29 1;
+#X connect 14 0 30 1;
+#X connect 14 0 31 1;
+#X connect 16 0 17 0;
+#X connect 16 0 24 2;
+#X connect 16 0 29 2;
+#X connect 16 0 30 2;
+#X connect 16 0 31 2;
+#X connect 18 0 19 0;
+#X connect 18 0 27 0;
+#X connect 18 0 28 0;
+#X connect 18 0 29 3;
+#X connect 18 0 31 3;
+#X connect 24 0 2 0;
+#X connect 25 0 26 0;
+#X connect 26 0 18 0;
+#X connect 27 0 30 3;
+#X connect 28 0 24 3;
+#X connect 29 0 2 0;
+#X connect 30 0 2 0;
+#X connect 31 0 2 0;
+#X connect 32 0 3 0;
+#X connect 33 0 32 0;

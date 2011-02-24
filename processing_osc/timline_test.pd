@@ -1,0 +1,7 @@
+#N canvas 327 305 672 489 10;
+#X obj 69 101 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X obj 67 71 OSCroute /start2;
+#X obj 65 37 dumpOSC 10002;
+#X connect 1 0 0 0;
+#X connect 2 0 1 0;

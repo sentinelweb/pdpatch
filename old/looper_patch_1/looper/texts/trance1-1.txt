@@ -1,0 +1,2 @@
+52842.5 380130 56.9834 1 1076.5 127 7 8611.37 F:/samples/pfx/Textures_Ambiences/17g.wav
+;

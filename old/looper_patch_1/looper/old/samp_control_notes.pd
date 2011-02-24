@@ -1,0 +1,356 @@
+#N canvas 66 23 1079 634 10;
+#X obj 342 61 hsl 128 15 50 500000 0 0 empty empty empty -2 -6 0 8
+-260818 -1 -1 0 1;
+#X obj 365 83 hsl 128 15 10 1000 0 0 empty empty empty -2 -6 0 8 -123526
+-1 -1 0 1;
+#X obj 331 42 hsl 128 15 0 300000 0 0 ljogi_r ljogi empty -2 -6 192
+8 -24198 -1 -1 0 1;
+#X obj 388 115 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 0
+1;
+#X obj -10 517 dac~;
+#X text 468 39 start;
+#X text 247 -6 repeat;
+#X text 408 111 activate;
+#X text 421 94 samp rate;
+#X obj 578 50 table sample1;
+#X obj 286 -6 hsl 300 10 100 50000 0 0 empty empty empty -2 -6 0 8
+-258699 -1 -1 0 1;
+#X obj 287 9 hsl 300 10 25 1000 1 0 empty empty empty -2 -6 0 8 -258699
+-1 -1 0 1;
+#X obj 230 78 / 127;
+#X obj 209 -4 vsl 15 128 0 127 0 0 empty empty empty 0 -8 0 8 -62784
+-1 -1 0 1;
+#X obj 232 100 *~ 0;
+#X text 229 62 volume;
+#X obj 519 39 openpanel;
+#X obj 585 29 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X msg 519 73 read -resize \$1 sample1;
+#X msg 101 574 print;
+#X msg 228 574 bang;
+#X msg 227 548 start;
+#X msg 272 545 stop;
+#X obj 264 574 del 1000;
+#X text 24 530 writesf~ -- write audio signals to a soundfile;
+#X text 165 588 creation argument is number of channels;
+#X text 156 599 (1 to 64).;
+#X obj 90 608 writesf~ 2;
+#X text 472 60 length;
+#X obj 520 103 soundfiler;
+#X obj 11 471 +~ 0;
+#X obj 342 221 hsl 128 15 50 500000 0 0 empty empty empty -2 -6 0 8
+-260818 -1 -1 0 1;
+#X obj 343 242 hsl 128 15 10 1000 0 0 empty empty empty -2 -6 0 8 -123526
+-1 -1 0 1;
+#X obj 333 201 hsl 128 15 0 300000 0 0 empty empty empty -2 -6 0 8
+-24198 -1 -1 0 1;
+#X obj 374 266 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 0
+1;
+#X text 469 198 start;
+#X text 248 153 repeat;
+#X text 394 262 activate;
+#X text 428 254 samp rate;
+#X obj 288 153 hsl 300 10 100 50000 0 0 empty empty empty -2 -6 0 8
+-258699 -1 -1 0 1;
+#X obj 288 167 hsl 300 10 25 1000 1 0 empty empty empty -2 -6 0 8 -258699
+-1 -1 0 1;
+#X obj 231 237 / 127;
+#X obj 209 149 vsl 15 128 0 127 0 0 empty empty empty 0 -8 0 8 -62784
+-1 -1 0 1;
+#X obj 233 259 *~ 0;
+#X text 230 221 volume;
+#X obj 528 202 openpanel;
+#X text 473 219 length;
+#X obj 525 259 soundfiler;
+#X obj 587 213 table sample2;
+#X msg 528 236 read -resize \$1 sample2;
+#X obj 265 264 tabread4~ sample2;
+#X obj 272 110 tabread4~ sample1;
+#X obj 598 184 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X msg 25 548 open f:/tunes/pd/output/dual.wav;
+#X symbolatom 593 99 70 0 0 0 - - -;
+#X obj 589 119 print s1;
+#X symbolatom 595 260 70 0 0 0 - - -;
+#X obj 591 280 print s2;
+#X obj -106 -19 hsl 300 10 100 50000 0 0 empty empty empty -2 -6 0
+8 -258699 -1 -1 0 1;
+#X floatatom -109 37 15 0 0 0 - - -;
+#X text 134 637 comment;
+#X obj -104 -7 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X obj 29 96 *;
+#X obj 342 23 r ljogi;
+#X obj 417 127 r l_toparr_but;
+#X obj 394 279 r r_toparr_but;
+#X obj 335 181 r rjogi;
+#X obj 496 285 r r_bass;
+#X obj -116 107 metro 50;
+#X obj -106 86 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 1
+1;
+#X obj 42 50 pow 2;
+#X obj 73 5 hsl 128 15 0.2 20 0 0 empty empty empty -2 -6 0 8 -262144
+-1 -1 0 1;
+#X floatatom 84 75 10 0 0 0 - - -;
+#X msg 41 9 2;
+#X obj -116 128 loadbang;
+#X obj 42 73 / 1024;
+#X obj 71 29 int;
+#X obj 40 185 pow 2;
+#X obj 62 141 hsl 128 15 0.2 20 0 0 empty empty empty -2 -6 0 8 -262144
+-1 -1 0 1;
+#X floatatom 85 209 10 0 0 0 - - -;
+#X msg 42 151 2;
+#X obj 40 208 / 1024;
+#X obj 69 164 int;
+#X msg -117 149 0;
+#X obj 23 256 *;
+#X obj 96 29 delay 10;
+#X obj 95 51 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X obj 96 163 delay 10;
+#X obj 95 185 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X obj 337 376 hsl 128 15 50 500000 0 0 empty empty empty -2 -6 0 8
+-260818 -1 -1 0 1;
+#X obj 341 397 hsl 128 15 10 1000 0 0 empty empty empty -2 -6 0 8 -123526
+-1 -1 0 1;
+#X obj 331 356 hsl 128 15 0 300000 0 0 empty empty empty -2 -6 0 8
+-24198 -1 -1 0 1;
+#X obj 372 421 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 0
+1;
+#X text 467 353 start;
+#X text 246 308 repeat;
+#X text 392 417 activate;
+#X text 426 409 samp rate;
+#X obj 286 308 hsl 300 10 100 50000 0 0 empty empty empty -2 -6 0 8
+-258699 -1 -1 0 1;
+#X obj 286 322 hsl 300 10 25 1000 1 0 empty empty empty -2 -6 0 8 -258699
+-1 -1 0 1;
+#X obj 229 392 / 127;
+#X obj 207 304 vsl 15 128 0 127 0 0 empty empty empty 0 -8 0 8 -62784
+-1 -1 0 1;
+#X obj 231 414 *~ 0;
+#X text 228 376 volume;
+#X obj 526 357 openpanel;
+#X text 489 376 length;
+#X obj 523 414 soundfiler;
+#X obj 596 339 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X symbolatom 593 415 70 0 0 0 - - -;
+#X obj 38 340 pow 2;
+#X obj 70 299 hsl 128 15 0.2 20 0 0 empty empty empty -2 -6 0 8 -262144
+-1 -1 0 1;
+#X floatatom 83 364 10 0 0 0 - - -;
+#X msg 40 306 2;
+#X obj 38 363 / 1024;
+#X obj 67 319 int;
+#X obj 21 411 *;
+#X obj 94 318 delay 10;
+#X obj 93 340 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X obj 263 419 tabread4~ sample3;
+#X obj 589 435 print s3;
+#X msg 526 391 read -resize \$1 sample3;
+#X obj 585 368 table sample3;
+#X obj 417 462 r r_1_but;
+#X obj 272 84 samp_player;
+#X text 473 510 idea: make other patches to save state of the sliders
+at a point.;
+#X text 473 537 idea: make slider alter value of the accumulator boxes
+in th herc_input;
+#X text 37 37 comment;
+#X text 473 581 idea: make more samplers and cofigure so that left
+and right sides of midi controller are aggignable to a sampler.;
+#X text 474 615 idea: make perview samplers so then transfer setting
+to putput samplers so that the fucked bit in the middle dont show up.
+;
+#X text 473 658 idea: add effects!!!;
+#X text 851 511 comment;
+#X floatatom 67 109 10 0 10 0 - - -;
+#X floatatom 65 267 10 0 0 0 - - -;
+#X text 475 674 idea: add granular patch so the ptich can be changed
+w/o timestretch.dl_grian maybe another?;
+#X obj 749 -8 pack 0 0 0 0 0;
+#X obj 747 -28 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X obj 749 16 print;
+#X obj 333 132 dac~;
+#X text -87 513 reconnect!!;
+#X obj 646 142 snapshot~;
+#X floatatom 639 167 5 0 0 0 - - -;
+#X obj 266 241 samp_player;
+#X obj 264 396 samp_player;
+#X obj 523 128 r l_volume;
+#X obj 500 470 r r_volume;
+#X obj 721 17 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X obj 721 41 savepanel;
+#X msg 721 68 write \$1;
+#X msg 819 28 rewind;
+#X obj 814 417 print done;
+#X text 1038 215 write one;
+#X obj 758 366 textfile;
+#X text 902 29 go to beginning;
+#X msg 819 55 bang;
+#X text 902 54 output one line as a list;
+#X text 830 265 write a file \, terminating lines only with carriage
+return (omitting semicolons.) You can read files this way too \, in
+which case carriage returns are mapped to semicolons.;
+#X obj 758 439 print list;
+#X msg 819 83 clear;
+#X text 974 84 empty the object;
+#X text 974 112 add a message;
+#X text 758 465 this outlet gets the lines in sequence.;
+#X text 845 386 This outlet gets a bang when you hit the end of the
+sequence.;
+#X text 1067 163 clear and then add one message;
+#X msg 819 110 add cis boom bah;
+#X msg 819 137 add2 bang;
+#X text 971 137 add an unterminated message;
+#X msg 819 340 print;
+#X text 873 343 debugging printout;
+#X msg 823 243 write c:/textfile2.txt cr;
+#X msg 819 163 set 2 4 6 8 "symbol string";
+#X msg 820 313 read c:/textfile2.txt cr;
+#X text 819 11 this stuff can read/write lists to from files;
+#X connect 0 0 122 2;
+#X connect 1 0 122 3;
+#X connect 1 0 133 2;
+#X connect 2 0 122 1;
+#X connect 3 0 122 4;
+#X connect 10 0 122 5;
+#X connect 11 0 122 5;
+#X connect 12 0 14 1;
+#X connect 13 0 12 0;
+#X connect 14 0 30 0;
+#X connect 14 0 138 0;
+#X connect 16 0 18 0;
+#X connect 16 0 54 0;
+#X connect 17 0 16 0;
+#X connect 18 0 29 0;
+#X connect 19 0 27 0;
+#X connect 20 0 21 0;
+#X connect 20 0 23 0;
+#X connect 21 0 27 0;
+#X connect 22 0 27 0;
+#X connect 23 0 22 0;
+#X connect 29 0 122 0;
+#X connect 30 0 27 0;
+#X connect 30 0 27 1;
+#X connect 30 0 4 0;
+#X connect 30 0 4 1;
+#X connect 31 0 140 2;
+#X connect 32 0 140 3;
+#X connect 33 0 140 1;
+#X connect 34 0 140 4;
+#X connect 39 0 140 5;
+#X connect 40 0 140 5;
+#X connect 41 0 43 1;
+#X connect 42 0 41 0;
+#X connect 43 0 30 0;
+#X connect 45 0 49 0;
+#X connect 45 0 56 0;
+#X connect 47 0 140 0;
+#X connect 49 0 47 0;
+#X connect 50 0 43 0;
+#X connect 51 0 14 0;
+#X connect 52 0 45 0;
+#X connect 53 0 27 0;
+#X connect 54 0 55 0;
+#X connect 56 0 57 0;
+#X connect 58 0 59 0;
+#X connect 59 0 62 0;
+#X connect 59 0 84 0;
+#X connect 59 0 114 0;
+#X connect 61 0 59 0;
+#X connect 62 0 10 0;
+#X connect 62 0 130 0;
+#X connect 63 0 2 0;
+#X connect 64 0 3 0;
+#X connect 65 0 34 0;
+#X connect 66 0 33 0;
+#X connect 67 0 32 0;
+#X connect 68 0 73 0;
+#X connect 68 0 80 0;
+#X connect 68 0 111 0;
+#X connect 69 0 68 0;
+#X connect 70 0 75 0;
+#X connect 71 0 76 0;
+#X connect 71 0 85 0;
+#X connect 73 0 70 0;
+#X connect 74 0 73 0;
+#X connect 74 0 83 0;
+#X connect 74 0 80 0;
+#X connect 74 0 69 0;
+#X connect 74 0 111 0;
+#X connect 75 0 72 0;
+#X connect 75 0 62 1;
+#X connect 76 0 70 1;
+#X connect 77 0 81 0;
+#X connect 78 0 82 0;
+#X connect 78 0 87 0;
+#X connect 80 0 77 0;
+#X connect 81 0 79 0;
+#X connect 81 0 84 1;
+#X connect 82 0 77 1;
+#X connect 83 0 71 0;
+#X connect 83 0 78 0;
+#X connect 83 0 109 0;
+#X connect 84 0 39 0;
+#X connect 84 0 131 0;
+#X connect 85 0 86 0;
+#X connect 86 0 62 0;
+#X connect 87 0 88 0;
+#X connect 88 0 84 0;
+#X connect 89 0 141 2;
+#X connect 90 0 141 3;
+#X connect 91 0 141 1;
+#X connect 92 0 141 4;
+#X connect 97 0 141 5;
+#X connect 98 0 141 5;
+#X connect 99 0 101 1;
+#X connect 100 0 99 0;
+#X connect 101 0 30 0;
+#X connect 103 0 119 0;
+#X connect 103 0 107 0;
+#X connect 105 0 141 0;
+#X connect 106 0 103 0;
+#X connect 107 0 118 0;
+#X connect 108 0 112 0;
+#X connect 109 0 113 0;
+#X connect 109 0 115 0;
+#X connect 111 0 108 0;
+#X connect 112 0 110 0;
+#X connect 112 0 114 1;
+#X connect 113 0 108 1;
+#X connect 114 0 97 0;
+#X connect 115 0 116 0;
+#X connect 116 0 114 0;
+#X connect 117 0 101 0;
+#X connect 119 0 105 0;
+#X connect 121 0 92 0;
+#X connect 122 0 51 0;
+#X connect 122 1 136 0;
+#X connect 122 1 136 1;
+#X connect 133 0 135 0;
+#X connect 133 0 145 0;
+#X connect 134 0 133 0;
+#X connect 138 0 139 0;
+#X connect 140 0 50 0;
+#X connect 141 0 117 0;
+#X connect 142 0 1 0;
+#X connect 143 0 90 0;
+#X connect 144 0 145 0;
+#X connect 145 0 146 0;
+#X connect 147 0 150 0;
+#X connect 150 0 155 0;
+#X connect 150 1 148 0;
+#X connect 152 0 150 0;
+#X connect 156 0 150 0;
+#X connect 162 0 150 0;
+#X connect 163 0 150 0;
+#X connect 165 0 150 0;
+#X connect 167 0 150 0;
+#X connect 168 0 150 0;
+#X connect 169 0 150 0;

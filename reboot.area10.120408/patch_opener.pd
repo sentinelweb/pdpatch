@@ -1,0 +1,36 @@
+#N canvas 0 0 450 300 10;
+#X obj 76 214 makesymbol pd-%s;
+#X msg 178 255 \; \$1 menuclose;
+#X obj 47 116 bng 15 250 50 0 empty empty empty 0 -6 0 10 -262144 -1
+-1;
+#X obj 160 149 pack s s;
+#X obj 243 227 print close;
+#X obj 80 133 unpack s s;
+#X msg 46 139 0;
+#X obj 46 161 pack f s;
+#X obj 48 186 unpack f s;
+#X obj 130 100 list;
+#X obj 129 78 del 500;
+#X obj 129 59 bng 15 250 50 0 empty empty empty 0 -6 0 10 -262144 -1
+-1;
+#X obj 151 35 list;
+#X obj 258 158 print open;
+#X msg 160 171 \; pd open \$2 \$1;
+#X obj 152 7 inlet;
+#X connect 0 0 1 0;
+#X connect 0 0 4 0;
+#X connect 2 0 6 0;
+#X connect 3 0 14 0;
+#X connect 3 0 13 0;
+#X connect 5 1 7 1;
+#X connect 6 0 7 0;
+#X connect 7 0 8 0;
+#X connect 8 1 0 0;
+#X connect 9 0 5 0;
+#X connect 9 0 3 0;
+#X connect 10 0 9 0;
+#X connect 11 0 10 0;
+#X connect 11 0 2 0;
+#X connect 12 0 11 0;
+#X connect 12 0 9 1;
+#X connect 15 0 12 0;

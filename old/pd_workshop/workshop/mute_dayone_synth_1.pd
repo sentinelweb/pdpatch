@@ -1,0 +1,172 @@
+#N canvas 279 43 796 606 10;
+#X obj -662 -30 dac~;
+#X obj -661 -77 *~;
+#X text -581 -27 this is the sound out;
+#X obj -621 -118 tgl 32 0 empty empty empty 0 -6 0 8 -258699 -1 -1
+1 1;
+#X text -582 -114 kill switch!;
+#X obj -662 -155 *~;
+#X obj -610 -189 / 100;
+#X obj -610 -225 nbx 5 24 -1e+37 1e+37 0 1 empty empty VOLUME 0 -6
+0 10 -241291 -1 -1 30 256;
+#X obj -660 -304 osc~;
+#X obj -659 -329 mtof;
+#X obj -610 -390 hsl 128 15 0 127 0 0 empty empty empty -2 -6 0 8 -262144
+-1 -1 7400 1;
+#X obj -662 -395 key;
+#X obj -230 -315 metro;
+#X obj -230 -355 tgl 32 0 empty empty empty 0 -6 0 8 -62784 -1 -1 0
+1;
+#X floatatom -160 -355 5 0 0 0 - - -;
+#X obj -229 -284 random 127;
+#N canvas 82 40 668 588 mysubpatch 0;
+#X obj 93 435 outlet;
+#X obj 94 89 metro;
+#X obj 94 133 f;
+#X obj 162 133 + 1;
+#X obj 93 184 mod 2;
+#X obj 94 -21 inlet toggle on off;
+#X obj 164 10 inlet metro speed;
+#X obj 306 41 inlet counter number;
+#X obj 93 278 select 0;
+#X obj 253 279 select 3;
+#X msg 93 336 66;
+#X msg 253 337 72;
+#X floatatom 240 229 5 0 0 0 - - -;
+#X connect 1 0 2 0;
+#X connect 2 0 3 0;
+#X connect 2 0 4 0;
+#X connect 3 0 2 1;
+#X connect 4 0 8 0;
+#X connect 4 0 9 0;
+#X connect 4 0 12 0;
+#X connect 5 0 1 0;
+#X connect 6 0 1 1;
+#X connect 7 0 4 1;
+#X connect 8 0 10 0;
+#X connect 9 0 11 0;
+#X connect 10 0 0 0;
+#X connect 11 0 0 0;
+#X restore -368 -413 pd mysubpatch;
+#X obj -368 -465 tgl 32 0 empty empty empty 0 -6 0 8 -166441 -1 -1
+0 1;
+#X floatatom -308 -465 5 0 0 0 - - -;
+#X floatatom -250 -464 5 0 0 0 - - -;
+#X floatatom -351 -337 5 0 0 0 - - -;
+#N canvas 101 221 842 434 envelope 1;
+#X obj 46 18 inlet~;
+#X obj 135 12 inlet;
+#X obj 77 246 outlet~;
+#X obj 79 217 *~;
+#X obj 105 189 line~;
+#X msg 192 18 1 500;
+#N canvas 0 0 450 300 graph6 0;
+#X array array2 100 float 1;
+#A 0 -0.942859 -0.914288 -0.885716 -0.757145 -0.714287 -0.628573 -0.457144
+-0.426787 -0.39643 -0.366072 -0.335715 -0.305358 -0.275001 -0.244643
+-0.214286 -0.176191 -0.138096 -0.0857145 -0.0714288 -0.057143 -0.0428573
+-0.00714288 0.0285715 0.0714288 0.128572 0.185715 0.242858 0.300001
+0.442858 0.514287 0.614287 0.757145 0.785716 0.784824 0.783931 0.783038
+0.782145 0.781252 0.780359 0.779466 0.778573 0.777681 0.776788 0.775895
+0.775002 0.774109 0.773216 0.772323 0.77143 0.765716 0.760002 0.754288
+0.748573 0.742859 0.728573 0.728573 0.728573 0.728573 0.728573 0.728573
+0.714287 0.700002 0.692859 0.67143 0.642859 0.614287 0.585716 0.542858
+0.514287 0.485716 0.457144 0.428573 0.419049 0.409525 0.385715 0.37143
+0.357144 0.328572 0.314287 0.271429 0.228572 0.185715 0.142858 0.1
+0.057143 0.0142857 -0.0428573 -0.1 -0.214286 -0.342858 -0.400001 -0.528573
+-0.614287 -0.700002 -0.757145 -0.77143 -0.842859 -0.871431 -0.914288
+-1.01429;
+#X coords 0 1 99 -1 200 140 1;
+#X restore 399 108 graph;
+#X text 397 250 attack;
+#X text 263 41 attack;
+#X text 461 109 sustain;
+#X text 573 162 release;
+#X text 545 253 decay;
+#X msg 165 154 0 500;
+#X text 295 103 sustain;
+#X text 259 131 decay;
+#X text 429 290 model evelope;
+#X obj 148 77 bang;
+#X text 251 220 comment;
+#X obj 204 75 b;
+#X obj 243 75 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X text 262 69 <-- all bangs;
+#X obj 148 102 delay 1500;
+#X obj 217 41 r att;
+#X obj 273 83 r sus;
+#X obj 217 129 r dec;
+#X obj 145 42 pack 1 0;
+#X obj 150 131 pack 0 0;
+#X obj 247 105 +;
+#X obj 276 109 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X connect 0 0 3 0;
+#X connect 1 0 25 0;
+#X connect 3 0 2 0;
+#X connect 4 0 3 1;
+#X connect 16 0 21 0;
+#X connect 21 0 26 0;
+#X connect 22 0 25 1;
+#X connect 22 0 27 0;
+#X connect 23 0 28 0;
+#X connect 23 0 27 1;
+#X connect 24 0 26 1;
+#X connect 25 0 4 0;
+#X connect 25 0 16 0;
+#X connect 26 0 4 0;
+#X connect 27 0 21 1;
+#X connect 28 0 27 0;
+#X restore -641 -269 pd envelope;
+#X obj -570 -325 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144
+-1 -1;
+#X obj -233 -211 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -6 0
+10 -262144 -1 -1 0 256;
+#X floatatom -228 -121 5 0 0 0 - - -;
+#X obj -131 -212 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -6 0
+10 -262144 -1 -1 0 256;
+#X floatatom -126 -118 5 0 0 0 - - -;
+#X obj -233 -191 send x;
+#X obj -229 -143 receive x;
+#X obj -131 -193 s y;
+#X obj -126 -143 r y;
+#X text -247 -168 sends and recieves;
+#X text -177 -316 gen rendom notes;
+#X obj -502 -289 cnv 15 250 150 empty empty envelope_control 20 12
+0 14 -225271 -66577 0;
+#X obj -478 -256 hsl 128 15 0 1000 0 0 att empty attack -2 -6 0 8 -24198
+-1 -1 2200 1;
+#X obj -480 -226 hsl 128 15 0 1000 0 0 sus empty sustain -2 -6 0 8
+-261681 -1 -1 800 1;
+#X obj -479 -197 hsl 128 15 0 1000 0 0 dec empty decay -2 -6 0 8 -258699
+-1 -1 2100 1;
+#X obj -344 -256 s att;
+#X obj -344 -226 s sus;
+#X obj -345 -198 s dec;
+#X connect 1 0 0 0;
+#X connect 1 0 0 1;
+#X connect 3 0 1 1;
+#X connect 5 0 1 0;
+#X connect 6 0 5 1;
+#X connect 7 0 6 0;
+#X connect 8 0 21 0;
+#X connect 9 0 8 0;
+#X connect 10 0 9 0;
+#X connect 10 0 22 0;
+#X connect 11 0 9 0;
+#X connect 11 0 22 0;
+#X connect 12 0 15 0;
+#X connect 13 0 12 0;
+#X connect 14 0 12 1;
+#X connect 16 0 20 0;
+#X connect 17 0 16 0;
+#X connect 18 0 16 1;
+#X connect 19 0 16 2;
+#X connect 21 0 5 0;
+#X connect 22 0 21 1;
+#X connect 23 0 27 0;
+#X connect 25 0 29 0;
+#X connect 28 0 24 0;
+#X connect 30 0 26 0;
+#X coords 0 121200 100 121000 200 140 1;

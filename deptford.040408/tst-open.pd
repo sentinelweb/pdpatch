@@ -1,0 +1,15 @@
+#N canvas 157 375 630 329 10;
+#X obj 122 35 bng 15 250 50 0 empty empty empty 0 -6 0 10 -262144 -1
+-1;
+#X msg 122 127 \; pd open deptford_tst1.pd /home/robm/patch/deptford.040408
+;
+#X obj 53 128 bng 15 250 50 0 empty empty empty 0 -6 0 10 -262144 -1
+-1;
+#X msg 54 180 \; pd-deptford_tst1.pd menuclose;
+#X msg 250 58 \; pd open addictVideoTrail.pd /home/robm/patch/addictVideoTrail
+;
+#X msg 38 219 \; pd-addictVideoTrail.pd menuclose;
+#X connect 0 0 1 0;
+#X connect 0 0 4 0;
+#X connect 2 0 3 0;
+#X connect 2 0 5 0;

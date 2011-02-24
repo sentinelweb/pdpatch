@@ -1,0 +1,77 @@
+#N canvas 5 261 1124 566 10;
+#X obj 1038 4 cnv 15 60 100 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 1083 54 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X obj 1052 73 genin;
+#X obj 1066 54 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 0
+1;
+#X obj 1060 28 r in;
+#X obj 1052 8 r in8;
+#X obj 65 25 dumpOSC 10001;
+#X obj 71 214 ../openlab_radio/sampler;
+#X obj 95 144 unpack f f f f f;
+#X obj 95 189 * 1;
+#X obj 111 167 hsl 128 15 0 1 0 0 empty empty empty -2 -6 0 8 -262144
+-1 -1 0 1;
+#X floatatom 208 168 5 0 0 0 - - -;
+#X obj 163 189 del 1;
+#X text 210 151 0.716;
+#X obj 145 189 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X obj 69 193 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X obj 29 256 ../openlab_radio/tape_pitchshift;
+#X obj 214 236 hsl 128 15 -50 50 0 0 empty empty empty -2 -6 0 4 -262144
+-1 -1 0 0;
+#X text 259 235 pitch;
+#X floatatom 307 235 5 0 0 0 - - -;
+#X obj 28 309 *~ 1;
+#X obj 47 290 hsl 128 15 0 1 0 0 empty empty empty -2 -6 0 8 -262144
+-1 -1 0 1;
+#X text 48 287 main vol;
+#X obj 72 59 OSCroute /sampler;
+#X obj 95 81 OSCroute /set;
+#X obj 120 103 OSCroute /trig;
+#X obj 53 125 OSCroute /file;
+#X obj 255 97 OSCroute /pitch;
+#X floatatom 257 130 8 0 0 0 - - -;
+#X obj 259 192 - 50;
+#X msg 282 173 50;
+#X obj 259 148 t f b;
+#X floatatom 299 203 5 0 0 0 - - -;
+#X connect 1 0 2 3;
+#X connect 3 0 2 2;
+#X connect 4 0 2 1;
+#X connect 5 0 2 0;
+#X connect 6 0 23 0;
+#X connect 7 0 16 0;
+#X connect 8 0 9 0;
+#X connect 8 1 7 2;
+#X connect 8 2 7 3;
+#X connect 8 3 12 0;
+#X connect 8 4 7 5;
+#X connect 9 0 7 1;
+#X connect 10 0 9 1;
+#X connect 10 0 11 0;
+#X connect 12 0 7 4;
+#X connect 14 0 7 4;
+#X connect 15 0 7 0;
+#X connect 16 0 20 0;
+#X connect 17 0 16 1;
+#X connect 17 0 19 0;
+#X connect 21 0 20 1;
+#X connect 23 0 24 0;
+#X connect 23 0 25 0;
+#X connect 23 0 26 0;
+#X connect 23 0 27 0;
+#X connect 24 0 8 0;
+#X connect 25 0 14 0;
+#X connect 26 0 7 0;
+#X connect 27 0 28 0;
+#X connect 28 0 31 0;
+#X connect 29 0 17 0;
+#X connect 29 0 32 0;
+#X connect 30 0 29 1;
+#X connect 31 0 29 0;
+#X connect 31 1 30 0;

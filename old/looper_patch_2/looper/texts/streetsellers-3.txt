@@ -1,0 +1,2 @@
+0 104843 46 1 2152.64 122.992 8 8611.37 F:/samples/pfx/Bass_Stuff/90reg_e2.wav
+;

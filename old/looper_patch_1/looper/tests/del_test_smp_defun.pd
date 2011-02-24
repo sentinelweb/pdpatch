@@ -1,0 +1,18 @@
+#N canvas 515 198 456 306 10;
+#X obj 89 108 sampmsg_defunnel;
+#X obj 121 155 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X obj 217 132 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X msg 166 40 7 345;
+#X msg 103 42 8 hello;
+#X obj 181 190 print hi;
+#X obj 176 155 symbol;
+#X symbolatom 241 167 10 0 0 0 - - -;
+#X connect 0 7 1 0;
+#X connect 0 8 2 0;
+#X connect 0 8 6 0;
+#X connect 3 0 0 0;
+#X connect 4 0 0 0;
+#X connect 6 0 5 0;
+#X connect 6 0 7 0;

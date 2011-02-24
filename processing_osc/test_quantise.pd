@@ -1,0 +1,26 @@
+#N canvas 147 218 781 548 8;
+#X obj 40 299 ../oc/quantise;
+#X obj 48 268 osc~;
+#X obj 51 248 hsl 128 15 0 1000 0 0 empty empty empty -2 -6 0 8 -262144
+-1 -1 659 1;
+#X obj 54 389 *~ 1;
+#X obj 50 424 dac~;
+#X obj 82 360 hsl 128 15 0 1 0 0 empty empty empty -2 -6 0 8 -262144
+-1 -1 3200 1;
+#X obj 232 42 dumpOSC 10001;
+#X obj 230 79 OSCroute /synth1;
+#X obj 84 173 ../oc/pitch_in;
+#X obj 307 210 ../drums/drum_sampler;
+#X obj 268 371 ../oc/mixer;
+#X connect 0 0 3 0;
+#X connect 1 0 0 0;
+#X connect 1 0 0 1;
+#X connect 2 0 1 0;
+#X connect 3 0 4 0;
+#X connect 3 0 4 1;
+#X connect 5 0 3 1;
+#X connect 6 0 7 0;
+#X connect 6 0 9 0;
+#X connect 7 0 0 2;
+#X connect 7 0 8 0;
+#X connect 8 0 2 0;

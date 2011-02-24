@@ -1,0 +1,43 @@
+#N canvas 0 0 450 300 10;
+#X obj 151 161 ../effects/sampler_st;
+#X msg 292 90 0 4e+06 44100 0 0.9;
+#X obj 132 30 hsl 128 15 0 2000 0 0 empty empty empty -2 -6 0 8 -262144
+-1 -1 0 1;
+#X obj 93 23 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 0 1
+;
+#X obj 79 101 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X obj 97 128 openpanel;
+#X obj 99 52 metro 100;
+#X floatatom 138 30 5 0 0 0 - - -;
+#X obj 239 112 hsl 128 15 22050 96000 1 0 empty empty empty -2 -6 0
+8 -262144 -1 -1 0 1;
+#X obj 193 48 hsl 128 15 0 20000 0 0 empty empty empty -2 -6 0 8 -262144
+-1 -1 0 1;
+#X obj 209 68 hsl 128 15 0 127 0 0 empty empty empty -2 -6 0 8 -262144
+-1 -1 0 1;
+#X floatatom 238 68 5 0 0 0 - - -;
+#X floatatom 206 48 5 0 0 0 - - -;
+#X obj 37 269 hsl 128 15 0 127 0 0 empty empty empty -2 -6 0 8 -262144
+-1 -1 0 1;
+#X obj 269 133 hsl 128 15 0 1 0 0 empty empty empty -2 -6 0 8 -262144
+-1 -1 0 1;
+#X obj 201 206 loadbang;
+#X msg 194 242 127;
+#X msg 155 242 0;
+#X connect 1 0 0 6;
+#X connect 2 0 6 1;
+#X connect 2 0 7 0;
+#X connect 3 0 6 0;
+#X connect 4 0 5 0;
+#X connect 5 0 0 0;
+#X connect 6 0 0 4;
+#X connect 8 0 0 3;
+#X connect 9 0 0 1;
+#X connect 9 0 12 0;
+#X connect 10 0 0 2;
+#X connect 10 0 11 0;
+#X connect 14 0 0 5;
+#X connect 15 0 17 0;
+#X connect 15 0 16 0;
+#X connect 17 0 13 0;

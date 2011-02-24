@@ -1,0 +1,5 @@
+#N canvas 0 0 450 300 10;
+#X obj 17 27 dumpOSC 10001;
+#X obj 34 99 openlab1;
+#X obj 119 155 futuresonic2;
+#X obj 180 186 futuresonic3;

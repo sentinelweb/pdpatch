@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<timelines version="1.0">
+<source>
+<objects/>
+</source>
+<description></description>
+<colors type="osc">
+<color for="/particle/sweep" value="0:0:255"/>
+<color for="/vp/p" value="0:0:240"/>
+<color for="/glass/on" value="0:0:180"/>
+<color for="/glas/on" value="180:0:180"/>
+<color for="/gla/on" value="180:0:0"/>
+<color for="/vp/" value="240:0:240"/>
+<color for="/ro1/" value="0:225:225"/>
+<color for="/vp" value="240:0:0"/>
+<color for="/r" value="225:0:0"/>
+<color for="/vp/po" value="0:240:240"/>
+<color for="/sj/on" value="0:255:0"/>
+<color for="sj" value="210:0:210"/>
+<color for="/sj/pos" value="0:255:255"/>
+<color for="sj/rotV" value="195:0:0"/>
+<color for="sj/ro" value="0:210:0"/>
+<color for="/video/play" value="0:180:0"/>
+<color for="/sj/rotVel" value="0:195:195"/>
+<color for="/vp/pos" value="0:240:0"/>
+<color for="/ro1/new" value="210:210:210"/>
+<color for="s" value="210:0:0"/>
+<color for="sj/rotVe" value="195:0:195"/>
+<color for="/ro" value="225:0:225"/>
+<color for="sj/" value="0:0:210"/>
+<color for="/" value="240:240:240"/>
+<color for="/ro1" value="0:0:225"/>
+<color for="/video/file" value="165:0:0"/>
+<color for="sj/r" value="0:210:210"/>
+<color for="/sj/space" value="255:0:0"/>
+<color for="/ sj/rotVel" value="0:195:0"/>
+<color for="sj/rotVel" value="0:0:195"/>
+<color for="/vp/alpha" value="225:225:225"/>
+<color for="/ro1/n" value="0:225:0"/>
+<color for="/particle/new" value="255:0:255"/>
+<color for="/gl/on" value="180:180:180"/>
+<color for="/video/stop" value="165:165:165"/>
+<color for="/vp/file" value="0:180:180"/>
+<color for="sj/rot" value="195:195:195"/>
+<color for="" value="255:255:255"/>
+</colors>
+<colors type="expr">
+<color for="" value="255:255:255"/>
+</colors>
+<filters/>
+<midiKeys/>
+<timeline beatLength="6" beatPerBar="4" color="255 0 0" currentEvent="14" displayEnd="9600" displayStart="0" followOnExpr="" height="100" id="25849454" lastSelEvent="14" oscIndex="0" pitch="1.0" playMode="" quantize="50" timeLineLength="9600" typeDisplay="false">
+<event active="true" eventTime="700" id="" oscIndex="0" oscMsgName="/sj/space" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="100 100 0.0 300" valueLen="0"/>
+<event active="true" eventTime="1000" id="" oscIndex="0" oscMsgName="/sj/space" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="0 0.0 0.0 300" valueLen="0"/>
+<event active="true" eventTime="1250" id="" oscIndex="0" oscMsgName="/sj/space" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="0 100 0.0 300" valueLen="0"/>
+<event active="true" eventTime="1450" id="" oscIndex="0" oscMsgName="/sj/pos" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="0 0.0 -1000 300" valueLen="0"/>
+<event active="true" eventTime="1600" id="" oscIndex="0" oscMsgName="/sj/rotVel" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="0 0 0.2 1" valueLen="0"/>
+<event active="true" eventTime="1950" id="" oscIndex="0" oscMsgName="/particle/new" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="0" valueLen="0"/>
+<event active="true" eventTime="2150" id="" oscIndex="0" oscMsgName="/particle/sweep" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="0" valueLen="0"/>
+<event active="true" eventTime="2450" id="" oscIndex="0" oscMsgName="/ro1/new" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="1" valueLen="0"/>
+<event active="true" eventTime="2950" id="" oscIndex="0" oscMsgName="/sj/on" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="0" valueLen="0"/>
+<event active="true" eventTime="3100" id="" oscIndex="0" oscMsgName="/sj/on" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="1" valueLen="0"/>
+<event active="true" eventTime="3300" id="" oscIndex="0" oscMsgName="/glass/on" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="0" valueLen="0"/>
+<event active="true" eventTime="3550" id="" oscIndex="0" oscMsgName="/glass/on" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="1" valueLen="0"/>
+<event active="true" eventTime="3750" id="" oscIndex="0" oscMsgName="/vp/pos" oscMsgName1="/vp/alpha" oscMsgNameLen="2" target="" targetData="" targetPlayMode="" value="$f:std:rnd::[400,-200] $f:std:rnd::[400,-200] $f:std:rnd::[200,-300] 100" value1="0.6 100" valueLen="2"/>
+<event active="true" eventTime="4000" id="" oscIndex="0" oscMsgName="/vp/alpha" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="0 100" valueLen="0"/>
+<event active="true" eventTime="4250" id="" oscIndex="0" oscMsgName="/video/file" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="/home/robm/media/video/60_com/avi/toppercamel.avi" valueLen="0"/>
+<event active="true" eventTime="4550" id="" oscIndex="0" oscMsgName="/video/file" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="/home/robm/media/video/60_com/avi/TONYTIGER.avi" valueLen="0"/>
+<event active="true" eventTime="4750" id="" oscIndex="0" oscMsgName="/video/play" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="" valueLen="0"/>
+<event active="true" eventTime="5050" id="" oscIndex="0" oscMsgName="/video/stop" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="" valueLen="0"/>
+</timeline>
+<view visible="25849454"/>
+</timelines>

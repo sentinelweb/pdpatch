@@ -1,0 +1,622 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<timelines version="1.0">
+<source>
+<objects>
+<object name="r.Calc" super="">
+<imports></imports>
+<code><![CDATA[public float calcFrScale(Integer ratio){
+     return ratio.intValue()*0.03f*-1f;
+}
+public float div(Float val, Float divisor){
+     return val.floatValue()/divisor.floatValue();
+}
+public float rndpos() {
+   return (float)Math.random()*4+-2f;	
+}
+public float rndrot() {
+   return (float)Math.random()*360+-180f;	
+}]]></code>
+</object>
+</objects>
+</source>
+<description></description>
+<colors type="osc">
+<color for="/mov_indexin" value="255:0:0"/>
+<color for="/control" value="0:0:255"/>
+<color for="/mov_indexout" value="255:0:255"/>
+<color for="" value="255:255:255"/>
+</colors>
+<colors type="expr">
+<color for="$t:stretch_in:v" value="255:255:255"/>
+</colors>
+<filters/>
+<midiKeys/>
+<midinotes device="PCR" id="def">
+<midipart note_26="0,/sampler/pitch" note_27="0,/sampler/pitch" note_28="0,/sampler/pitch" note_29="0:/sampler/pitch" note_30="0,/sampler/pitch" note_31="0,/sampler/pitch" note_32="0,/sampler/pitch" note_33="0,/sampler/pitch" note_34="0,/sampler/pitch" note_35="0,/sampler/pitch" note_36="0,/sampler/pitch" note_37="0,/sampler/pitch" note_38="0,/sampler/pitch" note_39="0,/sampler/pitch" note_40="0,/sampler/pitch" note_41="0,/sampler/pitch" note_42="0,/sampler/pitch" note_43="0,/sampler/pitch" note_44="0,/sampler/pitch" note_45="0,/sampler/pitch" note_46="0,/sampler/pitch" note_47="0,/sampler/pitch" note_48="0,/sampler/pitch" note_49="0,/sampler/pitch" note_50="0,/sampler/pitch" note_51="0,/sampler/pitch" note_52="0,/sampler/pitch" note_53="0,/sampler/pitch" note_54="0,/sampler/pitch" note_55="0,/sampler/pitch" note_56="0,/sampler/pitch" note_57="0,/sampler/pitch" note_58="0,/sampler/pitch" note_59="0,/sampler/pitch" note_60="0,/sampler/pitch" note_61="0,/sampler/pitch" note_62="0,/sampler/pitch" note_63="0,/sampler/pitch" note_64="0,/sampler/pitch" note_65="0,/sampler/pitch" note_66="0,/sampler/pitch" note_67="0,/sampler/pitch" note_68="0,/sampler/pitch" note_69="0,/sampler/pitch" note_70="0,/sampler/pitch" note_71="0,/sampler/pitch" note_72="0,/sampler/pitch" part="0"/>
+<midipart note_48="0,/sampler/pitch" note_49="0,/sampler/pitch" note_50="0,/sampler/pitch" note_51="0,/sampler/pitch" note_52="0,/sampler/pitch" note_53="0,/sampler/pitch" note_54="0,/sampler/pitch" note_55="0,/sampler/pitch" note_56="0,/sampler/pitch" note_57="0,/sampler/pitch" note_58="0,/sampler/pitch" note_59="0,/sampler/pitch" note_60="0,/sampler/pitch" note_61="0,/sampler/pitch" note_62="0,/sampler/pitch" note_63="0,/sampler/pitch" note_64="0,/sampler/pitch" note_65="0,$t:spin_xyz:p" note_67="0,$t:rotate_in:p" note_69="0,$t:zrot:p" note_71="0,$t:xrot:p" note_72="0,$t:zoom_io:p" part="1"/>
+</midinotes>
+<midicontrols default="true" device="OSCMIDI:0" id="def">
+<midicontrol ctlstring_0="1 38 0 /sampler/filter/off 1.07 10.0 l" size="1"/>
+<midicontrol ctlstring_0="1 40 0 $m:0:1_45:v -3.5 0.0 n" size="1"/>
+<midicontrol ctlstring_0="1 16 1 $e:snd_init:4:f 1.0 0.0 n" size="1"/>
+<midicontrol ctlstring_0="1 21 0 /sampler/metro/on 1.0 0.0 t" size="1"/>
+<midicontrol ctlstring_0="1 39 0 /sampler/metro/time 10.0 0.0 n" size="1"/>
+<midicontrol ctlstring_0="1 8 1 /mov_auto 1.0 0.0 t" size="1"/>
+<midicontrol ctlstring_0="1 3 0 $t:rr-1200:l 1.0 0.0 t" size="1"/>
+<midicontrol ctlstring_0="1 17 0 $e:snd_init:5:f 1.0 0.0 n" size="1"/>
+<midicontrol ctlstring_0="1 12 0 $t:size-Y:l 1.0 0.0 t" size="1"/>
+<midicontrol ctlstring_0="1 34 0 /mstr/mix/ch3 1.0 0.0 n" size="1"/>
+<midicontrol ctlstring_0="1 37 0 /sampler/x_filter 1.0 0.0 n" size="1"/>
+<midicontrol ctlstring_0="1 5 1 /blur/on 1.0 0.0 t" size="1"/>
+<midicontrol ctlstring_0="1 11 0 $t:size-X:l 1.0 0.0 t" size="1"/>
+<midicontrol ctlstring_0="1 23 0 $t:kaleido:p 1.0 0.0 n" size="1"/>
+<midicontrol ctlstring_0="1 18 0 $e:snd_init:6:f 1.0 0.0 n" size="1"/>
+<midicontrol ctlstring_0="1 45 0 /sampler/st -3110.4 -0.2 a" ctlstring_1="1 45 1 /mov_pos -1.62 -0.2 a" size="2"/>
+<midicontrol ctlstring_0="1 10 0 $t:rnd_pos:l 1.0 0.0 t" size="1"/>
+<midicontrol ctlstring_0="1 4 0 $t:photo:p 1.0 0.0 n" size="1"/>
+<midicontrol ctlstring_0="1 15 0 $t:drums-3:l 1.0 0.0 t" size="1"/>
+<midicontrol ctlstring_0="1 13 1 $t:drums-1:l 1.0 0.0 t" size="1"/>
+<midicontrol ctlstring_0="1 36 0 /mstr/mix/ch1 1.0 0.0 n" size="1"/>
+<midicontrol ctlstring_0="1 35 0 /mstr/mix/ch2 1.0 0.0 n" size="1"/>
+<midicontrol ctlstring_0="1 25 0 $t:drum-sq1:l 1.0 0.0 t" size="1"/>
+<midicontrol ctlstring_0="1 42 0 $m:0:1_45:s:1 -0.03 0.0 n" ctlstring_1="1 42 0 $m:0:1_45:s:0 -57.6 0.0 n" size="2"/>
+<midicontrol ctlstring_0="1 9 0 /mov_trig_send 1.0 0.0 t" size="1"/>
+<midicontrol ctlstring_0="1 26 0 $e:snd_init:7:f 1.0 0.0 n" size="1"/>
+<midicontrol ctlstring_0="1 14 0 $t:drums-2:l 1.0 0.0 t" size="1"/>
+<midicontrol ctlstring_0="1 41 0 /sampler/mstr_vol 0.0080 0.0 n" size="1"/>
+</midicontrols>
+<midicontrols default="true" device="PCR" id="def">
+<midicontrol ctlstring_0="0 78 0 /sampler/flange/fbdel 1.0 0.0 n" size="1"/>
+<midicontrol ctlstring_0="0 74 0 /sampler/flange/dep 1.0 0.0 n" size="1"/>
+<midicontrol ctlstring_0="0 71 0 /sampler/flange/oscf 1.0 0.0 n" size="1"/>
+<midicontrol ctlstring_0="0 76 0 /sampler/flange/offset 1.04 -0.1 l" size="1"/>
+<midicontrol ctlstring_0="0 77 0 /sampler/flange/fb 1.0 -1.0 n" size="1"/>
+<midicontrol ctlstring_0="1 74 1 /blur/alpha 0.0080 0.0 n" size="1"/>
+<midicontrol ctlstring_0="1 76 1 /blur/rot 0.16 -10.0 n" size="1"/>
+<midicontrol size="0"/>
+<midicontrol ctlstring_0="1 71 1 /blur/sq 0.08 0.0 n" size="1"/>
+</midicontrols>
+<timeline beatLength="6" beatPerBar="4" color="255 0 0" currentEvent="18" displayEnd="180000" displayStart="0" followOnExpr="" height="100" id="master" lastSelEvent="18" oscIndex="0" pitch="1.0" playMode="" quantize="50" timeLineLength="180000" typeDisplay="false">
+<event active="true" eventTime="150" id="" oscIndex="0" oscMsgName="" oscMsgNameLen="0" target="drum_ctl" targetData="" targetPlayMode="p" value="" valueLen="0"/>
+<event active="true" eventTime="24309" id="" oscIndex="1" oscMsgName="/mov_indexin" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="2" valueLen="0"/>
+<event active="true" eventTime="24959" id="" oscIndex="1" oscMsgName="/mov_indexout" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="2" valueLen="0"/>
+<event active="true" eventTime="25809" id="" oscIndex="1" oscMsgName="/mov_indexout" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="1" valueLen="0"/>
+<event active="true" eventTime="32000" id="" oscIndex="0" oscMsgName="$t:stretch_in:v" oscMsgNameLen="0" target="stretch_in" targetData="" targetPlayMode="p" value="/home/robm/media/video/nuc_vid/mpg/nuc_doorstep_ky5_out.mpgt /home/robm/media/video/nuc_vid/wav/nuc_doorstep_ky5.wav -3 1920" valueLen="0"/>
+<event active="true" eventTime="35567" id="" oscIndex="0" oscMsgName="$t:stretch_in:v" oscMsgNameLen="0" target="stretch_in" targetData="" targetPlayMode="p" value="/home/robm/media/video/nuc_vid/mpg/nuc_guided_missiles_ky5_out.mpgt /home/robm/media/video/nuc_vid/wav/nuc_guided_missiles_ky5.wav -3 1920" valueLen="0"/>
+<event active="true" eventTime="37967" id="" oscIndex="0" oscMsgName="$t:stretch_in:v" oscMsgNameLen="0" target="stretch_in" targetData="" targetPlayMode="p" value="/home/robm/media/video/nuc_vid/mpg/nuc_able_ky5_out.mpgt /home/robm/media/video/nuc_vid/wav/nuc_able_ky5.wav -3 1920" valueLen="0"/>
+<event active="true" eventTime="40417" id="" oscIndex="0" oscMsgName="$t:stretch_in:v" oscMsgNameLen="0" target="stretch_in" targetData="" targetPlayMode="p" value="/home/robm/media/video/nuc_vid/mpg/nuc_argus_ky5_out.mpgt /home/robm/media/video/nuc_vid/wav/nuc_argus_ky5.wav -3 1920" valueLen="0"/>
+<event active="true" eventTime="46137" id="" oscIndex="0" oscMsgName="$t:stretch_in:v" oscMsgNameLen="0" target="stretch_in" targetData="" targetPlayMode="p" value="/home/robm/media/video/buckrogers/mpg/buck_rgr_500yrs_old_cpk_400x300_ky1.mpgt /home/robm/media/video/buckrogers/wav/buck_rgr_500yrs_old_cpk_400x300_ky1.wav -7 1920" valueLen="0"/>
+<event active="true" eventTime="49257" id="" oscIndex="0" oscMsgName="$t:stretch_in:v" oscMsgNameLen="0" target="stretch_in" targetData="" targetPlayMode="p" value="/home/robm/media/video/buckrogers/mpg/buck_rgr_av_maachine_cpk_400x300_ky1.mpgt /home/robm/media/video/buckrogers/wav/buck_rgr_av_maachine_cpk_400x300_ky1.wav -3 1920" valueLen="0"/>
+<event active="true" eventTime="61564" id="" oscIndex="1" oscMsgName="$t:stretch_in:v" oscMsgNameLen="0" target="stretch_in" targetData="0" targetPlayMode="p" value="/home/robm/media/video/jap_com/mpg/jap_com_drink_cpk_ky1_434x340.mpgt /home/robm/media/video/jap_com/wav/008_drink.wav -3.5 1920" valueLen="0"/>
+<event active="true" eventTime="66244" id="" oscIndex="0" oscMsgName="$t:stretch_in:v" oscMsgNameLen="0" target="stretch_in" targetData="" targetPlayMode="p" value="/home/robm/media/video/jap_com/mpg/jap_com_tarako_cpk_ky1_434x340.mpgt /home/robm/media/video/jap_com/wav/019_tarako.wav -3.5 1920" valueLen="0"/>
+<event active="true" eventTime="73999" id="" oscIndex="0" oscMsgName="$t:stretch_in:v" oscMsgNameLen="0" target="spin_tr" targetData="" targetPlayMode="p" value="/home/robm/media/video/jap_com/mpg/jap_com_Edwin_cpk_ky1_434x340.mpgt /home/robm/media/video/jap_com/wav/005_Edwin_cpk_ky1_434x340.wav -3.5 1920" valueLen="0"/>
+<event active="true" eventTime="83681" id="" oscIndex="0" oscMsgName="$t:stretch_in:v" oscMsgNameLen="0" target="stretch_in" targetData="0" targetPlayMode="p" value="/home/robm/media/video/jap_com/mpg/jap_com_Daikoo_cpk_ky1_434x340.mpgt /home/robm/media/video/jap_com/wav/003_Daikoo_cpk_ky1_434x340.wav -3 1920" valueLen="0"/>
+<event active="true" eventTime="91377" id="" oscIndex="0" oscMsgName="$t:stretch_in:v" oscMsgNameLen="0" target="stretch_in" targetData="0" targetPlayMode="p" value="/home/robm/media/video/jap_com/mpg/jap_com_CloretsXP_cpk_ky1_434x340.mpgt /home/robm/media/video/jap_com/wav/002_CloretsXP_cpk_ky1_434x340.wav -3.5 1920" valueLen="0"/>
+<event active="true" eventTime="94844" id="" oscIndex="0" oscMsgName="$t:stretch_in:v" oscMsgNameLen="0" target="rotate_in" targetData="" targetPlayMode="p" value="/home/robm/media/video/jap_com/mpg/jap_com_fujitsu_phone_cpk_ky1_434x340.mpgt /home/robm/media/video/jap_com/wav/021_fujitsu_phone.wav -3.5 1920" valueLen="0"/>
+<event active="true" eventTime="98484" id="" oscIndex="0" oscMsgName="$t:stretch_in:v" oscMsgNameLen="0" target="stretch_in" targetData="" targetPlayMode="p" value="/home/robm/media/video/jap_com/mpg/jap_com_gamecube_cpk_ky1_434x340.mpgt /home/robm/media/video/jap_com/wav/006_gamecube.wav -3.5 1920" valueLen="0"/>
+<event active="true" eventTime="104072" id="" oscIndex="0" oscMsgName="$t:stretch_in:v" oscMsgNameLen="0" target="rotate_in" targetData="" targetPlayMode="p" value="/home/robm/media/video/jap_com/mpg/jap_com_Morinaga_Love_cpk_ky1_434x340.mpgt /home/robm/media/video/jap_com/wav/009_Morinaga_Love_cpk_ky1_434x340.wav -3.5 1920" valueLen="0"/>
+<event active="true" eventTime="111525" id="" oscIndex="0" oscMsgName="$t:stretch_in:v" oscMsgNameLen="0" target="rotate_in" targetData="" targetPlayMode="p" value="/home/robm/media/video/jap_com/mpg/jap_com_PS2_cpk_ky1_434x340.mpgt /home/robm/media/video/jap_com/wav/011_PS2_cpk_ky1_434x340.wav -1.5 1920" valueLen="0"/>
+<event active="true" eventTime="117751" id="" oscIndex="0" oscMsgName="$t:stretch_in:v" oscMsgNameLen="0" target="rotate_in" targetData="" targetPlayMode="p" value="/home/robm/media/video/jap_com/mpg/jap_com_anime_cpk_ky1_434x340.mpgt /home/robm/media/video/jap_com/wav/003_anime.wav -1.5 1920" valueLen="0"/>
+<event active="true" eventTime="124337" id="" oscIndex="0" oscMsgName="$t:stretch_in:v" oscMsgNameLen="0" target="rotate_in" targetData="" targetPlayMode="p" value="/home/robm/media/video/jap_com/mpg/jap_com_77s_cpk_ky1_434x300.mpgt /home/robm/media/video/jap_com/wav/022_77s.wav -1.5 1920" valueLen="0"/>
+<event active="true" eventTime="136837" id="" oscIndex="0" oscMsgName="$t:stretch_in:v" oscMsgNameLen="0" target="rotate_in" targetData="" targetPlayMode="p" value="/home/robm/media/video/60_com/mpg/videnc_waynecamel.mpgt /home/robm/media/video/60_com/wav/waynecamel.wav -1.5 1920" valueLen="0"/>
+<event active="true" eventTime="139537" id="" oscIndex="0" oscMsgName="$t:stretch_in:v" oscMsgNameLen="0" target="rotate_in" targetData="" targetPlayMode="p" value="/home/robm/media/video/60_com/mpg/videnc_wayne-cancer.mpgt /home/robm/media/video/60_com/wav/wayne-cancer.wav -1.5 1920" valueLen="0"/>
+<event active="true" eventTime="141937" id="" oscIndex="0" oscMsgName="$t:stretch_in:v" oscMsgNameLen="0" target="rotate_in" targetData="" targetPlayMode="p" value="/home/robm/media/video/60_com/mpg/videnc_noxema56K.mpgt /home/robm/media/video/60_com/wav/noxema56K.wav -1.5 1920" valueLen="0"/>
+<event active="true" eventTime="144337" id="" oscIndex="0" oscMsgName="$t:stretch_in:v" oscMsgNameLen="0" target="rotate_in" targetData="" targetPlayMode="p" value="/home/robm/media/video/60_com/mpg/videnc_girdle.mpgt /home/robm/media/video/60_com/wav/girdle.wav -1.5 1920" valueLen="0"/>
+<event active="true" eventTime="148937" id="" oscIndex="0" oscMsgName="$t:stretch_in:v" oscMsgNameLen="0" target="rotate_in" targetData="" targetPlayMode="p" value="/home/robm/media/video/60_com/mpg/videnc_whamohula80.mpgt /home/robm/media/video/60_com/wav/whamohula80.wav -1.5 1920" valueLen="0"/>
+<event active="true" eventTime="152237" id="" oscIndex="0" oscMsgName="$t:stretch_in:v" oscMsgNameLen="0" target="rotate_in" targetData="" targetPlayMode="p" value="/home/robm/media/video/60_com/mpg/60s_com_bullwinklejets.mpgt /home/robm/media/video/60_com/wav/bullwinklejets.wav -1.5 1920" valueLen="0"/>
+<event active="true" eventTime="155237" id="" oscIndex="0" oscMsgName="$t:stretch_in:v" oscMsgNameLen="0" target="rotate_in" targetData="" targetPlayMode="p" value="/home/robm/media/video/60_com/mpg/videnc_greengiant.mpgt /home/robm/media/video/60_com/wav/greengiant.wav -1.5 1920" valueLen="0"/>
+<event active="true" eventTime="157937" id="" oscIndex="0" oscMsgName="$t:stretch_in:v" oscMsgNameLen="0" target="rotate_in" targetData="" targetPlayMode="p" value="/home/robm/media/video/60_com/mpg/60s_com_7upburger.mpgt /home/robm/media/video/60_com/wav/7upburger.wav -1.5 1920" valueLen="0"/>
+<group eventIndexes="11,12" id="buckRog"/>
+<group eventIndexes="5,6" id="news"/>
+<group eventIndexes="13,14,15,16,17,18,19,20,21" id="jap_com"/>
+<group eventIndexes="7,8,9,10" id="nuc_vid"/>
+</timeline>
+<timeline beatLength="6" beatPerBar="4" color="255 0 0" currentEvent="2" displayEnd="1000" displayStart="0" followOnExpr="" height="100" id="init" lastSelEvent="2" oscIndex="0" pitch="1.0" playMode="" quantize="50" timeLineLength="1000" typeDisplay="false">
+<event active="true" eventTime="50" id="" oscIndex="0" oscMsgName="" oscMsgNameLen="0" target="drums_setup" targetData="" targetPlayMode="p" value="" valueLen="0"/>
+<event active="true" eventTime="100" id="" oscIndex="0" oscMsgName="" oscMsgNameLen="0" target="snd_init" targetData="" targetPlayMode="p" value="" valueLen="0"/>
+<event active="true" eventTime="150" id="" oscIndex="0" oscMsgName="" oscMsgNameLen="0" target="mov_init" targetData="" targetPlayMode="p" value="" valueLen="0"/>
+<event active="true" eventTime="200" id="" oscIndex="1" oscMsgName="/control" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="1 0 1" valueLen="0"/>
+<event active="true" eventTime="249" id="" oscIndex="1" oscMsgName="/control" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="1 0 0" valueLen="0"/>
+<event active="true" eventTime="249" id="" oscIndex="0" oscMsgName="/control" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="1 0 0" valueLen="0"/>
+</timeline>
+<timeline beatLength="6" beatPerBar="4" color="255 0 0" currentEvent="2" displayEnd="600" displayStart="0" followOnExpr="" height="100" id="snd_init" lastSelEvent="2" oscIndex="0" pitch="1.0" playMode="" quantize="50" timeLineLength="600" typeDisplay="false">
+<event active="true" eventTime="50" id="" oscIndex="0" oscMsgName="/sampler/flanger/s" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="10 20 1 1 0 127" valueLen="0"/>
+<event active="true" eventTime="150" id="" oscIndex="0" oscMsgName="/sampler/mstr_vol" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="0.09 200" valueLen="0"/>
+<event active="true" eventTime="200" id="" oscIndex="0" oscMsgName="/sampler/s" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="0 200000 44100 1 1" valueLen="0"/>
+<event active="true" eventTime="200" id="" oscIndex="0" oscMsgName="/sampler/metro/set" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="1 250" valueLen="0"/>
+<event active="true" eventTime="250" id="" oscIndex="0" oscMsgName="/sampler/metro/time" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="300" valueLen="0"/>
+<event active="true" eventTime="271" id="" oscIndex="0" oscMsgName="/sampler/metro/time" oscMsgNameLen="0" target="" targetData="" targetPlayMode="p" value="600" valueLen="0"/>
+<event active="true" eventTime="297" id="" oscIndex="0" oscMsgName="/sampler/metro/time" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="1200" valueLen="0"/>
+<event active="true" eventTime="311" id="" oscIndex="0" oscMsgName="/sampler/metro/time" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="2400" valueLen="0"/>
+<event active="true" eventTime="351" id="" oscIndex="0" oscMsgName="/drums/d1/preset" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="1" valueLen="0"/>
+<event active="true" eventTime="351" id="" oscIndex="0" oscMsgName="/drums/d2/preset" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="4" valueLen="0"/>
+<event active="true" eventTime="351" id="" oscIndex="0" oscMsgName="/drums/d3/preset" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="4" valueLen="0"/>
+<event active="true" eventTime="375" id="" oscIndex="0" oscMsgName="/drums/mix/ch1" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="20" valueLen="0"/>
+<event active="true" eventTime="375" id="" oscIndex="0" oscMsgName="/drums/mix/ch2" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="20" valueLen="0"/>
+<event active="true" eventTime="375" id="" oscIndex="0" oscMsgName="/drums/mix/ch3" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="20" valueLen="0"/>
+<event active="true" eventTime="400" id="" oscIndex="0" oscMsgName="/mstr/mix/ch1" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="20" valueLen="0"/>
+<event active="true" eventTime="400" id="" oscIndex="0" oscMsgName="/mstr/mix/ch2" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="20" valueLen="0"/>
+</timeline>
+<timeline beatLength="6" beatPerBar="4" color="255 0 0" currentEvent="11" displayEnd="1000" displayStart="0" followOnExpr="" height="100" id="mov_init" lastSelEvent="11" oscIndex="0" pitch="1.0" playMode="" quantize="50" timeLineLength="1000" typeDisplay="false">
+<event active="true" eventTime="25" id="" oscIndex="1" oscMsgName="/mov_indexout" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="1" valueLen="0"/>
+<event active="true" eventTime="25" id="" oscIndex="1" oscMsgName="/mov_indexin" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="0" valueLen="0"/>
+<event active="true" eventTime="50" id="" oscIndex="1" oscMsgName="/mov_screen" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="1 1 1 1 1 0" valueLen="0"/>
+<event active="false" eventTime="100" id="" oscIndex="1" oscMsgName="/mov_setup" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="1" valueLen="0"/>
+<event active="true" eventTime="100" id="" oscIndex="1" oscMsgName="/mov_fr" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="29" valueLen="0"/>
+<event active="true" eventTime="150" id="" oscIndex="1" oscMsgName="/mov_auto" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="1" valueLen="0"/>
+<event active="true" eventTime="150" id="" oscIndex="1" oscMsgName="/mov_kg1" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="0 0 0 0.2 0 0 1 0" valueLen="0"/>
+<event active="true" eventTime="250" id="" oscIndex="1" oscMsgName="/mov_size" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="5" valueLen="0"/>
+<event active="true" eventTime="300" id="" oscIndex="1" oscMsgName="/mov_kgrepeat" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="0 0 0 0 0 0 0.6 1000" valueLen="0"/>
+<event active="false" eventTime="400" id="" oscIndex="1" oscMsgName="/mov_delay" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="5" valueLen="0"/>
+<event active="false" eventTime="450" id="" oscIndex="1" oscMsgName="/mov_screen" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="0 0 0 0 0 0" valueLen="0"/>
+<event active="true" eventTime="500" id="" oscIndex="0" oscMsgName="$e:master:current:f" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="1" valueLen="0"/>
+</timeline>
+<timeline beatLength="6" beatPerBar="4" color="255 0 0" currentEvent="7" displayEnd="9600" displayStart="0" followOnExpr="" height="100" id="mov_pos" lastSelEvent="7" oscIndex="0" pitch="1.0" playMode="" quantize="50" timeLineLength="9600" typeDisplay="false">
+<event active="true" eventTime="850" id="" oscIndex="1" oscMsgName="/mov_pos" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="50" valueLen="0"/>
+<event active="true" eventTime="1750" id="" oscIndex="1" oscMsgName="/mov_pos" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="100" valueLen="0"/>
+<event active="true" eventTime="3600" id="" oscIndex="1" oscMsgName="/mov_pos" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="150" valueLen="0"/>
+<event active="true" eventTime="5700" id="" oscIndex="1" oscMsgName="/mov_pos" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="200" valueLen="0"/>
+<event active="true" eventTime="6700" id="" oscIndex="1" oscMsgName="/mov_pos" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="250" valueLen="0"/>
+<event active="true" eventTime="7350" id="" oscIndex="1" oscMsgName="/mov_pos" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="300" valueLen="0"/>
+<event active="true" eventTime="7650" id="" oscIndex="1" oscMsgName="/mov_pos" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="350" valueLen="0"/>
+<event active="true" eventTime="8350" id="" oscIndex="1" oscMsgName="/mov_pos" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="400" valueLen="0"/>
+</timeline>
+<timeline beatLength="6" beatPerBar="4" color="255 0 0" currentEvent="2" displayEnd="9600" displayStart="0" followOnExpr="" height="100" id="spin_xyz" lastSelEvent="2" oscIndex="0" pitch="1.0" playMode="" quantize="50" timeLineLength="9600" typeDisplay="false">
+<event active="true" eventTime="100" id="" oscIndex="1" oscMsgName="/mov_kgrepeat" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="0 0 0 0 0 0 0.8 1000" valueLen="0"/>
+<event active="true" eventTime="1200" id="" oscIndex="1" oscMsgName="/mov_kgrepeat" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="180 0 180 0 0 0 0.8 3000" valueLen="0"/>
+<event active="true" eventTime="3600" id="" oscIndex="1" oscMsgName="/mov_kgrepeat" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="0 180 0 0 0 0 0.8 1200" valueLen="0"/>
+<event active="true" eventTime="4800" id="" oscIndex="1" oscMsgName="/mov_kgrepeat" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="-180 -180 -180 0 0 0 0.8 1200" valueLen="0"/>
+<event active="true" eventTime="6000" id="" oscIndex="1" oscMsgName="/mov_kgrepeat" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="180 0 180 0 0 0 0.8 3000" valueLen="0"/>
+<event active="true" eventTime="8400" id="" oscIndex="1" oscMsgName="/mov_kgrepeat" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="0 0 0 0 0 0 0.8 1000" valueLen="0"/>
+</timeline>
+<timeline beatLength="6" beatPerBar="4" color="255 0 0" currentEvent="0" displayEnd="9600" displayStart="0" followOnExpr="" height="100" id="xrot" lastSelEvent="0" oscIndex="0" pitch="1.0" playMode="" quantize="50" timeLineLength="9600" typeDisplay="false">
+<event active="true" eventTime="100" id="" oscIndex="1" oscMsgName="/mov_kgrepeat" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="0 0 0 0 0 0 0.8 $t:xrot:r" valueLen="0"/>
+<event active="true" eventTime="1200" id="" oscIndex="1" oscMsgName="/mov_kgrepeat" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="-180 0 0 0 0 0 0.8 $t:xrot:r" valueLen="0"/>
+<event active="true" eventTime="2400" id="" oscIndex="1" oscMsgName="/mov_kgrepeat" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="0 0 0 0 0 0 0.8 $t:xrot:r" valueLen="0"/>
+<event active="true" eventTime="3600" id="" oscIndex="1" oscMsgName="/mov_kgrepeat" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="180 0 0 0 0 0 0.8 $t:xrot:r" valueLen="0"/>
+<event active="true" eventTime="4800" id="" oscIndex="1" oscMsgName="/mov_kgrepeat" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="0 0 0 0 0 0 0.8 $t:xrot:r" valueLen="0"/>
+<event active="true" eventTime="6000" id="" oscIndex="1" oscMsgName="/mov_kgrepeat" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="-180 0 0 0 0 0 0.8 $t:xrot:r" valueLen="0"/>
+<event active="true" eventTime="7200" id="" oscIndex="1" oscMsgName="/mov_kgrepeat" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="0 0 0 0 0 0 0.8 $t:xrot:r" valueLen="0"/>
+<event active="true" eventTime="8400" id="" oscIndex="1" oscMsgName="/mov_kgrepeat" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="180 0 0 0 0 0 0.8 $t:xrot:r" valueLen="0"/>
+<event active="true" eventTime="9500" id="" oscIndex="1" oscMsgName="/mov_kgrepeat" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="0 0 0 0 0 0 0.8 $t:xrot:r" valueLen="0"/>
+</timeline>
+<timeline beatLength="6" beatPerBar="4" color="255 0 0" currentEvent="9" displayEnd="9600" displayStart="0" followOnExpr="" height="100" id="spin_tr" lastSelEvent="9" oscIndex="0" pitch="1.0" playMode="" quantize="50" timeLineLength="9600" typeDisplay="false">
+<event active="true" eventTime="150" id="" oscIndex="0" oscMsgName="" oscMsgNameLen="0" target="singlescreen" targetData="" targetPlayMode="p" value="" valueLen="0"/>
+<event active="true" eventTime="2800" id="" oscIndex="1" oscMsgName="/mov_kg1" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="0 90 0 0 0 0 1 1000" valueLen="0"/>
+<event active="true" eventTime="4085" id="" oscIndex="0" oscMsgName="$t:stretch_in:v:4" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="$m:0:1_41:v:0" valueLen="0"/>
+<event active="true" eventTime="4110" id="" oscIndex="0" oscMsgName="/sampler/mstr_vol" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="0 20" valueLen="0"/>
+<event active="true" eventTime="4150" id="" oscIndex="1" oscMsgName="/mov" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="$t:stretch_in:v:0" valueLen="0"/>
+<event active="true" eventTime="4150" id="" oscIndex="0" oscMsgName="/sampler/file" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="$t:stretch_in:v:1" valueLen="0"/>
+<event active="true" eventTime="4150" id="" oscIndex="0" oscMsgName="$m:0:1_40:s" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="$t:stretch_in:v:2" valueLen="0"/>
+<event active="true" eventTime="4150" id="" oscIndex="0" oscMsgName="/sampler/mstr_vol" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="0.9 20" valueLen="0"/>
+<event active="true" eventTime="4150" id="" oscIndex="0" oscMsgName="/sampler/mstr_vol" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="$t:stretch_in:v:4 20" valueLen="0"/>
+<event active="true" eventTime="4250" id="" oscIndex="1" oscMsgName="$m:0:1_42:s:1" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="$f:x=r.Calc:calcFrScale::[$t:stretch_in:v:3]" valueLen="0"/>
+<event active="true" eventTime="4300" id="" oscIndex="1" oscMsgName="/mov_kg1" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="0 0 0 0 0 0 1 1000" valueLen="0"/>
+</timeline>
+<timeline beatLength="5" beatPerBar="4" color="64 0 128" currentEvent="19" displayEnd="3600" displayStart="0" followOnExpr="" height="100" id="stretch_in" lastSelEvent="19" oscIndex="1" pitch="1.0" playMode="" quantize="50" timeLineLength="3600" typeDisplay="false">
+<event active="true" eventTime="150" id="" oscIndex="1" oscMsgName="/mov_kg1" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="0 0 0 -5.43307 0 -5.82677 6 999.986" valueLen="0"/>
+<event active="true" eventTime="150" id="" oscIndex="1" oscMsgName="/mov_kgrepeat" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="0 0 180 0.499843 0 0 0.584646 1999.986" valueLen="0"/>
+<event active="true" eventTime="200" id="" oscIndex="1" oscMsgName="/mov_screen" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="1 1 1 1 1 0" valueLen="0"/>
+<event active="true" eventTime="200" id="" oscIndex="1" oscMsgName="/mov_delay" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="3" valueLen="0"/>
+<event active="true" eventTime="350" id="" oscIndex="1" oscMsgName="/mov_wh" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="50 1.4" valueLen="0"/>
+<event active="true" eventTime="1200" id="" oscIndex="1" oscMsgName="" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="" valueLen="0"/>
+<event active="true" eventTime="1900" id="" oscIndex="1" oscMsgName="/mov_kgrepeat" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="0 0 -180 0.499843 0 0 0.584646 1999.986" valueLen="0"/>
+<event active="true" eventTime="2050" id="" oscIndex="0" oscMsgName="/sampler/mstr_vol" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="0.0 40" valueLen="0"/>
+<event active="true" eventTime="2050" id="" oscIndex="0" oscMsgName="$t:stretch_in:v:4" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="$m:0:1_41:v:0" valueLen="0"/>
+<event active="false" eventTime="2100" id="" oscIndex="0" oscMsgName="/sampler/set" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="$t:stretch_in:v:3 200000 44100 1 1" valueLen="0"/>
+<event active="true" eventTime="2100" id="" oscIndex="1" oscMsgName="/mov" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="$t:stretch_in:v:0" valueLen="0"/>
+<event active="true" eventTime="2100" id="" oscIndex="0" oscMsgName="/sampler/file" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="$t:stretch_in:v:1" valueLen="0"/>
+<event active="true" eventTime="2100" id="" oscIndex="0" oscMsgName="$m:0:1_40:s" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="$t:stretch_in:v:2" valueLen="0"/>
+<event active="true" eventTime="2120" id="" oscIndex="0" oscMsgName="/sampler/mstr_vol" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="$t:stretch_in:v:4 20" valueLen="0"/>
+<event active="true" eventTime="2150" id="" oscIndex="1" oscMsgName="$m:0:1_42:s:1" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="$f:x=r.Calc:calcFrScale::[$t:stretch_in:v:3]" valueLen="0"/>
+<event active="true" eventTime="2512" id="" oscIndex="1" oscMsgName="$e:stretch_fin:current:f" oscMsgNameLen="0" target="" targetData="" targetPlayMode="p" value="0" valueLen="0"/>
+<event active="false" eventTime="2580" id="" oscIndex="1" oscMsgName="/mov_kg1" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="0 0 0 0.2 0 0.15 1 1000" valueLen="0"/>
+<event active="false" eventTime="2650" id="" oscIndex="1" oscMsgName="/mov_kgrepeat" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="0 0 0 0 0 0 0.85 1000" valueLen="0"/>
+<event active="false" eventTime="2750" id="" oscIndex="1" oscMsgName="/mov_wh" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="5 3.75 500" valueLen="0"/>
+</timeline>
+<timeline beatLength="6" beatPerBar="4" color="16 96 208" currentEvent="0" displayEnd="9756" displayStart="0" followOnExpr="" height="100" id="stretch_fin" lastSelEvent="0" oscIndex="0" pitch="1.0" playMode="" quantize="50" timeLineLength="9756" typeDisplay="false">
+<event active="true" eventTime="0" id="" oscIndex="0" oscMsgName="" oscMsgNameLen="0" target="photo" targetData="" targetPlayMode="p" value="" valueLen="0"/>
+<event active="true" eventTime="366" id="" oscIndex="0" oscMsgName="" oscMsgNameLen="0" target="square" targetData="" targetPlayMode="p" value="" valueLen="0"/>
+<event active="true" eventTime="1463" id="" oscIndex="0" oscMsgName="" oscMsgNameLen="0" target="photo-del" targetData="" targetPlayMode="p" value="" valueLen="0"/>
+<event active="true" eventTime="2927" id="" oscIndex="0" oscMsgName="" oscMsgNameLen="0" target="stack_x_d" targetData="" targetPlayMode="p" value="" valueLen="0"/>
+<event active="true" eventTime="4390" id="" oscIndex="0" oscMsgName="" oscMsgNameLen="0" target="stack_y_d" targetData="" targetPlayMode="p" value="" valueLen="0"/>
+<event active="true" eventTime="5854" id="" oscIndex="0" oscMsgName="" oscMsgNameLen="0" target="stack_y" targetData="" targetPlayMode="p" value="" valueLen="0"/>
+<event active="true" eventTime="7317" id="" oscIndex="0" oscMsgName="" oscMsgNameLen="0" target="stack_x" targetData="" targetPlayMode="p" value="" valueLen="0"/>
+<event active="true" eventTime="8780" id="" oscIndex="0" oscMsgName="" oscMsgNameLen="0" target="square" targetData="" targetPlayMode="p" value="" valueLen="0"/>
+</timeline>
+<timeline beatLength="6" beatPerBar="4" color="255 0 0" currentEvent="1" displayEnd="9600" displayStart="0" followOnExpr="" height="100" id="zoom_io" lastSelEvent="1" oscIndex="0" pitch="1.0" playMode="" quantize="50" timeLineLength="9600" typeDisplay="false">
+<event active="true" eventTime="50" id="" oscIndex="1" oscMsgName="/mov_kg1" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="0 0 0 0 0 0 2.6 1000" valueLen="0"/>
+<event active="true" eventTime="100" id="" oscIndex="1" oscMsgName="/mov_wh" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="2.03 1.5" valueLen="0"/>
+<event active="true" eventTime="350" id="" oscIndex="1" oscMsgName="/mov_kgrepeat" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="0 0 0 0 0 0 0.685039 999.986" valueLen="0"/>
+<event active="true" eventTime="650" id="" oscIndex="1" oscMsgName="/mov_kgrepeat" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="0 0 0 0 0 0 0.826772 999.986" valueLen="0"/>
+<event active="true" eventTime="1000" id="" oscIndex="1" oscMsgName="/mov_kgrepeat" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="0 0 0 0 0 0 0.897638 999.986" valueLen="0"/>
+<event active="true" eventTime="1650" id="" oscIndex="1" oscMsgName="/mov_kgrepeat" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="0 0 0 0 0 0 0.826772 999.986" valueLen="0"/>
+<event active="true" eventTime="1950" id="" oscIndex="1" oscMsgName="/mov_kgrepeat" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="0 0 0 0 0 0 0.661417 999.986" valueLen="0"/>
+<event active="true" eventTime="2350" id="" oscIndex="1" oscMsgName="/mov_kgrepeat" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="0 0 0 0 0 0 0.496063 999.986" valueLen="0"/>
+<event active="true" eventTime="2700" id="" oscIndex="1" oscMsgName="/mov_kgrepeat" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="0 0 0 0 0 0 0.448819 999.986" valueLen="0"/>
+<event active="true" eventTime="2950" id="" oscIndex="1" oscMsgName="/mov_kgrepeat" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="0 0 0 0 0 0 0.614173 999.986" valueLen="0"/>
+<event active="true" eventTime="3350" id="" oscIndex="1" oscMsgName="/mov_kgrepeat" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="0 0 0 0 0 0 0.944882 999.986" valueLen="0"/>
+<event active="true" eventTime="3733" id="" oscIndex="1" oscMsgName="/mov_kgrepeat" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="0 0 0 0 0 0 1.01575 999.986" valueLen="0"/>
+<event active="true" eventTime="4650" id="" oscIndex="1" oscMsgName="/mov_kgrepeat" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="0 0 0 0 0 0 0.708661 999.986" valueLen="0"/>
+<event active="true" eventTime="5050" id="" oscIndex="1" oscMsgName="/mov_kgrepeat" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="0 0 0 0 0 0 0.496063 999.986" valueLen="0"/>
+<event active="true" eventTime="5250" id="" oscIndex="1" oscMsgName="/mov_kgrepeat" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="0 0 0 0 0 0 0.377953 999.986" valueLen="0"/>
+<event active="true" eventTime="6000" id="" oscIndex="1" oscMsgName="/mov_kgrepeat" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="0 0 0 0 0 0 0.543307 999.986" valueLen="0"/>
+<event active="true" eventTime="6350" id="" oscIndex="1" oscMsgName="/mov_kgrepeat" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="0 0 0 0 0 0 0.755906 999.986" valueLen="0"/>
+<event active="true" eventTime="6600" id="" oscIndex="1" oscMsgName="/mov_kgrepeat" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="0 0 0 0 0 0 0.80315 999.986" valueLen="0"/>
+<event active="true" eventTime="6950" id="" oscIndex="1" oscMsgName="/mov_kgrepeat" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="0 0 0 0 0 0 0.850394 999.986" valueLen="0"/>
+<event active="true" eventTime="7300" id="" oscIndex="1" oscMsgName="/mov_kgrepeat" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="0 0 0 0 0 0 0.897638 999.986" valueLen="0"/>
+<event active="true" eventTime="7650" id="" oscIndex="1" oscMsgName="/mov_kgrepeat" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="0 0 0 0 0 0 0.968504 999.986" valueLen="0"/>
+<event active="true" eventTime="7950" id="" oscIndex="1" oscMsgName="/mov_kgrepeat" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="0 0 0 0 0 0 1.11024 999.986" valueLen="0"/>
+<event active="true" eventTime="8300" id="" oscIndex="1" oscMsgName="/mov_kgrepeat" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="0 0 0 0 0 0 0.897638 999.986" valueLen="0"/>
+<event active="true" eventTime="8650" id="" oscIndex="1" oscMsgName="/mov_kgrepeat" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="0 0 0 0 0 0 0.566929 999.986" valueLen="0"/>
+<event active="true" eventTime="9000" id="" oscIndex="1" oscMsgName="/mov_kgrepeat" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="0 0 0 0 0 0 0.448819 999.986" valueLen="0"/>
+<event active="true" eventTime="9350" id="" oscIndex="1" oscMsgName="/mov_kgrepeat" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="0 0 0 0 0 0 0.425197 999.986" valueLen="0"/>
+<event active="true" eventTime="9650" id="" oscIndex="1" oscMsgName="/mov_kgrepeat" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="0 0 0 0 0 0 0.779528 999.986" valueLen="0"/>
+</timeline>
+<timeline beatLength="5" beatPerBar="4" color="255 0 0" currentEvent="0" displayEnd="9600" displayStart="0" followOnExpr="" height="100" id="zrot" lastSelEvent="0" oscIndex="1" pitch="1.0" playMode="" quantize="50" timeLineLength="9600" typeDisplay="false">
+<event active="true" eventTime="50" id="" oscIndex="1" oscMsgName="/mov_kgrepeat" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="0 0 0 0 0 0 0.8 1600" valueLen="0"/>
+<event active="true" eventTime="50" id="" oscIndex="1" oscMsgName="/mov_kg1" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="0 0 0 0 0 0 2.6 1000" valueLen="0"/>
+<event active="true" eventTime="100" id="" oscIndex="1" oscMsgName="/mov_wh" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="2.03 1.5" valueLen="0"/>
+<event active="true" eventTime="1500" id="" oscIndex="1" oscMsgName="/mov_kgrepeat" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="0 0 360 0 0 0 0.8 1600" valueLen="0"/>
+<event active="true" eventTime="3000" id="" oscIndex="1" oscMsgName="/mov_kgrepeat" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="0 0 0 0 0 0 0.8 1600" valueLen="0"/>
+<event active="true" eventTime="4500" id="" oscIndex="1" oscMsgName="/mov_kgrepeat" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="0 0 -360 0 0 0 0.8 1600" valueLen="0"/>
+<event active="true" eventTime="6000" id="" oscIndex="1" oscMsgName="/mov_kgrepeat" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="0 0 0 0 0 0 0.8 1600" valueLen="0"/>
+<event active="true" eventTime="7500" id="" oscIndex="1" oscMsgName="/mov_kgrepeat" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="0 0 -360 0 0 0 0.8 1600" valueLen="0"/>
+<event active="true" eventTime="9050" id="" oscIndex="1" oscMsgName="/mov_kgrepeat" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="0 0 0 0 0 0 0.8 1600" valueLen="0"/>
+<event active="true" eventTime="9400" id="" oscIndex="1" oscMsgName="/mov_kgrepeat" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="0 0 0 0 0 0 0.8 $t:xrot:r" valueLen="0"/>
+<event active="true" eventTime="9500" id="" oscIndex="1" oscMsgName="/mov_kgrepeat" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="0 0 0 0 0 0 0.8 $t:xrot:r" valueLen="0"/>
+</timeline>
+<timeline beatLength="5" beatPerBar="4" color="16 80 144" currentEvent="0" displayEnd="150" displayStart="0" followOnExpr="" height="100" id="kaleido" lastSelEvent="0" oscIndex="1" pitch="1.0" playMode="" quantize="50" timeLineLength="150" typeDisplay="false">
+<event active="true" eventTime="50" id="" oscIndex="1" oscMsgName="/mov_screen" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="1 1 1 0 0 0" valueLen="0"/>
+<event active="true" eventTime="50" id="" oscIndex="1" oscMsgName="/mov_size" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="1.256" valueLen="0"/>
+<event active="true" eventTime="50" id="" oscIndex="1" oscMsgName="/mov_kg1" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="0 0 0 -2.72 2.009 0 2.16 1000" valueLen="0"/>
+<event active="true" eventTime="50" id="" oscIndex="1" oscMsgName="/mov_kg3" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="180 180 0 -2.48 1.879 0 1 1000" valueLen="0"/>
+<event active="true" eventTime="50" id="" oscIndex="1" oscMsgName="/mov_kg2" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="0 180 0 -2.49 0 0 1 1000" valueLen="0"/>
+<event active="true" eventTime="50" id="" oscIndex="1" oscMsgName="/mov_delay" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="0" valueLen="0"/>
+<event active="true" eventTime="100" id="" oscIndex="1" oscMsgName="/mov_kg4" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="0 180 0 -2.48 0 0 1 1000" valueLen="0"/>
+</timeline>
+<timeline beatLength="5" beatPerBar="4" color="48 16 240" currentEvent="4" displayEnd="1000" displayStart="0" followOnExpr="" height="100" id="singlescreen" lastSelEvent="4" oscIndex="1" pitch="1.0" playMode="" quantize="50" timeLineLength="1000" typeDisplay="false">
+<event active="true" eventTime="40" id="" oscIndex="1" oscMsgName="/mov_delay" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="4" valueLen="0"/>
+<event active="true" eventTime="40" id="" oscIndex="1" oscMsgName="/mov_kg1" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="0 0 0 0 0 0 1 1000" valueLen="0"/>
+<event active="true" eventTime="40" id="" oscIndex="1" oscMsgName="/mov_kgrepeat" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="0 0 0 0 0 0 1 1000" valueLen="0"/>
+<event active="true" eventTime="40" id="" oscIndex="1" oscMsgName="/mov_size" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="5.5" valueLen="0"/>
+<event active="true" eventTime="950" id="" oscIndex="1" oscMsgName="/mov_screen" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="1 0 0 0 0 0" valueLen="0"/>
+</timeline>
+<timeline beatLength="5" beatPerBar="4" color="64 0 128" currentEvent="1" displayEnd="3600" displayStart="0" followOnExpr="" height="100" id="rotate_in" lastSelEvent="1" oscIndex="1" pitch="1.0" playMode="" quantize="50" timeLineLength="3600" typeDisplay="false">
+<event active="true" eventTime="150" id="" oscIndex="1" oscMsgName="/mov_kg1" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="0 0 0 -5.43307 0 -5.82677 6 999.986" valueLen="0"/>
+<event active="true" eventTime="150" id="" oscIndex="1" oscMsgName="/mov_kgrepeat" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="0 180 180 0.499843 0 0.08 2.95 1200.29" valueLen="0"/>
+<event active="true" eventTime="200" id="" oscIndex="1" oscMsgName="/mov_screen" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="1 1 1 1 1 0" valueLen="0"/>
+<event active="true" eventTime="200" id="" oscIndex="1" oscMsgName="/mov_delay" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="3" valueLen="0"/>
+<event active="true" eventTime="350" id="" oscIndex="1" oscMsgName="/mov_wh" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="50 1.4" valueLen="0"/>
+<event active="true" eventTime="1900" id="" oscIndex="1" oscMsgName="/mov_kgrepeat" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="0 0 -180 0.499843 0 0 0.584646 1999.986" valueLen="0"/>
+<event active="true" eventTime="2100" id="" oscIndex="1" oscMsgName="/mov" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="$t:stretch_in:v:0" valueLen="0"/>
+<event active="true" eventTime="2100" id="" oscIndex="0" oscMsgName="/sampler/file" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="$t:stretch_in:v:1" valueLen="0"/>
+<event active="true" eventTime="2500" id="" oscIndex="1" oscMsgName="/mov_kg1" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="0 0 0 0.2 0 0.15 1 1000" valueLen="0"/>
+<event active="true" eventTime="2650" id="" oscIndex="1" oscMsgName="/mov_kgrepeat" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="0 0 0 0 0 0 0.85 1000" valueLen="0"/>
+<event active="true" eventTime="2750" id="" oscIndex="1" oscMsgName="/mov_wh" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="5 3.75 500" valueLen="0"/>
+</timeline>
+<timeline beatLength="5" beatPerBar="4" color="0 255 255" currentEvent="1" displayEnd="100" displayStart="0" followOnExpr="" height="100" id="photo" lastSelEvent="1" oscIndex="1" pitch="1.0" playMode="" quantize="50" timeLineLength="100" typeDisplay="false">
+<event active="true" eventTime="50" id="" oscIndex="1" oscMsgName="/mov_screen" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="1 1 1 1 1" valueLen="0"/>
+<event active="true" eventTime="50" id="" oscIndex="1" oscMsgName="/mov_kgrepeat" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="0 0 0 0 0 0 0.71 1000" valueLen="0"/>
+<event active="true" eventTime="50" id="" oscIndex="1" oscMsgName="/mov_size" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="3" valueLen="0"/>
+<event active="true" eventTime="50" id="" oscIndex="1" oscMsgName="/mov_kg1" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="0 0 0 0 0 0 2.6 1000" valueLen="0"/>
+<event active="true" eventTime="50" id="" oscIndex="1" oscMsgName="/mov_delay" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="5" valueLen="0"/>
+</timeline>
+<timeline beatLength="5" beatPerBar="4" color="0 255 255" currentEvent="4" displayEnd="100" displayStart="0" followOnExpr="" height="100" id="photo-del" lastSelEvent="4" oscIndex="1" pitch="1.0" playMode="" quantize="50" timeLineLength="100" typeDisplay="false">
+<event active="true" eventTime="50" id="" oscIndex="1" oscMsgName="/mov_screen" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="0 0 1 1 1" valueLen="0"/>
+<event active="true" eventTime="50" id="" oscIndex="1" oscMsgName="/mov_kgrepeat" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="0 0 0 0 0 0 0.7 1000" valueLen="0"/>
+<event active="true" eventTime="50" id="" oscIndex="1" oscMsgName="/mov_size" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="2" valueLen="0"/>
+<event active="true" eventTime="50" id="" oscIndex="1" oscMsgName="/mov_kg1" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="0 0 0 0 0 0 2.6 1000" valueLen="0"/>
+<event active="true" eventTime="50" id="" oscIndex="1" oscMsgName="/mov_delay" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="5" valueLen="0"/>
+</timeline>
+<timeline beatLength="6" beatPerBar="4" color="255 0 0" currentEvent="0" displayEnd="9600" displayStart="0" followOnExpr="" height="100" id="test" lastSelEvent="0" oscIndex="0" pitch="1.0" playMode="" quantize="50" timeLineLength="9600" typeDisplay="false">
+<event active="true" eventTime="200" id="" oscIndex="1" oscMsgName="/mov_screen" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="0 0 0 1 1" valueLen="0"/>
+<event active="true" eventTime="250" id="" oscIndex="1" oscMsgName="/mov_delay" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="6" valueLen="0"/>
+<event active="true" eventTime="350" id="" oscIndex="0" oscMsgName="" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="" valueLen="0"/>
+<event active="true" eventTime="2400" id="" oscIndex="0" oscMsgName="/sampler/metro/time" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="300" valueLen="0"/>
+<event active="true" eventTime="3000" id="" oscIndex="0" oscMsgName="/sampler/metro/time" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="600" valueLen="0"/>
+<event active="true" eventTime="3600" id="" oscIndex="0" oscMsgName="/sampler/metro/time" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="1200" valueLen="0"/>
+<event active="true" eventTime="3900" id="" oscIndex="0" oscMsgName="/sampler/flanger/s" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="0 0 0 0 0 127" valueLen="0"/>
+</timeline>
+<timeline beatLength="6" beatPerBar="4" color="255 0 0" currentEvent="3" displayEnd="100" displayStart="0" followOnExpr="" height="100" id="stack_x" lastSelEvent="3" oscIndex="0" pitch="1.0" playMode="" quantize="50" timeLineLength="100" typeDisplay="false">
+<event active="true" eventTime="50" id="" oscIndex="1" oscMsgName="/mov_screen" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="1 1 1 1 1" valueLen="0"/>
+<event active="true" eventTime="50" id="" oscIndex="1" oscMsgName="/mov_kgrepeat" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="0 0 0 1.3 0 0 1 1000" valueLen="0"/>
+<event active="true" eventTime="50" id="" oscIndex="1" oscMsgName="/mov_wh" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="0.8 3.77" valueLen="0"/>
+<event active="true" eventTime="50" id="" oscIndex="1" oscMsgName="/mov_kg1" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="0 0 0 -4 0 0 1.4 1000" valueLen="0"/>
+<event active="true" eventTime="50" id="" oscIndex="1" oscMsgName="/mov_delay" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="5" valueLen="0"/>
+</timeline>
+<timeline beatLength="6" beatPerBar="4" color="255 0 0" currentEvent="3" displayEnd="100" displayStart="0" followOnExpr="" height="100" id="stack_y" lastSelEvent="3" oscIndex="0" pitch="1.0" playMode="" quantize="50" timeLineLength="100" typeDisplay="false">
+<event active="true" eventTime="50" id="" oscIndex="1" oscMsgName="/mov_screen" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="1 1 1 1 1" valueLen="0"/>
+<event active="true" eventTime="50" id="" oscIndex="1" oscMsgName="/mov_kgrepeat" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="0 0 0 0 0.89 0 1 1000" valueLen="0"/>
+<event active="true" eventTime="50" id="" oscIndex="1" oscMsgName="/mov_wh" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="3.9 0.6" valueLen="0"/>
+<event active="true" eventTime="50" id="" oscIndex="1" oscMsgName="/mov_kg1" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="0 0 0 0 -3 0 1.4 1000" valueLen="0"/>
+<event active="true" eventTime="50" id="" oscIndex="1" oscMsgName="/mov_delay" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="5" valueLen="0"/>
+</timeline>
+<timeline beatLength="5" beatPerBar="4" color="255 0 0" currentEvent="2" displayEnd="100" displayStart="0" followOnExpr="" height="100" id="stack_y_d" lastSelEvent="2" oscIndex="0" pitch="1.0" playMode="" quantize="50" timeLineLength="100" typeDisplay="false">
+<event active="true" eventTime="50" id="" oscIndex="1" oscMsgName="/mov_screen" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="0 0 1 1 1" valueLen="0"/>
+<event active="true" eventTime="50" id="" oscIndex="1" oscMsgName="/mov_kgrepeat" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="0 0 0 0 2.1 0 1 1000" valueLen="0"/>
+<event active="true" eventTime="50" id="" oscIndex="1" oscMsgName="/mov_wh" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="3.9 0.954 1000" valueLen="0"/>
+<event active="true" eventTime="50" id="" oscIndex="1" oscMsgName="/mov_kg1" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="0 0 0 0 -3 0 1.4 1000" valueLen="0"/>
+<event active="true" eventTime="50" id="" oscIndex="1" oscMsgName="/mov_delay" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="5" valueLen="0"/>
+</timeline>
+<timeline beatLength="5" beatPerBar="4" color="255 0 0" currentEvent="3" displayEnd="100" displayStart="0" followOnExpr="" height="100" id="stack_x_d" lastSelEvent="3" oscIndex="0" pitch="1.0" playMode="" quantize="50" timeLineLength="100" typeDisplay="false">
+<event active="true" eventTime="50" id="" oscIndex="1" oscMsgName="/mov_screen" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="0 0 1 1 1" valueLen="0"/>
+<event active="true" eventTime="50" id="" oscIndex="1" oscMsgName="/mov_kgrepeat" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="0 0 0 2.76 0 0 1 1000" valueLen="0"/>
+<event active="true" eventTime="50" id="" oscIndex="1" oscMsgName="/mov_wh" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="1.3 3.06 1000" valueLen="0"/>
+<event active="true" eventTime="50" id="" oscIndex="1" oscMsgName="/mov_kg1" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="0 0 0 -4 0 0 1.4 1000" valueLen="0"/>
+<event active="true" eventTime="50" id="" oscIndex="1" oscMsgName="/mov_delay" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="8" valueLen="0"/>
+</timeline>
+<timeline beatLength="5" beatPerBar="4" color="255 0 0" currentEvent="4" displayEnd="100" displayStart="0" followOnExpr="" height="100" id="square" lastSelEvent="4" oscIndex="0" pitch="1.0" playMode="" quantize="50" timeLineLength="100" typeDisplay="false">
+<event active="true" eventTime="50" id="" oscIndex="1" oscMsgName="/mov_screen" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="1 1 1 0 0" valueLen="0"/>
+<event active="true" eventTime="50" id="" oscIndex="1" oscMsgName="/mov_kgrepeat" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="0 0 90 0 2 0 1 1000" valueLen="0"/>
+<event active="true" eventTime="50" id="" oscIndex="1" oscMsgName="/mov_wh" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="2.3 0.11 1000" valueLen="0"/>
+<event active="true" eventTime="50" id="" oscIndex="1" oscMsgName="/mov_kg1" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="0 0 -180 1.4 1.5 -1.57 1.4 1000" valueLen="0"/>
+<event active="true" eventTime="50" id="" oscIndex="1" oscMsgName="/mov_delay" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="8" valueLen="0"/>
+</timeline>
+<timeline beatLength="6" beatPerBar="4" color="255 0 0" currentEvent="4" displayEnd="100" displayStart="0" followOnExpr="" height="100" id="pentagon" lastSelEvent="4" oscIndex="0" pitch="1.0" playMode="" quantize="50" timeLineLength="100" typeDisplay="false">
+<event active="true" eventTime="50" id="" oscIndex="1" oscMsgName="/mov_wh" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="2.3 0.11 1000" valueLen="0"/>
+<event active="true" eventTime="50" id="" oscIndex="1" oscMsgName="/mov_delay" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="8" valueLen="0"/>
+<event active="true" eventTime="50" id="" oscIndex="1" oscMsgName="/mov_kgrepeat" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="0 0 144 1.41 7.2 0 1 1000" valueLen="0"/>
+<event active="true" eventTime="50" id="" oscIndex="1" oscMsgName="/mov_screen" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="1 1 1 1 0" valueLen="0"/>
+<event active="true" eventTime="50" id="" oscIndex="1" oscMsgName="/mov_kg1" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="0 0 -180 1.4 1.5 -1.57 1.4 1000" valueLen="0"/>
+</timeline>
+<timeline beatLength="6" beatPerBar="4" color="255 0 0" currentEvent="0" displayEnd="2400" displayStart="0" followOnExpr="" height="100" id="rot_sq" lastSelEvent="0" oscIndex="0" pitch="1.0" playMode="" quantize="50" timeLineLength="2400" typeDisplay="false">
+<event active="true" eventTime="50" id="" oscIndex="1" oscMsgName="/mov_kg1" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="0 0 -180 1.4 1.5 -1.57 1.4 600" valueLen="0"/>
+<event active="true" eventTime="1200" id="" oscIndex="1" oscMsgName="/mov_kg1" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="0 0 179.02 1.4 1.5 -1.57 1.4 600" valueLen="0"/>
+</timeline>
+<timeline beatLength="6" beatPerBar="4" color="255 0 0" currentEvent="0" displayEnd="200" displayStart="0" followOnExpr="" height="100" id="vid_size" lastSelEvent="0" oscIndex="0" pitch="1.0" playMode="" quantize="50" timeLineLength="200" typeDisplay="false">
+<event active="true" eventTime="96" id="" oscIndex="1" oscMsgName="/mov_wh" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="$f:x=r.Calc:div::[$m:0:1_41:v:0,0.325] $f:x=r.Calc:div::[$m:0:1_41:v:0,0.5]" valueLen="0"/>
+</timeline>
+<timeline beatLength="6" beatPerBar="4" color="255 0 0" currentEvent="16" displayEnd="38400" displayStart="0" followOnExpr="" height="100" id="drum-sq1" lastSelEvent="16" oscIndex="0" pitch="1.0" playMode="" quantize="50" timeLineLength="38400" typeDisplay="false">
+<event active="true" eventTime="44" id="" oscIndex="0" oscMsgName="" oscMsgNameLen="0" target="drums-1" targetData="" targetPlayMode="p" value="" valueLen="0"/>
+<event active="true" eventTime="2400" id="" oscIndex="0" oscMsgName="" oscMsgNameLen="0" target="drums-1" targetData="" targetPlayMode="p" value="" valueLen="0"/>
+<event active="true" eventTime="4800" id="" oscIndex="0" oscMsgName="" oscMsgNameLen="0" target="drums-2" targetData="" targetPlayMode="p" value="" valueLen="0"/>
+<event active="true" eventTime="7200" id="" oscIndex="0" oscMsgName="" oscMsgNameLen="0" target="drums-2" targetData="" targetPlayMode="p" value="" valueLen="0"/>
+<event active="true" eventTime="9600" id="" oscIndex="0" oscMsgName="" oscMsgNameLen="0" target="drums-3" targetData="" targetPlayMode="p" value="" valueLen="0"/>
+<event active="true" eventTime="12000" id="" oscIndex="0" oscMsgName="" oscMsgNameLen="0" target="drums-3" targetData="" targetPlayMode="p" value="" valueLen="0"/>
+<event active="true" eventTime="14400" id="" oscIndex="0" oscMsgName="" oscMsgNameLen="0" target="drums-2" targetData="" targetPlayMode="p" value="" valueLen="0"/>
+<event active="true" eventTime="16800" id="" oscIndex="0" oscMsgName="" oscMsgNameLen="0" target="drums-2" targetData="" targetPlayMode="p" value="" valueLen="0"/>
+<event active="true" eventTime="19200" id="" oscIndex="0" oscMsgName="" oscMsgNameLen="0" target="drums-2" targetData="" targetPlayMode="p" value="" valueLen="0"/>
+<event active="true" eventTime="21600" id="" oscIndex="0" oscMsgName="" oscMsgNameLen="0" target="drums-2" targetData="" targetPlayMode="p" value="" valueLen="0"/>
+<event active="true" eventTime="24000" id="" oscIndex="0" oscMsgName="" oscMsgNameLen="0" target="drums-4" targetData="" targetPlayMode="p" value="" valueLen="0"/>
+<event active="true" eventTime="26400" id="" oscIndex="0" oscMsgName="" oscMsgNameLen="0" target="drums-4" targetData="" targetPlayMode="p" value="" valueLen="0"/>
+<event active="true" eventTime="28800" id="" oscIndex="0" oscMsgName="" oscMsgNameLen="0" target="drums-1" targetData="" targetPlayMode="p" value="" valueLen="0"/>
+<event active="true" eventTime="31200" id="" oscIndex="0" oscMsgName="" oscMsgNameLen="0" target="drums-2" targetData="" targetPlayMode="p" value="" valueLen="0"/>
+<event active="true" eventTime="33600" id="" oscIndex="0" oscMsgName="" oscMsgNameLen="0" target="drums-3" targetData="" targetPlayMode="p" value="" valueLen="0"/>
+<event active="true" eventTime="36000" id="" oscIndex="0" oscMsgName="" oscMsgNameLen="0" target="drums-4" targetData="" targetPlayMode="p" value="" valueLen="0"/>
+<event active="true" eventTime="38400" id="" oscIndex="0" oscMsgName="" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="" valueLen="0"/>
+</timeline>
+<timeline beatLength="6" beatPerBar="4" color="255 0 0" currentEvent="3" displayEnd="2400" displayStart="0" followOnExpr="" height="100" id="drums-1" lastSelEvent="3" oscIndex="0" pitch="1.0" playMode="" quantize="50" timeLineLength="2400" typeDisplay="false">
+<event active="false" eventTime="0" id="" oscIndex="0" oscMsgName="" oscMsgNameLen="0" target="hats1" targetData="" targetPlayMode="p" value="" valueLen="0"/>
+<event active="true" eventTime="3" id="" oscIndex="0" oscMsgName="/drums/d1/trig" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="" valueLen="0"/>
+<event active="true" eventTime="603" id="" oscIndex="0" oscMsgName="/drums/d1/trig" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="" valueLen="0"/>
+<event active="true" eventTime="1200" id="" oscIndex="0" oscMsgName="/drums/d1/trig" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="" valueLen="0"/>
+<event active="true" eventTime="1250" id="" oscIndex="0" oscMsgName="/drums/d2/trig" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="" valueLen="0"/>
+<event active="true" eventTime="1350" id="" oscIndex="0" oscMsgName="/drums/d2/trig" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="" valueLen="0"/>
+<event active="true" eventTime="1500" id="" oscIndex="0" oscMsgName="/drums/d1/trig" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="" valueLen="0"/>
+<event active="true" eventTime="1550" id="" oscIndex="0" oscMsgName="/drums/d2/trig" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="" valueLen="0"/>
+<event active="true" eventTime="1650" id="" oscIndex="0" oscMsgName="/drums/d2/trig" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="" valueLen="0"/>
+<event active="true" eventTime="1800" id="" oscIndex="0" oscMsgName="/drums/d1/trig" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="" valueLen="0"/>
+<event active="true" eventTime="2091" id="" oscIndex="0" oscMsgName="/drums/d1/trig" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="" valueLen="0"/>
+<group eventIndexes="0" id="hats"/>
+</timeline>
+<timeline beatLength="6" beatPerBar="4" color="255 0 0" currentEvent="9" displayEnd="2400" displayStart="0" followOnExpr="" height="100" id="drums-2" lastSelEvent="9" oscIndex="0" pitch="1.0" playMode="" quantize="50" timeLineLength="2400" typeDisplay="false">
+<event active="false" eventTime="0" id="" oscIndex="0" oscMsgName="" oscMsgNameLen="0" target="hats1" targetData="" targetPlayMode="p" value="" valueLen="0"/>
+<event active="true" eventTime="3" id="" oscIndex="0" oscMsgName="/drums/d1/trig" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="" valueLen="0"/>
+<event active="true" eventTime="603" id="" oscIndex="0" oscMsgName="/drums/d1/trig" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="" valueLen="0"/>
+<event active="true" eventTime="1200" id="" oscIndex="0" oscMsgName="/drums/d1/trig" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="" valueLen="0"/>
+<event active="true" eventTime="1250" id="" oscIndex="0" oscMsgName="/drums/d2/trig" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="" valueLen="0"/>
+<event active="true" eventTime="1500" id="" oscIndex="0" oscMsgName="/drums/d1/trig" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="" valueLen="0"/>
+<event active="true" eventTime="1550" id="" oscIndex="0" oscMsgName="/drums/d2/trig" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="" valueLen="0"/>
+<event active="true" eventTime="1800" id="" oscIndex="0" oscMsgName="/drums/d1/trig" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="" valueLen="0"/>
+<event active="true" eventTime="1850" id="" oscIndex="0" oscMsgName="/drums/d2/trig" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="" valueLen="0"/>
+<event active="true" eventTime="2100" id="" oscIndex="0" oscMsgName="/drums/d1/trig" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="" valueLen="0"/>
+<event active="true" eventTime="2150" id="" oscIndex="0" oscMsgName="/drums/d2/trig" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="" valueLen="0"/>
+</timeline>
+<timeline beatLength="6" beatPerBar="4" color="255 0 0" currentEvent="3" displayEnd="2400" displayStart="0" followOnExpr="" height="100" id="drums-3" lastSelEvent="3" oscIndex="0" pitch="1.0" playMode="" quantize="50" timeLineLength="2400" typeDisplay="false">
+<event active="false" eventTime="0" id="" oscIndex="0" oscMsgName="" oscMsgNameLen="0" target="hats1" targetData="" targetPlayMode="p" value="" valueLen="0"/>
+<event active="true" eventTime="3" id="" oscIndex="0" oscMsgName="/drums/d1/trig" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="" valueLen="0"/>
+<event active="true" eventTime="603" id="" oscIndex="0" oscMsgName="/drums/d1/trig" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="" valueLen="0"/>
+<event active="true" eventTime="900" id="" oscIndex="0" oscMsgName="/drums/d1/trig" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="" valueLen="0"/>
+<event active="true" eventTime="1050" id="" oscIndex="0" oscMsgName="/drums/d1/trig" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="" valueLen="0"/>
+<event active="true" eventTime="1200" id="" oscIndex="0" oscMsgName="/drums/d1/trig" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="" valueLen="0"/>
+<event active="true" eventTime="1250" id="" oscIndex="0" oscMsgName="/drums/d2/trig" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="" valueLen="0"/>
+<event active="true" eventTime="1400" id="" oscIndex="0" oscMsgName="/drums/d2/trig" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="" valueLen="0"/>
+<event active="true" eventTime="1550" id="" oscIndex="0" oscMsgName="/drums/d2/trig" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="" valueLen="0"/>
+<event active="true" eventTime="1650" id="" oscIndex="0" oscMsgName="/drums/d2/trig" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="" valueLen="0"/>
+<event active="true" eventTime="1700" id="" oscIndex="0" oscMsgName="/drums/d2/trig" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="" valueLen="0"/>
+<event active="true" eventTime="1800" id="" oscIndex="0" oscMsgName="/drums/d1/trig" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="" valueLen="0"/>
+<event active="true" eventTime="1850" id="" oscIndex="0" oscMsgName="/drums/d2/trig" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="" valueLen="0"/>
+<event active="true" eventTime="2100" id="" oscIndex="0" oscMsgName="/drums/d1/trig" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="" valueLen="0"/>
+<event active="true" eventTime="2150" id="" oscIndex="0" oscMsgName="/drums/d2/trig" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="" valueLen="0"/>
+</timeline>
+<timeline beatLength="6" beatPerBar="4" color="255 0 0" currentEvent="6" displayEnd="2400" displayStart="0" followOnExpr="" height="100" id="drums-4" lastSelEvent="6" oscIndex="0" pitch="1.0" playMode="" quantize="50" timeLineLength="2400" typeDisplay="false">
+<event active="false" eventTime="0" id="" oscIndex="0" oscMsgName="" oscMsgNameLen="0" target="hats1" targetData="" targetPlayMode="p" value="" valueLen="0"/>
+<event active="true" eventTime="3" id="" oscIndex="0" oscMsgName="/drums/d1/trig" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="" valueLen="0"/>
+<event active="true" eventTime="100" id="" oscIndex="0" oscMsgName="/drums/d2/trig" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="" valueLen="0"/>
+<event active="true" eventTime="200" id="" oscIndex="0" oscMsgName="/drums/d2/trig" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="" valueLen="0"/>
+<event active="true" eventTime="300" id="" oscIndex="0" oscMsgName="/drums/d2/trig" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="" valueLen="0"/>
+<event active="true" eventTime="300" id="" oscIndex="0" oscMsgName="/drums/d1/trig" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="" valueLen="0"/>
+<event active="true" eventTime="893" id="" oscIndex="0" oscMsgName="/drums/d1/trig" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="" valueLen="0"/>
+<event active="true" eventTime="1200" id="" oscIndex="0" oscMsgName="/drums/d1/trig" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="" valueLen="0"/>
+<event active="true" eventTime="1250" id="" oscIndex="0" oscMsgName="/drums/d2/trig" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="" valueLen="0"/>
+<event active="true" eventTime="1500" id="" oscIndex="0" oscMsgName="/drums/d1/trig" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="" valueLen="0"/>
+<event active="true" eventTime="1550" id="" oscIndex="0" oscMsgName="/drums/d2/trig" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="" valueLen="0"/>
+<event active="true" eventTime="1800" id="" oscIndex="0" oscMsgName="/drums/d1/trig" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="" valueLen="0"/>
+<event active="true" eventTime="1850" id="" oscIndex="0" oscMsgName="/drums/d2/trig" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="" valueLen="0"/>
+<event active="true" eventTime="2100" id="" oscIndex="0" oscMsgName="/drums/d1/trig" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="" valueLen="0"/>
+<event active="true" eventTime="2150" id="" oscIndex="0" oscMsgName="/drums/d2/trig" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="" valueLen="0"/>
+</timeline>
+<timeline beatLength="6" beatPerBar="4" color="255 0 0" currentEvent="1" displayEnd="2400" displayStart="0" followOnExpr="" height="100" id="hats1" lastSelEvent="1" oscIndex="0" pitch="1.0" playMode="" quantize="50" timeLineLength="2400" typeDisplay="false">
+<event active="true" eventTime="300" id="" oscIndex="0" oscMsgName="/drums/d3/trig" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="" valueLen="0"/>
+<event active="false" eventTime="350" id="" oscIndex="0" oscMsgName="/drums/d3/trig" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="" valueLen="0"/>
+<event active="false" eventTime="400" id="" oscIndex="0" oscMsgName="/drums/d3/trig" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="" valueLen="0"/>
+<event active="false" eventTime="450" id="" oscIndex="0" oscMsgName="/drums/d3/trig" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="" valueLen="0"/>
+<event active="true" eventTime="600" id="" oscIndex="0" oscMsgName="/drums/d3/trig" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="" valueLen="0"/>
+<event active="false" eventTime="1201" id="" oscIndex="0" oscMsgName="/drums/d3/trig" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="" valueLen="0"/>
+<event active="true" eventTime="1500" id="" oscIndex="0" oscMsgName="/drums/d3/trig" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="" valueLen="0"/>
+<group eventIndexes="3,5" id="3.5"/>
+<group eventIndexes="1,2" id="1.2"/>
+</timeline>
+<timeline beatLength="6" beatPerBar="4" color="255 0 0" currentEvent="1" displayEnd="2400" displayStart="0" followOnExpr="" height="100" id="size-X" lastSelEvent="1" oscIndex="0" pitch="1.0" playMode="" quantize="50" timeLineLength="2400" typeDisplay="false">
+<event active="true" eventTime="0" id="" oscIndex="1" oscMsgName="/mov_wh" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="3 2.25 100" valueLen="0"/>
+<event active="true" eventTime="300" id="" oscIndex="1" oscMsgName="/mov_wh" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="2 2.25 100" valueLen="0"/>
+<event active="true" eventTime="600" id="" oscIndex="1" oscMsgName="/mov_wh" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="1 2.25 100" valueLen="0"/>
+<event active="true" eventTime="900" id="" oscIndex="1" oscMsgName="/mov_wh" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="0.5 2.25 100" valueLen="0"/>
+<event active="true" eventTime="1200" id="" oscIndex="1" oscMsgName="/mov_wh" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="0.2 2.25 100" valueLen="0"/>
+<event active="true" eventTime="1500" id="" oscIndex="1" oscMsgName="/mov_wh" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="0.5 2.25 100" valueLen="0"/>
+<event active="true" eventTime="1800" id="" oscIndex="1" oscMsgName="/mov_wh" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="1 2.25 100" valueLen="0"/>
+<event active="true" eventTime="2100" id="" oscIndex="1" oscMsgName="/mov_wh" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="2 2.25 100" valueLen="0"/>
+<event active="true" eventTime="2375" id="" oscIndex="1" oscMsgName="/mov_wh" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="3 2.25 100" valueLen="0"/>
+</timeline>
+<timeline beatLength="6" beatPerBar="4" color="255 0 0" currentEvent="7" displayEnd="2400" displayStart="0" followOnExpr="" height="100" id="size-Y" lastSelEvent="7" oscIndex="0" pitch="1.0" playMode="" quantize="50" timeLineLength="2400" typeDisplay="false">
+<event active="true" eventTime="0" id="" oscIndex="1" oscMsgName="/mov_wh" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="3 2.25 100" valueLen="0"/>
+<event active="true" eventTime="300" id="" oscIndex="1" oscMsgName="/mov_wh" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="3 1.75 100" valueLen="0"/>
+<event active="true" eventTime="600" id="" oscIndex="1" oscMsgName="/mov_wh" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="3 1 100" valueLen="0"/>
+<event active="true" eventTime="900" id="" oscIndex="1" oscMsgName="/mov_wh" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="3 0.5 100" valueLen="0"/>
+<event active="true" eventTime="1200" id="" oscIndex="1" oscMsgName="/mov_wh" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="3 0.1 100" valueLen="0"/>
+<event active="true" eventTime="1500" id="" oscIndex="1" oscMsgName="/mov_wh" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="3 0.5 100" valueLen="0"/>
+<event active="true" eventTime="1800" id="" oscIndex="1" oscMsgName="/mov_wh" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="3 1 100" valueLen="0"/>
+<event active="true" eventTime="2100" id="" oscIndex="1" oscMsgName="/mov_wh" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="3 1.75 100" valueLen="0"/>
+<event active="true" eventTime="2375" id="" oscIndex="1" oscMsgName="/mov_wh" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="3 2.25 100" valueLen="0"/>
+</timeline>
+<timeline beatLength="6" beatPerBar="4" color="255 0 0" currentEvent="1" displayEnd="2400" displayStart="0" followOnExpr="" height="100" id="tree_r" lastSelEvent="1" oscIndex="0" pitch="1.0" playMode="" quantize="50" timeLineLength="2400" typeDisplay="false">
+<event active="true" eventTime="3" id="" oscIndex="1" oscMsgName="/mov_kgrepeat" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="0 0 0 0 -0.75 0 0.73 603" valueLen="0"/>
+<event active="true" eventTime="3" id="" oscIndex="1" oscMsgName="/mov_wh" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="2 0.75 301" valueLen="0"/>
+<event active="true" eventTime="5" id="" oscIndex="1" oscMsgName="/mov_kg1" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="0 0 0 0 2.15 0 2.6 602.5" valueLen="0"/>
+<event active="true" eventTime="1200" id="" oscIndex="1" oscMsgName="/mov_kgrepeat" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="0 180.18 0 0 -0.75 0 0.73 603" valueLen="0"/>
+</timeline>
+<timeline beatLength="6" beatPerBar="4" color="255 0 0" currentEvent="4" displayEnd="2400" displayStart="0" followOnExpr="" height="100" id="tree_x" lastSelEvent="4" oscIndex="0" pitch="1.0" playMode="" quantize="50" timeLineLength="2400" typeDisplay="false">
+<event active="true" eventTime="3" id="" oscIndex="1" oscMsgName="/mov_kgrepeat" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="0 0 0 0 -0.75 0 0.73 603" valueLen="0"/>
+<event active="true" eventTime="3" id="" oscIndex="1" oscMsgName="/mov_wh" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="2 0.75 301" valueLen="0"/>
+<event active="true" eventTime="5" id="" oscIndex="1" oscMsgName="/mov_kg1" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="0 0 0 0 2.15 0 2.6 602.5" valueLen="0"/>
+<event active="true" eventTime="600" id="" oscIndex="1" oscMsgName="/mov_kgrepeat" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="0 0 0 -0.5 -0.75 0 0.73 603" valueLen="0"/>
+<event active="true" eventTime="1800" id="" oscIndex="1" oscMsgName="/mov_kgrepeat" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="0 0 0 0.5 -0.75 0 0.73 603" valueLen="0"/>
+</timeline>
+<timeline beatLength="6" beatPerBar="4" color="255 0 0" currentEvent="11" displayEnd="9600" displayStart="0" followOnExpr="" height="100" id="rr-seq" lastSelEvent="11" oscIndex="0" pitch="1.0" playMode="" quantize="50" timeLineLength="9600" typeDisplay="false">
+<event active="true" eventTime="0" id="" oscIndex="0" oscMsgName="" oscMsgNameLen="0" target="rnd_pos" targetData="" targetPlayMode="p" value="" valueLen="0"/>
+<event active="true" eventTime="1200" id="" oscIndex="0" oscMsgName="" oscMsgNameLen="0" target="rnd_pos" targetData="" targetPlayMode="p" value="" valueLen="0"/>
+<event active="true" eventTime="2400" id="" oscIndex="0" oscMsgName="" oscMsgNameLen="0" target="rnd_rot" targetData="" targetPlayMode="p" value="" valueLen="0"/>
+<event active="true" eventTime="3600" id="" oscIndex="0" oscMsgName="" oscMsgNameLen="0" target="rnd_rot" targetData="" targetPlayMode="p" value="" valueLen="0"/>
+<event active="true" eventTime="4800" id="" oscIndex="0" oscMsgName="" oscMsgNameLen="0" target="rnd_pos" targetData="" targetPlayMode="p" value="" valueLen="0"/>
+<event active="true" eventTime="6000" id="" oscIndex="0" oscMsgName="" oscMsgNameLen="0" target="rnd_pos" targetData="" targetPlayMode="p" value="" valueLen="0"/>
+<event active="true" eventTime="7200" id="" oscIndex="0" oscMsgName="" oscMsgNameLen="0" target="rnd_rot" targetData="" targetPlayMode="p" value="" valueLen="0"/>
+<event active="true" eventTime="8400" id="" oscIndex="0" oscMsgName="" oscMsgNameLen="0" target="rnd_rot" targetData="" targetPlayMode="p" value="" valueLen="0"/>
+</timeline>
+<timeline beatLength="6" beatPerBar="4" color="255 0 0" currentEvent="1" displayEnd="600" displayStart="0" followOnExpr="" height="100" id="rnd_pos" lastSelEvent="1" oscIndex="0" pitch="1.0" playMode="" quantize="50" timeLineLength="600" typeDisplay="false">
+<event active="true" eventTime="2" id="" oscIndex="0" oscMsgName="/x" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="$f:x=r.Calc::n:" valueLen="0"/>
+<event active="true" eventTime="6" id="" oscIndex="1" oscMsgName="/mov_kg1" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="0 0 0 $f:x:rndpos:: $f:x:rndpos:: 0 1 600" valueLen="0"/>
+<event active="true" eventTime="6" id="" oscIndex="1" oscMsgName="/mov_kg2" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="0 0 0 $f:x:rndpos:: $f:x:rndpos:: 0 1 600" valueLen="0"/>
+<event active="true" eventTime="6" id="" oscIndex="1" oscMsgName="/mov_kg3" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="0 0 0 $f:x:rndpos:: $f:x:rndpos:: 0 1 600" valueLen="0"/>
+<event active="true" eventTime="6" id="" oscIndex="1" oscMsgName="/mov_kg4" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="0 0 0 $f:x:rndpos:: $f:x:rndpos:: 0 1 600" valueLen="0"/>
+<event active="true" eventTime="6" id="" oscIndex="1" oscMsgName="/mov_kg5" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="0 0 0 $f:x:rndpos:: $f:x:rndpos:: 0 1 600" valueLen="0"/>
+<event active="true" eventTime="6" id="" oscIndex="1" oscMsgName="/mov_kg5" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="0 0 0 $f:x:rndpos:: $f:x:rndpos:: 0 1 600" valueLen="0"/>
+</timeline>
+<timeline beatLength="6" beatPerBar="4" color="255 0 0" currentEvent="1" displayEnd="100" displayStart="0" followOnExpr="" height="100" id="rnd_rot" lastSelEvent="1" oscIndex="0" pitch="1.0" playMode="" quantize="50" timeLineLength="100" typeDisplay="false">
+<event active="true" eventTime="0" id="" oscIndex="0" oscMsgName="/x" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="$f:x=r.Calc::n: eventTime2.0" valueLen="0"/>
+<event active="true" eventTime="6" id="" oscIndex="1" oscMsgName="/mov_kg1" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="$f:x:rndrot:: $f:x:rndrot:: 0 $f:x:rndpos:: $f:x:rndpos:: 0 1 600" valueLen="0"/>
+<event active="true" eventTime="6" id="" oscIndex="1" oscMsgName="/mov_kg2" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="$f:x:rndrot:: $f:x:rndrot:: 0 $f:x:rndpos:: $f:x:rndpos:: 0 1 600" valueLen="0"/>
+<event active="true" eventTime="6" id="" oscIndex="1" oscMsgName="/mov_kg3" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="$f:x:rndrot:: $f:x:rndrot:: 0 $f:x:rndpos:: $f:x:rndpos:: 0 1 600" valueLen="0"/>
+<event active="true" eventTime="6" id="" oscIndex="1" oscMsgName="/mov_kg4" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="$f:x:rndrot:: $f:x:rndrot:: 0 $f:x:rndpos:: $f:x:rndpos:: 0 1 600" valueLen="0"/>
+<event active="true" eventTime="6" id="" oscIndex="1" oscMsgName="/mov_kg5" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="$f:x:rndrot:: $f:x:rndrot:: 0 $f:x:rndpos:: $f:x:rndpos:: 0 1 600" valueLen="0"/>
+<event active="true" eventTime="6" id="" oscIndex="1" oscMsgName="/mov_kg5" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="$f:x:rndrot:: $f:x:rndrot:: 0 $f:x:rndpos:: $f:x:rndpos:: 0 1 600" valueLen="0"/>
+</timeline>
+<timeline beatLength="6" beatPerBar="4" color="255 0 0" currentEvent="1" displayEnd="1200" displayStart="0" followOnExpr="" height="100" id="rr-1200" lastSelEvent="1" oscIndex="0" pitch="1.0" playMode="" quantize="50" timeLineLength="1200" typeDisplay="false">
+<event active="true" eventTime="0" id="" oscIndex="0" oscMsgName="/x" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="$f:x=r.Calc::n: eventTime2.0" valueLen="0"/>
+<event active="true" eventTime="6" id="" oscIndex="1" oscMsgName="/mov_kg1" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="$f:x:rndrot:: $f:x:rndrot:: 0 0 0 0 1 600" valueLen="0"/>
+<event active="true" eventTime="6" id="" oscIndex="1" oscMsgName="/mov_kg2" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="$f:x:rndrot:: $f:x:rndrot:: 0 0 0 0 1 600" valueLen="0"/>
+<event active="true" eventTime="6" id="" oscIndex="1" oscMsgName="/mov_kg3" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="$f:x:rndrot:: $f:x:rndrot:: 0 0 0 0 1 600" valueLen="0"/>
+<event active="true" eventTime="6" id="" oscIndex="1" oscMsgName="/mov_kg4" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="$f:x:rndrot:: $f:x:rndrot:: 0 0 0 0 1 600" valueLen="0"/>
+<event active="true" eventTime="6" id="" oscIndex="1" oscMsgName="/mov_kg5" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="$f:x:rndrot:: $f:x:rndrot:: 0 0 0 0 1 600" valueLen="0"/>
+<event active="true" eventTime="6" id="" oscIndex="1" oscMsgName="/mov_kg5" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="$f:x:rndrot:: $f:x:rndrot:: 0 0 0 0 1 600" valueLen="0"/>
+</timeline>
+<timeline beatLength="6" beatPerBar="4" color="255 0 0" currentEvent="1" displayEnd="600" displayStart="0" followOnExpr="" height="100" id="rr-600" lastSelEvent="1" oscIndex="0" pitch="1.0" playMode="" quantize="50" timeLineLength="600" typeDisplay="false">
+<event active="true" eventTime="0" id="" oscIndex="0" oscMsgName="/x" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="$f:x=r.Calc::n: eventTime2.0" valueLen="0"/>
+<event active="true" eventTime="6" id="" oscIndex="1" oscMsgName="/mov_kg1" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="$f:x:rndrot:: $f:x:rndrot:: 0 0 0 0 1 300" valueLen="0"/>
+<event active="true" eventTime="6" id="" oscIndex="1" oscMsgName="/mov_kg2" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="$f:x:rndrot:: $f:x:rndrot:: 0 0 0 0 1 300" valueLen="0"/>
+<event active="true" eventTime="6" id="" oscIndex="1" oscMsgName="/mov_kg3" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="$f:x:rndrot:: $f:x:rndrot:: 0 0 0 0 1 300" valueLen="0"/>
+<event active="true" eventTime="6" id="" oscIndex="1" oscMsgName="/mov_kg4" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="$f:x:rndrot:: $f:x:rndrot:: 0 0 0 0 1 300" valueLen="0"/>
+<event active="true" eventTime="6" id="" oscIndex="1" oscMsgName="/mov_kg5" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="$f:x:rndrot:: $f:x:rndrot:: 0 0 0 0 1 300" valueLen="0"/>
+<event active="true" eventTime="6" id="" oscIndex="1" oscMsgName="/mov_kg5" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="$f:x:rndrot:: $f:x:rndrot:: 0 0 0 0 1 300" valueLen="0"/>
+</timeline>
+<timeline beatLength="6" beatPerBar="4" color="255 0 0" currentEvent="105" displayEnd="9600" displayStart="0" followOnExpr="" height="100" id="16422974" lastSelEvent="105" oscIndex="0" pitch="1.0" playMode="" quantize="50" timeLineLength="9600" typeDisplay="false">
+<event active="true" eventTime="932" id="" oscIndex="0" oscMsgName="/sampler/pitch" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="54 19" valueLen="0"/>
+<event active="true" eventTime="989" id="" oscIndex="0" oscMsgName="/sampler/pitch" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="57 127" valueLen="0"/>
+<event active="true" eventTime="1013" id="" oscIndex="0" oscMsgName="/sampler/pitch" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="52 127" valueLen="0"/>
+<event active="true" eventTime="1027" id="" oscIndex="0" oscMsgName="/sampler/pitch" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="57 127" valueLen="0"/>
+<event active="true" eventTime="1241" id="" oscIndex="0" oscMsgName="/sampler/pitch" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="54 74" valueLen="0"/>
+<event active="true" eventTime="1620" id="" oscIndex="0" oscMsgName="/sampler/pitch" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="57 48" valueLen="0"/>
+<event active="true" eventTime="1655" id="" oscIndex="0" oscMsgName="/sampler/pitch" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="60 16" valueLen="0"/>
+<event active="true" eventTime="1853" id="" oscIndex="0" oscMsgName="/sampler/pitch" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="52 127" valueLen="0"/>
+<event active="true" eventTime="1859" id="" oscIndex="0" oscMsgName="/sampler/pitch" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="53 22" valueLen="0"/>
+<event active="true" eventTime="2159" id="" oscIndex="0" oscMsgName="/sampler/pitch" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="60 9" valueLen="0"/>
+<event active="true" eventTime="2182" id="" oscIndex="0" oscMsgName="/sampler/pitch" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="59 18" valueLen="0"/>
+<event active="true" eventTime="2188" id="" oscIndex="0" oscMsgName="/sampler/pitch" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="60 37" valueLen="0"/>
+<event active="true" eventTime="2366" id="" oscIndex="0" oscMsgName="/sampler/pitch" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="56 127" valueLen="0"/>
+<event active="true" eventTime="2400" id="" oscIndex="0" oscMsgName="/sampler/pitch" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="60 1" valueLen="0"/>
+<event active="true" eventTime="2545" id="" oscIndex="0" oscMsgName="/sampler/pitch" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="60 39" valueLen="0"/>
+<event active="true" eventTime="2603" id="" oscIndex="0" oscMsgName="/sampler/pitch" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="53 11" valueLen="0"/>
+<event active="true" eventTime="2681" id="" oscIndex="0" oscMsgName="/sampler/pitch" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="59 5" valueLen="0"/>
+<event active="true" eventTime="2936" id="" oscIndex="0" oscMsgName="/sampler/pitch" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="59 6" valueLen="0"/>
+<event active="true" eventTime="3194" id="" oscIndex="0" oscMsgName="/sampler/pitch" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="59 9" valueLen="0"/>
+<event active="true" eventTime="3590" id="" oscIndex="0" oscMsgName="/sampler/pitch" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="52 127" valueLen="0"/>
+<event active="true" eventTime="3797" id="" oscIndex="0" oscMsgName="/sampler/pitch" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="53 14" valueLen="0"/>
+<event active="true" eventTime="3808" id="" oscIndex="0" oscMsgName="/sampler/flange/dep" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="40.0" valueLen="0"/>
+<event active="true" eventTime="4021" id="" oscIndex="0" oscMsgName="/sampler/flange/dep" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="76.0" valueLen="0"/>
+<event active="true" eventTime="4276" id="" oscIndex="0" oscMsgName="/sampler/flange/dep" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="86.0" valueLen="0"/>
+<event active="true" eventTime="4442" id="" oscIndex="0" oscMsgName="/sampler/pitch" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="55 1" valueLen="0"/>
+<event active="true" eventTime="4469" id="" oscIndex="0" oscMsgName="/sampler/pitch" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="49 127" valueLen="0"/>
+<event active="true" eventTime="4510" id="" oscIndex="0" oscMsgName="/sampler/flange/dep" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="127.0" valueLen="0"/>
+<event active="true" eventTime="4726" id="" oscIndex="0" oscMsgName="/sampler/flange/dep" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="107.0" valueLen="0"/>
+<event active="true" eventTime="4815" id="" oscIndex="0" oscMsgName="/sampler/pitch" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="59 62" valueLen="0"/>
+<event active="true" eventTime="4942" id="" oscIndex="0" oscMsgName="/sampler/flange/dep" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="43.0" valueLen="0"/>
+<event active="true" eventTime="4997" id="" oscIndex="0" oscMsgName="/sampler/pitch" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="49 127" valueLen="0"/>
+<event active="true" eventTime="5155" id="" oscIndex="0" oscMsgName="/sampler/flange/dep" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="6.0" valueLen="0"/>
+<event active="true" eventTime="5177" id="" oscIndex="0" oscMsgName="/sampler/pitch" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="54 34" valueLen="0"/>
+<event active="true" eventTime="5309" id="" oscIndex="0" oscMsgName="/sampler/pitch" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="56 127" valueLen="0"/>
+<event active="true" eventTime="5357" id="" oscIndex="0" oscMsgName="/sampler/pitch" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="57 46" valueLen="0"/>
+<event active="true" eventTime="5492" id="" oscIndex="0" oscMsgName="/sampler/pitch" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="59 1" valueLen="0"/>
+<event active="true" eventTime="5496" id="" oscIndex="0" oscMsgName="/sampler/pitch" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="60 62" valueLen="0"/>
+<event active="true" eventTime="5561" id="" oscIndex="0" oscMsgName="/sampler/pitch" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="56 127" valueLen="0"/>
+<event active="true" eventTime="5567" id="" oscIndex="0" oscMsgName="/sampler/pitch" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="58 7" valueLen="0"/>
+<event active="true" eventTime="5842" id="" oscIndex="0" oscMsgName="/sampler/flange/oscf" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="96.0" valueLen="0"/>
+<event active="true" eventTime="5939" id="" oscIndex="0" oscMsgName="/sampler/pitch" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="51 58" valueLen="0"/>
+<event active="true" eventTime="6146" id="" oscIndex="0" oscMsgName="/sampler/pitch" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="56 127" valueLen="0"/>
+<event active="true" eventTime="6150" id="" oscIndex="0" oscMsgName="/sampler/pitch" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="60 62" valueLen="0"/>
+<event active="true" eventTime="6290" id="" oscIndex="0" oscMsgName="/sampler/pitch" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="54 8" valueLen="0"/>
+<event active="true" eventTime="6346" id="" oscIndex="0" oscMsgName="/sampler/flange/oscf" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="126.0" valueLen="0"/>
+<event active="true" eventTime="6431" id="" oscIndex="0" oscMsgName="/sampler/pitch" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="57 127" valueLen="0"/>
+<event active="true" eventTime="6440" id="" oscIndex="0" oscMsgName="/sampler/pitch" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="53 5" valueLen="0"/>
+<event active="true" eventTime="6562" id="" oscIndex="0" oscMsgName="/sampler/flange/oscf" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="62.0" valueLen="0"/>
+<event active="true" eventTime="6602" id="" oscIndex="0" oscMsgName="/sampler/pitch" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="59 1" valueLen="0"/>
+<event active="true" eventTime="6778" id="" oscIndex="0" oscMsgName="/sampler/flange/oscf" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="7.0" valueLen="0"/>
+<event active="true" eventTime="6882" id="" oscIndex="0" oscMsgName="/sampler/pitch" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="60 62" valueLen="0"/>
+<event active="true" eventTime="7079" id="" oscIndex="0" oscMsgName="/sampler/pitch" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="56 127" valueLen="0"/>
+<event active="true" eventTime="7121" id="" oscIndex="0" oscMsgName="/sampler/pitch" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="51 27" valueLen="0"/>
+<event active="true" eventTime="7124" id="" oscIndex="0" oscMsgName="/sampler/pitch" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="54 22" valueLen="0"/>
+<event active="true" eventTime="7192" id="" oscIndex="0" oscMsgName="/sampler/flange/oscf" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="1.0" valueLen="0"/>
+<event active="true" eventTime="7192" id="" oscIndex="0" oscMsgName="/sampler/pitch" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="49 127" valueLen="0"/>
+<event active="true" eventTime="7408" id="" oscIndex="0" oscMsgName="/sampler/flange/oscf" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="80.0" valueLen="0"/>
+<event active="true" eventTime="7471" id="" oscIndex="0" oscMsgName="/sampler/pitch" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="60 62" valueLen="0"/>
+<event active="true" eventTime="7583" id="" oscIndex="0" oscMsgName="/sampler/pitch" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="59 13" valueLen="0"/>
+<event active="true" eventTime="7589" id="" oscIndex="0" oscMsgName="/sampler/pitch" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="60 32" valueLen="0"/>
+<event active="true" eventTime="7759" id="" oscIndex="0" oscMsgName="/sampler/pitch" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="51 10" valueLen="0"/>
+<event active="true" eventTime="7935" id="" oscIndex="0" oscMsgName="/sampler/pitch" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="60 62" valueLen="0"/>
+<event active="true" eventTime="8110" id="" oscIndex="0" oscMsgName="/sampler/flange/oscf" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="126.0" valueLen="0"/>
+<event active="true" eventTime="8175" id="" oscIndex="0" oscMsgName="/sampler/pitch" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="60 62" valueLen="0"/>
+<event active="true" eventTime="8189" id="" oscIndex="0" oscMsgName="/sampler/pitch" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="57 80" valueLen="0"/>
+<event active="true" eventTime="8207" id="" oscIndex="0" oscMsgName="/sampler/pitch" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="59 15" valueLen="0"/>
+<event active="true" eventTime="8237" id="" oscIndex="0" oscMsgName="/sampler/pitch" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="60 8" valueLen="0"/>
+<event active="true" eventTime="8326" id="" oscIndex="0" oscMsgName="/sampler/flange/oscf" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="38.0" valueLen="0"/>
+<event active="true" eventTime="8447" id="" oscIndex="0" oscMsgName="/sampler/pitch" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="51 19" valueLen="0"/>
+<event active="true" eventTime="8766" id="" oscIndex="0" oscMsgName="/sampler/pitch" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="60 62" valueLen="0"/>
+<event active="true" eventTime="8828" id="" oscIndex="0" oscMsgName="/sampler/pitch" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="59 26" valueLen="0"/>
+<event active="true" eventTime="8831" id="" oscIndex="0" oscMsgName="/sampler/pitch" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="57 127" valueLen="0"/>
+<event active="true" eventTime="8831" id="" oscIndex="0" oscMsgName="/sampler/pitch" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="60 37" valueLen="0"/>
+<event active="true" eventTime="9096" id="" oscIndex="0" oscMsgName="/sampler/pitch" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="60 62" valueLen="0"/>
+<event active="true" eventTime="9205" id="" oscIndex="0" oscMsgName="/sampler/flange/dep" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="3.0" valueLen="0"/>
+<event active="true" eventTime="9384" id="" oscIndex="0" oscMsgName="/sampler/pitch" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="60 62" valueLen="0"/>
+<event active="true" eventTime="9421" id="" oscIndex="0" oscMsgName="/sampler/flange/dep" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="89.0" valueLen="0"/>
+</timeline>
+<view visible="master,init"/>
+</timelines>

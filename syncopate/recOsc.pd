@@ -1,0 +1,28 @@
+#N canvas 17 521 450 404 10;
+#X obj 150 199 sendOSC;
+#X obj 171 154 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X msg 166 179 connect localhost 10011;
+#X obj 172 133 loadbang;
+#X obj 119 177 spigot;
+#X obj 153 153 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 1
+1;
+#X obj 97 112 bng 15 250 50 0 /mov_trig empty empty 0 -6 0 8 -262144
+-1 -1;
+#X obj 118 20 r rec_data;
+#X obj 171 45 r rec_msg;
+#X obj 118 88 pack f s;
+#X msg 120 113 send \$2 \$1;
+#X obj 169 66 symbol;
+#X connect 1 0 2 0;
+#X connect 2 0 0 0;
+#X connect 3 0 1 0;
+#X connect 4 0 0 0;
+#X connect 5 0 4 1;
+#X connect 6 0 10 0;
+#X connect 7 0 9 0;
+#X connect 8 0 11 0;
+#X connect 9 0 10 0;
+#X connect 10 0 4 0;
+#X connect 11 0 9 1;
+#X coords 0 -1 1 1 40 30 1 150 140;

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<timelines version="1.0">
+<source>
+<objects>
+<object name="r.Scales" super="">
+<imports></imports>
+<code><![CDATA[// with ref:-
+// http://www.phy.mtu.edu/~suits/scales.html (quite cool)
+//
+public static double equal=Math.pow(2,1/12.0);
+int ctr=-1;
+int scaleCtr=0;
+int scaleAccum=0;
+float freq=100.0f;
+
+float justFactors[]= {1, (25.0f/24.0f) , (9.0f/8.0f) , (6.0f/5.0f) , (5.0f/4.0f) ,
+ (4.0f/3.0f) , (45f/32.0f) ,(3.0f/2.0f) , (8.0f/5.0f) , (5.0f/3.0f) , (9f/5.0f) , (15f/8.0f), 2f};
+
+// get equal temperament factors.
+public float getEqFact(int i) {    return (float)Math.pow(2,i/12.0);}
+// get Just temprament factor
+public double getJustFact(int i) {return justFactors[i];}
+
+public float getNote(int  numIntervals) {
+    //ctr=++ctr%12;
+     // int octave=	numIntervals/12;
+     //double freq  = octave*this.freq;
+     float fact =getEqFact(numIntervals%12);
+     return fact;
+}
+public float getNote() {
+    ctr=++ctr%12;
+    return getNote(ctr); 
+}
+//////////////////////////////////////////////////////////////////////////
+// scales
+int majorScale[] = {2,2,1,2,2,2,1};
+int minorscale[] = {2,1,2,2,1,2,2};
+int harmonicMinorScale[] = {2,1,2,2,1,3,1};
+int majorPentatonicScale[] = {2,2,3,2,3};
+int minorPentatonicScale[] = {3,2,2,3,2};
+int wholeNoteHextonicScale[] = {2,2,2,2,2,2};
+int bluesHextonicScale[] = {3,2,1,1,3,2};
+
+int scale[]=minorscale;
+public float getOctaveFactor(int  numIntervals) {
+   int fact=(numIntervals)/12;
+   return (float) Math.pow(2,(float) fact);
+}
+public float playScale() {
+     //ctr=++ctr%48;
+     scaleCtr = (++scaleCtr) % scale.length;
+     scaleAccum+=scale[scaleCtr];
+     scaleAccum%=50;
+     return (float) getOctaveFactor(scaleAccum)*getNote(scaleAccum%12);
+}
+public float freqScale() {
+    playScale();
+    float freq = this.freq;
+     freq=freq*getOctaveFactor(scaleAccum)*getNote(scaleAccum%12);
+    return freq;
+}
+
+public void resetScale() {
+scaleCtr = 0;
+scaleAccum = 0;
+}]]></code>
+</object>
+</objects>
+</source>
+<notes/><![CDATA[rddfghdfghdfgh
+ghjfghj]]>
+<filters/>
+<midiKeys/>
+<timeline beatLength="10" beatPerBar="4" color="255 0 0" currentEvent="2" displayEnd="2000" displayHeight="60" displayStart="0" followOnExpr="" id="kick1-1" lastSelEvent="2" oscIndex="0" pitch="1.0" playMode="" timeLineLength="2000">
+<event active="true" eventTime="350" id="" oscIndex="0" oscMsgName="/kick1/t" target="" targetData="" targetPlayMode="" value="0"/>
+<event active="true" eventTime="600" id="" oscIndex="0" oscMsgName="/kick1/t" target="" targetData="" targetPlayMode="" value="0"/>
+<event active="true" eventTime="1050" id="" oscIndex="0" oscMsgName="/kick1/t" target="" targetData="" targetPlayMode="" value="0"/>
+<event active="true" eventTime="1200" id="" oscIndex="0" oscMsgName="/kick1/t" target="" targetData="" targetPlayMode="" value="0"/>
+<event active="true" eventTime="1600" id="" oscIndex="0" oscMsgName="/kick1/t" target="" targetData="" targetPlayMode="" value="0"/>
+<event active="true" eventTime="1750" id="" oscIndex="0" oscMsgName="/kick1/t" target="" targetData="" targetPlayMode="" value="0"/>
+</timeline>
+<timeline beatLength="10" beatPerBar="4" color="255 0 0" currentEvent="4" displayEnd="2000" displayHeight="60" displayStart="0" followOnExpr="" id="kick1-2" lastSelEvent="4" oscIndex="0" pitch="1.0" playMode="" timeLineLength="2000">
+<event active="true" eventTime="250" id="" oscIndex="0" oscMsgName="/kick1/t" target="" targetData="" targetPlayMode="" value="0"/>
+<event active="true" eventTime="500" id="" oscIndex="0" oscMsgName="/kick1/t" target="" targetData="" targetPlayMode="" value="0"/>
+<event active="true" eventTime="950" id="" oscIndex="0" oscMsgName="/kick1/t" target="" targetData="" targetPlayMode="" value="0"/>
+<event active="true" eventTime="1100" id="" oscIndex="0" oscMsgName="/kick1/t" target="" targetData="" targetPlayMode="" value="0"/>
+<event active="true" eventTime="1500" id="" oscIndex="0" oscMsgName="/kick1/t" target="" targetData="" targetPlayMode="" value="0"/>
+</timeline>
+<timeline beatLength="10" beatPerBar="4" color="255 0 0" currentEvent="0" displayEnd="2000" displayHeight="60" displayStart="0" followOnExpr="" id="dd-1" lastSelEvent="0" oscIndex="0" pitch="1.0" playMode="" timeLineLength="2000">
+<event active="false" eventTime="0" id="" oscIndex="0" oscMsgName="/kick2/t" target="" targetData="" targetPlayMode="" value="0"/>
+<event active="true" eventTime="100" id="" oscIndex="0" oscMsgName="/kick2/t" target="" targetData="" targetPlayMode="" value="0"/>
+<event active="true" eventTime="400" id="" oscIndex="0" oscMsgName="/kick2/t" target="" targetData="" targetPlayMode="" value="0"/>
+<event active="true" eventTime="600" id="" oscIndex="0" oscMsgName="/kick2/t" target="" targetData="" targetPlayMode="" value="0"/>
+<event active="true" eventTime="700" id="" oscIndex="0" oscMsgName="/kick2/t" target="" targetData="" targetPlayMode="" value="0"/>
+<event active="true" eventTime="1100" id="" oscIndex="0" oscMsgName="/kick2/t" target="" targetData="" targetPlayMode="" value="0"/>
+<event active="true" eventTime="1200" id="" oscIndex="0" oscMsgName="/kick2/t" target="" targetData="" targetPlayMode="" value="0"/>
+<event active="true" eventTime="1300" id="" oscIndex="0" oscMsgName="/kick2/t" target="" targetData="" targetPlayMode="" value="0"/>
+<event active="true" eventTime="1500" id="" oscIndex="0" oscMsgName="/kick2/t" target="" targetData="" targetPlayMode="" value="0"/>
+</timeline>
+<timeline beatLength="10" beatPerBar="4" color="255 0 0" currentEvent="5" displayEnd="2000" displayHeight="60" displayStart="0" followOnExpr="" id="dd-2" lastSelEvent="5" oscIndex="0" pitch="1.0" playMode="" timeLineLength="2000">
+<event active="true" eventTime="250" id="" oscIndex="0" oscMsgName="/kick2/t" target="" targetData="" targetPlayMode="" value="0"/>
+<event active="true" eventTime="500" id="" oscIndex="0" oscMsgName="/kick2/t" target="" targetData="" targetPlayMode="" value="0"/>
+<event active="true" eventTime="1006" id="" oscIndex="0" oscMsgName="/kick2/t" target="" targetData="" targetPlayMode="" value="0"/>
+<event active="true" eventTime="1100" id="" oscIndex="0" oscMsgName="/kick2/t" target="" targetData="" targetPlayMode="" value="0"/>
+<event active="true" eventTime="1200" id="" oscIndex="0" oscMsgName="/kick2/t" target="" targetData="" targetPlayMode="" value="0"/>
+<event active="true" eventTime="1500" id="" oscIndex="0" oscMsgName="/kick2/t" target="" targetData="" targetPlayMode="" value="0"/>
+</timeline>
+<timeline beatLength="10" beatPerBar="4" color="255 0 0" currentEvent="1" displayEnd="4000" displayHeight="105" displayStart="0" followOnExpr="" id="bird-1" lastSelEvent="1" oscIndex="0" pitch="1.0" playMode="" timeLineLength="4000">
+<event active="true" eventTime="0" id="" oscIndex="0" oscMsgName="/bird1/trig" target="" targetData="" targetPlayMode="" value="0"/>
+<event active="true" eventTime="100" id="" oscIndex="0" oscMsgName="/bird1/f" target="" targetData="" targetPlayMode="" value="150"/>
+<event active="true" eventTime="150" id="" oscIndex="0" oscMsgName="/bird1/trig" target="" targetData="" targetPlayMode="" value="0"/>
+<event active="true" eventTime="500" id="" oscIndex="0" oscMsgName="/bird1/trig" target="" targetData="" targetPlayMode="" value="0"/>
+<event active="true" eventTime="1200" id="" oscIndex="0" oscMsgName="/bird1/f" target="" targetData="" targetPlayMode="" value="90"/>
+<event active="true" eventTime="1250" id="" oscIndex="0" oscMsgName="/bird1/trig" target="" targetData="" targetPlayMode="" value="0"/>
+<event active="true" eventTime="1500" id="" oscIndex="0" oscMsgName="/bird1/trig" target="" targetData="" targetPlayMode="" value="0"/>
+<event active="true" eventTime="2000" id="" oscIndex="0" oscMsgName="/bird1/trig" target="" targetData="" targetPlayMode="" value="0"/>
+<event active="true" eventTime="2500" id="" oscIndex="0" oscMsgName="/bird1/trig" target="" targetData="" targetPlayMode="" value="0"/>
+<event active="true" eventTime="2750" id="" oscIndex="0" oscMsgName="/bird1/trig" target="" targetData="" targetPlayMode="" value="0"/>
+<event active="true" eventTime="3000" id="" oscIndex="0" oscMsgName="/bird1/trig" target="" targetData="" targetPlayMode="" value="0"/>
+</timeline>
+</timelines>

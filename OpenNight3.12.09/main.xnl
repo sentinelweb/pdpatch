@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<timelines version="1.0">
+<source>
+<objects/>
+</source>
+<description/>
+<colors type="osc">
+<color for="/osc/cf" value="0:225:0"/>
+<color for="" value="255:255:255"/>
+<color for="/ping/1/n" value="0:255:255"/>
+<color for="/ping/1" value="255:0:0"/>
+<color for="/os" value="0:240:240"/>
+<color for="/osc2" value="0:210:210"/>
+<color for=";82-2" value="210:0:210"/>
+<color for="/osc/cf/" value="210:210:210"/>
+<color for="/osc" value="0:240:0"/>
+<color for="ping/2/" value="0:0:195"/>
+<color for="ping/2/c" value="0:195:195"/>
+<color for="/o" value="0:0:210"/>
+<color for="/osc.c" value="225:0:0"/>
+<color for="/osc.cf" value="225:0:225"/>
+<color for="pin/2/" value="195:0:195"/>
+<color for="/2/" value="195:195:195"/>
+<color for="/ping/1/mn" value="240:0:240"/>
+<color for="c" value="210:0:0"/>
+<color for="/ping/1/cn" value="0:255:0"/>
+<color for="/" value="0:0:240"/>
+<color for="/ping/1/" value="255:0:255"/>
+<color for="/ping/1/cf" value="240:0:0"/>
+<color for="ping/2/cf" value="0:195:0"/>
+<color for="/osc/" value="0:0:225"/>
+<color for="/osc." value="225:225:225"/>
+<color for="p/2/" value="195:0:0"/>
+<color for="/2" value="0:210:0"/>
+<color for="/ping/1/c" value="240:240:240"/>
+<color for="/ping/2/cf" value="180:180:180"/>
+<color for="/osc/c" value="0:225:225"/>
+<color for="/ping/1/f" value="0:0:255"/>
+</colors>
+<colors type="expr">
+<color for="" value="255:255:255"/>
+<color for="$t:seq-{$f:std:rndW::[1-2;2-1;3]}:p" value="0:255:0"/>
+<color for="$t:seq-{$f:std:rndW::[1-2;2-1;3-2;4-1]}:p" value="0:0:225"/>
+<color for="$t:seq-1:p" value="255:0:0"/>
+<color for="$t:seq-{$f:std:rndW::[1-2;2-1;3-2;4-1;]}:p" value="0:225:225"/>
+<color for="$t:seq-{$f:std:rndW::[1-2;2-1;3-2;4-1;5-1;6-]}:p" value="0:210:210"/>
+<color for="$t:seq-{$f:std:rndW::[1-2;2-1;3-]}:p" value="240:0:240"/>
+<color for="$t:seq-{$f:std:rndW::[1-2;2-1;3-2;4-1;5-1;6-1]}:p" value="0:210:0"/>
+<color for="$t:seq-{$f:std:rndW::[1-2;2-1]}:p" value="240:0:0"/>
+<color for="$t:seq-{$f:std:rndW::[1-2;2-1;3-1;4-]}:p" value="225:225:225"/>
+<color for="$t:seq-{$f:std:rndW::[1-2;2-1;3-3]}:p" value="0:0:255"/>
+<color for="$t:seq-{}:p" value="255:0:255"/>
+<color for="$t:seq-{$f:std:rndW::[1-2;2-1;3-2]}:p" value="0:255:255"/>
+<color for="$t:seq-{$f:std:rndW::[1-2;2-1;3-2;4-1;5]}:p" value="0:225:0"/>
+<color for="$t:seq-{$f:std:rndW::[1-2;2-1;3-2;4-1;5-1]}:p" value="210:0:0"/>
+<color for="$t:seq-{$f:std:rndW::[1-2;2-1;3-1]}:p" value="0:0:240"/>
+<color for="$t:seq-{$f:std:rndW::[1-2;2-1;3-2;4-1;5-1;6-1]}:ps" value="195:195:195"/>
+<color for="$t:seq-{$f:std:rndW::[1-2;2-1;3-2;4-1;5-]}:p" value="210:210:210"/>
+<color for="$t:seq-{$f:std:rndW::[1-2;2-1;3-;4-1]}:p" value="225:0:225"/>
+<color for="$t:seq-{$f:std:rndW::[1-2;2-1;]}:p" value="240:240:240"/>
+<color for="$t:seq-{$f:std:rndW::[1-2;2-1;3-2;4-1;5-1;6]}:p" value="0:0:210"/>
+<color for="$t:seq-{$f:std:rndW::[1-2;2-1;3-1;4-1]}:p" value="225:0:0"/>
+<color for="$t:seq-{$f:std:rndW::[1-2;2-1;3-1;]}:p" value="0:240:240"/>
+<color for="$t:seq-{$f:std:rndW::[1-2;2-1;3-1;4]}:p" value="0:240:0"/>
+<color for="$t:seq-{$f:std:rndW::[1-2;2-1;3-2;4-1;5-1;]}:p" value="210:0:210"/>
+</colors>
+<filters/>
+<midiKeys/>
+<timeline beatLength="10" beatPerBar="4" color="255 0 0" currentEvent="0" displayEnd="4000" displayStart="0" followOnExpr="" height="100" id="seq-1" lastSelEvent="0" oscIndex="0" pitch="1.0" playMode="p" quantize="50" timeLineLength="4000" typeDisplay="false">
+<event active="true" eventTime="500" id="ping10" oscIndex="0" oscMsgName="/ping/1/cf" oscMsgName1="/ping/1/mn" oscMsgName2="/ping/1/t" oscMsgNameLen="3" target="" targetData="" targetPlayMode="" value="500" value1="78" value2="1" valueLen="3"/>
+<event active="true" eventTime="750" id="ping11" oscIndex="0" oscMsgName="/ping/1/cf" oscMsgName1="/ping/1/mn" oscMsgName2="/ping/1/t" oscMsgNameLen="3" target="" targetData="" targetPlayMode="" value="500" value1="$e:util:ping1nm:f" value2="1" valueLen="3"/>
+<event active="true" eventTime="1000" id="ping12" oscIndex="0" oscMsgName="/ping/1/cf" oscMsgName1="/ping/1/mn" oscMsgName2="/ping/1/t" oscMsgNameLen="3" target="" targetData="" targetPlayMode="" value="500" value1="$e:util:ping1nm:f" value2="1" valueLen="3"/>
+<event active="true" eventTime="1500" id="ping13" oscIndex="0" oscMsgName="/ping/1/cf" oscMsgName1="/ping/1/mn" oscMsgName2="/ping/1/t" oscMsgNameLen="3" target="" targetData="" targetPlayMode="" value="500" value1="$e:util:ping1nm:f" value2="1" valueLen="3"/>
+<event active="true" eventTime="2000" id="ping14" oscIndex="0" oscMsgName="/ping/1/cf" oscMsgName1="/ping/1/mn" oscMsgName2="/ping/1/t" oscMsgNameLen="3" target="" targetData="" targetPlayMode="" value="500" value1="$e:util:ping1nm:f" value2="1" valueLen="3"/>
+<event active="true" eventTime="2500" id="ping15" oscIndex="0" oscMsgName="/ping/1/cf" oscMsgName1="/ping/1/mn" oscMsgName2="/ping/1/t" oscMsgNameLen="3" target="" targetData="" targetPlayMode="" value="500" value1="65" value2="1" valueLen="3"/>
+<event active="true" eventTime="2750" id="ping16" oscIndex="0" oscMsgName="/ping/1/cf" oscMsgName1="/ping/1/mn" oscMsgName2="/ping/1/t" oscMsgNameLen="3" target="" targetData="" targetPlayMode="" value="500" value1="$e:util:ping1nm:f" value2="1" valueLen="3"/>
+<event active="true" eventTime="2900" id="ping17" oscIndex="0" oscMsgName="/ping/1/cf" oscMsgName1="/ping/1/mn" oscMsgName2="/ping/1/t" oscMsgNameLen="3" target="" targetData="" targetPlayMode="" value="500" value1="$e:util:ping1nm:f" value2="1" valueLen="3"/>
+<event active="true" eventTime="3000" id="ping18" oscIndex="0" oscMsgName="/ping/1/cf" oscMsgName1="/ping/1/mn" oscMsgName2="/ping/1/t" oscMsgNameLen="3" target="" targetData="" targetPlayMode="" value="500" value1="76" value2="1" valueLen="3"/>
+<event active="true" eventTime="3500" id="ping19" oscIndex="0" oscMsgName="/ping/1/cf" oscMsgName1="/ping/1/mn" oscMsgName2="/ping/1/t" oscMsgNameLen="3" target="" targetData="" targetPlayMode="" value="500" value1="78" value2="1" valueLen="3"/>
+</timeline>
+<timeline beatLength="10" beatPerBar="4" color="255 0 0" currentEvent="2" displayEnd="4000" displayStart="0" followOnExpr="" height="100" id="seq-2" lastSelEvent="2" oscIndex="0" pitch="1.0" playMode="" quantize="50" timeLineLength="4000" typeDisplay="false">
+<event active="true" eventTime="500" id="ping10" oscIndex="0" oscMsgName="/ping/1/cf" oscMsgName1="/ping/1/mn" oscMsgName2="/ping/1/t" oscMsgNameLen="3" target="" targetData="" targetPlayMode="" value="500" value1="78" value2="1" valueLen="3"/>
+<event active="true" eventTime="750" id="ping11" oscIndex="0" oscMsgName="/ping/1/cf" oscMsgName1="/ping/1/mn" oscMsgName2="/ping/1/t" oscMsgNameLen="3" target="" targetData="" targetPlayMode="" value="500" value1="$e:util:ping1nm2:f" value2="1" valueLen="3"/>
+<event active="true" eventTime="1000" id="ping12" oscIndex="0" oscMsgName="/ping/1/cf" oscMsgName1="/ping/1/mn" oscMsgName2="/ping/1/t" oscMsgNameLen="3" target="" targetData="" targetPlayMode="" value="500" value1="$e:util:ping1nm2:f" value2="1" valueLen="3"/>
+<event active="true" eventTime="1500" id="ping13" oscIndex="0" oscMsgName="/ping/1/cf" oscMsgName1="/ping/1/mn" oscMsgName2="/ping/1/t" oscMsgNameLen="3" target="" targetData="" targetPlayMode="" value="500" value1="$e:util:ping1nm2:f" value2="1" valueLen="3"/>
+<event active="true" eventTime="2000" id="ping14" oscIndex="0" oscMsgName="/ping/1/cf" oscMsgName1="/ping/1/mn" oscMsgName2="/ping/1/t" oscMsgNameLen="3" target="" targetData="" targetPlayMode="" value="500" value1="$e:util:ping1nm2:f" value2="1" valueLen="3"/>
+<event active="true" eventTime="2500" id="ping15" oscIndex="0" oscMsgName="/ping/1/cf" oscMsgName1="/ping/1/mn" oscMsgName2="/ping/1/t" oscMsgNameLen="3" target="" targetData="" targetPlayMode="" value="500" value1="65" value2="1" valueLen="3"/>
+<event active="true" eventTime="2750" id="ping16" oscIndex="0" oscMsgName="/ping/1/cf" oscMsgName1="/ping/1/mn" oscMsgName2="/ping/1/t" oscMsgNameLen="3" target="" targetData="" targetPlayMode="" value="500" value1="$e:util:ping1nm2:f" value2="1" valueLen="3"/>
+<event active="true" eventTime="2900" id="ping17" oscIndex="0" oscMsgName="/ping/1/cf" oscMsgName1="/ping/1/mn" oscMsgName2="/ping/1/t" oscMsgNameLen="3" target="" targetData="" targetPlayMode="" value="500" value1="$e:util:ping1nm2:f" value2="1" valueLen="3"/>
+<event active="true" eventTime="3000" id="ping18" oscIndex="0" oscMsgName="/ping/1/cf" oscMsgName1="/ping/1/mn" oscMsgName2="/ping/1/t" oscMsgNameLen="3" target="" targetData="" targetPlayMode="" value="500" value1="76" value2="1" valueLen="3"/>
+<event active="true" eventTime="3500" id="ping19" oscIndex="0" oscMsgName="/ping/1/cf" oscMsgName1="/ping/1/mn" oscMsgName2="/ping/1/t" oscMsgNameLen="3" target="" targetData="" targetPlayMode="" value="500" value1="78" value2="1" valueLen="3"/>
+</timeline>
+<timeline beatLength="10" beatPerBar="4" color="255 0 0" currentEvent="1" displayEnd="8000" displayStart="0" followOnExpr="" height="100" id="util" lastSelEvent="1" oscIndex="0" pitch="1.0" playMode="" quantize="50" timeLineLength="8000" typeDisplay="false">
+<event active="true" eventTime="250" id="ping1nm" oscIndex="0" oscMsgName="/ping/1/mn" oscMsgName1="$e:util:ping2:f" oscMsgNameLen="2" target="" targetData="" targetPlayMode="" value="$f:std:rndW::[65-2;71-1;74-2;76-1;78-2]" valueLen="0"/>
+<event active="true" eventTime="350" id="ping1nm2" oscIndex="0" oscMsgName="/ping/1/mn" oscMsgName1="$e:util:ping2:f" oscMsgNameLen="2" target="" targetData="" targetPlayMode="" value="$f:std:rndW::[70-2;72-2]" valueLen="0"/>
+<event active="true" eventTime="600" id="ping2" oscIndex="0" oscMsgName="/ping/2/cf" oscMsgName1="/ping/2/mn" oscMsgName2="/ping/2/t" oscMsgNameLen="3" target="" targetData="" targetPlayMode="" value="40" value1="$f:std:rndW::[59-1;60-1]" value2="1" valueLen="3"/>
+</timeline>
+<timeline beatLength="10" beatPerBar="4" color="255 0 0" currentEvent="0" displayEnd="4000" displayStart="0" followOnExpr="" height="100" id="seq-3" lastSelEvent="0" oscIndex="0" pitch="1.0" playMode="" quantize="50" timeLineLength="4000" typeDisplay="false">
+<event active="true" eventTime="0" id="ping1" oscIndex="0" oscMsgName="/ping/1/cf" oscMsgName1="/ping/1/mn" oscMsgName2="/ping/1/t" oscMsgNameLen="3" target="" targetData="" targetPlayMode="" value="500" value1="65" value2="1" valueLen="3"/>
+<event active="true" eventTime="500" id="ping3" oscIndex="0" oscMsgName="/ping/1/cf" oscMsgName1="/ping/1/mn" oscMsgName2="/ping/1/t" oscMsgNameLen="3" target="" targetData="" targetPlayMode="" value="500" value1="71" value2="1" valueLen="3"/>
+<event active="true" eventTime="750" id="ping4" oscIndex="0" oscMsgName="/ping/1/cf" oscMsgName1="/ping/1/mn" oscMsgName2="/ping/1/t" oscMsgNameLen="3" target="" targetData="" targetPlayMode="" value="500" value1="74" value2="1" valueLen="3"/>
+<event active="true" eventTime="1000" id="ping5" oscIndex="0" oscMsgName="/ping/1/cf" oscMsgName1="/ping/1/mn" oscMsgName2="/ping/1/t" oscMsgNameLen="3" target="" targetData="" targetPlayMode="" value="500" value1="76" value2="1" valueLen="3"/>
+<event active="true" eventTime="1500" id="ping6" oscIndex="0" oscMsgName="/ping/1/cf" oscMsgName1="/ping/1/mn" oscMsgName2="/ping/1/t" oscMsgNameLen="3" target="" targetData="" targetPlayMode="" value="500" value1="78" value2="1" valueLen="3"/>
+<event active="true" eventTime="2050" id="ping7" oscIndex="0" oscMsgName="/ping/1/cf" oscMsgName1="/ping/1/mn" oscMsgName2="/ping/1/t" oscMsgNameLen="3" target="" targetData="" targetPlayMode="" value="500" value1="65" value2="1" valueLen="3"/>
+<event active="true" eventTime="3000" id="ping8" oscIndex="0" oscMsgName="/ping/1/cf" oscMsgName1="/ping/1/mn" oscMsgName2="/ping/1/t" oscMsgNameLen="3" target="" targetData="" targetPlayMode="" value="500" value1="71" value2="1" valueLen="3"/>
+<event active="true" eventTime="3250" id="ping9" oscIndex="0" oscMsgName="/ping/1/cf" oscMsgName1="/ping/1/mn" oscMsgName2="/ping/1/t" oscMsgNameLen="3" target="" targetData="" targetPlayMode="" value="500" value1="$e:util:ping1nm:f" value2="1" valueLen="3"/>
+<event active="true" eventTime="3750" id="ping10" oscIndex="0" oscMsgName="/ping/1/cf" oscMsgName1="/ping/1/mn" oscMsgName2="/ping/1/t" oscMsgNameLen="3" target="" targetData="" targetPlayMode="" value="500" value1="$e:util:ping1nm:f" value2="1" valueLen="3"/>
+</timeline>
+<timeline beatLength="10" beatPerBar="4" color="255 0 0" currentEvent="0" displayEnd="4000" displayStart="0" followOnExpr="" height="100" id="seq_main" lastSelEvent="0" oscIndex="0" pitch="1.0" playMode="l" quantize="50" timeLineLength="4000" typeDisplay="false">
+<event active="true" eventTime="0" id="" oscIndex="0" oscMsgName="$t:seq-{$f:std:rndW::[1-2;2-1;3-2;4-1;5-1;6-1]}:p" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="" valueLen="0"/>
+</timeline>
+<timeline beatLength="10" beatPerBar="4" color="255 0 0" currentEvent="9" displayEnd="4000" displayStart="0" followOnExpr="" height="100" id="seq-4" lastSelEvent="9" oscIndex="0" pitch="1.0" playMode="" quantize="50" timeLineLength="4000" typeDisplay="false">
+<event active="true" eventTime="500" id="ping10" oscIndex="0" oscMsgName="/ping/1/cf" oscMsgName1="/ping/1/mn" oscMsgName2="/ping/1/t" oscMsgNameLen="3" target="" targetData="" targetPlayMode="" value="500" value1="78" value2="1" valueLen="3"/>
+<event active="true" eventTime="750" id="ping11" oscIndex="0" oscMsgName="/ping/1/cf" oscMsgName1="/ping/1/mn" oscMsgName2="/ping/1/t" oscMsgNameLen="3" target="" targetData="" targetPlayMode="" value="500" value1="$e:util:ping1nm:f" value2="1" valueLen="3"/>
+<event active="true" eventTime="1000" id="ping12" oscIndex="0" oscMsgName="/ping/1/cf" oscMsgName1="/ping/1/mn" oscMsgName2="/ping/1/t" oscMsgNameLen="3" target="" targetData="" targetPlayMode="" value="500" value1="$e:util:ping1nm:f" value2="1" valueLen="3"/>
+<event active="true" eventTime="1100" id="ping20" oscIndex="0" oscMsgName="/ping/1/cf" oscMsgName1="/ping/1/mn" oscMsgName2="/ping/1/t" oscMsgNameLen="3" target="" targetData="" targetPlayMode="" value="500" value1="$e:util:ping1nm:f" value2="1" valueLen="3"/>
+<event active="true" eventTime="1500" id="ping13" oscIndex="0" oscMsgName="/ping/1/cf" oscMsgName1="/ping/1/mn" oscMsgName2="/ping/1/t" oscMsgNameLen="3" target="" targetData="" targetPlayMode="" value="500" value1="$e:util:ping1nm:f" value2="1" valueLen="3"/>
+<event active="true" eventTime="1600" id="ping21" oscIndex="0" oscMsgName="/ping/1/cf" oscMsgName1="/ping/1/mn" oscMsgName2="/ping/1/t" oscMsgNameLen="3" target="" targetData="" targetPlayMode="" value="500" value1="$e:util:ping1nm:f" value2="1" valueLen="3"/>
+<event active="true" eventTime="1750" id="ping22" oscIndex="0" oscMsgName="/ping/1/cf" oscMsgName1="/ping/1/mn" oscMsgName2="/ping/1/t" oscMsgNameLen="3" target="" targetData="" targetPlayMode="" value="500" value1="$e:util:ping1nm:f" value2="1" valueLen="3"/>
+<event active="true" eventTime="2000" id="ping14" oscIndex="0" oscMsgName="/ping/1/cf" oscMsgName1="/ping/1/mn" oscMsgName2="/ping/1/t" oscMsgNameLen="3" target="" targetData="" targetPlayMode="" value="500" value1="$e:util:ping1nm:f" value2="1" valueLen="3"/>
+<event active="true" eventTime="2100" id="ping23" oscIndex="0" oscMsgName="/ping/1/cf" oscMsgName1="/ping/1/mn" oscMsgName2="/ping/1/t" oscMsgNameLen="3" target="" targetData="" targetPlayMode="" value="500" value1="$e:util:ping1nm:f" value2="1" valueLen="3"/>
+<event active="true" eventTime="2500" id="ping15" oscIndex="0" oscMsgName="/ping/1/cf" oscMsgName1="/ping/1/mn" oscMsgName2="/ping/1/t" oscMsgNameLen="3" target="" targetData="" targetPlayMode="" value="500" value1="65" value2="1" valueLen="3"/>
+<event active="true" eventTime="2600" id="ping24" oscIndex="0" oscMsgName="/ping/1/cf" oscMsgName1="/ping/1/mn" oscMsgName2="/ping/1/t" oscMsgNameLen="3" target="" targetData="" targetPlayMode="" value="500" value1="65" value2="1" valueLen="3"/>
+<event active="true" eventTime="2750" id="ping16" oscIndex="0" oscMsgName="/ping/1/cf" oscMsgName1="/ping/1/mn" oscMsgName2="/ping/1/t" oscMsgNameLen="3" target="" targetData="" targetPlayMode="" value="500" value1="$e:util:ping1nm:f" value2="1" valueLen="3"/>
+<event active="true" eventTime="2900" id="ping17" oscIndex="0" oscMsgName="/ping/1/cf" oscMsgName1="/ping/1/mn" oscMsgName2="/ping/1/t" oscMsgNameLen="3" target="" targetData="" targetPlayMode="" value="500" value1="$e:util:ping1nm:f" value2="1" valueLen="3"/>
+<event active="true" eventTime="3000" id="ping18" oscIndex="0" oscMsgName="/ping/1/cf" oscMsgName1="/ping/1/mn" oscMsgName2="/ping/1/t" oscMsgNameLen="3" target="" targetData="" targetPlayMode="" value="500" value1="76" value2="1" valueLen="3"/>
+<event active="true" eventTime="3500" id="ping19" oscIndex="0" oscMsgName="/ping/1/cf" oscMsgName1="/ping/1/mn" oscMsgName2="/ping/1/t" oscMsgNameLen="3" target="" targetData="" targetPlayMode="" value="500" value1="78" value2="1" valueLen="3"/>
+</timeline>
+<timeline beatLength="10" beatPerBar="4" color="255 0 0" currentEvent="13" displayEnd="4000" displayStart="0" followOnExpr="" height="100" id="seq-5" lastSelEvent="13" oscIndex="0" pitch="1.0" playMode="" quantize="50" timeLineLength="4000" typeDisplay="false">
+<event active="true" eventTime="500" id="ping10" oscIndex="0" oscMsgName="/ping/1/cf" oscMsgName1="/ping/1/mn" oscMsgName2="/ping/1/t" oscMsgNameLen="3" target="" targetData="" targetPlayMode="" value="500" value1="78" value2="1" valueLen="3"/>
+<event active="true" eventTime="750" id="ping11" oscIndex="0" oscMsgName="/ping/1/cf" oscMsgName1="/ping/1/mn" oscMsgName2="/ping/1/t" oscMsgNameLen="3" target="" targetData="" targetPlayMode="" value="500" value1="$e:util:ping1nm2:f" value2="1" valueLen="3"/>
+<event active="true" eventTime="1000" id="ping12" oscIndex="0" oscMsgName="/ping/1/cf" oscMsgName1="/ping/1/mn" oscMsgName2="/ping/1/t" oscMsgNameLen="3" target="" targetData="" targetPlayMode="" value="500" value1="$e:util:ping1nm2:f" value2="1" valueLen="3"/>
+<event active="true" eventTime="1250" id="ping13" oscIndex="0" oscMsgName="/ping/1/cf" oscMsgName1="/ping/1/mn" oscMsgName2="/ping/1/t" oscMsgNameLen="3" target="" targetData="" targetPlayMode="" value="500" value1="$e:util:ping1nm2:f" value2="1" valueLen="3"/>
+<event active="true" eventTime="1350" id="ping20" oscIndex="0" oscMsgName="/ping/1/cf" oscMsgName1="/ping/1/mn" oscMsgName2="/ping/1/t" oscMsgNameLen="3" target="" targetData="" targetPlayMode="" value="500" value1="$e:util:ping1nm2:f" value2="1" valueLen="3"/>
+<event active="true" eventTime="2000" id="ping14" oscIndex="0" oscMsgName="/ping/1/cf" oscMsgName1="/ping/1/mn" oscMsgName2="/ping/1/t" oscMsgNameLen="3" target="" targetData="" targetPlayMode="" value="500" value1="$e:util:ping1nm2:f" value2="1" valueLen="3"/>
+<event active="true" eventTime="2100" id="ping21" oscIndex="0" oscMsgName="/ping/1/cf" oscMsgName1="/ping/1/mn" oscMsgName2="/ping/1/t" oscMsgNameLen="3" target="" targetData="" targetPlayMode="" value="500" value1="$e:util:ping1nm2:f" value2="1" valueLen="3"/>
+<event active="true" eventTime="2500" id="ping15" oscIndex="0" oscMsgName="/ping/1/cf" oscMsgName1="/ping/1/mn" oscMsgName2="/ping/1/t" oscMsgNameLen="3" target="" targetData="" targetPlayMode="" value="500" value1="65" value2="1" valueLen="3"/>
+<event active="true" eventTime="2750" id="ping16" oscIndex="0" oscMsgName="/ping/1/cf" oscMsgName1="/ping/1/mn" oscMsgName2="/ping/1/t" oscMsgNameLen="3" target="" targetData="" targetPlayMode="" value="500" value1="$e:util:ping1nm2:f" value2="1" valueLen="3"/>
+<event active="true" eventTime="2900" id="ping17" oscIndex="0" oscMsgName="/ping/1/cf" oscMsgName1="/ping/1/mn" oscMsgName2="/ping/1/t" oscMsgNameLen="3" target="" targetData="" targetPlayMode="" value="500" value1="$e:util:ping1nm2:f" value2="1" valueLen="3"/>
+<event active="true" eventTime="3000" id="ping18" oscIndex="0" oscMsgName="/ping/1/cf" oscMsgName1="/ping/1/mn" oscMsgName2="/ping/1/t" oscMsgNameLen="3" target="" targetData="" targetPlayMode="" value="500" value1="76" value2="1" valueLen="3"/>
+<event active="true" eventTime="3500" id="ping19" oscIndex="0" oscMsgName="/ping/1/cf" oscMsgName1="/ping/1/mn" oscMsgName2="/ping/1/t" oscMsgNameLen="3" target="" targetData="" targetPlayMode="" value="500" value1="78" value2="1" valueLen="3"/>
+<event active="true" eventTime="3600" id="ping22" oscIndex="0" oscMsgName="/ping/1/cf" oscMsgName1="/ping/1/mn" oscMsgName2="/ping/1/t" oscMsgNameLen="3" target="" targetData="" targetPlayMode="" value="500" value1="$e:util:ping1nm2:f" value2="1" valueLen="3"/>
+<event active="true" eventTime="3700" id="ping23" oscIndex="0" oscMsgName="/ping/1/cf" oscMsgName1="/ping/1/mn" oscMsgName2="/ping/1/t" oscMsgNameLen="3" target="" targetData="" targetPlayMode="" value="500" value1="78" value2="1" valueLen="3"/>
+</timeline>
+<timeline beatLength="10" beatPerBar="4" color="255 0 0" currentEvent="15" displayEnd="4000" displayStart="0" followOnExpr="" height="100" id="seq-6" lastSelEvent="15" oscIndex="0" pitch="1.0" playMode="" quantize="50" timeLineLength="4000" typeDisplay="false">
+<event active="true" eventTime="500" id="ping10" oscIndex="0" oscMsgName="/ping/1/cf" oscMsgName1="/ping/1/mn" oscMsgName2="/ping/1/t" oscMsgNameLen="3" target="" targetData="" targetPlayMode="" value="500" value1="78" value2="1" valueLen="3"/>
+<event active="true" eventTime="600" id="ping20" oscIndex="0" oscMsgName="/ping/1/cf" oscMsgName1="/ping/1/mn" oscMsgName2="/ping/1/t" oscMsgNameLen="3" target="" targetData="" targetPlayMode="" value="500" value1="$e:util:ping1nm:f" value2="1" valueLen="3"/>
+<event active="true" eventTime="750" id="ping11" oscIndex="0" oscMsgName="/ping/1/cf" oscMsgName1="/ping/1/mn" oscMsgName2="/ping/1/t" oscMsgNameLen="3" target="" targetData="" targetPlayMode="" value="500" value1="$e:util:ping1nm:f" value2="1" valueLen="3"/>
+<event active="true" eventTime="850" id="ping21" oscIndex="0" oscMsgName="/ping/1/cf" oscMsgName1="/ping/1/mn" oscMsgName2="/ping/1/t" oscMsgNameLen="3" target="" targetData="" targetPlayMode="" value="500" value1="$e:util:ping1nm:f" value2="1" valueLen="3"/>
+<event active="true" eventTime="1000" id="ping12" oscIndex="0" oscMsgName="/ping/1/cf" oscMsgName1="/ping/1/mn" oscMsgName2="/ping/1/t" oscMsgNameLen="3" target="" targetData="" targetPlayMode="" value="500" value1="$e:util:ping1nm:f" value2="1" valueLen="3"/>
+<event active="true" eventTime="1500" id="ping13" oscIndex="0" oscMsgName="/ping/1/cf" oscMsgName1="/ping/1/mn" oscMsgName2="/ping/1/t" oscMsgNameLen="3" target="" targetData="" targetPlayMode="" value="500" value1="$e:util:ping1nm:f" value2="1" valueLen="3"/>
+<event active="true" eventTime="1750" id="ping22" oscIndex="0" oscMsgName="/ping/1/cf" oscMsgName1="/ping/1/mn" oscMsgName2="/ping/1/t" oscMsgNameLen="3" target="" targetData="" targetPlayMode="" value="500" value1="$e:util:ping1nm:f" value2="1" valueLen="3"/>
+<event active="true" eventTime="1850" id="ping23" oscIndex="0" oscMsgName="/ping/1/cf" oscMsgName1="/ping/1/mn" oscMsgName2="/ping/1/t" oscMsgNameLen="3" target="" targetData="" targetPlayMode="" value="500" value1="$e:util:ping1nm:f" value2="1" valueLen="3"/>
+<event active="true" eventTime="2000" id="ping14" oscIndex="0" oscMsgName="/ping/1/cf" oscMsgName1="/ping/1/mn" oscMsgName2="/ping/1/t" oscMsgNameLen="3" target="" targetData="" targetPlayMode="" value="500" value1="$e:util:ping1nm:f" value2="1" valueLen="3"/>
+<event active="true" eventTime="2500" id="ping15" oscIndex="0" oscMsgName="/ping/1/cf" oscMsgName1="/ping/1/mn" oscMsgName2="/ping/1/t" oscMsgNameLen="3" target="" targetData="" targetPlayMode="" value="500" value1="65" value2="1" valueLen="3"/>
+<event active="true" eventTime="2750" id="ping16" oscIndex="0" oscMsgName="/ping/1/cf" oscMsgName1="/ping/1/mn" oscMsgName2="/ping/1/t" oscMsgNameLen="3" target="" targetData="" targetPlayMode="" value="500" value1="$e:util:ping1nm:f" value2="1" valueLen="3"/>
+<event active="true" eventTime="2900" id="ping17" oscIndex="0" oscMsgName="/ping/1/cf" oscMsgName1="/ping/1/mn" oscMsgName2="/ping/1/t" oscMsgNameLen="3" target="" targetData="" targetPlayMode="" value="500" value1="$e:util:ping1nm:f" value2="1" valueLen="3"/>
+<event active="true" eventTime="3000" id="ping18" oscIndex="0" oscMsgName="/ping/1/cf" oscMsgName1="/ping/1/mn" oscMsgName2="/ping/1/t" oscMsgNameLen="3" target="" targetData="" targetPlayMode="" value="500" value1="76" value2="1" valueLen="3"/>
+<event active="true" eventTime="3500" id="ping19" oscIndex="0" oscMsgName="/ping/1/cf" oscMsgName1="/ping/1/mn" oscMsgName2="/ping/1/t" oscMsgNameLen="3" target="" targetData="" targetPlayMode="" value="500" value1="78" value2="1" valueLen="3"/>
+<event active="true" eventTime="3650" id="ping24" oscIndex="0" oscMsgName="/ping/1/cf" oscMsgName1="/ping/1/mn" oscMsgName2="/ping/1/t" oscMsgNameLen="3" target="" targetData="" targetPlayMode="" value="500" value1="$e:util:ping1nm:f" value2="1" valueLen="3"/>
+<event active="true" eventTime="3750" id="ping25" oscIndex="0" oscMsgName="/ping/1/cf" oscMsgName1="/ping/1/mn" oscMsgName2="/ping/1/t" oscMsgNameLen="3" target="" targetData="" targetPlayMode="" value="500" value1="$e:util:ping1nm:f" value2="1" valueLen="3"/>
+</timeline>
+<view visible="util,seq-2,seq-3,seq_main,seq-4,seq-5,seq-6"/>
+</timelines>

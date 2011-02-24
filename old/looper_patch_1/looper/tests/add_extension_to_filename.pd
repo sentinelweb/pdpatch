@@ -1,0 +1,18 @@
+#N canvas 783 247 452 302 10;
+#X obj 48 29 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X obj 45 164 print;
+#X obj 48 61 symbol cat;
+#X msg 48 96 s dog \$1;
+#X text 13 3 trying to add a string to the end of another.;
+#X msg 46 124 \$2-1;
+#X msg 87 126 \$2-2;
+#X msg 123 126 \$2-3;
+#X connect 0 0 2 0;
+#X connect 2 0 3 0;
+#X connect 3 0 5 0;
+#X connect 3 0 6 0;
+#X connect 3 0 7 0;
+#X connect 5 0 1 0;
+#X connect 6 0 1 0;
+#X connect 7 0 1 0;

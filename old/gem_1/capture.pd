@@ -1,0 +1,16 @@
+#N canvas 448 97 341 189 10;
+#X obj 18 158 pix_write;
+#X obj 18 84 gemhead 99;
+#X msg 39 126 file \$1;
+#X msg 112 71 auto 1;
+#X obj 122 150 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X msg 175 62 auto 0;
+#X text 11 1 captures rendering output;
+#X msg 109 111 file f:/media/test/testGem.jpg;
+#X connect 1 0 0 0;
+#X connect 2 0 0 0;
+#X connect 3 0 0 0;
+#X connect 4 0 0 0;
+#X connect 5 0 0 0;
+#X connect 7 0 0 0;

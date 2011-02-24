@@ -1,0 +1,46 @@
+#N canvas 211 109 720 557 10;
+#X obj 59 32 openpanel;
+#X msg 64 59 open \$1;
+#X msg 56 7 bang;
+#X obj 94 131 pdp_qt;
+#X msg 22 102 loop \$1;
+#X obj 21 72 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 1 1
+;
+#X obj 179 183 pdp_route 3;
+#X obj 72 230 pdp_sub;
+#X obj 157 229 pdp_add;
+#X obj 202 70 pdp_noise;
+#X obj 202 47 metro 40;
+#X obj 202 26 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 1 1
+;
+#X obj 200 92 pdp_zoom;
+#X obj 269 93 hsl 128 15 0 20 0 0 empty empty empty -2 -6 0 8 -260818
+-1 -1 5600 1;
+#X obj 254 231 pdp_and;
+#X obj 168 128 hradio 15 1 0 3 empty empty empty 0 -6 0 8 -262144 -1
+-1 0;
+#X obj 45 182 pdp_route 3;
+#X obj 133 306 pdp_glx;
+#X connect 0 0 1 0;
+#X connect 1 0 3 0;
+#X connect 2 0 0 0;
+#X connect 3 0 16 0;
+#X connect 4 0 3 0;
+#X connect 5 0 4 0;
+#X connect 6 0 7 1;
+#X connect 6 1 8 1;
+#X connect 6 2 14 1;
+#X connect 7 0 17 0;
+#X connect 8 0 17 0;
+#X connect 9 0 12 0;
+#X connect 10 0 9 0;
+#X connect 10 0 3 0;
+#X connect 11 0 10 0;
+#X connect 12 0 6 0;
+#X connect 13 0 12 1;
+#X connect 14 0 17 0;
+#X connect 15 0 6 1;
+#X connect 15 0 16 1;
+#X connect 16 0 7 0;
+#X connect 16 1 8 0;
+#X connect 16 2 14 0;

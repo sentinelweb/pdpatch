@@ -1,0 +1,41 @@
+#N canvas 669 82 289 423 10;
+#X obj 31 323 reverb;
+#X obj 30 165 adsr 1 100 200 50 300;
+#X obj 46 216 osc~ 440;
+#X obj 30 293 *~;
+#X obj 29 106 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X msg 29 137 1;
+#X msg 63 136 0;
+#X obj 63 116 del 300;
+#X obj 48 239 *~;
+#X obj 48 262 *~;
+#X obj 49 191 hsl 128 15 20 10000 1 0 empty empty empty -2 -8 0 10
+-262144 -1 -1 0 1;
+#X floatatom 141 192 5 0 0 0 - - -;
+#X obj 113 93 hsl 128 15 10 5000 1 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X floatatom 206 92 5 0 0 0 - - -;
+#X obj 32 371 outlet~;
+#X obj 70 349 outlet~;
+#X obj 33 19 inlet;
+#X obj 92 17 inlet;
+#X connect 0 0 14 0;
+#X connect 0 1 15 0;
+#X connect 1 0 3 0;
+#X connect 2 0 8 0;
+#X connect 2 0 8 1;
+#X connect 3 0 0 0;
+#X connect 3 0 0 1;
+#X connect 4 0 5 0;
+#X connect 4 0 7 0;
+#X connect 5 0 1 0;
+#X connect 6 0 1 0;
+#X connect 7 0 6 0;
+#X connect 8 0 9 0;
+#X connect 8 0 9 1;
+#X connect 9 0 3 1;
+#X connect 10 0 2 0;
+#X connect 10 0 11 0;
+#X connect 12 0 7 1;
+#X connect 12 0 13 0;

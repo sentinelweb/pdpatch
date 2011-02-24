@@ -1,0 +1,41 @@
+#N canvas 149 173 706 319 10;
+#X obj 168 -60 dumpOSC 9999;
+#X obj 168 -38 OSCroute /ol3;
+#X obj 168 -17 OSCroute /peckham;
+#X obj 168 17 OSCroute /key;
+#X obj 168 41 outlet key;
+#X obj 55 18 OSCroute /tempo;
+#X obj 55 42 outlet tempo;
+#X obj 274 40 outlet complexity;
+#X obj 423 15 OSCroute /time;
+#X obj 423 39 outlet time;
+#X obj 274 16 OSCroute /control;
+#X obj 100 100 cnv 15 200 100 empty empty OSC-receiver 20 12 1 14 -233017
+-258699 0;
+#X obj 111 158 nbx 3 14 0 1e+37 0 0 empty empty tempo 0 -6 1 10 -262144
+-1 -1 88.651 256;
+#X obj 157 158 nbx 3 14 0 1e+37 0 0 empty empty key 0 -6 1 10 -262144
+-1 -1 47.0588 256;
+#X obj 199 158 nbx 3 14 0 1e+37 0 0 empty empty ctl 0 -6 1 10 -262144
+-1 -1 61.2588 256;
+#X obj 240 158 nbx 6 14 0 1e+37 0 0 empty empty time 0 -6 1 10 -262144
+-1 -1 8411 256;
+#X obj 545 14 OSCroute /harmonics;
+#X obj 545 38 outlet harmonics;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 2 0 3 0;
+#X connect 2 0 5 0;
+#X connect 2 0 8 0;
+#X connect 2 0 10 0;
+#X connect 2 0 16 0;
+#X connect 3 0 4 0;
+#X connect 3 0 13 0;
+#X connect 5 0 6 0;
+#X connect 5 0 12 0;
+#X connect 8 0 9 0;
+#X connect 8 0 15 0;
+#X connect 10 0 7 0;
+#X connect 10 0 14 0;
+#X connect 16 0 17 0;
+#X coords 0 -1 1 1 200 100 1 100 100;

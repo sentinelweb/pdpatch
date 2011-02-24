@@ -1,0 +1,85 @@
+#N canvas 113 231 549 500 10;
+#X obj 2 95 vsl 15 128 0 127 0 0 empty empty empty 0 -8 0 8 -262144
+-1 -1 0 0;
+#X obj 52 175 link \$0-link 0 1 0 200;
+#X obj 239 175 mass \$0-mass 10000 0;
+#X obj 9 19 hsl 128 15 1 10000 1 0 empty empty K -2 8 0 10 -204786
+-13330 -1 10500 1;
+#X obj 8 37 hsl 128 15 1 1000 1 0 empty empty D -2 8 0 10 -204800 -13330
+-1 6600 1;
+#X obj 8 55 hsl 128 15 1 10000 1 0 empty empty D2 -2 8 0 10 -203904
+-16662 -1 7500 1;
+#X msg 162 31 setD \$1;
+#X msg 161 10 setK \$1;
+#X floatatom 104 20 5 0 0 0 - - -;
+#X floatatom 103 37 5 0 0 0 - - -;
+#X floatatom 103 55 5 0 0 0 - - -;
+#X msg 162 51 setD2 \$1;
+#X obj 285 0 loadbang;
+#X obj 320 91 s \$0-link;
+#X obj 285 66 t b b;
+#X obj 285 117 s \$0-mass;
+#X obj 361 14 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X msg 396 86 reset;
+#X msg 361 60 resetL \, resetF;
+#X obj 361 34 t b b;
+#X obj 285 22 tgl 15 0 empty empty empty 0 -6 0 10 -262144 -1 -1 1
+1;
+#X obj 285 43 metro 5;
+#X msg 118 218 \$1 5;
+#X obj 118 274 outlet~;
+#X obj 29 113 inlet;
+#X obj 119 244 line~ 0 5;
+#X floatatom 89 74 8 0 0 0 - - -;
+#X text 432 2 depends on pmpd;
+#X obj 439 116 inlet;
+#X obj 443 149 OSCroute /spring;
+#X obj 440 174 OSCroute /K;
+#X obj 443 199 OSCroute /D;
+#X obj 440 223 OSCroute /D2;
+#X obj 441 246 OSCroute /val;
+#X text 51 72 output;
+#X obj 233 278 outlet;
+#X obj 35 73 bng 15 250 50 0 empty empty empty 0 -6 0 10 -262144 -1
+-1;
+#X text 1 72 reset;
+#X text 83 334 seems to be a bit of a bug where the mass position changes
+for some reason.;
+#X connect 0 0 1 0;
+#X connect 1 1 2 0;
+#X connect 2 0 1 1;
+#X connect 2 0 26 0;
+#X connect 3 0 8 0;
+#X connect 3 0 7 0;
+#X connect 4 0 6 0;
+#X connect 4 0 9 0;
+#X connect 5 0 10 0;
+#X connect 5 0 11 0;
+#X connect 6 0 1 0;
+#X connect 7 0 1 0;
+#X connect 11 0 1 0;
+#X connect 12 0 20 0;
+#X connect 14 0 15 0;
+#X connect 14 1 13 0;
+#X connect 16 0 19 0;
+#X connect 17 0 15 0;
+#X connect 18 0 13 0;
+#X connect 19 0 18 0;
+#X connect 19 1 17 0;
+#X connect 20 0 21 0;
+#X connect 21 0 14 0;
+#X connect 22 0 25 0;
+#X connect 24 0 1 0;
+#X connect 25 0 23 0;
+#X connect 26 0 22 0;
+#X connect 26 0 35 0;
+#X connect 28 0 29 0;
+#X connect 29 0 30 0;
+#X connect 29 0 31 0;
+#X connect 29 0 32 0;
+#X connect 30 0 3 0;
+#X connect 31 0 4 0;
+#X connect 32 0 5 0;
+#X connect 33 0 1 0;
+#X coords 0 -1 1 1 140 90 1 0 0;

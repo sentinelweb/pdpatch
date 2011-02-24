@@ -1,0 +1,443 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>OSC Timeline</title>
+
+
+
+<script type="text/javascript">
+	var djConfig = {
+		isDebug : false
+// ,  
+//		baseScriptUri : "/"
+    };
+	//alert('here.');
+</script>
+<script type="text/javascript" src="index_files/dojo.js"></script>
+<script language="JavaScript" type="text/javascript">
+	dojo.require("dojo.widget.AccordionContainer");
+	dojo.require("dojo.widget.ContentPane");
+	dojo.require("dojo.widget.*");	
+	dojo.require("dojo.widget.LinkPane");
+
+function toggle(el){
+	var state=el.nextSibling.style.display;
+	if (state=="block") {el.nextSibling.style.display="none";}
+	else {el.nextSibling.style.display="block";}
+} 
+</script><style type="text/css">.dojoLayoutContainer{ position: relative; display: block; overflow: hidden; }
+body .dojoAlignTop, body .dojoAlignBottom, body .dojoAlignLeft, body .dojoAlignRight { position: absolute; overflow: hidden; }
+body .dojoAlignClient { position: absolute }
+.dojoAlignClient { overflow: auto; }
+</style>
+<style>
+html, body {	height: 99%;	width: 99%;	overflow: hidden;	font-family: Arial,Verdana;	background:#000000;	color:white;	font-size:11px;}
+.header {	width:99%;font-weight:bold;background:#888888;color:white;border:1px solid black;}
+.contents{ width:98%; border:1px solid #bbbbff; margin-left:2px;}
+.section {	width:99%;font-weight:normal;background:#bbbbbb;color:black;border:1px solid black;vertical-align:middle;}
+.normal {color:white;}
+#main {	height: 97%;	width: 97%;	left: 1%;	top: 1%;	position: relative;}
+a {color:red;}
+table {font-size:11px;}
+.label {	border: 1px solid black;	background: #232323;	color: #444444;	font-weight: bold;	font-size:13px;}
+.label :hover {	cursor: pointer;}
+.accBody {	background: #44444;	color: #444444;	overflow: auto;}
+</style><style type="text/css">.dojoAccordionPane .label {
+	color: #000;
+	font-weight: bold;
+	background: url(../src/widget/templates/images/soriaAccordionOff.gif) repeat-x top left #85aeec;
+	border:1px solid #d9d9d9;
+	font-size:0.9em;
+}
+
+.dojoAccordionPane-selected .label {
+	background: url(../src/widget/templates/images/soriaAccordionSelected.gif) repeat-x top left #85aeec;
+	border:1px solid #84a3d1;
+}
+
+.dojoAccordionPane .label:hover {
+	cursor: pointer;
+}
+
+.dojoAccordionPane .accBody {
+	background: #fff;
+	overflow: auto;
+	border:1px solid #84a3d1;
+}
+</style></head><body>
+<div dojotype="AccordionContainer" labelnodeclass="label" containernodeclass="accBody" style="border: 2px solid black; overflow: hidden; position: relative;" id="main"><div style="width: 1101px; height: 613px; z-index: 1; position: absolute; top: 0px;" dojoinsertionindex="0" class="dojoAccordionPane dojoLayoutContainer" dojoattachpoint="domNode">
+<div style="-moz-user-select: none; left: 0px; top: 0px; bottom: auto; right: auto; width: 1099px;" dojoattachpoint="labelNode" dojoattachevent="onclick: onLabelClick" class="label dojoAlignTop">Introduction &amp; features</div>
+<div dojoattachpoint="containerNode" style="overflow: hidden; left: 0px; top: 15px; bottom: auto; right: auto; width: 1099px; height: 596px;" class="accBody dojoAlignClient"><div dojoinsertionindex="0" style="width: 1099px; font-size: 14px; height: 596px;" class="dojoLinkPane"><div class="accBody" style="margin: 2px; background: rgb(68, 68, 68) none repeat scroll 0%; width: 100%; height: 100%; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; color: rgb(238, 238, 238);">
+<div class="header">What is it ?</div>
+It is a OSC sequencer, individual OSC events are programmed onto
+timelines, the OSC messages are used to control seperate audio and
+video PD patches, but could be any OSC enabled software.
+<ul>
+	<li> Timelines can be sequenced together (timelines can play
+other timelines). A "Tree" of timelines can execute for increased
+complexity. </li><li> Midi controllers can be configured to play via OSC.
+Multiple maps can be configured to play different sets of osc
+events.(e.g. for different instruments). A photo of the controller can
+be configured to overlay with the configured osc messages. </li><li> OSC events can be sent to the sequencer and can be routed
+to other OSC ports. Filter can trigger osc messages based on other osc
+messages. </li><li> A simple expression language allows you to manipluate data
+in the software. Expressions can be invoked anywhere an osc message can
+be configure, an expression can do lot of different things (mainly set
+different data in the interface) : <ul>
+			<li> Trigger a timeline, set its speed, position, 
+			</li><li> Invoke java code. eith standard java objects, custom objects written as a package or in the compile window.
+			</li><li> Set event parameters, event targets, osc destinations, 
+			</li><li> Midi controller values can be set. 
+		</li></ul>
+	</li><li> Java can be live coded in the interface - as code is written it can be intermittently compiled and the generated class loaded.
+</li></ul>
+<div style="width: 100%; text-align: center;"><img src="index_files/TimeLine.png" border="0"></div>
+
+<b>Figure 1: Screenshot - designed to have a minimal screen footprint.</b><br>
+
+<div class="header">Project status</div>
+At the moment this software is in a very alpha stage but i am
+interested to see if there is any other similar project or interest by
+other in the concept.<br><br>
+The software is built in Java, it started out a s a processing applet
+but after the complexity grew i decided to rewrited parts of it (mainly
+the draw methods in plain java 2D) for efficiency sake.<br><br>
+It seems to run fairly quickly at the moment (my comp is a 2Ghz duo
+though so it should ), but i think it should be reasonably efficient
+even on slower machines.<br><br>
+It does suffer from useability issues at the moment but hey its free and it (mostly) works :)<br><br>
+There is a short video <a href="file:///media/USBDISK/src/devel/silicontransit.com/timeline/mov/timeline2.avi" traget="_blank">here</a><br><br>
+contact timeline at silicontransit dot com<br><br>
+</div>
+</div></div>
+</div><div style="width: 1101px; height: 613px; z-index: 2; position: absolute; top: 15px; left: 0px;" dojoinsertionindex="0" class="dojoAccordionPane dojoLayoutContainer dojoAccordionPane-selected" dojoattachpoint="domNode">
+<div style="-moz-user-select: none; left: 0px; top: 0px; bottom: auto; right: auto; width: 1099px;" dojoattachpoint="labelNode" dojoattachevent="onclick: onLabelClick" class="label dojoAlignTop">Download / Source</div>
+<div dojoattachpoint="containerNode" style="overflow: hidden; left: 0px; top: 15px; bottom: auto; right: auto; width: 1099px; height: 596px;" class="accBody dojoAlignClient"><div dojoinsertionindex="0" style="width: 1099px; font-size: 14px; height: 596px;" class="dojoLinkPane"><div class="accBody" style="margin: 2px; background: rgb(68, 68, 68) none repeat scroll 0%; width: 100%; height: 100%; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; color: rgb(238, 238, 238);">
+<div class="header">Download files</div>
+I am only distributing source at the mo as a binary most likely wouldnt work. I use <a href="http://www.eclipse.org/" target="_blank">eclipse</a> to build. It should work with a standard java 5 which is what i use i have not tested it with java 6. <br><br> <b>You will have to be fairly proficient with Java to get it up and running</b>.
+<ul>
+	<li><a href="file:///media/USBDISK/src/devel/silicontransit.com/timeline/code/timeline_151107.tar.gz">timeline_151107.tar.gz</a>: The source code classes. compiled for j2sdk_1.5.0_12. 
+	<!--<li/><a href="code/libs.zip">libs.zip</a>: These are the processing libraries i use, i have (only slightly) modified the standard processing OSC jar - probably easier to use these with this software.-->
+	</li><li><a href="file:///media/USBDISK/src/devel/silicontransit.com/timeline/code/timeline_conf.tar.gz">timeline_conf.tar.gz</a>: The config files unpack to your home directory (makes the dir .timelinerc)
+</li></ul>
+<div class="header">Some instructions.</div>
+<ol>
+	<li> Unpack timeline_151107.tar.gz to dir TIMELINE_UNPACK (you choose it)
+	</li><li> Unpack timeline_conf.tar.gz to your home directory (makes the file .timelinerc) 
+	</li><li> make sure you have j2sdk_1.5.0_12 installed and have your environment variable JAVA_HOME set to its path.
+	</li><li> edit the config.xml in .timelinerc to have the classpath pointing to your TIMELINE_UNPACK/timeline/Timeline/classes directory
+</li></ol>
+<div class="header">Config file formats.</div>
+<br>
+The config file should be named config.xml and be located at
+XML_PATH/config.xml - this is the main config file for the software. <br>
+<table class="header" border="1" cellpadding="0" cellspacing="0">
+	<tbody><tr><td colspan="3">Config file (xml/config.xml)</td></tr><tr>
+	</tr><tr><td>XML Path</td><td>Data format</td><td>Description</td></tr>
+	<tr><td>/config/hosts/host</td><td></td><td>Host element</td></tr>
+	<tr><td>/config/hosts/host/@addr</td><td>hostname/ipaddr</td><td> to other OSC software.</td></tr>
+	<tr><td>/config/hosts/host/@rcvPort</td><td>port</td><td>that timeline recieves OSC on.</td></tr>
+	<tr><td>/config/hosts/host/@sndPort</td><td>port</td><td>that the other software recieves on.</td></tr>
+	<tr><td>/config/midi/device</td><td></td><td>Config for a MIDI device</td></tr>
+	<tr><td>/config/midi/device/@id</td><td>String</td><td>The
+prefix for the midi device name (e.g. without [hw x,y] on the end),
+OSCMIDI:x is a special name that treats /midi x &lt;part&gt;
+&lt;val&gt; (this is because my hercules is a joystick under linux)</td></tr>
+	<tr><td>/config/classpath</td><td>String</td><td>The class path for compilation purposes set TIMELINE_UNPACK/timeline/Timeline/classes.</td></tr>
+	<tr><td>/config/datapath</td><td>String</td><td>arbitrary</td></tr>
+	<tr><td>/config/mappath</td><td>String</td><td>the path to the maps config file (in the example case XML_PATH/maps/ControlMaps.xml)</td></tr>
+</tbody></table>
+
+<br>
+The mapping config file should be located at /config/mappath (from
+config.xml) - this is the main config file for MIDI controller config
+the software. <br>
+In the MIDI window using the middle button a rect can be drawn, the
+coords are shown in the to right of the MIDI window, clicking on the
+square next to it copies the XML to the clipboard (useful for pasting
+into this config file )
+<table class="header" border="1" cellpadding="0" cellspacing="0">
+	<tbody><tr><td colspan="3">Controller mapping Config file (/config/mappath )</td></tr><tr>
+	</tr><tr><td>XML Path</td><td>Data format</td><td>Description</td></tr>
+	<tr><td>/controlConfig/device/@timeLineId</td><td>String</td><td>The id the timeline uses - this is stored in files</td></tr>
+	<tr><td>/controlConfig/device/@midiId</td><td>String</td><td>The id the OS gives the midi device i.e. which one tto actually open can exclude the [hwx,y]</td></tr>
+	<tr><td>/controlConfig/device/@image</td><td>File Path</td><td>The full path to the image file</td></tr>
+	<tr><td>/controlConfig/device/control/</td><td>int</td><td>configure a control</td></tr>
+	<tr><td>/controlConfig/device/control/@num</td><td>int</td><td>control number</td></tr>
+	<tr><td>/controlConfig/device/control/@desc</td><td>String</td><td>short description (to display on image)</td></tr>
+	<tr><td>/controlConfig/device/control/@width</td><td>int</td><td>the width of the rect to map</td></tr>
+	<tr><td>/controlConfig/device/control/@height</td><td>int</td><td>the height of the rect to map</td></tr>
+	<tr><td>/controlConfig/device/control/@top</td><td>int</td><td>the top of the rect to map</td></tr>
+	<tr><td>/controlConfig/device/control/@left</td><td>int</td><td>the left of the rect to map</td></tr>
+	<tr><td>/controlConfig/device/notes/</td><td></td><td>configure a keyboard</td></tr>
+	<tr><td>/controlConfig/device/notes/@width</td><td>int</td><td>the width of the rect to map the whole area of the keys</td></tr>
+	<tr><td>/controlConfig/device/notes/@height</td><td>int</td><td>the height of the rect to map</td></tr>
+	<tr><td>/controlConfig/device/notes/@top</td><td>int</td><td>the top of the rect to map</td></tr>
+	<tr><td>/controlConfig/device/notes/@left</td><td>int</td><td>the left of the rect to map</td></tr>
+	<tr><td>/controlConfig/device/notes/@octaves</td><td>int</td><td>the number of octaves</td></tr>
+	<tr><td>/controlConfig/device/notes/@textAlign</td><td>String</td><td>'vertical' (else assumed horizontal) </td></tr>
+	<tr><td>/controlConfig/device/notes/@blackKeyWidth</td><td>int</td><td>the width of a single black key</td></tr>
+	<tr><td>/controlConfig/device/notes/@blackKeyHeight</td><td>int</td><td>the height of a single black key</td></tr>
+</tbody></table>
+</div>
+</div></div>
+</div><div style="width: 1101px; height: 613px; z-index: 3; position: absolute; top: 628px;" dojoinsertionindex="0" class="dojoAccordionPane dojoLayoutContainer" dojoattachpoint="domNode">
+<div style="-moz-user-select: none; left: 0px; top: 0px; bottom: auto; right: auto; width: 1099px;" dojoattachpoint="labelNode" dojoattachevent="onclick: onLabelClick" class="label dojoAlignTop">Manual	</div>
+<div dojoattachpoint="containerNode" style="overflow: hidden; left: 0px; top: 15px; bottom: auto; right: auto; width: 1099px; height: 596px;" class="accBody dojoAlignClient"><div dojoinsertionindex="0" style="width: 1099px; font-size: 14px; height: 596px;" class="dojoLinkPane"><div class="accBody" style="margin: 2px; background: rgb(68, 68, 68) none repeat scroll 0%; width: 100%; height: 100%; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; color: rgb(238, 238, 238);">
+<div class="header" style="font-size: 16px;">TimeLine - built with processing.</div>
+<div class="contents">OSC message timelineing and sequencing.<br></div>
+<div class="header" onclick="toggle(this)">File operations :-</div>
+<div class="contents">
+	<li><b>s</b>: save file.<br>
+	</li><li><b>o</b>: open file.<br>
+	<br>
+</li></div>
+
+<div class="header" onclick="toggle(this)">Input modes :- input data o set object properties.</div>
+<div class="contents"> 
+	<li><b>RETURN</b>: enter data.
+	</li><li><b>TAB</b>: exit inputmode without entering data.
+	</li><li><b>shift+backsp</b>: clear line.
+	</li><li><b>clear line then press backspace again</b>: exit inputmode without entering data.
+	</li><li><b>alt+backsp:</b>: clear to previous file separator char.
+	<br><b>global properies:-</b>
+	</li><li><b>f</b>: input filename.(<b>o</b>: to load)<span style="color: rgb(0, 0, 136);">(<b>value help</b>: UP and DOWN get next file in alphabetical order)</span>
+	</li><li><b>F</b>: load additional timelines from a file.<span style="color: rgb(0, 0, 136);">(<b>value help</b>: UP and DOWN get next file in alphabetical order)</span>
+	</li><li><b>N</b>: add note. (up /down next/last note).
+	</li><li><b>w</b>: pitch control ratio..
+	</li><li><b>W</b>: normalise timeline on pitch control ratio (i.e. make timelne pitch 1 but keep time settings)..
+	</li><li><b>+</b>: input MIDI note range (part startNote endNote oscIndex oscMsg) <span style="color: rgb(0, 0, 136);">(<b>value help</b>: hit start and end note on MIDI controller)(<b>value help</b>: shift and note gets setting for that note)</span>.
+	</li><li><b>=</b>: input MIDI controller setting (part ctlNumber oscIndex [$expr|/oscMsg] scale offset type)<span style="color: rgb(0, 0, 136);">(<b>value help</b>: hit control on MIDI controller, UP &amp; DOWN for next setting on this control.)</span>.
+	<br><b>for timeline:-</b>
+	</li><li><b>t</b>: input timeline length.
+	</li><li><b>n</b>: input timeline id.
+	</li><li><b>b</b>: input timeline quantize marks per beat(format: beatLength-beatsPerBar).
+	</li><li><b>q</b>: input timeline quantisation(msec).
+	</li><li><b>M</b>: input timeline default OSC sender index.
+	</li><li><b>ctrl+g</b>: input group name.
+	</li><li><b>g</b>: add current event to selection.
+	</li><li><b>shift+g</b>: add/remove all event to selection
+	</li><li><b>alt+g</b>: select all/none events of the current type.
+	</li><li><b>*</b>: force timeline rebuild (good if event pllayed are out of sync with display -but should'nt be needed).
+	</li><li><b>k</b>: set timeline color.<span style="color: rgb(0, 0, 136);">(<b>value help</b>:mouse over input bar: red=(SCREEN_HEIGHT-mouseY-1)*15; green = (mouseX/15)*15; int blue = (mouseX%15)*15;)</span>
+	<br><b>for event:-</b>
+	</li><li><b>e</b>: input event target timeLine name (sets selection and currentEvent).<span style="color: rgb(0, 0, 136);">(<b>value help</b>: click timeline on selector)</span><br>
+- set same timeline to rotate playmode (p=play, l=loop, b=bang (bang
+plays all events at one time instant, then stops till next bang))<br>
+	 - add data to send to play fn by adding : then data.(for p &amp; l sets start position, for b set start event).
+	</li><li><b>i</b>: input event OSC message name (sets selection and currentEvent).format [$expr|/oscMsg]
+	</li><li><b>m</b>: input event OSC sender index.
+	</li><li><b>alt+n</b>: input event id.
+	</li><li><b>v</b>: input event value (int) (sets selection and currentEvent) (<span style="color: rgb(0, 0, 136);"><b>value help</b>(for filename): UP and DOWN get next file in alphabetical order)</span>.
+	</li><li><b>V</b>: input event value index - sets the index of the value to edit int the events value list.
+	<br><br>
+</li></div>
+
+<div class="header" onclick="toggle(this)">Input modes :-</div>
+<div class="contents">
+	<li><b>backsp</b>: clear char before cursor.
+	</li><li><b>shift+backsp</b>: clear line (from cursor to start) in input mode.
+	</li><li><b>alt+backsp</b>: clear to last "/" or "\".
+	</li><li><b>left arrow</b>: move cursor 1 char toward start.
+	</li><li><b>right arrow</b>: move cursor 1 char toward end.
+	</li><li><b>alt+left arrow</b>: move cursor to start.
+	</li><li><b>alt+right arrow</b>: move cursor to end.
+	<br><br>
+</li></div>
+<div class="header" onclick="toggle(this)" style="font-size: 14px;"> $ Expression format :- specifies an object to send a value to.</div>
+<div class="contents">$ = set val a execution time , % = set val at input time (eval to a number).
+	<div class="header" onclick="toggle(this)">MIDI format:-</div>
+	<div class="contents">
+		Set:<b>$m:&lt;device_number&gt;:&lt;partNum&gt;_&lt;controlNum&gt;:[v|s|o]:[controlIndex]</b><br>
+		Get:<b>[%$]m:&lt;device_number&gt;:&lt;partNum&gt;_&lt;controlNum&gt;:[v|s|o]:[controlIndex]</b>
+		<li><b>v</b>: set value.
+		</li><li><b>s</b>: set scale.
+		</li><li><b>o</b>: set offset.
+		</li><li><b>controlIndex</b>: index of the controllsetting under that control.
+		</li><li>if controlIndex is omitted then the setting is applied to all controlsettings under that control.
+	</li></div>
+	<div class="header" onclick="toggle(this)"> Timeline format:-</div>
+	<div class="contents">
+		Set:<b>$t:[&lt;timeLineId&gt;|current]:[p|l|x|v|c|w]:[parameterIndex]</b><br>
+		Get:<b>[%$]t:[&lt;timeLineId&gt;|current]:[p|l|x|v|q|b|r|c|w]:parameterIndex</b>
+		<li><b>current</b>: current time line.
+		</li><li><b>p</b>: toggle play mode.
+		</li><li><b>l</b>: toggle loop mode.
+		</li><li><b>x</b>: get/set position.
+		</li><li><b>w</b>: get/set pitch.
+		</li><li><b>v</b>: get/set parameter at (optional) parameterIndex. if no index then the parameters are set as a list.(current list is replaced).
+		</li><li><b>q</b>: get quantization timelength(ms).
+		</li><li><b>b</b>: get beat timelength(ms).
+		</li><li><b>r</b>: get bar timelength(ms).
+		</li><li><b>c</b>: current event index.
+		</li><li><b>no [p|l|x|v|q|b|r|c|w]</b>: (get) return timeline object.
+	</li></div>
+	<div class="header" onclick="toggle(this)"> Event format:-</div>
+	<div class="contents">
+		Set:<b>$e:[&lt;timeLineId&gt;|current]:[&lt;eventIndex&gt;|current]:[v|i|m|f]:[valueIndex]</b><br>
+		Get:<b>[%$]e:[&lt;timeLineId&gt;|current]:[&lt;eventIndex&gt;|current]:[v|i|m]:[valueIndex]</b>
+		<li><b>current</b>: current time line.
+		</li><li><b>v</b>: get/set value.(optional valueIndex)
+		</li><li><b>i</b>: get/set oscMsgName.
+		</li><li><b>m</b>: get/set oscIndex.
+		</li><li><b>f</b>: fire event(set only). data is ignored.
+		</li><li><b>no [v|i|m]</b>: (get) return event.
+	</li></div>
+	<div class="header" onclick="toggle(this)"> Function (Java method call) format:-</div>
+	<div class="contents">
+		Set:<b>$f:&lt;var_name&gt;=&lt;class_name&gt;:&lt;methodname&gt;:[n]:</b><br>
+		Get:<b>[%$]f:&lt;var_name&gt;=&lt;class_name&gt;:&lt;methodname&gt;:[n]:(&lt;args&gt;)</b><br>
+		* objects are stored in a global hash array<br>
+		* if &lt;var_name&gt; then new object always used.<br>
+		* if &lt;class_name&gt; then retreive object from global array for this &lt;var_name&gt;<br>
+		* in Set event values are used for method arguments.
+		<li><b>n</b>: new object.
+		</li><li><b>args</b>: (, separated) (only in get) evaluated objects to send to function ($T=timeline).
+	</li></div>
+</div>
+<div class="header" onclick="toggle(this)" style="font-size: 14px;">MIDI operations :-</div>
+<div class="contents">
+	<div class="header" onclick="toggle(this)"> Controller input string:-</div>
+	<div class="contents">
+		<b>(part ctlNumber oscIndex [$expr|/oscMsg] scale offset type[-])</b>
+		<li><b>part</b>: the part number.
+		</li><li><b>ctlNumber</b>: the control number.
+		</li><li><b>oscIndex</b>: the the oscIndex.
+		</li><li><b>[$expr|/oscMsg]</b>: either an expression(see above) or an OSC message.
+		</li><li><b>scale</b>: multiplier of midi value.
+		</li><li><b>offset</b>: offset of midi value.
+		</li><li><b>type</b>: the control type.
+		<ul><b>types</b>:-
+			<li><b>b</b>: button.</li>
+			<li><b>t</b>: toggle button.</li>
+			<li><b>n</b>: normal range (0-127)*scale+offset.</li>
+			<li><b>l</b>: logarithmic range (0-127)^scale+offset.</li>
+			<li><b>a</b>: accumulator (e.g. for jogwheel). step=scale, intiial value = offset</li>
+		</ul>
+		</li><li><b>-</b>: (last char) delete this control setting.
+	</li></div>
+	<div class="header" onclick="toggle(this)"> Note input string:-</div>
+	<div class="contents">
+		<b>(part startNote endNote oscIndex [$expr|/oscMsg])</b>
+		<li><b>part</b>: the part number.
+		</li><li><b>startNote</b>: the start note.
+		</li><li><b>endNote</b>: the end note.
+		</li><li><b>oscIndex</b>: the the oscIndex.
+		</li><li><b>[$expr|/oscMsg]</b>: either an expression(see above) or an OSC message.
+	</li></div>
+</div>
+<div class="header" onclick="toggle(this)" style="font-size: 14px;"> Timeline operations :-</div>
+<div class="contents">
+	<div class="header" onclick="toggle(this)"> Timeline selection :-</div>
+	<div class="contents">
+		<li><b>z</b>:last timeLine.
+		</li><li><b>x</b>:next timeline.
+		</li><li><b>`</b>:goto timeline triggeed by current event.
+		</li><li><b>shift+'(~)</b>:go back to parent timeline (if entered from `).
+		</li><li><b>shift+0 (')')</b>: goto root timeline(0).
+		<br><br>
+	</li></div>
+	
+	<div class="header" onclick="toggle(this)">Timeline selector :-</div>
+	<div class="contents">
+		<li><b>left click on select reigon(right)</b>: selects that timeline.<br>
+		</li><li><b>right click on select reigon(right)</b>: <br>
+				-in input mode 'e': set timeline id to input string.<br>
+				-otherwise if in input mode: puts timeline expression at cursor pos.<br>
+				-otherwise: selects that timeline.<br>
+		</li><li><b>left click on play reigon(left)</b>: play/stop clicked timeline(cycles beetween them).
+		</li><li><b>right click on play reigon(left)</b>: loop/stop clicked timeline(cycles beetween them).
+		<br><br>
+	</li></div>
+	
+	<div class="header" onclick="toggle(this)">Timeline funcs :-</div>
+	<div class="contents"><li><b>p</b>: play(toggles).
+		</li><li><b>l</b>: loop(toggles).
+		</li><li><b>r</b>: record (if osgmsg in == /in then the osc message name is the currently selected event).
+		</li><li><b>P</b>: stops all timelines.
+		</li><li><b>*</b>: rebuild timeLine.
+		</li><li><b>D</b>: delete timeline.
+		</li><li><b>C</b>: copy selected timeline.(the copy is placed at the end).
+		</li><li><b>h</b>: toggle long beat/bar marks on this timeline.
+		<br><br>
+	</li></div>
+</div><!-- timeLine operations -->
+
+<div class="header" onclick="toggle(this)" style="font-size: 14px;"> Event operations :-</div>
+<div class="contents"> Data can be copied beetween events by selecting
+the inputmode for the data and moveing to the event you want to copy it
+to then hitting enter. This also works for a whole selection. <div class="header" onclick="toggle(this)">Event selection.</div>
+	<div class="contents">
+		<li><b>g</b>: (de)select event (to selection)
+		</li><li><b>G</b>: (de)select all.
+		</li><li><b>alt+g</b>:  - (de)select event of same name or target (priority to name) based on current event,<br>
+				- if current event selected the removes from selection.<br>
+				- if current event not selected the adds to selection.
+		</li><li><b>y</b>: copy event selection.
+		</li><li><b>Y</b>: Paste event selection.
+		</li><li>if (in input mode) {
+		<ol><b>ctrl+lft arrow</b> : select next event to left<br>
+		<b>ctrl+rgt arrow </b>: select next event to right
+		</ol>} else {
+		<ol><b>lft arrow </b>: select next event to left<br>
+		<b>rgt arrow </b>: select next event to right
+		</ol>}
+		</li><li><b>lft click</b>: select next el to left of mouseClick
+		</li><li><b>shift + left drag</b>: toggle selects timerange.
+		<br><br>
+	</li></div>
+
+	<div class="header" onclick="toggle(this)">Event selector :-</div>
+	<div class="contents"><li><b>left click</b>: selects that event.
+		</li><li><b>shift + left click</b>: plays clicked timeline.
+		<br><br>
+	</li></div>
+	
+	<div class="header" onclick="toggle(this)">Event funcs.</div>
+	<div class="contents"><li><b>a</b>: event (de)activate. (sets selection and currentEvent)
+		</li><li><b>space</b>: fire current event.
+		</li><li><b>d</b>: delete selected event(s) (current evemnt and selection).
+		</li><li><b>c</b>: copy selected event.
+		</li><li><b>right click</b>: create event at click pos.<br>
+		</li><li><b>shift + right click</b>: create event at click pos  - copy data from current event.<br>
+		<br>
+	</li></div>
+	<div class="header" onclick="toggle(this)">Event move.</div>
+	<div class="contents">
+		<li><b>shift +lft arr</b> : move event to left (toward start)(quantizes)<br>
+		</li><li><b>shift +rgt arr</b> : move event to right (toward end)(quantizes)<br>
+		</li><li><b>shift +ctrl+lft arr</b> : move event 1 beat to left (toward start)(quantizes)<br>
+		</li><li><b>shift +ctrl+rgt arr</b> : move event 1 beat to right (toward end)(quantizes)<br>
+		</li><li><b>shift +alt+ctrl+lft arr</b> : move event 1 bar to left (toward start)<br>
+		</li><li><b>shift +alt+ctrl+rgt arr</b> : move event 1 bar to right (toward end)<br>
+		</li><li><b>shift +alt+lft arr</b> : move event 1 ms to left (toward start)<br>
+		</li><li><b>shift +alt+rgt arr</b> : move event 1 ms to right (toward end)<br>
+		</li><li><b>drag event</b> : move event snap to quantize mark.<br>
+		</li><li><b>ctrl + drag event</b> : move event snap to beat mark.<br>
+		</li><li><b>alt + drag event</b> : move event freely.<br>
+		<br>
+	</li></div>
+</div><!-- event operations -->
+
+<div class="header" onclick="toggle(this)">Set position.</div>
+<div class="contents"><li><b>ctrl+left click</b>: set position.<br>
+	</li><li><b>ctrl+shift+left click</b>: set position thru to child timelines.<br>
+	</li><li><b>0(zero)</b>: go to start position.<br>
+<br>
+</li></div>
+
+<div class="header" onclick="toggle(this)">Notes :-</div>
+<div class="contents">
+	<li> can add patch to send key strokes (genin.pd) and input data.<br>
+	<br>
+</li></div>
+</div></div></div>
+</div><div style="width: 1101px; height: 613px; z-index: 4; position: absolute; top: 643px;" dojoinsertionindex="0" class="dojoAccordionPane dojoLayoutContainer" dojoattachpoint="domNode">
+<div style="-moz-user-select: none; left: 0px; top: 0px; bottom: auto; right: auto; width: 1099px;" dojoattachpoint="labelNode" dojoattachevent="onclick: onLabelClick" class="label dojoAlignTop">Screenshots</div>
+<div dojoattachpoint="containerNode" style="overflow: hidden; left: 0px; top: 15px; bottom: auto; right: auto; width: 1099px; height: 596px;" class="accBody dojoAlignClient"><div dojoinsertionindex="0" style="width: 1099px; font-size: 14px; height: 596px;" class="dojoLinkPane"><div class="accBody" style="background: rgb(68, 68, 68) none repeat scroll 0%; width: 100%; height: 100%; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; color: rgb(238, 238, 238); font-weight: bold;">
+<a href="file:///media/USBDISK/src/devel/silicontransit.com/timeline/img/TimeLine.png" target="_blank"><img src="index_files/TimeLine.png" border="0" width="100%"></a><br>Figure 1: The time line window<br><br>
+<a href="file:///media/USBDISK/src/devel/silicontransit.com/timeline/img/Timeline1.png" target="_blank"><img src="index_files/Timeline1.png" border="0" width="100%"></a><br>Figure 2:The time line window with MIDI (configured for my hercules), compile, and debug subwindows open.<br><br>
+<a href="file:///media/USBDISK/src/devel/silicontransit.com/timeline/img/Timeline2.png" target="_blank"><img src="index_files/Timeline2.png" border="0" width="100%"></a><br>Figure 3:The time line window with MIDI (configured for my Edirol keyboard), compile, and debug subwindows open.<br><br>
+<a href="file:///media/USBDISK/src/devel/silicontransit.com/timeline/img/Timeline3.png" target="_blank"><img src="index_files/Timeline3.png" border="0" width="100%"></a><br>Figure 4:The time line window with MIDI config dialog open and all windows.<br><br>
+</div>
+</div></div>
+</div></div>
+</body></html>

@@ -1,0 +1,2 @@
+0 104843 38.3877 0 506.967 71.0709 6 8110.7 F:/samples/pfx/Beat_things/100-beat16.wav
+;

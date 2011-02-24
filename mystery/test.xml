@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<timelines version="1.0">
+<source>
+<objects/>
+</source>
+<description/>
+<colors type="osc">
+<color for="" value="255:255:255"/>
+<color for="/aft" value="240:240:240"/>
+<color for="/b4" value="0:0:255"/>
+<color for="/" value="255:0:0"/>
+<color for="/b" value="255:0:255"/>
+<color for="/after" value="240:0:0"/>
+<color for="/a" value="0:255:255"/>
+<color for="/af" value="0:255:0"/>
+</colors>
+<colors type="expr">
+<color for="$t:tgt1:p" value="255:255:255"/>
+<color for="$t:tgt2:p" value="255:0:0"/>
+</colors>
+<filters/>
+<midiKeys/>
+<timeline beatLength="10" beatPerBar="4" color="255 0 0" currentEvent="0" displayEnd="200" displayStart="0" followOnExpr="" height="100" id="parent" lastSelEvent="0" oscIndex="0" pitch="1.0" playMode="" quantize="50" timeLineLength="200" typeDisplay="false">
+<event active="true" eventTime="50" id="b4" oscIndex="0" oscMsgName="/b4" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="" valueLen="0"/>
+<event active="true" eventTime="100" id="event1" oscIndex="0" oscMsgName="$t:tgt2:p" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="" valueLen="0"/>
+<event active="true" eventTime="100" id="event2" oscIndex="0" oscMsgName="$t:tgt1:p" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="" valueLen="0"/>
+<event active="true" eventTime="150" id="" oscIndex="0" oscMsgName="/after" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="" valueLen="0"/>
+</timeline>
+<timeline beatLength="10" beatPerBar="4" color="255 0 0" currentEvent="0" displayEnd="2000" displayStart="0" followOnExpr="" height="100" id="tgt1" lastSelEvent="0" oscIndex="0" pitch="1.0" playMode="" quantize="50" timeLineLength="2000" typeDisplay="false"/>
+<timeline beatLength="10" beatPerBar="4" color="255 0 0" currentEvent="0" displayEnd="2000" displayStart="0" followOnExpr="" height="100" id="tgt2" lastSelEvent="0" oscIndex="0" pitch="1.0" playMode="" quantize="50" timeLineLength="2000" typeDisplay="false"/>
+<view visible="parent,tgt1,tgt2"/>
+</timelines>

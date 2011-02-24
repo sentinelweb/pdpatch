@@ -1,0 +1,88 @@
+#N canvas 602 457 892 658 10;
+#X floatatom 32 -50 5 0 0 0 - - -;
+#X floatatom 118 -59 5 0 0 0 - - -;
+#X obj 66 -112 notein 1;
+#X obj 27 -92 inlet;
+#X obj 127 -89 inlet;
+#X text 73 -90 note;
+#X obj 49 -1 select 1;
+#X obj 51 20 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 49 138 select 1;
+#X obj 51 159 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 47 68 select 1;
+#X obj 51 89 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 143 481 outlet~;
+#X obj 48 116 == 36;
+#X obj 47 46 == 42;
+#X obj 48 -23 == 46;
+#X obj 123 263 openpanel;
+#X obj 122 242 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 231 -118 loadbang;
+#X obj 226 103 openpanel;
+#X obj 225 82 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 353 -51 ../cmp/sampler_st;
+#X obj 353 -110 openpanel;
+#X obj 352 -131 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 362 -87 /home/robm/media/samples/PlatinumSelection/BonusBeats/Hits/Hats/02.wav
+;
+#X msg 232 130 /home/robm/media/samples/PlatinumSelection/BonusBeats/Hits/Hats/20.wav
+;
+#X msg 382 263 0 100000 40000 0 1;
+#X obj 380 242 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 341 86 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X msg 343 107 0 100000 80000 0 1;
+#X obj 467 -130 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 469 -109 0 100000 71632 0 1;
+#X obj 120 326 ../cmp/sampler_st;
+#X obj 223 166 ../cmp/sampler_st;
+#X msg 129 290 /home/robm/media/samples/PlatinumSelection/BonusBeats/Hits/Kicks/3.wav
+;
+#X connect 0 0 13 0;
+#X connect 0 0 14 0;
+#X connect 0 0 15 0;
+#X connect 2 0 0 0;
+#X connect 2 1 1 0;
+#X connect 3 0 0 0;
+#X connect 4 0 1 0;
+#X connect 6 0 7 0;
+#X connect 7 0 21 4;
+#X connect 8 0 9 0;
+#X connect 9 0 32 4;
+#X connect 10 0 11 0;
+#X connect 11 0 33 4;
+#X connect 13 0 8 0;
+#X connect 14 0 10 0;
+#X connect 15 0 6 0;
+#X connect 16 0 32 0;
+#X connect 17 0 16 0;
+#X connect 18 0 30 0;
+#X connect 18 0 27 0;
+#X connect 18 0 28 0;
+#X connect 19 0 33 0;
+#X connect 20 0 19 0;
+#X connect 21 0 12 0;
+#X connect 22 0 21 0;
+#X connect 23 0 22 0;
+#X connect 24 0 21 0;
+#X connect 25 0 33 0;
+#X connect 26 0 32 6;
+#X connect 27 0 26 0;
+#X connect 27 0 34 0;
+#X connect 28 0 29 0;
+#X connect 28 0 25 0;
+#X connect 29 0 33 6;
+#X connect 30 0 31 0;
+#X connect 30 0 24 0;
+#X connect 31 0 21 6;
+#X connect 32 0 12 0;
+#X connect 33 0 12 0;
+#X connect 34 0 32 0;

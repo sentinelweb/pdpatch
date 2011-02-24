@@ -1,0 +1,131 @@
+#N canvas 123 10 729 215 8;
+#X obj 5 -48 vsl 15 128 0 200 0 0 volume_i volume_c empty 0 -8 0 8
+-62784 -1 -1 0 1;
+#X obj 28 37 hsl 230 15 50 1.5e+06 0 0 length_i length_c empty -2 -6
+0 8 -255769 -1 -1 0 1;
+#X obj 27 55 hsl 230 15 10 1000 1 0 samp_rate_i samp_rate_c empty -2
+-6 0 8 -227008 -1 -1 0 1;
+#X obj 28 20 hsl 230 15 0 6e+06 0 0 start_i start_c empty -2 -6 0 8
+-110432 -1 -1 0 1;
+#X obj 364 23 tgl 15 0 activate_i activate_c empty 0 -6 0 8 -261681
+-1 -1 0 1;
+#X text 217 21 start;
+#X text 398 21 activate;
+#X text 215 56 samp rate;
+#X obj 29 6 hsl 300 10 30 50000 1 0 repeat_i repeat_c empty -2 -6 0
+8 -120960 -1 -1 0 1;
+#X text 217 39 length;
+#X obj 29 -15 hsl 128 15 1 20 0 0 divisor_i divisor_c empty -2 -6 0
+8 -260818 -1 -1 0 1;
+#X obj 451 9 bng 15 250 50 0 open_file_i empty empty 0 -6 0 8 -262144
+-1 -1;
+#X symbolatom 23 74 70 0 0 0 - filename_c filename_i;
+#X floatatom 23 -49 5 0 0 0 - - -;
+#X floatatom 160 20 8 0 0 0 - - -;
+#X floatatom 160 39 8 0 0 0 - - -;
+#X floatatom 161 56 8 0 0 0 - - -;
+#X floatatom 338 4 8 0 0 0 - - -;
+#X text 389 3 repeat;
+#X floatatom 164 -15 5 0 0 0 - - -;
+#X text 198 -16 divisor;
+#X obj 451 -47 hradio 15 1 0 8 sampler_select_i sampler_select_c empty
+0 -6 0 8 -108800 -1 -1 0;
+#X obj 28 -29 hsl 300 10 100 50000 0 0 global_time_i global_time_c
+empty -2 -6 0 8 -262035 -1 -1 0 1;
+#X floatatom 338 -32 6 0 0 0 - - -;
+#X text 381 -32 global time;
+#X text 469 8 open file;
+#X obj 451 27 bng 15 250 50 0 send_output_i send_output_c empty 0 -6
+0 8 -262144 -1 -1;
+#X text 470 25 send to output;
+#X obj 451 45 tgl 15 0 update_from_preview_i update_from_preview_c
+empty 0 -6 0 8 -262144 -1 -1 0 1;
+#X obj 451 -26 bng 15 250 50 0 open_track_i empty empty 0 -6 0 8 -262144
+-1 -1;
+#X obj 451 -8 bng 15 250 50 0 save_track_i empty empty 0 -6 0 8 -262144
+-1 -1;
+#X text 469 43 update output in real time;
+#X obj 274 38 bng 15 250 50 0 next_preset_i empty empty 0 -6 0 8 -231255
+-1 -1;
+#X obj 451 63 tgl 15 0 preview_solo_i preview_solo_c empty 0 -6 0 8
+-262144 -1 -1 0 1;
+#X obj 451 81 tgl 15 0 output_solo_i output_solo_c empty 0 -6 0 8 -262144
+-1 -1 0 1;
+#X text 469 62 preview solo;
+#X text 468 79 output solo;
+#X text 295 36 next preset;
+#X obj 274 19 bng 15 250 50 0 add_preset_i empty empty 0 -6 0 8 -105677
+-118665 -1;
+#X text 294 18 add preset;
+#X symbolatom 58 -49 65 0 0 0 - song_c song_i;
+#X obj 274 57 bng 15 250 50 0 clear_preset_i empty empty 0 -6 0 8 -225280
+-1 -1;
+#X text 294 54 clear preset;
+#X floatatom 579 -46 5 0 0 0 - sampler_select_i -;
+#X obj 364 40 bng 15 250 50 0 init_i init_c empty 0 -6 0 8 -260818
+-1 -1;
+#X text 384 39 i;
+#X obj 401 40 bng 15 250 50 0 zero_i zero_c empty 0 -6 0 8 -241291
+-1 -1;
+#X text 419 39 0;
+#X obj 382 23 bng 15 250 50 0 activate_oneshot_i activate_oneshot_c
+empty 0 -6 0 8 -261681 -1 -1;
+#X obj -69 -48 vu 15 120 preview_c empty -1 -8 0 8 -66577 -1 0 0;
+#X obj -45 -48 vu 15 120 output_c empty -1 -8 0 8 -66577 -1 0 0;
+#X obj -78 93 cnv 15 390 40 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj -67 99 bng 15 250 50 0 rec_openout empty empty 0 -6 0 8 -262144
+-1 -1;
+#X text -51 98 open out;
+#X obj -67 116 bng 15 250 50 0 rec_reopenout empty empty 0 -6 0 8 -262144
+-1 -1;
+#X text -51 115 re-open out;
+#X obj 21 98 bng 15 250 50 0 rec_start empty empty 0 -6 0 8 -258699
+-1 -1;
+#X obj 21 115 bng 15 250 50 0 rec_stop empty empty 0 -6 0 8 -251969
+-1 -1;
+#X text 37 97 start rec;
+#X text 37 114 stop rec;
+#X obj 102 100 hsl 128 15 0 127 0 0 rec_gain_i rec_gain_c empty -2
+-6 0 8 -262144 -1 -1 0 1;
+#X text 98 86 rec gain;
+#X obj 100 117 bng 15 250 50 0 rec_print empty empty 0 -6 0 8 -135198
+-1 -1;
+#X text 116 116 print;
+#X obj -20 -47 vu 15 120 rec_vu_c empty -1 -8 0 8 -66577 -1 0 0;
+#X obj 159 117 tgl 15 0 rec_pre_out_i rec_pre_out_c empty 0 -6 0 8
+-262144 -1 -1 0 1;
+#X text 176 115 pre(x)/out;
+#X obj 451 99 bng 15 250 50 0 open_song_i empty empty 0 -6 0 8 -262144
+-1 -1;
+#X obj 451 117 bng 15 250 50 0 save_song_i empty empty 0 -6 0 8 -262144
+-1 -1;
+#X text 470 99 open song;
+#X text 470 115 save song;
+#X text 470 -27 open track;
+#X text 470 -10 save track;
+#X floatatom 369 58 5 0 0 0 - preset_number_c -;
+#X obj 238 116 tgl 15 0 rec_in_out_i rec_in_out_c empty 0 -6 0 8 -262144
+-1 -1 0 1;
+#X text 257 116 out/in(x);
+#X floatatom 324 97 2 0 0 0 h samp_tmr_h_c -;
+#X floatatom 350 97 2 0 0 0 m samp_tmr_m_c -;
+#X floatatom 375 97 2 0 0 0 s samp_tmr_s_c -;
+#X obj 324 114 bng 15 250 50 0 samp_tmr_rst_i empty empty 0 -6 0 8
+-262144 -1 -1;
+#X text 340 117 reset;
+#X obj 372 114 tgl 15 0 samp_tmr_tog_i empty empty 0 -6 0 8 -262144
+-1 -1 0 1;
+#X text 388 117 start/stop;
+#X text 451 -65 sampler select;
+#X obj 238 99 tgl 15 0 rec_insel_i rec_insel_c empty 0 -6 0 8 -262144
+-1 -1 0 1;
+#X text 255 99 in1/in2(x);
+#X obj 373 -12;
+#X connect 0 0 13 0;
+#X connect 1 0 15 0;
+#X connect 2 0 16 0;
+#X connect 3 0 14 0;
+#X connect 8 0 17 0;
+#X connect 10 0 19 0;
+#X connect 22 0 23 0;

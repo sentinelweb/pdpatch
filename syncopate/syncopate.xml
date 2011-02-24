@@ -1,0 +1,569 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<timelines version="1.0">
+<source>
+<objects>
+<jars>/home/robm/patch/syncopate/lib/flickr.jar
+</jars>
+
+<object name="syncopate.Scales" super="">
+<imports>com.silicontransit.timeline.window.LogWindow
+java.util.Vector</imports>
+<code><![CDATA[// with ref:-
+// http://www.phy.mtu.edu/~suits/scales.html (quite cool)
+//
+public static double equal=Math.pow(2,1/12.0);
+int ctr=-1;
+int scaleCtr=0;
+int scaleAccum=0;
+float freqBase=60.0f;
+//public void setFreqBase(Float f) {freqBase = f.floatValue();}
+//public Float getFreqBase() {return new Float(freqBase);}
+
+float justFactors[]= {1, (25.0f/24.0f) , (9.0f/8.0f) , (6.0f/5.0f) , (5.0f/4.0f) ,
+ (4.0f/3.0f) , (45f/32.0f) ,(3.0f/2.0f) , (8.0f/5.0f) , (5.0f/3.0f) , (9f/5.0f) , (15f/8.0f), 2f};
+
+// get equal temperament factors.
+public float getEqFact(int i) {    return (float)Math.pow(2,i/12.0);}
+// get Just temprament factor
+public double getJustFact(int i) {return justFactors[i];}
+
+public float getNote(int  numIntervals) {
+    //ctr=++ctr%12;
+     // int octave=	numIntervals/12;
+     //double freq  = octave*this.freq;
+     float fact = (float)getEqFact(numIntervals%12);
+     return fact;
+}
+public float getNote() {
+    ctr=++ctr%12;
+    return getNote(ctr); 
+}
+//////////////////////////////////////////////////////////////////////////
+// scales
+int majorScale[] = {2,2,1,2,2,2,1};
+int minorscale[] = {2,1,2,2,1,2,2};
+int harmonicMinorScale[] = {2,1,2,2,1,3,1};
+int majorPentatonicScale[] = {2,2,3,2,3};
+int minorPentatonicScale[] = {3,2,2,3,2};
+int wholeNoteHextonicScale[] = {2,2,2,2,2,2};
+int bluesHextonicScale[] = {3,2,1,1,3,2};
+
+int scale[]=minorscale;
+public float getOctaveFactor(int  numIntervals) {
+   int fact=(numIntervals)/12;
+   return (float) Math.pow(2,(float) fact);
+}
+public Float playScale() {
+     //ctr=++ctr%48;
+     scaleCtr = (++scaleCtr) % scale.length;
+     scaleAccum+=scale[scaleCtr];
+     scaleAccum%=50;
+     return (float) getOctaveFactor(scaleAccum)*getNote(scaleAccum%12);
+}
+public float freqScale() {
+    playScale();
+    float freq = this.freqBase;
+     freq=freq*getOctaveFactor(scaleAccum)*getNote(scaleAccum%12);
+    return freq;
+}
+
+public void resetScale() {
+	scaleCtr = 0; 
+	scaleAccum = 0;
+}
+
+public Float getNoteFreq(Integer index) {
+	long start = System.nanoTime();
+	int accum=0;
+	//System.out.println("hello");
+	for (int i=0;i<index;i++) {	accum+=scale[i%scale.length];	}
+	//System.out.println(accum);
+	float note = getNote(accum%12);
+	double scaleMutliplier = Math.pow(2.0f,(float)(accum/12)); 
+	float op=(float)freqBase*((float)scaleMutliplier)*note;
+	//LogWindow.log("acc:"+(accum/12)+":"+" ("+(accum%12)+") "+":"+(accum)+" : "+freqBase*((accum/12)+1) +"*"+note+" ="+op,"msg");
+	//LogWindow.log("acc:"+(accum/12)+":"+" ("+(accum%12)+") "+":"+(accum)+" : "+(freqBase+"*")+scaleMutliplier+"*"+note+" ="+op,"msg");
+	Float f = new Float(op);
+//LogWindow.log("time("+index+"):"+(System.nanoTime()-start),"warn");
+	return  f;
+}]]></code>
+</object>
+
+<object name="syncopate.Multi" super="">
+<imports>com.silicontransit.timeline.window.LogWindow</imports>
+<code><![CDATA[public int last = 0;
+int direction =1;
+public Float getSurge(Integer offset, Integer limit,Integer step) {
+	if (last ==0) {
+		last = offset;
+	}
+	if (last>=limit) {direction=-1;}
+	else if (last <= offset) {direction =1;} 
+	last += Math.random()*((direction* limit)/step);
+//LogWindow.log(last+":"+direction,"warn");
+	return new Float(last);
+}]]></code>
+</object>
+
+<object name="syncopate.NoteSend" super="">
+<imports>com.silicontransit.timeline.window.LogWindow
+syncopate.Scales
+java.util.Vector
+com.silicontransit.timeline.TimeLine</imports>
+<code><![CDATA[// this just sends a calculated note maybe need to make a standard object that does this
+Scales scales = new Scales();
+TimeLine t = null;
+public NoteSend() {
+	
+}
+public void setTL(TimeLine t){
+	this.t =t; 
+	LogWindow.log("setTL:","warn");
+}
+public TimeLine getTL(){ 
+	return t;
+}
+public void getNoteFreq(Integer pit, Integer vel, Integer poly) {
+	long start = System.nanoTime();
+	if (vel.intValue()>0) {
+		pit-=36;
+		scales.setFreqBase(new Float (20));
+		Float f = scales.getNoteFreq(pit);
+		//LogWindow.log("note:"+pit+"="+f.floatValue(),"warn");
+		int index=(poly.intValue()+1);
+		Vector v = new Vector();
+		v.add(f);
+		t.oscUtil.simpleOscMessage("/bird"+index+"/f",v,0);
+		Vector v1 = new Vector();v1.add(new Integer(0));
+		t.oscUtil.simpleOscMessage("/bird"+index+"/trig",v1,0);
+	}
+	//LogWindow.log("time("+pit+":"+(System.nanoTime()-start),"warn");
+	return ;//gettNoteFreq((Integer) noteVec.get(0));
+}]]></code>
+</object>
+
+<object name="syncopate.Pics" super="">
+<imports>com.rob.FlickrPhotoDownload
+com.silicontransit.timeline.TimeLine
+java.util.Vector
+com.silicontransit.timeline.window.LogWindow</imports>
+<code><![CDATA[public FlickrPhotoDownload flickr = null;
+TimeLine t= null;
+public int picIndex = 1;
+
+public Pics(TimeLine t,String folder,Integer index) {
+	this.t=t;
+	this.picIndex = index.intValue();
+	if (!"".equals(folder)) {flickr = new FlickrPhotoDownload(folder);}
+ 	else {flickr = new FlickrPhotoDownload();}
+}
+
+public void startDownloadWithTag(String tag) {
+	flickr.getPhotosThread( tag );
+	Vector sendTagData = new Vector();
+	sendTagData.add(tag);
+	this.t.oscUtil.simpleOscMessage("/pic/tag",sendTagData,1);
+}
+public String getPhotoPath() {
+	Vector v = flickr.getPhotos();
+	if (v.size()==0) {return "";}
+	int index =(int)Math.round( Math.random()*(v.size()-1));
+	Vector picDetails=(Vector)v.get(index);
+	return (String) picDetails.get(0);
+}
+public void sendAPhoto(Integer i) {
+	//if ( this.t != null ) {
+		Vector v = flickr.getPhotos();
+		if (v.size()==0) {return;}
+		
+		int index =(int)Math.round( Math.random()*(v.size()-1));
+		Vector picDetails=(Vector)v.get(index);
+		Vector sendPicData = new Vector();
+		sendPicData.add(picDetails.get(0));
+		Vector sendPicWid = new Vector();
+		sendPicWid.add(Integer.parseInt((String)picDetails.get(2)));
+		Vector sendPicHgt = new Vector();
+		sendPicHgt.add(Integer.parseInt((String)picDetails.get(3)));
+		Vector sendPicText = new Vector();
+		sendPicText.add(picDetails.get(1));
+		this.t.oscUtil.simpleOscMessage("/pic"+picIndex+"/data",sendPicData,1);
+		this.t.oscUtil.simpleOscMessage("/pic"+picIndex+"/wid",sendPicWid,1);
+		this.t.oscUtil.simpleOscMessage("/pic"+picIndex+"/hgt",sendPicHgt,1);
+		this.t.oscUtil.simpleOscMessage("/pic"+picIndex+"/title",sendPicText,1);
+		//LogWindow.msg("send:"+picDetails.get(0));
+	//}
+}
+
+public TimeLine getTimeline(){
+	return t;
+}
+public void setTimeLine(TimeLine t) {
+	this.t=t;
+}]]></code>
+</object>
+
+<object name="syncopate.Counter" super="">
+<imports></imports>
+<code><![CDATA[public int counter =0;
+public int mod = 1;
+public Counter(Integer mod){
+	this.mod=mod;
+}
+public Integer next() {
+	return new Integer((counter++))%mod;
+}
+]]></code>
+</object>
+</objects>
+</source>
+<description><![CDATA[11bdrum = base drum - have to re-trigger here and there to stop follow on drift
+tdrum = tom tom
+pulse-1&2 ok
+cireleSet : sends the parameters for the circle
+circleSeq : sequences the circle over time.
+
+*MIDI MAP
+PCR : 
+vol (key 1)
+bird (key2)
+pulse(3)]]></description>
+<colors type="osc">
+<color for="/pulse2/del2" value="0:240:0"/>
+<color for="/circle{$t:circleSet:v:0}/data" value="0:0:180"/>
+<color for="/circle{$t:circleSet:v:0}/rrot/x" value="0:165:165"/>
+<color for="/circle1/data" value="0:180:0"/>
+<color for="/buzz/chorus/mult" value="180:0:0"/>
+<color for="/pic2/rpos/s" value="195:0:0"/>
+<color for="/kick1/f2" value="225:0:0"/>
+<color for="/pic2/rpos/t" value="0:195:0"/>
+<color for="/circle{$t:circleSet:v:0}/rrot/set" value="0:150:0"/>
+<color for="/pulse/osc/f" value="0:255:0"/>
+<color for="/pulse1/t" value="0:0:240"/>
+<color for="/pulse/t" value="240:0:0"/>
+<color for="/pic1/rpos/t" value="0:195:195"/>
+<color for="/pic2/rsize/s" value="195:0:195"/>
+<color for="/kick2/t" value="0:255:255"/>
+<color for="/mix1/mix/ch4" value="210:210:210"/>
+<color for="/bang1" value="0:0:225"/>
+<color for="/buzz/chorus/lfo" value="0:210:210"/>
+<color for="/circle{$t:circleSet:v:0}/rpos/t" value="0:165:0"/>
+<color for="/circle{$t:circleSet:v:0}/fadeout" value="135:0:135"/>
+<color for="/buzz/t" value="0:225:225"/>
+<color for="/pic2/on" value="0:150:150"/>
+<color for="/pulse2/osc/f" value="0:153:153"/>
+<color for="/circle{$t:circleSet:v:0}/rrot/z" value="0:0:165"/>
+<color for="/pulse/env/st" value="0:225:0"/>
+<color for="/circle{$t:circleSet:v:0}/rpos/set" value="150:150:150"/>
+<color for="/buzz/vcf/f" value="210:0:210"/>
+<color for="/pic1/rsize/s" value="0:0:195"/>
+<color for="/circle{$t:circleSet:v:0}/alpha" value="150:0:150"/>
+<color for="/kick1/env" value="225:225:225"/>
+<color for="/pulse2/t" value="255:51:102"/>
+<color for="/mix2/mix/time" value="180:180:180"/>
+<color for="/pic1/rpos/s" value="195:195:195"/>
+<color for="/buzz/vcf/q" value="0:0:210"/>
+<color for="/circle{$t:circleSet:v:0}/size" value="180:0:180"/>
+<color for="/circle{$t:circleSet:v:0}/rrot/t" value="165:0:165"/>
+<color for="/buzz/osc_nz" value="210:0:0"/>
+<color for="/kick1/f1" value="255:0:255"/>
+<color for="/buzz/x" value="0:210:0"/>
+<color for="/circle{$t:circleSet:v:0}/rsize/x" value="165:165:165"/>
+<color for="/pic1/on" value="0:0:150"/>
+<color for="/circle1/size" value="0:180:180"/>
+<color for="/buzz/f" value="225:0:225"/>
+<color for="/kick2/f1" value="0:0:255"/>
+<color for="/circle{$t:circleSet:v:0}/rpos/s" value="135:0:0"/>
+<color for="/circle{$t:circleSet:v:0}/rsize/t" value="165:0:0"/>
+<color for="/circle{$t:circleSet:v:0}/rrot/s" value="135:135:135"/>
+<color for="/circle{$t:circleSet:v:0}/aplha" value="150:0:0"/>
+<color for="/kick1/t" value="255:0:0"/>
+<color for="" value="255:255:255"/>
+<color for="/pulse2/del1" value="0:240:240"/>
+</colors>
+<colors type="expr">
+<color for="$t:pulse_apg:v" value="255:0:0"/>
+<color for="$g:pic_st:pic_on:f" value="240:240:240"/>
+<color for="$t:circleInit:v" value="0:255:255"/>
+<color for="$t:pulse_ap1:v" value="255:0:255"/>
+<color for="$t:circleSet:v" value="0:0:255"/>
+<color for="$g:pic_st:pic_off:f" value="0:255:0"/>
+<color for="" value="255:255:255"/>
+</colors>
+<filters>
+<filter target="/pulse2/t">
+<expression active="true" text="$f:pics2:sendAPhoto::"/>
+</filter>
+<filter target="/buzz/chorus/lfo">
+<expression active="true" text="$e:circleSeq:{$f:circleCtr:next::}:f"/>
+</filter>
+<filter target="/pulse/t">
+<expression active="true" text="$f:pics:sendAPhoto::"/>
+</filter>
+<filter target="/kick1/t">
+<expression active="false" text="$t:pic_bump:p"/>
+<expression active="true" text="$e:circleSeq:{$f:circleCtr:next::}:f"/>
+</filter>
+<filter target=""/>
+</filters>
+<midiKeys key_1="vol" key_2="bird" key_3="pulse1filtr"/>
+<midinotes default="true" device="PCR" id="new"/>
+<midicontrols device="PCR" id="bird">
+<midicontrol ctlstring_0="1 77 0 /mix1/mix/ch3 1.0 0.0 n" size="1"/>
+<midicontrol ctlstring_0="1 74 0 /bird1/f 1.0 0.0 n" size="1"/>
+<midicontrol ctlstring_0="1 76 0 /bird1/off 1.08 0.0 l" size="1"/>
+<midicontrol ctlstring_0="1 71 0 /bird1/mult 1.08 100.0 l" size="1"/>
+</midicontrols>
+<midicontrols default="true" device="PCR" id="pulse1filtr">
+<midicontrol ctlstring_0="1 77 0 /pulse/flange/fb 1.0 0.0 n" size="1"/>
+<midicontrol ctlstring_0="1 74 0 /pulse/flange/oscf 1.0 0.0 n" size="1"/>
+<midicontrol ctlstring_0="1 76 0 /pulse/flange/offset 3.0 0.0 n" size="1"/>
+<midicontrol ctlstring_0="1 78 0 /pulse/flange/fbdel 3.0 0.0 n" size="1"/>
+<midicontrol ctlstring_0="1 71 0 /pulse/flange/dep 1.0 -1.0 n" size="1"/>
+</midicontrols>
+<midicontrols device="PCR" id="vol">
+<midicontrol ctlstring_0="1 77 0 /mix1/mix/ch4 1.0 0.0 n" size="1"/>
+<midicontrol ctlstring_0="1 10 0 /main 1.005 -1.0 l" size="1"/>
+<midicontrol ctlstring_0="1 6 0 /mix2/mix/ch2 1.0 0.0 n" size="1"/>
+<midicontrol ctlstring_0="1 74 0 /mix1/mix/ch1 1.0 0.0 n" size="1"/>
+<midicontrol ctlstring_0="1 76 0 /mix1/mix/ch3 1.0 0.0 n" size="1"/>
+<midicontrol ctlstring_0="1 78 0 /mix2/mix/ch1 1.0 0.0 n" size="1"/>
+<midicontrol ctlstring_0="1 71 0 /mix1/mix/ch2 1.0 0.0 n" size="1"/>
+<midicontrol size="0"/>
+</midicontrols>
+<timeline beatLength="6" beatPerBar="4" color="255 0 0" currentEvent="15" displayEnd="1000" displayStart="0" followOnExpr="" height="100" id="init" lastSelEvent="15" oscIndex="0" pitch="1.0" playMode="" timeLineLength="1000" typeDisplay="false">
+<event active="true" eventTime="50" id="" oscIndex="0" oscMsgName="" target="" targetData="" targetPlayMode="" value="$f:scales=syncopate.Scales::n:"/>
+<event active="true" eventTime="100" id="" oscIndex="0" oscMsgName="" target="" targetData="" targetPlayMode="" value="$f:multi=syncopate.Multi::n:"/>
+<event active="true" eventTime="150" id="" oscIndex="0" oscMsgName="" target="" targetData="" targetPlayMode="" value=""/>
+<event active="true" eventTime="200" id="" oscIndex="0" oscMsgName="" target="drum_st" targetData="" targetPlayMode="p" value=""/>
+<event active="true" eventTime="250" id="" oscIndex="0" oscMsgName="" target="pulse_st" targetData="" targetPlayMode="p" value=""/>
+<event active="true" eventTime="300" id="" oscIndex="0" oscMsgName="" target="buzz_st" targetData="" targetPlayMode="p" value="0"/>
+<event active="true" eventTime="300" id="" oscIndex="0" oscMsgName="" target="pic_st" targetData="" targetPlayMode="p" value=""/>
+<event active="true" eventTime="350" id="" oscIndex="0" oscMsgName="" target="" targetData="" targetPlayMode="" value="$f:pics=syncopate.Pics::n:[$T,set1,1]"/>
+<event active="true" eventTime="400" id="" oscIndex="0" oscMsgName="" target="" targetData="" targetPlayMode="" value="$f:pics:startDownloadWithTag::[water]"/>
+<event active="true" eventTime="450" id="" oscIndex="0" oscMsgName="" target="" targetData="" targetPlayMode="" value="$f:pics2=syncopate.Pics::n:[$T,set2,2]"/>
+<event active="true" eventTime="500" id="" oscIndex="0" oscMsgName="" target="" targetData="" targetPlayMode="" value="$f:pics2:startDownloadWithTag::[sun]"/>
+<event active="true" eventTime="550" id="" oscIndex="0" oscMsgName="" target="" targetData="" targetPlayMode="" value="$f:circle=syncopate.Pics::n:[$T,circle,3]"/>
+<event active="true" eventTime="600" id="" oscIndex="0" oscMsgName="" target="" targetData="" targetPlayMode="" value="$f:circle:startDownloadWithTag::[circle]"/>
+<event active="true" eventTime="650" id="" oscIndex="0" oscMsgName="" target="" targetData="" targetPlayMode="" value="$f:circleCtr=syncopate.Counter::n:[4]"/>
+<event active="true" eventTime="750" id="" oscIndex="0" oscMsgName="/pulse/t" target="" targetData="" targetPlayMode="" value=""/>
+<event active="true" eventTime="750" id="" oscIndex="0" oscMsgName="/pulse2/t" target="" targetData="" targetPlayMode="" value=""/>
+</timeline>
+<timeline beatLength="10" beatPerBar="4" color="255 0 0" currentEvent="1" displayEnd="4000" displayStart="0" followOnExpr="$t:bdrum-{$f:std:rnd::[1,1]}:p" height="70" id="bdrum-1" lastSelEvent="1" oscIndex="0" pitch="1.0" playMode="" timeLineLength="4000" typeDisplay="false">
+<event active="true" eventTime="0" id="" oscIndex="0" oscMsgName="/kick1/f1" target="" targetData="" targetPlayMode="" value="$f:std:rnd::[30,20]"/>
+<event active="true" eventTime="0" id="" oscIndex="0" oscMsgName="/kick1/t" target="" targetData="" targetPlayMode="" value=""/>
+<event active="true" eventTime="500" id="" oscIndex="0" oscMsgName="/kick1/t" target="" targetData="" targetPlayMode="" value=""/>
+<event active="true" eventTime="1000" id="" oscIndex="0" oscMsgName="/kick1/t" target="" targetData="" targetPlayMode="" value=""/>
+<event active="true" eventTime="1500" id="" oscIndex="0" oscMsgName="/kick1/t" target="" targetData="" targetPlayMode="" value=""/>
+<event active="true" eventTime="2000" id="" oscIndex="0" oscMsgName="/kick1/t" target="" targetData="" targetPlayMode="" value=""/>
+<event active="true" eventTime="2500" id="" oscIndex="0" oscMsgName="/kick1/t" target="" targetData="" targetPlayMode="" value=""/>
+<event active="true" eventTime="3000" id="" oscIndex="0" oscMsgName="/kick1/t" target="" targetData="" targetPlayMode="" value=""/>
+<event active="true" eventTime="3500" id="" oscIndex="0" oscMsgName="/kick1/t" target="" targetData="" targetPlayMode="" value=""/>
+</timeline>
+<timeline beatLength="10" beatPerBar="4" color="255 0 0" currentEvent="1" displayEnd="4000" displayStart="0" followOnExpr="$t:bdrum-{$f:std:rnd::[1,1]}:p" height="70" id="bdrum-2" lastSelEvent="1" oscIndex="0" pitch="1.0" playMode="" timeLineLength="4000" typeDisplay="false">
+<event active="true" eventTime="0" id="" oscIndex="0" oscMsgName="/kick1/t" target="" targetData="" targetPlayMode="" value=""/>
+<event active="true" eventTime="0" id="" oscIndex="0" oscMsgName="/kick1/f1" target="" targetData="" targetPlayMode="" value="$f:std:rnd::[30,20]"/>
+<event active="true" eventTime="500" id="" oscIndex="0" oscMsgName="/kick1/t" target="" targetData="" targetPlayMode="" value=""/>
+<event active="true" eventTime="650" id="" oscIndex="0" oscMsgName="/kick1/t" target="" targetData="" targetPlayMode="" value=""/>
+<event active="true" eventTime="1000" id="" oscIndex="0" oscMsgName="/kick1/t" target="" targetData="" targetPlayMode="" value=""/>
+<event active="true" eventTime="1500" id="" oscIndex="0" oscMsgName="/kick1/t" target="" targetData="" targetPlayMode="" value=""/>
+<event active="true" eventTime="2000" id="" oscIndex="0" oscMsgName="/kick1/t" target="" targetData="" targetPlayMode="" value=""/>
+<event active="true" eventTime="2200" id="" oscIndex="0" oscMsgName="/kick1/t" target="" targetData="" targetPlayMode="" value=""/>
+<event active="true" eventTime="2350" id="" oscIndex="0" oscMsgName="/kick1/t" target="" targetData="" targetPlayMode="" value=""/>
+<event active="true" eventTime="2500" id="" oscIndex="0" oscMsgName="/kick1/t" target="" targetData="" targetPlayMode="" value=""/>
+<event active="true" eventTime="3000" id="" oscIndex="0" oscMsgName="/kick1/t" target="" targetData="" targetPlayMode="" value=""/>
+<event active="true" eventTime="3500" id="" oscIndex="0" oscMsgName="/kick1/t" target="" targetData="" targetPlayMode="" value=""/>
+</timeline>
+<timeline beatLength="6" beatPerBar="4" color="255 0 0" currentEvent="4" displayEnd="500" displayStart="0" followOnExpr="" height="100" id="drum_st" lastSelEvent="4" oscIndex="0" pitch="1.0" playMode="" timeLineLength="500" typeDisplay="false">
+<event active="true" eventTime="50" id="" oscIndex="0" oscMsgName="/kick1/f1" target="" targetData="" targetPlayMode="" value="45"/>
+<event active="true" eventTime="100" id="" oscIndex="0" oscMsgName="/kick2/f1" target="" targetData="" targetPlayMode="" value="60"/>
+<event active="true" eventTime="150" id="" oscIndex="0" oscMsgName="/kick1/f2" target="" targetData="" targetPlayMode="" value="51"/>
+<event active="true" eventTime="150" id="" oscIndex="0" oscMsgName="/kick1/env" target="" targetData="" targetPlayMode="" value="8 4 0 800 0"/>
+<event active="true" eventTime="150" id="" oscIndex="0" oscMsgName="/kick1/f1" target="" targetData="" targetPlayMode="" value="27"/>
+</timeline>
+<timeline beatLength="10" beatPerBar="4" color="255 0 0" currentEvent="5" displayEnd="4000" displayStart="0" followOnExpr="" height="70" id="tdrum-1" lastSelEvent="5" oscIndex="0" pitch="1.0" playMode="" timeLineLength="4000" typeDisplay="false">
+<event active="true" eventTime="0" id="" oscIndex="0" oscMsgName="/kick2/f1" target="" targetData="" targetPlayMode="" value="$f:std:rnd::[30,60]"/>
+<event active="false" eventTime="600" id="" oscIndex="0" oscMsgName="/kick2/t" target="" targetData="" targetPlayMode="" value=""/>
+<event active="true" eventTime="1000" id="" oscIndex="0" oscMsgName="/kick2/t" target="" targetData="" targetPlayMode="" value=""/>
+<event active="true" eventTime="1600" id="" oscIndex="0" oscMsgName="/kick2/t" target="" targetData="" targetPlayMode="" value=""/>
+<event active="false" eventTime="1750" id="" oscIndex="0" oscMsgName="/kick2/t" target="" targetData="" targetPlayMode="" value=""/>
+<event active="true" eventTime="1950" id="" oscIndex="0" oscMsgName="/kick2/f1" target="" targetData="" targetPlayMode="" value="$f:std:rnd::[30,60]"/>
+<event active="true" eventTime="2000" id="" oscIndex="0" oscMsgName="/kick2/t" target="" targetData="" targetPlayMode="" value=""/>
+<event active="true" eventTime="2500" id="" oscIndex="0" oscMsgName="/kick2/t" target="" targetData="" targetPlayMode="" value=""/>
+<event active="true" eventTime="3000" id="" oscIndex="0" oscMsgName="/kick2/t" target="" targetData="" targetPlayMode="" value=""/>
+<event active="true" eventTime="3150" id="" oscIndex="0" oscMsgName="/kick2/t" target="" targetData="" targetPlayMode="" value=""/>
+<event active="false" eventTime="3700" id="" oscIndex="0" oscMsgName="/kick2/t" target="" targetData="" targetPlayMode="" value=""/>
+</timeline>
+<timeline beatLength="6" beatPerBar="4" color="255 0 0" currentEvent="4" displayEnd="4000" displayStart="0" followOnExpr="" height="100" id="pulse1-1" lastSelEvent="4" oscIndex="0" pitch="1.0" playMode="" timeLineLength="4000" typeDisplay="true">
+<event active="true" eventTime="0" id="" oscIndex="0" oscMsgName="/pulse/t" target="" targetData="" targetPlayMode="" value="0"/>
+<event active="true" eventTime="0" id="" oscIndex="0" oscMsgName="/pulse/osc/f" target="" targetData="" targetPlayMode="" value="$f:scales:getNoteFreq::[20]"/>
+<event active="true" eventTime="300" id="" oscIndex="0" oscMsgName="/pulse/t" target="" targetData="" targetPlayMode="" value="0"/>
+<event active="true" eventTime="600" id="" oscIndex="0" oscMsgName="/pulse/t" target="" targetData="" targetPlayMode="" value="0"/>
+<event active="true" eventTime="1150" id="" oscIndex="0" oscMsgName="/pulse/osc/f" target="" targetData="" targetPlayMode="" value="$f:scales:getNoteFreq::[25]"/>
+<event active="true" eventTime="1200" id="" oscIndex="0" oscMsgName="/pulse/t" target="" targetData="" targetPlayMode="" value="0"/>
+<event active="true" eventTime="2350" id="" oscIndex="0" oscMsgName="/pulse/osc/f" target="" targetData="" targetPlayMode="" value="$f:scales:getNoteFreq::[20]"/>
+<event active="true" eventTime="2400" id="" oscIndex="0" oscMsgName="/pulse/t" target="" targetData="" targetPlayMode="" value="0"/>
+<event active="true" eventTime="2650" id="" oscIndex="0" oscMsgName="/pulse/osc/f" target="" targetData="" targetPlayMode="" value="$f:scales:getNoteFreq::[{$f:std:rnd::[8,20]}]"/>
+<event active="true" eventTime="2700" id="" oscIndex="0" oscMsgName="/pulse/t" target="" targetData="" targetPlayMode="" value="0"/>
+<event active="true" eventTime="3250" id="" oscIndex="0" oscMsgName="/pulse/osc/f" target="" targetData="" targetPlayMode="" value="$f:scales:getNoteFreq::[22]"/>
+<event active="true" eventTime="3300" id="" oscIndex="0" oscMsgName="/pulse/t" target="" targetData="" targetPlayMode="" value="0"/>
+</timeline>
+<timeline beatLength="10" beatPerBar="4" color="255 0 0" currentEvent="0" displayEnd="4000" displayStart="0" followOnExpr="" height="75" id="pulse1-2" lastSelEvent="0" oscIndex="0" pitch="1.0" playMode="" timeLineLength="4000" typeDisplay="false">
+<event active="true" eventTime="0" id="" oscIndex="0" oscMsgName="/pulse/t" target="" targetData="" targetPlayMode="" value="0"/>
+<event active="true" eventTime="0" id="" oscIndex="0" oscMsgName="/pulse/osc/f" target="" targetData="" targetPlayMode="" value="$f:scales:getNoteFreq::[20]"/>
+<event active="true" eventTime="300" id="" oscIndex="0" oscMsgName="/pulse/t" target="" targetData="" targetPlayMode="" value="0"/>
+<event active="true" eventTime="550" id="" oscIndex="0" oscMsgName="/pulse/t" target="" targetData="" targetPlayMode="" value="0"/>
+<event active="true" eventTime="650" id="" oscIndex="0" oscMsgName="/pulse/t" target="" targetData="" targetPlayMode="" value="0"/>
+<event active="true" eventTime="1150" id="" oscIndex="0" oscMsgName="/pulse/osc/f" target="" targetData="" targetPlayMode="" value="$f:scales:getNoteFreq::[25]"/>
+<event active="true" eventTime="1200" id="" oscIndex="0" oscMsgName="/pulse/t" target="" targetData="" targetPlayMode="" value="0"/>
+<event active="false" eventTime="1400" id="" oscIndex="0" oscMsgName="/pulse/osc/f" target="" targetData="" targetPlayMode="" value="$f:scales:getNoteFreq::[{$f:std:rnd::[8,20]}]"/>
+<event active="false" eventTime="1450" id="" oscIndex="0" oscMsgName="/pulse/t" target="" targetData="" targetPlayMode="" value="0"/>
+<event active="false" eventTime="1600" id="" oscIndex="0" oscMsgName="/pulse/osc/f" target="" targetData="" targetPlayMode="" value="$f:scales:getNoteFreq::[20]"/>
+<event active="false" eventTime="1650" id="" oscIndex="0" oscMsgName="/pulse/t" target="" targetData="" targetPlayMode="" value="0"/>
+<event active="true" eventTime="2000" id="" oscIndex="0" oscMsgName="$t:pulse_apg:v" target="pulse_apg" targetData="" targetPlayMode="p" value="12"/>
+<event active="true" eventTime="3250" id="" oscIndex="0" oscMsgName="/pulse/osc/f" target="" targetData="" targetPlayMode="" value="$f:scales:getNoteFreq::[22]"/>
+<event active="true" eventTime="3300" id="" oscIndex="0" oscMsgName="/pulse/t" target="" targetData="" targetPlayMode="" value="0"/>
+</timeline>
+<timeline beatLength="10" beatPerBar="4" color="255 0 0" currentEvent="2" displayEnd="4000" displayStart="0" followOnExpr="$t:pulse_apg:v" height="80" id="pulse1-3" lastSelEvent="2" oscIndex="0" pitch="1.0" playMode="" timeLineLength="4000" typeDisplay="false">
+<event active="true" eventTime="0" id="" oscIndex="0" oscMsgName="$t:pulse_apg:v" target="pulse_apg" targetData="" targetPlayMode="p" value="10"/>
+<event active="true" eventTime="1000" id="" oscIndex="0" oscMsgName="$t:pulse_apg:v" target="pulse_apg" targetData="" targetPlayMode="p" value="11"/>
+<event active="true" eventTime="2000" id="" oscIndex="0" oscMsgName="$t:pulse_apg:v" target="pulse_apg" targetData="" targetPlayMode="p" value="15"/>
+<event active="true" eventTime="3000" id="" oscIndex="0" oscMsgName="$t:pulse_apg:v" target="pulse_apg" targetData="" targetPlayMode="p" value="18"/>
+<event active="false" eventTime="3000" id="" oscIndex="0" oscMsgName="$t:pulse_ap1:v" target="pulse_ap1" targetData="" targetPlayMode="p" value="$f:std:rnd::[8,4]"/>
+</timeline>
+<timeline beatLength="10" beatPerBar="4" color="255 0 0" currentEvent="0" displayEnd="4000" displayStart="0" followOnExpr="" height="80" id="pulse1-4" lastSelEvent="0" oscIndex="0" pitch="1.0" playMode="" timeLineLength="4000" typeDisplay="false">
+<event active="true" eventTime="0" id="" oscIndex="0" oscMsgName="$t:pulse_apg:v" target="pulse_apg" targetData="" targetPlayMode="p" value="10"/>
+<event active="true" eventTime="1000" id="" oscIndex="0" oscMsgName="$t:pulse_apg:v" target="pulse_apg" targetData="" targetPlayMode="p" value="11"/>
+<event active="true" eventTime="2000" id="" oscIndex="0" oscMsgName="$t:pulse_apg:v" target="pulse_apg" targetData="" targetPlayMode="p" value="15"/>
+<event active="true" eventTime="3000" id="" oscIndex="0" oscMsgName="$t:pulse_apg:v" target="pulse_apg" targetData="" targetPlayMode="p" value="18"/>
+<event active="false" eventTime="3000" id="" oscIndex="0" oscMsgName="$t:pulse_ap1:v" target="pulse_ap1" targetData="" targetPlayMode="p" value="$f:std:rnd::[8,4]"/>
+</timeline>
+<timeline beatLength="6" beatPerBar="4" color="255 0 0" currentEvent="13" displayEnd="1000" displayStart="0" followOnExpr="" height="100" id="pulse_apg" lastSelEvent="13" oscIndex="0" pitch="1.0" playMode="" timeLineLength="1000" typeDisplay="true">
+<event active="true" eventTime="0" id="" oscIndex="0" oscMsgName="/pulse/t" target="" targetData="" targetPlayMode="" value="0"/>
+<event active="true" eventTime="0" id="" oscIndex="0" oscMsgName="/pulse/osc/f" target="" targetData="" targetPlayMode="" value="$f:scales:getNoteFreq::[{$f:std:add::[$t:pulse_apg:v:0,10]}]"/>
+<event active="true" eventTime="200" id="" oscIndex="0" oscMsgName="/pulse/osc/f" target="" targetData="" targetPlayMode="" value="$f:scales:getNoteFreq::[{$f:std:add::[$t:pulse_apg:v:0,12]}]"/>
+<event active="true" eventTime="200" id="" oscIndex="0" oscMsgName="/pulse/t" target="" targetData="" targetPlayMode="" value="0"/>
+<event active="false" eventTime="350" id="" oscIndex="0" oscMsgName="/pulse/osc/f" target="" targetData="" targetPlayMode="" value="$f:scales:getNoteFreq::[{$f:std:add::[$t:pulse_apg:v:0,18]}]"/>
+<event active="false" eventTime="350" id="" oscIndex="0" oscMsgName="/pulse/t" target="" targetData="" targetPlayMode="" value="0"/>
+<event active="true" eventTime="500" id="" oscIndex="0" oscMsgName="/pulse/osc/f" target="" targetData="" targetPlayMode="" value="$f:scales:getNoteFreq::[{$f:std:add::[$t:pulse_apg:v:0,13]}]"/>
+<event active="true" eventTime="500" id="" oscIndex="0" oscMsgName="/pulse/t" target="" targetData="" targetPlayMode="" value="0"/>
+<event active="false" eventTime="650" id="" oscIndex="0" oscMsgName="/pulse/osc/f" target="" targetData="" targetPlayMode="" value="$f:scales:getNoteFreq::[{$f:std:add::[$t:pulse_apg:v:0,15]}]"/>
+<event active="false" eventTime="650" id="" oscIndex="0" oscMsgName="/pulse/t" target="" targetData="" targetPlayMode="" value="0"/>
+<event active="true" eventTime="750" id="" oscIndex="0" oscMsgName="/pulse/env/st" target="" targetData="" targetPlayMode="" value="300"/>
+<event active="true" eventTime="750" id="" oscIndex="0" oscMsgName="/pulse/osc/f" target="" targetData="" targetPlayMode="" value="$f:scales:getNoteFreq::[{$f:std:add::[$t:pulse_apg:v:0,15]}]"/>
+<event active="true" eventTime="750" id="" oscIndex="0" oscMsgName="/pulse/t" target="" targetData="" targetPlayMode="" value="0"/>
+<event active="true" eventTime="992" id="" oscIndex="0" oscMsgName="/pulse/env/st" target="" targetData="" targetPlayMode="" value="100"/>
+</timeline>
+<timeline beatLength="6" beatPerBar="4" color="255 0 0" currentEvent="10" displayEnd="50" displayStart="0" followOnExpr="" height="100" id="circleSet" lastSelEvent="10" oscIndex="0" pitch="1.0" playMode="" timeLineLength="50" typeDisplay="false">
+<event active="true" eventTime="5" id="" oscIndex="1" oscMsgName="/circle{$t:circleSet:v:0}/rrot/t" target="" targetData="" targetPlayMode="" value="0"/>
+<event active="true" eventTime="5" id="" oscIndex="1" oscMsgName="/circle{$t:circleSet:v:0}/rsize/t" target="" targetData="" targetPlayMode="" value="0"/>
+<event active="true" eventTime="10" id="" oscIndex="1" oscMsgName="/circle{$t:circleSet:v:0}/rsize/x" target="" targetData="" targetPlayMode="" value="0"/>
+<event active="true" eventTime="10" id="" oscIndex="1" oscMsgName="/circle{$t:circleSet:v:0}/rrot/z" target="" targetData="" targetPlayMode="" value="0"/>
+<event active="true" eventTime="10" id="" oscIndex="1" oscMsgName="/circle{$t:circleSet:v:0}/alpha" target="" targetData="" targetPlayMode="" value="0.5 0.3"/>
+<event active="true" eventTime="15" id="" oscIndex="1" oscMsgName="/circle{$t:circleSet:v:0}/data" target="" targetData="" targetPlayMode="" value="$f:circle:getPhotoPath::"/>
+<event active="true" eventTime="20" id="" oscIndex="1" oscMsgName="/circle{$t:circleSet:v:0}/rsize/t" target="" targetData="" targetPlayMode="" value="$t:circleSet:v:1"/>
+<event active="true" eventTime="20" id="" oscIndex="1" oscMsgName="/circle{$t:circleSet:v:0}/rrot/t" target="" targetData="" targetPlayMode="" value="$t:circleSet:v:1"/>
+<event active="true" eventTime="25" id="" oscIndex="1" oscMsgName="/circle{$t:circleSet:v:0}/rsize/x" target="" targetData="" targetPlayMode="" value="10"/>
+<event active="true" eventTime="25" id="" oscIndex="1" oscMsgName="/circle{$t:circleSet:v:0}/rrot/z" target="" targetData="" targetPlayMode="" value="$t:circleSet:v:2"/>
+<event active="true" eventTime="30" id="" oscIndex="1" oscMsgName="/circle{$t:circleSet:v:0}/fadeout" target="" targetData="" targetPlayMode="" value="$t:circleSet:v:1"/>
+</timeline>
+<timeline beatLength="6" beatPerBar="4" color="255 0 0" currentEvent="4" displayEnd="1000" displayStart="0" followOnExpr="" height="100" id="pulse_ap1" lastSelEvent="4" oscIndex="0" pitch="1.0" playMode="" timeLineLength="1000" typeDisplay="true">
+<event active="true" eventTime="0" id="" oscIndex="0" oscMsgName="/pulse/osc/f" target="" targetData="" targetPlayMode="" value="$f:scales:getNoteFreq::[{$f:std:add::[$t:pulse_ap1:v:0,21]}]"/>
+<event active="true" eventTime="0" id="" oscIndex="0" oscMsgName="/pulse/t" target="" targetData="" targetPlayMode="" value="0"/>
+<event active="true" eventTime="200" id="" oscIndex="0" oscMsgName="/pulse/osc/f" target="" targetData="" targetPlayMode="" value="$f:scales:getNoteFreq::[{$f:std:add::[$t:pulse_ap1:v:0,24]}]"/>
+<event active="true" eventTime="200" id="" oscIndex="0" oscMsgName="/pulse/t" target="" targetData="" targetPlayMode="" value="0"/>
+<event active="true" eventTime="550" id="" oscIndex="0" oscMsgName="/pulse/osc/f" target="" targetData="" targetPlayMode="" value="$f:scales:getNoteFreq::[{$f:std:add::[$t:pulse_ap1:v:0,24]}]"/>
+<event active="true" eventTime="550" id="" oscIndex="0" oscMsgName="/pulse/t" target="" targetData="" targetPlayMode="" value="0"/>
+<event active="true" eventTime="700" id="" oscIndex="0" oscMsgName="/pulse/osc/f" target="" targetData="" targetPlayMode="" value="$f:scales:getNoteFreq::[{$f:std:add::[$t:pulse_ap1:v:0,26]}]"/>
+<event active="true" eventTime="700" id="" oscIndex="0" oscMsgName="/pulse/t" target="" targetData="" targetPlayMode="" value="0"/>
+</timeline>
+<timeline beatLength="6" beatPerBar="4" color="255 0 0" currentEvent="7" displayEnd="4000" displayStart="0" followOnExpr="" height="100" id="pulse2-1" lastSelEvent="7" oscIndex="0" pitch="1.0" playMode="" timeLineLength="4000" typeDisplay="true">
+<event active="true" eventTime="0" id="" oscIndex="0" oscMsgName="/pulse2/t" target="" targetData="" targetPlayMode="" value="0"/>
+<event active="true" eventTime="0" id="" oscIndex="0" oscMsgName="/pulse2/osc/f" target="" targetData="" targetPlayMode="" value="$f:scales:getNoteFreq::[33]"/>
+<event active="true" eventTime="300" id="" oscIndex="0" oscMsgName="/pulse2/t" target="" targetData="" targetPlayMode="" value="0"/>
+<event active="true" eventTime="600" id="" oscIndex="0" oscMsgName="/pulse2/t" target="" targetData="" targetPlayMode="" value="0"/>
+<event active="true" eventTime="1150" id="" oscIndex="0" oscMsgName="/pulse2/osc/f" target="" targetData="" targetPlayMode="" value="$f:scales:getNoteFreq::[28]"/>
+<event active="true" eventTime="1200" id="" oscIndex="0" oscMsgName="/pulse2/t" target="" targetData="" targetPlayMode="" value="0"/>
+<event active="true" eventTime="2350" id="" oscIndex="0" oscMsgName="/pulse2/osc/f" target="" targetData="" targetPlayMode="" value="$f:scales:getNoteFreq::[32]"/>
+<event active="true" eventTime="2400" id="" oscIndex="0" oscMsgName="/pulse2/t" target="" targetData="" targetPlayMode="" value="0"/>
+<event active="true" eventTime="2650" id="" oscIndex="0" oscMsgName="/pulse2/osc/f" target="" targetData="" targetPlayMode="" value="$f:scales:getNoteFreq::[40]"/>
+<event active="true" eventTime="2700" id="" oscIndex="0" oscMsgName="/pulse2/t" target="" targetData="" targetPlayMode="" value="0"/>
+<event active="true" eventTime="3250" id="" oscIndex="0" oscMsgName="/pulse2/osc/f" target="" targetData="" targetPlayMode="" value="$f:scales:getNoteFreq::[25]"/>
+<event active="true" eventTime="3300" id="" oscIndex="0" oscMsgName="/pulse2/t" target="" targetData="" targetPlayMode="" value="0"/>
+</timeline>
+<timeline beatLength="6" beatPerBar="4" color="255 0 0" currentEvent="1" displayEnd="500" displayStart="0" followOnExpr="" height="100" id="pulse_st" lastSelEvent="1" oscIndex="0" pitch="1.0" playMode="" timeLineLength="500" typeDisplay="false">
+<event active="true" eventTime="50" id="" oscIndex="0" oscMsgName="/pulse2/del2" target="" targetData="" targetPlayMode="" value="52"/>
+<event active="true" eventTime="100" id="" oscIndex="0" oscMsgName="/pulse2/del1" target="" targetData="" targetPlayMode="" value="6"/>
+</timeline>
+<timeline beatLength="10" beatPerBar="4" color="255 0 0" currentEvent="0" displayEnd="8000" displayStart="0" followOnExpr="" height="100" id="buzz" lastSelEvent="0" oscIndex="0" pitch="1.0" playMode="" timeLineLength="8000" typeDisplay="true">
+<event active="true" eventTime="50" id="" oscIndex="0" oscMsgName="/mix1/mix/ch4" target="" targetData="" targetPlayMode="" value="0 0"/>
+<event active="true" eventTime="50" id="" oscIndex="0" oscMsgName="/buzz/chorus/lfo" target="" targetData="" targetPlayMode="" value="$f:std:rnd::[50]"/>
+<event active="true" eventTime="100" id="" oscIndex="0" oscMsgName="/buzz/osc_nz" target="" targetData="" targetPlayMode="" value="127"/>
+<event active="true" eventTime="100" id="" oscIndex="0" oscMsgName="/mix1/mix/ch4" target="" targetData="" targetPlayMode="" value="74 1000"/>
+<event active="true" eventTime="200" id="" oscIndex="0" oscMsgName="/buzz/vcf/f" target="" targetData="" targetPlayMode="" value="10000 2000"/>
+<event active="true" eventTime="2500" id="" oscIndex="0" oscMsgName="/buzz/vcf/f" target="" targetData="" targetPlayMode="" value="100 2000"/>
+<event active="true" eventTime="3500" id="" oscIndex="0" oscMsgName="/mix1/mix/ch4" target="" targetData="" targetPlayMode="" value="0 3000"/>
+</timeline>
+<timeline beatLength="6" beatPerBar="4" color="255 0 0" currentEvent="2" displayEnd="500" displayStart="0" followOnExpr="" height="100" id="buzz_st" lastSelEvent="2" oscIndex="0" pitch="1.0" playMode="" timeLineLength="500" typeDisplay="false">
+<event active="true" eventTime="150" id="" oscIndex="0" oscMsgName="/buzz/vcf/q" target="" targetData="" targetPlayMode="" value="50"/>
+<event active="true" eventTime="200" id="" oscIndex="0" oscMsgName="/buzz/x" target="" targetData="" targetPlayMode="" value="127"/>
+<event active="true" eventTime="250" id="" oscIndex="0" oscMsgName="/buzz/chorus/mult" target="" targetData="" targetPlayMode="" value="5"/>
+</timeline>
+<timeline beatLength="6" beatPerBar="4" color="255 0 0" currentEvent="10" displayEnd="500" displayStart="0" followOnExpr="" height="100" id="pic_st" lastSelEvent="10" oscIndex="1" pitch="1.0" playMode="" timeLineLength="500" typeDisplay="false">
+<event active="true" eventTime="50" id="" oscIndex="1" oscMsgName="/pic1/rpos/s" target="" targetData="" targetPlayMode="" value="-8 -1 -9"/>
+<event active="true" eventTime="50" id="" oscIndex="1" oscMsgName="/pic1/rsize/s" target="" targetData="" targetPlayMode="" value="9 15"/>
+<event active="true" eventTime="100" id="" oscIndex="1" oscMsgName="/pic2/rpos/s" target="" targetData="" targetPlayMode="" value="8 -1 -9"/>
+<event active="true" eventTime="100" id="" oscIndex="1" oscMsgName="/pic2/rsize/s" target="" targetData="" targetPlayMode="" value="10 15"/>
+<event active="true" eventTime="200" id="" oscIndex="1" oscMsgName="/pic1/on" target="" targetData="" targetPlayMode="" value="1"/>
+<event active="true" eventTime="200" id="" oscIndex="1" oscMsgName="/pic2/on" target="" targetData="" targetPlayMode="" value="1"/>
+<event active="true" eventTime="200" id="" oscIndex="1" oscMsgName="$g:pic_st:pic_on:f" target="" targetData="" targetPlayMode="" value=""/>
+<event active="false" eventTime="250" id="" oscIndex="1" oscMsgName="/pic1/on" target="" targetData="" targetPlayMode="" value="0"/>
+<event active="false" eventTime="250" id="" oscIndex="1" oscMsgName="/pic2/on" target="" targetData="" targetPlayMode="" value="0"/>
+<event active="false" eventTime="250" id="" oscIndex="1" oscMsgName="$g:pic_st:pic_off:f" target="" targetData="" targetPlayMode="" value=""/>
+<event active="true" eventTime="300" id="" oscIndex="1" oscMsgName="$t:circleInit:v" target="circleInit" targetData="" targetPlayMode="p" value="4"/>
+<event active="true" eventTime="350" id="" oscIndex="1" oscMsgName="$t:circleInit:v" target="circleInit" targetData="" targetPlayMode="p" value="1"/>
+<event active="true" eventTime="400" id="" oscIndex="1" oscMsgName="$t:circleInit:v" target="circleInit" targetData="" targetPlayMode="p" value="2"/>
+<event active="true" eventTime="450" id="" oscIndex="1" oscMsgName="$t:circleInit:v" target="circleInit" targetData="" targetPlayMode="p" value="3"/>
+<group eventIndexes="7,8" id="pic_off"/>
+<group eventIndexes="4,5" id="pic_on"/>
+</timeline>
+<timeline beatLength="6" beatPerBar="4" color="255 0 0" currentEvent="0" displayEnd="500" displayStart="0" followOnExpr="" height="100" id="pic_bump" lastSelEvent="0" oscIndex="1" pitch="1.0" playMode="" timeLineLength="500" typeDisplay="false">
+<event active="true" eventTime="0" id="" oscIndex="1" oscMsgName="/pic2/rpos/s" target="" targetData="" targetPlayMode="" value="9 -1 -9"/>
+<event active="true" eventTime="0" id="" oscIndex="1" oscMsgName="/pic1/rpos/s" target="" targetData="" targetPlayMode="" value="-7 -1 -9"/>
+<event active="true" eventTime="0" id="" oscIndex="1" oscMsgName="/pic1/rpos/t" target="" targetData="" targetPlayMode="" value="50"/>
+<event active="true" eventTime="0" id="" oscIndex="1" oscMsgName="/pic2/rpos/t" target="" targetData="" targetPlayMode="" value="50"/>
+<event active="true" eventTime="100" id="" oscIndex="1" oscMsgName="/pic1/rpos/s" target="" targetData="" targetPlayMode="" value="-8 -1 -9"/>
+<event active="true" eventTime="100" id="" oscIndex="1" oscMsgName="/pic2/rpos/s" target="" targetData="" targetPlayMode="" value="10 -1 -9"/>
+</timeline>
+<timeline beatLength="10" beatPerBar="4" color="255 0 0" currentEvent="-1" displayEnd="8000" displayStart="0" followOnExpr="" height="100" id="circleSeq" lastSelEvent="-1" oscIndex="0" pitch="1.0" playMode="" timeLineLength="8000" typeDisplay="false">
+<event active="true" eventTime="0" id="" oscIndex="0" oscMsgName="$t:circleSet:v" target="circleSet" targetData="" targetPlayMode="p" value="1 4000 $f:std:rnd::[720,-360]"/>
+<event active="true" eventTime="2000" id="" oscIndex="0" oscMsgName="$t:circleSet:v" target="circleSet" targetData="" targetPlayMode="p" value="2 4000 $f:std:rnd::[720,-360]"/>
+<event active="true" eventTime="4000" id="" oscIndex="0" oscMsgName="$t:circleSet:v" target="circleSet" targetData="" targetPlayMode="p" value="3 4000 $f:std:rnd::[720,-360]"/>
+<event active="true" eventTime="6000" id="" oscIndex="0" oscMsgName="$t:circleSet:v" target="circleSet" targetData="" targetPlayMode="p" value="4 4000 $f:std:rnd::[720,-360]"/>
+</timeline>
+<timeline beatLength="6" beatPerBar="4" color="255 0 0" currentEvent="0" displayEnd="10" displayStart="0" followOnExpr="" height="100" id="circleInit" lastSelEvent="0" oscIndex="0" pitch="1.0" playMode="" timeLineLength="10" typeDisplay="false">
+<event active="true" eventTime="2" id="" oscIndex="1" oscMsgName="/circle{$t:circleSet:v:0}/rrot/t" target="" targetData="" targetPlayMode="" value="0"/>
+<event active="true" eventTime="4" id="" oscIndex="1" oscMsgName="/circle{$t:circleSet:v:0}/rsize/t" target="" targetData="" targetPlayMode="" value="0"/>
+<event active="true" eventTime="5" id="" oscIndex="1" oscMsgName="/circle{$t:circleSet:v:0}/rpos/t" target="" targetData="" targetPlayMode="" value="0"/>
+<event active="true" eventTime="5" id="" oscIndex="1" oscMsgName="/circle{$t:circleSet:v:0}/rpos/s" target="" targetData="" targetPlayMode="" value="0 0 0"/>
+<event active="true" eventTime="6" id="" oscIndex="1" oscMsgName="/circle{$t:circleSet:v:0}/rrot/s" target="" targetData="" targetPlayMode="" value="0 0 0"/>
+</timeline>
+<timeline beatLength="6" beatPerBar="4" color="255 0 0" currentEvent="8" displayEnd="9600" displayStart="0" followOnExpr="" height="100" id="selectPics" lastSelEvent="8" oscIndex="0" pitch="1.0" playMode="" timeLineLength="9600" typeDisplay="false">
+<event active="true" eventTime="400" id="" oscIndex="0" oscMsgName="" target="" targetData="" targetPlayMode="" value="$f:pics:startDownloadWithTag::[water]"/>
+<event active="true" eventTime="650" id="" oscIndex="0" oscMsgName="" target="" targetData="" targetPlayMode="" value="$f:pics:startDownloadWithTag::[crystal]"/>
+<event active="true" eventTime="900" id="" oscIndex="0" oscMsgName="" target="" targetData="" targetPlayMode="" value="$f:pics:startDownloadWithTag::[moon]"/>
+<event active="true" eventTime="1100" id="" oscIndex="0" oscMsgName="" target="" targetData="" targetPlayMode="" value="$f:pics:startDownloadWithTag::[fish]"/>
+<event active="true" eventTime="1350" id="" oscIndex="0" oscMsgName="" target="" targetData="" targetPlayMode="" value="$f:pics:startDownloadWithTag::[night]"/>
+<event active="true" eventTime="1650" id="" oscIndex="0" oscMsgName="" target="" targetData="" targetPlayMode="" value="$f:pics:startDownloadWithTag::[lightening]"/>
+<event active="true" eventTime="1900" id="" oscIndex="0" oscMsgName="" target="" targetData="" targetPlayMode="" value="$f:pics:startDownloadWithTag::[graffiti]"/>
+<event active="true" eventTime="2150" id="" oscIndex="0" oscMsgName="" target="" targetData="" targetPlayMode="" value="$f:pics:startDownloadWithTag::[snow]"/>
+<event active="true" eventTime="3550" id="" oscIndex="0" oscMsgName="" target="" targetData="" targetPlayMode="" value="$f:pics2:startDownloadWithTag::[sun]"/>
+<event active="true" eventTime="3900" id="" oscIndex="0" oscMsgName="" target="" targetData="" targetPlayMode="" value="$f:pics2:startDownloadWithTag::[purple]"/>
+<event active="true" eventTime="4250" id="" oscIndex="0" oscMsgName="" target="" targetData="" targetPlayMode="" value="$f:pics2:startDownloadWithTag::[smoke]"/>
+<event active="true" eventTime="4600" id="" oscIndex="0" oscMsgName="" target="" targetData="" targetPlayMode="" value="$f:pics2:startDownloadWithTag::[flower]"/>
+<event active="true" eventTime="5000" id="" oscIndex="0" oscMsgName="" target="" targetData="" targetPlayMode="" value="$f:pics2:startDownloadWithTag::[clouds]"/>
+<event active="true" eventTime="5300" id="" oscIndex="0" oscMsgName="" target="" targetData="" targetPlayMode="" value="$f:pics2:startDownloadWithTag::[static]"/>
+<event active="true" eventTime="5550" id="" oscIndex="0" oscMsgName="" target="" targetData="" targetPlayMode="" value="$f:pics2:startDownloadWithTag::[lights]"/>
+<event active="true" eventTime="5850" id="" oscIndex="0" oscMsgName="" target="" targetData="" targetPlayMode="" value="$f:pics2:startDownloadWithTag::[sunset]"/>
+</timeline>
+<view visible="circleSet,circleSeq,init,pic_st,buzz,selectPics,pulse1-3,pulse1-4"/>
+</timelines>

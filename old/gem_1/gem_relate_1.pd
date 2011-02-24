@@ -1,0 +1,51 @@
+#N canvas 0 73 787 626 10;
+#X obj 16 92 gemwin;
+#X msg 17 25 create;
+#X msg 70 26 1;
+#X msg 69 48 0;
+#X msg 17 44 destroy;
+#X text 97 22 start rendering;
+#X text 100 45 stop render;
+#X msg 128 62 offset 1440 -1;
+#X msg 19 70 dimen 800 601;
+#X text 108 34 makes window on second screen with title bar hidden
+;
+#X obj 236 90 gemhead;
+#X obj -155 413 sphere;
+#X obj -147 355 color 0.8 0.8 0.2;
+#X obj -54 226 rotateXYZ;
+#X obj -56 168 hsl 128 15 -256 256 0 0 empty empty empty -2 -6 0 8
+-262144 -1 -1 6300 1;
+#X msg -165 255 draw line;
+#X obj 37 414 sphere;
+#X obj 85 336 rotateXYZ;
+#X obj 103 302 hsl 128 15 -256 256 0 0 empty empty empty -2 -6 0 8
+-262144 -1 -1 1900 1;
+#X obj 37 389 color 0.2 0.8 0.2;
+#X obj 85 264 gemhead;
+#X obj 101 220 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 1
+1;
+#X obj 263 64 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 1 1
+;
+#X obj 163 333 hsl 128 15 0 40 0 0 empty empty empty -2 -6 0 8 -262144
+-1 -1 12700 1;
+#X connect 1 0 0 0;
+#X connect 2 0 0 0;
+#X connect 3 0 0 0;
+#X connect 4 0 0 0;
+#X connect 7 0 0 0;
+#X connect 8 0 0 0;
+#X connect 10 0 13 0;
+#X connect 12 0 11 0;
+#X connect 13 0 12 0;
+#X connect 14 0 13 1;
+#X connect 15 0 11 0;
+#X connect 15 0 16 0;
+#X connect 17 0 19 0;
+#X connect 18 0 17 1;
+#X connect 19 0 16 0;
+#X connect 20 0 17 0;
+#X connect 21 0 20 0;
+#X connect 22 0 10 0;
+#X connect 23 0 11 2;
+#X connect 23 0 16 2;

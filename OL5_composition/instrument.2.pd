@@ -1,0 +1,68 @@
+#N canvas 850 6 824 571 10;
+#X obj 32 335 outlet~;
+#X obj 70 313 outlet~;
+#X obj 43 70 inlet;
+#X obj 82 48 inlet;
+#X obj 43 93 poly 4;
+#X obj 42 134 route 1 2 3 4;
+#X obj 43 114 pack f f f;
+#X obj 33 286 *~ 1;
+#X obj 167 102 hsl 128 15 0.01 10 0 0 empty empty empty -2 -8 0 10
+-262144 -1 -1 1259 1;
+#X floatatom 258 102 5 0 0 0 - - -;
+#X obj 164 53 loadbang;
+#X msg 164 78 1;
+#X obj 301 166 s i2-res;
+#X obj 305 145 hsl 128 15 0.1 127 1 0 empty empty empty -2 -8 0 10
+-262144 -1 -1 0 1;
+#X floatatom 398 145 5 0 0 0 - - -;
+#X obj 326 100 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 60 186 instrument.2.synth;
+#X obj 74 210 instrument.2.synth;
+#X obj 100 232 instrument.2.synth;
+#X obj 43 164 instrument.2.synth;
+#X obj 296 298 hsl 128 15 0 50 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 295 198 hsl 128 15 0.1 1000 1 0 empty empty empty -2 -8 0 10
+-262144 -1 -1 0 1;
+#X obj 298 250 hsl 128 15 0 64 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 296 326 s i2-ramp_fr;
+#X obj 295 225 s i2-ramp_mod;
+#X obj 294 274 s i2-phase_multiplier;
+#X floatatom 391 196 5 0 0 0 - - -;
+#X floatatom 391 250 5 0 0 0 - - -;
+#X floatatom 388 299 5 0 0 0 - - -;
+#X msg 436 297 0.5;
+#X obj 103 69 r stop;
+#X connect 2 0 4 0;
+#X connect 3 0 4 1;
+#X connect 4 0 6 0;
+#X connect 4 1 6 1;
+#X connect 4 2 6 2;
+#X connect 5 0 19 0;
+#X connect 5 1 16 0;
+#X connect 5 2 17 0;
+#X connect 5 3 18 0;
+#X connect 6 0 5 0;
+#X connect 7 0 0 0;
+#X connect 7 0 1 0;
+#X connect 8 0 9 0;
+#X connect 10 0 11 0;
+#X connect 11 0 8 0;
+#X connect 13 0 12 0;
+#X connect 13 0 14 0;
+#X connect 15 0 13 0;
+#X connect 16 0 7 0;
+#X connect 17 0 7 0;
+#X connect 18 0 7 0;
+#X connect 19 0 7 0;
+#X connect 20 0 23 0;
+#X connect 20 0 28 0;
+#X connect 21 0 24 0;
+#X connect 21 0 26 0;
+#X connect 22 0 25 0;
+#X connect 22 0 27 0;
+#X connect 29 0 23 0;
+#X connect 30 0 4 0;

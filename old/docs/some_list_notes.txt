@@ -1,0 +1,14 @@
+------------------concatening string together------------------------- 
+hi Eli,
+
+i don't think this is necessarily the best way to do it, but in Pd,
+as in Max, $-variables only work when they appear at the beginning of
+symbols, so that, for instance, $1$2$3 expands to "arg1$2$3" (if the first
+arg is arg1), without expanding $2 etc. 
+
+To do multidimensional expansion, for instance, instr1-voice2-yada,
+make an "instr" abstraction and call it with "instr1".  inside the
+abstraction, call a "voice" abstraction with $1-voice2" as argument.
+inside the voice abstraction, use "$1-yada" which will then expand
+to "instr1-voice2-yada".  Continue to any depth desired...
+-----------------------------------------------------------------------

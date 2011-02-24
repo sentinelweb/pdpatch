@@ -1,0 +1,6 @@
+#N canvas 218 193 288 124 10;
+#X obj 19 50 OSCroute /open;
+#X obj 19 74 patch_opener;
+#X obj 19 22 dumpOSC 10004;
+#X connect 0 0 1 0;
+#X connect 2 0 0 0;

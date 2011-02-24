@@ -1,0 +1,2 @@
+0 104843 25.1391 0 8110.07 73.4488 10 8110.7 F:/samples/SynthBitz/klingOver.wav
+;

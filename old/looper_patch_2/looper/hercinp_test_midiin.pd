@@ -1,0 +1,30 @@
+#N canvas 9 99 314 126 10;
+#X obj 204 28 outlet;
+#X obj 221 71 outlet;
+#X text 14 4 this is rebuilt from my memory of a lost file!!!;
+#X obj 68 29 hsl 128 15 0 127 0 0 empty empty empty -2 -6 0 8 -262144
+-1 -1 3700 1;
+#X obj 68 70 hsl 128 15 0 127 0 0 empty empty empty -2 -6 0 8 -262144
+-1 -1 6700 1;
+#X msg 28 83 127;
+#X msg 28 64 0;
+#X obj 10 64 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X obj 10 83 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X floatatom 65 47 5 0 0 0 - - -;
+#X floatatom 65 88 5 0 0 0 - - -;
+#X obj 11 25 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X obj 107 49 int;
+#X connect 3 0 9 0;
+#X connect 4 0 10 0;
+#X connect 5 0 4 0;
+#X connect 6 0 4 0;
+#X connect 7 0 6 0;
+#X connect 8 0 5 0;
+#X connect 9 0 12 0;
+#X connect 10 0 1 0;
+#X connect 11 0 9 0;
+#X connect 11 0 10 0;
+#X connect 12 0 0 0;

@@ -1,0 +1,76 @@
+#N canvas 732 188 609 423 8;
+#X obj 145 178 futuresonic2;
+#X obj 255 178 futuresonic3;
+#X obj 81 255 ../effects/mixer control;
+#X obj 114 26 dumpOSC 10001;
+#X obj 117 342 dac~;
+#X obj 281 19 herc_joystk;
+#X obj 28 129 spigot;
+#X obj 65 100 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 1 1
+;
+#X obj 113 49 OSCroute /control;
+#X obj 126 74 unpack f f f;
+#X obj 147 146 spigot;
+#X obj 167 96 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 0 1
+;
+#X obj 254 143 spigot;
+#X obj 280 120 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 0
+1;
+#X obj 78 137 spigot;
+#X obj 77 119 t b f;
+#X obj 189 138 spigot;
+#X obj 188 120 t b f;
+#X obj 118 141 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X obj 227 140 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X obj 307 140 spigot;
+#X obj 306 122 t b f;
+#X obj 374 137 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X msg 272 159 0 0 64 0 3000;
+#X msg 167 162 0 64 0 0 3000;
+#X msg 74 159 64 0 0 0 3000;
+#X obj 38 187 openlab1;
+#X connect 0 0 2 2;
+#X connect 0 1 2 3;
+#X connect 1 0 2 4;
+#X connect 1 1 2 5;
+#X connect 2 0 4 0;
+#X connect 2 1 4 1;
+#X connect 3 0 8 0;
+#X connect 3 0 12 0;
+#X connect 3 0 10 0;
+#X connect 3 0 6 0;
+#X connect 6 0 26 0;
+#X connect 7 0 6 1;
+#X connect 7 0 15 0;
+#X connect 7 0 26 1;
+#X connect 8 0 9 0;
+#X connect 9 0 7 0;
+#X connect 9 1 11 0;
+#X connect 9 2 13 0;
+#X connect 10 0 0 0;
+#X connect 11 0 10 1;
+#X connect 11 0 17 0;
+#X connect 12 0 1 0;
+#X connect 13 0 12 1;
+#X connect 13 0 21 0;
+#X connect 13 0 1 1;
+#X connect 14 0 25 0;
+#X connect 14 0 18 0;
+#X connect 15 0 14 0;
+#X connect 15 1 14 1;
+#X connect 16 0 24 0;
+#X connect 16 0 19 0;
+#X connect 17 0 16 0;
+#X connect 17 1 16 1;
+#X connect 20 0 23 0;
+#X connect 20 0 22 0;
+#X connect 21 0 20 0;
+#X connect 21 1 20 1;
+#X connect 23 0 2 9;
+#X connect 24 0 2 9;
+#X connect 25 0 2 9;
+#X connect 26 0 2 0;
+#X connect 26 1 2 1;

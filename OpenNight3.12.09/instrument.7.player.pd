@@ -1,0 +1,25 @@
+#N canvas 209 455 450 300 10;
+#X obj 45 -27 openpanel;
+#X obj 45 -47 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 133 -60 inlet trig;
+#X obj 163 -33 inlet set;
+#X obj 67 -82 inlet file;
+#X obj 44 163 outlet~;
+#X obj 45 -1 ../cmp/sampler_st;
+#X obj 44 132 hip~ 1;
+#X obj 106 41 hsl 128 15 0 4e+06 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 2400 1;
+#X obj 188 -3 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X floatatom 189 42 10 0 0 0 - - -;
+#X connect 0 0 6 0;
+#X connect 1 0 0 0;
+#X connect 2 0 6 4;
+#X connect 3 0 6 6;
+#X connect 4 0 6 0;
+#X connect 6 0 7 0;
+#X connect 7 0 5 0;
+#X connect 8 0 6 1;
+#X connect 8 0 10 0;
+#X connect 9 0 6 4;

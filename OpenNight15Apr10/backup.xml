@@ -1,0 +1,614 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<timelines version="1.0">
+<source>
+<objects/>
+</source>
+<description/>
+<colors type="osc">
+<color for="" value="255:255:255"/>
+<color for="/vi/wi" value="240:0:240"/>
+<color for="/a1/lo" value="0:0:210"/>
+<color for="/v1/film" value="0:225:225"/>
+<color for="/a1/locpt" value="195:195:195"/>
+<color for="/a1/l" value="210:0:210"/>
+<color for="/midi1/note" value="255:0:0"/>
+<color for="/a1/loc" value="0:210:210"/>
+<color for="/v1/fil" value="0:0:225"/>
+<color for="/vi" value="0:255:0"/>
+<color for="/midi3/note" value="0:0:255"/>
+<color for="/a1" value="210:210:210"/>
+<color for="/v1/wid" value="0:240:0"/>
+<color for="/vi/w" value="240:0:0"/>
+<color for="/" value="0:255:255"/>
+<color for="/a1/" value="210:0:0"/>
+<color for="/v/wid" value="0:240:240"/>
+<color for="/v1" value="225:225:225"/>
+<color for="/a1/locp" value="0:210:0"/>
+<color for="/vi/" value="240:240:240"/>
+<color for="/v1/" value="225:0:0"/>
+<color for="/vi/wid" value="0:0:240"/>
+<color for="/midi2/note" value="255:0:255"/>
+<color for="/v1/f" value="225:0:225"/>
+<color for="/a" value="0:225:0"/>
+</colors>
+<colors type="expr">
+<color for="" value="255:255:255"/>
+<color for="$t:drums-{$f:std:rnd::[6]}:p" value="240:240:240"/>
+<color for="$t:drums-:p" value="0:0:255"/>
+<color for="$t:drums-{$f:std:rnd::[6,1]}:p" value="240:0:0"/>
+<color for="$t:drums-{}:p" value="0:255:0"/>
+<color for="$t:drums-{$f:std:rnd::[5,1]}:p" value="0:0:240"/>
+<color for="$t:drums-1:p" value="255:0:255"/>
+<color for="$f:std:rnd::[6]" value="0:255:255"/>
+<color for="$t:drums-{$f:std:rnd::[4,4]}:p" value="225:225:225"/>
+<color for="$t:drums-{$f:std:rnd::[,5]}:p" value="225:0:225"/>
+<color for="$e:vctl:b1:f" value="255:0:0"/>
+<color for="$t:drums-{$f:std:rnd::[,1]}:p" value="240:0:240"/>
+<color for="$t:drums-{$f:std:rnd::[4,1]}:p" value="0:240:240"/>
+<color for="$t:drums-{$f:std:rnd::[4,]}:p" value="0:240:0"/>
+<color for="$t:drums-{$f:std:rnd::[4,5]}:p" value="225:0:0"/>
+<color for="$t:drums-{$f:std:rnd::[6,5]}:p" value="0:0:225"/>
+</colors>
+<filters/>
+<midiKeys key_1="mixer" key_2="video"/>
+<midicontrols default="true" device="" id="new2"/>
+<midicontrols default="true" device="" id="new3"/>
+<midicontrols default="true" device="" id="new0"/>
+<midicontrols default="true" device="" id="new1"/>
+<midicontrols default="true" device="" id="new6"/>
+<midicontrols default="true" device="" id="new7"/>
+<midicontrols default="true" device="" id="new4"/>
+<midicontrols default="true" device="" id="new5"/>
+<midicontrols default="true" device="" id="new10"/>
+<midicontrols default="true" device="" id="new8"/>
+<midicontrols default="true" device="" id="new9"/>
+<midicontrols default="true" device="" id="new11"/>
+<midicontrols default="true" device="" id="new12"/>
+<midicontrols default="true" device="" id="new"/>
+<midicontrols default="true" device="" id="new13"/>
+<midicontrols default="true" device="" id="new14"/>
+<midicontrols default="true" device="" id="new15"/>
+<midicontrols default="true" device="BCF2000" id="mixer">
+<midicontrol ctlstring_0="0 66 0 /a1/spd 115.0 0.0 b" size="1"/>
+<midicontrol ctlstring_0="0 84 0 /m1/mix/ch4 1.0 0.0 n" size="1"/>
+<midicontrol ctlstring_0="0 65 0 $t:voice_sq1:l 1.0 0.0 n" size="1"/>
+<midicontrol ctlstring_0="0 83 0 /m1/mix/ch3 1.0 0.0 n" size="1"/>
+<midicontrol ctlstring_0="0 70 0 /ds2/rnd 1.0 0.0 b" size="1"/>
+<midicontrol ctlstring_0="0 73 0 $t:voice_sq1:s 1.0 0.0 n" size="1"/>
+<midicontrol ctlstring_0="0 82 0 /m1/mix/ch2 1.0 0.0 n" size="1"/>
+<midicontrol ctlstring_0="0 81 0 /m1/mix/ch1 1.0 0.0 n" size="1"/>
+<midicontrol ctlstring_0="0 72 0 /ds4/rnd 1.0 0.0 b" size="1"/>
+<midicontrol ctlstring_0="0 88 0 /m2/mix/ch4 1.0 0.0 n" size="1"/>
+<midicontrol ctlstring_0="0 74 0 /a1/trig 1.0 0.0 n" size="1"/>
+<midicontrol ctlstring_0="0 87 0 /m2/mix/ch3 1.0 0.0 n" size="1"/>
+<midicontrol ctlstring_0="0 86 0 /m2/mix/ch2 1.0 0.0 n" size="1"/>
+<midicontrol ctlstring_0="0 85 0 /m2/mix/ch1 1.0 0.0 n" size="1"/>
+<midicontrol ctlstring_0="0 1 0 /a1/locpt 1.0 0.0 n" size="1"/>
+<midicontrol ctlstring_0="0 2 0 /a1/spd 2.5 -100.0 n" size="1"/>
+<midicontrol ctlstring_0="0 3 0 /a1/tsp 5.0 -300.0 n" size="1"/>
+<midicontrol ctlstring_0="0 69 0 /ds1/rnd 1.0 0.0 b" size="1"/>
+<midicontrol ctlstring_0="0 33 0 /a1/trig 1.0 0.0 b" size="1"/>
+<midicontrol ctlstring_0="0 67 0 /a1/tsp 0.0 0.0 b" size="1"/>
+</midicontrols>
+<midicontrols device="BCF2000" id="video">
+<midicontrol ctlstring_0="0 66 1 /v1/zero 1.0 0.0 b" ctlstring_1="0 66 1 $e:vctl:fullscreen:f 1.0 0.0 n" size="2"/>
+<midicontrol ctlstring_0="0 84 1 /v1/wid 0.05 0.0 n" size="1"/>
+<midicontrol ctlstring_0="0 65 0 /vhenv1 1.0 0.0 b" size="1"/>
+<midicontrol ctlstring_0="0 83 1 /mb/size 0.08 0.0 n" size="1"/>
+<midicontrol ctlstring_0="0 82 1 /mb/alpha 0.0080 0.0 n" size="1"/>
+<midicontrol ctlstring_0="0 73 0 $e:vctl:b1:f 1.0 0.0 b" size="1"/>
+<midicontrol ctlstring_0="0 81 1 /v1/rz 5.66 -360.0 n" size="1"/>
+<midicontrol ctlstring_0="0 75 0 $e:vctl:b3:f 1.0 0.0 n" size="1"/>
+<midicontrol ctlstring_0="0 74 0 $e:vctl:b2:f 1.0 0.0 n" size="1"/>
+<midicontrol ctlstring_0="0 85 1 /v1/hgt 0.03 0.0 n" size="1"/>
+</midicontrols>
+<timeline beatLength="10" beatPerBar="4" color="255 0 0" currentEvent="1" displayEnd="8000" displayStart="0" followOnExpr="" height="100" id="vctl" lastSelEvent="1" oscIndex="0" pitch="1.0" playMode="" quantize="50" timeLineLength="8000" typeDisplay="false">
+<event active="true" eventTime="100" id="fullscreen" oscIndex="1" oscMsgName="/v1/wid" oscMsgName1="/v1/hgt" oscMsgNameLen="2" target="" targetData="" targetPlayMode="" value="5" value1="4" valueLen="2"/>
+<event active="true" eventTime="428" id="b1" oscIndex="1" oscMsgName="/v1/film" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="/mnt/sda6/robm/patch/OpenNight15Apr10/bingo1.mpgt" valueLen="0"/>
+<event active="true" eventTime="640" id="b2" oscIndex="1" oscMsgName="/v1/film" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="/mnt/sda6/robm/patch/OpenNight15Apr10/bingo2.mpgt" valueLen="0"/>
+<event active="true" eventTime="850" id="b3" oscIndex="1" oscMsgName="/v1/film" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="/mnt/sda6/robm/patch/OpenNight15Apr10/bingo3.mpgt" valueLen="0"/>
+</timeline>
+<timeline beatLength="2" beatPerBar="4" color="255 0 0" currentEvent="0" displayEnd="2000" displayStart="0" followOnExpr="" height="100" id="vidrndpt" lastSelEvent="0" oscIndex="0" pitch="1.0" playMode="" quantize="125" timeLineLength="2000" typeDisplay="false">
+<event active="true" eventTime="0" id="" oscIndex="0" oscMsgName="/a1/locpt" oscMsgName1="/a1/trig" oscMsgNameLen="2" target="" targetData="" targetPlayMode="" value="$f:std:rnd::[24,1]" value1="1" valueLen="2"/>
+</timeline>
+<timeline beatLength="2" beatPerBar="4" color="255 0 0" currentEvent="0" displayEnd="24000" displayStart="0" followOnExpr="" height="100" id="voice_sq1" lastSelEvent="0" oscIndex="0" pitch="1.0" playMode="l" quantize="125" timeLineLength="24000" typeDisplay="false">
+<event active="true" eventTime="0" id="" oscIndex="0" oscMsgName="/midi1/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="60 100" valueLen="0"/>
+<event active="true" eventTime="500" id="" oscIndex="0" oscMsgName="/midi1/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="60 0" valueLen="0"/>
+<event active="true" eventTime="500" id="" oscIndex="0" oscMsgName="/midi1/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 100" valueLen="0"/>
+<event active="true" eventTime="1000" id="" oscIndex="0" oscMsgName="/midi1/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 0" valueLen="0"/>
+<event active="true" eventTime="1000" id="" oscIndex="0" oscMsgName="/midi1/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="60 100" valueLen="0"/>
+<event active="true" eventTime="1500" id="" oscIndex="0" oscMsgName="/midi1/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="60 0" valueLen="0"/>
+<event active="true" eventTime="1500" id="" oscIndex="0" oscMsgName="/midi1/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 100" valueLen="0"/>
+<event active="true" eventTime="2000" id="" oscIndex="0" oscMsgName="/midi1/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 0" valueLen="0"/>
+<event active="true" eventTime="2000" id="" oscIndex="0" oscMsgName="/midi1/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="72 100" valueLen="0"/>
+<event active="true" eventTime="2500" id="" oscIndex="0" oscMsgName="/midi1/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="72 0" valueLen="0"/>
+<event active="true" eventTime="3000" id="" oscIndex="0" oscMsgName="/midi1/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="65 100" valueLen="0"/>
+<event active="true" eventTime="3500" id="" oscIndex="0" oscMsgName="/midi1/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="65 0" valueLen="0"/>
+<event active="true" eventTime="3500" id="" oscIndex="0" oscMsgName="/midi1/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="72 100" valueLen="0"/>
+<event active="true" eventTime="4000" id="" oscIndex="0" oscMsgName="/midi1/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="72 0" valueLen="0"/>
+<event active="true" eventTime="4000" id="" oscIndex="0" oscMsgName="/midi1/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="60 100" valueLen="0"/>
+<event active="true" eventTime="4500" id="" oscIndex="0" oscMsgName="/midi1/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="60 0" valueLen="0"/>
+<event active="true" eventTime="4500" id="" oscIndex="0" oscMsgName="/midi1/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 100" valueLen="0"/>
+<event active="true" eventTime="5000" id="" oscIndex="0" oscMsgName="/midi1/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 0" valueLen="0"/>
+<event active="true" eventTime="5000" id="" oscIndex="0" oscMsgName="/midi1/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="60 100" valueLen="0"/>
+<event active="true" eventTime="5500" id="" oscIndex="0" oscMsgName="/midi1/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="60 0" valueLen="0"/>
+<event active="true" eventTime="5500" id="" oscIndex="0" oscMsgName="/midi1/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="77 100" valueLen="0"/>
+<event active="true" eventTime="6000" id="" oscIndex="0" oscMsgName="/midi1/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="77 0" valueLen="0"/>
+<event active="true" eventTime="6000" id="" oscIndex="0" oscMsgName="/midi1/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="72 100" valueLen="0"/>
+<event active="true" eventTime="6500" id="" oscIndex="0" oscMsgName="/midi1/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="72 0" valueLen="0"/>
+<event active="true" eventTime="7000" id="" oscIndex="0" oscMsgName="/midi1/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="65 100" valueLen="0"/>
+<event active="true" eventTime="7500" id="" oscIndex="0" oscMsgName="/midi1/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="65 0" valueLen="0"/>
+<event active="true" eventTime="7500" id="" oscIndex="0" oscMsgName="/midi1/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="77 100" valueLen="0"/>
+<event active="true" eventTime="8000" id="" oscIndex="0" oscMsgName="/midi1/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="77 0" valueLen="0"/>
+<event active="true" eventTime="8000" id="" oscIndex="0" oscMsgName="/midi1/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="60 100" valueLen="0"/>
+<event active="true" eventTime="8500" id="" oscIndex="0" oscMsgName="/midi1/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="60 0" valueLen="0"/>
+<event active="true" eventTime="8500" id="" oscIndex="0" oscMsgName="/midi1/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="74 100" valueLen="0"/>
+<event active="true" eventTime="9000" id="" oscIndex="0" oscMsgName="/midi1/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="74 0" valueLen="0"/>
+<event active="true" eventTime="9000" id="" oscIndex="0" oscMsgName="/midi1/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="60 100" valueLen="0"/>
+<event active="true" eventTime="9500" id="" oscIndex="0" oscMsgName="/midi1/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="60 0" valueLen="0"/>
+<event active="true" eventTime="9500" id="" oscIndex="0" oscMsgName="/midi1/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="84 100" valueLen="0"/>
+<event active="true" eventTime="10000" id="" oscIndex="0" oscMsgName="/midi1/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="84 0" valueLen="0"/>
+<event active="true" eventTime="10000" id="" oscIndex="0" oscMsgName="/midi1/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="72 100" valueLen="0"/>
+<event active="true" eventTime="10500" id="" oscIndex="0" oscMsgName="/midi1/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="72 0" valueLen="0"/>
+<event active="true" eventTime="11000" id="" oscIndex="0" oscMsgName="/midi1/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="65 100" valueLen="0"/>
+<event active="true" eventTime="11500" id="" oscIndex="0" oscMsgName="/midi1/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="65 0" valueLen="0"/>
+<event active="true" eventTime="11500" id="" oscIndex="0" oscMsgName="/midi1/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="76 100" valueLen="0"/>
+<event active="true" eventTime="12000" id="" oscIndex="0" oscMsgName="/midi1/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="76 0" valueLen="0"/>
+<event active="true" eventTime="12000" id="" oscIndex="0" oscMsgName="/midi1/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="60 100" valueLen="0"/>
+<event active="true" eventTime="12500" id="" oscIndex="0" oscMsgName="/midi1/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="60 0" valueLen="0"/>
+<event active="true" eventTime="12500" id="" oscIndex="0" oscMsgName="/midi1/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 100" valueLen="0"/>
+<event active="true" eventTime="13000" id="" oscIndex="0" oscMsgName="/midi1/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 0" valueLen="0"/>
+<event active="true" eventTime="13000" id="" oscIndex="0" oscMsgName="/midi1/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="60 100" valueLen="0"/>
+<event active="true" eventTime="13500" id="" oscIndex="0" oscMsgName="/midi1/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="60 0" valueLen="0"/>
+<event active="true" eventTime="13500" id="" oscIndex="0" oscMsgName="/midi1/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="74 100" valueLen="0"/>
+<event active="true" eventTime="14000" id="" oscIndex="0" oscMsgName="/midi1/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="74 0" valueLen="0"/>
+<event active="true" eventTime="14000" id="" oscIndex="0" oscMsgName="/midi1/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="72 100" valueLen="0"/>
+<event active="true" eventTime="14500" id="" oscIndex="0" oscMsgName="/midi1/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="72 0" valueLen="0"/>
+<event active="true" eventTime="15000" id="" oscIndex="0" oscMsgName="/midi1/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="65 100" valueLen="0"/>
+<event active="true" eventTime="15500" id="" oscIndex="0" oscMsgName="/midi1/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="65 0" valueLen="0"/>
+<event active="true" eventTime="15500" id="" oscIndex="0" oscMsgName="/midi1/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="72 100" valueLen="0"/>
+<event active="true" eventTime="16000" id="" oscIndex="0" oscMsgName="/midi1/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="72 0" valueLen="0"/>
+<event active="true" eventTime="16000" id="" oscIndex="0" oscMsgName="/midi1/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="60 100" valueLen="0"/>
+<event active="true" eventTime="16500" id="" oscIndex="0" oscMsgName="/midi1/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="60 0" valueLen="0"/>
+<event active="true" eventTime="16500" id="" oscIndex="0" oscMsgName="/midi1/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 100" valueLen="0"/>
+<event active="true" eventTime="17000" id="" oscIndex="0" oscMsgName="/midi1/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 0" valueLen="0"/>
+<event active="true" eventTime="17000" id="" oscIndex="0" oscMsgName="/midi1/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="60 100" valueLen="0"/>
+<event active="true" eventTime="17500" id="" oscIndex="0" oscMsgName="/midi1/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="60 0" valueLen="0"/>
+<event active="true" eventTime="17500" id="" oscIndex="0" oscMsgName="/midi1/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 100" valueLen="0"/>
+<event active="true" eventTime="18000" id="" oscIndex="0" oscMsgName="/midi1/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 0" valueLen="0"/>
+<event active="true" eventTime="18000" id="" oscIndex="0" oscMsgName="/midi1/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="72 100" valueLen="0"/>
+<event active="true" eventTime="18500" id="" oscIndex="0" oscMsgName="/midi1/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="72 0" valueLen="0"/>
+<event active="true" eventTime="19000" id="" oscIndex="0" oscMsgName="/midi1/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="65 100" valueLen="0"/>
+<event active="true" eventTime="19500" id="" oscIndex="0" oscMsgName="/midi1/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="65 0" valueLen="0"/>
+<event active="true" eventTime="19500" id="" oscIndex="0" oscMsgName="/midi1/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="72 100" valueLen="0"/>
+<event active="true" eventTime="20000" id="" oscIndex="0" oscMsgName="/midi1/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="72 0" valueLen="0"/>
+<event active="true" eventTime="20000" id="" oscIndex="0" oscMsgName="/midi1/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="60 100" valueLen="0"/>
+<event active="true" eventTime="20500" id="" oscIndex="0" oscMsgName="/midi1/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="60 0" valueLen="0"/>
+<event active="true" eventTime="20500" id="" oscIndex="0" oscMsgName="/midi1/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 100" valueLen="0"/>
+<event active="true" eventTime="21000" id="" oscIndex="0" oscMsgName="/midi1/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 0" valueLen="0"/>
+<event active="true" eventTime="21000" id="" oscIndex="0" oscMsgName="/midi1/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="60 100" valueLen="0"/>
+<event active="true" eventTime="21500" id="" oscIndex="0" oscMsgName="/midi1/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="60 0" valueLen="0"/>
+<event active="true" eventTime="21500" id="" oscIndex="0" oscMsgName="/midi1/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 100" valueLen="0"/>
+<event active="true" eventTime="22000" id="" oscIndex="0" oscMsgName="/midi1/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 0" valueLen="0"/>
+<event active="true" eventTime="22000" id="" oscIndex="0" oscMsgName="/midi1/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="72 100" valueLen="0"/>
+<event active="true" eventTime="22500" id="" oscIndex="0" oscMsgName="/midi1/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="72 0" valueLen="0"/>
+<event active="true" eventTime="23000" id="" oscIndex="0" oscMsgName="/midi1/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="65 100" valueLen="0"/>
+<event active="true" eventTime="23500" id="" oscIndex="0" oscMsgName="/midi1/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="65 0" valueLen="0"/>
+<event active="true" eventTime="23500" id="" oscIndex="0" oscMsgName="/midi1/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="72 100" valueLen="0"/>
+<event active="true" eventTime="24000" id="" oscIndex="0" oscMsgName="/midi1/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="72 0" valueLen="0"/>
+</timeline>
+<timeline beatLength="2" beatPerBar="4" color="255 0 0" currentEvent="24" displayEnd="2000" displayStart="0" followOnExpr="" height="100" id="drums-1" lastSelEvent="24" oscIndex="0" pitch="1.0" playMode="" quantize="125" timeLineLength="2000" typeDisplay="false">
+<event active="true" eventTime="0" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 100" valueLen="0"/>
+<event active="true" eventTime="0" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="67 100" valueLen="0"/>
+<event active="true" eventTime="125" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="67 0" valueLen="0"/>
+<event active="true" eventTime="125" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="70 0" valueLen="0"/>
+<event active="true" eventTime="125" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 0" valueLen="0"/>
+<event active="true" eventTime="125" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 100" valueLen="0"/>
+<event active="true" eventTime="250" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 0" valueLen="0"/>
+<event active="true" eventTime="250" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="70 100" valueLen="0"/>
+<event active="true" eventTime="250" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 100" valueLen="0"/>
+<event active="true" eventTime="375" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="70 0" valueLen="0"/>
+<event active="true" eventTime="375" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 0" valueLen="0"/>
+<event active="true" eventTime="375" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="68 100" valueLen="0"/>
+<event active="true" eventTime="500" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="68 0" valueLen="0"/>
+<event active="true" eventTime="500" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="67 100" valueLen="0"/>
+<event active="true" eventTime="500" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="70 100" valueLen="0"/>
+<event active="true" eventTime="500" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 100" valueLen="0"/>
+<event active="true" eventTime="625" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="67 0" valueLen="0"/>
+<event active="true" eventTime="625" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="70 0" valueLen="0"/>
+<event active="true" eventTime="625" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 0" valueLen="0"/>
+<event active="true" eventTime="625" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="70 100" valueLen="0"/>
+<event active="true" eventTime="625" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 100" valueLen="0"/>
+<event active="true" eventTime="750" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="70 0" valueLen="0"/>
+<event active="true" eventTime="750" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 0" valueLen="0"/>
+<event active="true" eventTime="750" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="67 100" valueLen="0"/>
+<event active="true" eventTime="875" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="67 0" valueLen="0"/>
+<event active="true" eventTime="1000" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="67 100" valueLen="0"/>
+<event active="true" eventTime="1000" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="70 100" valueLen="0"/>
+<event active="true" eventTime="1000" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 100" valueLen="0"/>
+<event active="true" eventTime="1125" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="67 0" valueLen="0"/>
+<event active="true" eventTime="1125" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="70 0" valueLen="0"/>
+<event active="true" eventTime="1125" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 0" valueLen="0"/>
+<event active="true" eventTime="1250" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="70 100" valueLen="0"/>
+<event active="true" eventTime="1250" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 100" valueLen="0"/>
+<event active="true" eventTime="1375" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="70 0" valueLen="0"/>
+<event active="true" eventTime="1375" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 0" valueLen="0"/>
+<event active="true" eventTime="1375" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="67 100" valueLen="0"/>
+<event active="true" eventTime="1375" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="68 100" valueLen="0"/>
+<event active="true" eventTime="1500" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="67 0" valueLen="0"/>
+<event active="true" eventTime="1500" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="68 0" valueLen="0"/>
+<event active="true" eventTime="1500" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 100" valueLen="0"/>
+<event active="true" eventTime="1625" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 0" valueLen="0"/>
+<event active="true" eventTime="1625" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="67 100" valueLen="0"/>
+<event active="true" eventTime="1625" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="70 100" valueLen="0"/>
+<event active="true" eventTime="1750" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="67 0" valueLen="0"/>
+<event active="true" eventTime="1750" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="70 0" valueLen="0"/>
+<event active="true" eventTime="1750" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 100" valueLen="0"/>
+<event active="true" eventTime="1875" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 0" valueLen="0"/>
+<event active="true" eventTime="1875" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="67 100" valueLen="0"/>
+<event active="true" eventTime="1875" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="70 100" valueLen="0"/>
+<event active="true" eventTime="2000" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="67 0" valueLen="0"/>
+</timeline>
+<timeline beatLength="10" beatPerBar="4" color="255 0 0" currentEvent="29" displayEnd="2000" displayStart="0" followOnExpr="" height="100" id="drums-2" lastSelEvent="29" oscIndex="0" pitch="1.0" playMode="" quantize="125" timeLineLength="2000" typeDisplay="false">
+<event active="true" eventTime="0" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="67 0" valueLen="0"/>
+<event active="true" eventTime="0" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="70 0" valueLen="0"/>
+<event active="true" eventTime="0" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="67 100" valueLen="0"/>
+<event active="true" eventTime="0" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="70 100" valueLen="0"/>
+<event active="true" eventTime="0" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 100" valueLen="0"/>
+<event active="true" eventTime="125" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="67 0" valueLen="0"/>
+<event active="true" eventTime="125" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="70 0" valueLen="0"/>
+<event active="true" eventTime="125" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 0" valueLen="0"/>
+<event active="true" eventTime="125" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 100" valueLen="0"/>
+<event active="true" eventTime="250" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 0" valueLen="0"/>
+<event active="true" eventTime="250" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="67 100" valueLen="0"/>
+<event active="true" eventTime="250" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="70 100" valueLen="0"/>
+<event active="true" eventTime="250" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="68 100" valueLen="0"/>
+<event active="true" eventTime="375" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="67 0" valueLen="0"/>
+<event active="true" eventTime="375" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="70 0" valueLen="0"/>
+<event active="true" eventTime="375" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="68 0" valueLen="0"/>
+<event active="true" eventTime="375" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="68 100" valueLen="0"/>
+<event active="true" eventTime="500" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="68 0" valueLen="0"/>
+<event active="true" eventTime="500" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="67 100" valueLen="0"/>
+<event active="true" eventTime="500" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="70 100" valueLen="0"/>
+<event active="true" eventTime="500" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 100" valueLen="0"/>
+<event active="true" eventTime="625" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="67 0" valueLen="0"/>
+<event active="true" eventTime="625" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="70 0" valueLen="0"/>
+<event active="true" eventTime="625" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 0" valueLen="0"/>
+<event active="true" eventTime="625" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="70 100" valueLen="0"/>
+<event active="true" eventTime="625" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 100" valueLen="0"/>
+<event active="true" eventTime="750" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="70 0" valueLen="0"/>
+<event active="true" eventTime="750" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 0" valueLen="0"/>
+<event active="true" eventTime="750" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="67 100" valueLen="0"/>
+<event active="true" eventTime="875" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="67 0" valueLen="0"/>
+<event active="true" eventTime="1000" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="67 100" valueLen="0"/>
+<event active="true" eventTime="1000" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="70 100" valueLen="0"/>
+<event active="true" eventTime="1000" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 100" valueLen="0"/>
+<event active="true" eventTime="1125" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="67 0" valueLen="0"/>
+<event active="true" eventTime="1125" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="70 0" valueLen="0"/>
+<event active="true" eventTime="1125" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 0" valueLen="0"/>
+<event active="true" eventTime="1125" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="67 100" valueLen="0"/>
+<event active="true" eventTime="1125" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 100" valueLen="0"/>
+<event active="true" eventTime="1250" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="67 0" valueLen="0"/>
+<event active="true" eventTime="1250" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 0" valueLen="0"/>
+<event active="true" eventTime="1250" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="70 100" valueLen="0"/>
+<event active="true" eventTime="1375" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="70 0" valueLen="0"/>
+<event active="true" eventTime="1500" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="70 100" valueLen="0"/>
+<event active="true" eventTime="1500" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 100" valueLen="0"/>
+<event active="true" eventTime="1625" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="70 0" valueLen="0"/>
+<event active="true" eventTime="1625" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 0" valueLen="0"/>
+<event active="true" eventTime="1625" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="67 100" valueLen="0"/>
+<event active="true" eventTime="1625" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="70 100" valueLen="0"/>
+<event active="true" eventTime="1750" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="67 0" valueLen="0"/>
+<event active="true" eventTime="1750" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="70 0" valueLen="0"/>
+<event active="true" eventTime="1750" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 100" valueLen="0"/>
+<event active="true" eventTime="1875" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 0" valueLen="0"/>
+</timeline>
+<timeline beatLength="2" beatPerBar="4" color="255 0 0" currentEvent="15" displayEnd="2000" displayStart="0" followOnExpr="" height="100" id="drums-3" lastSelEvent="15" oscIndex="0" pitch="1.0" playMode="p" quantize="125" timeLineLength="2000" typeDisplay="false">
+<event active="true" eventTime="0" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="67 100" valueLen="0"/>
+<event active="true" eventTime="0" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="70 100" valueLen="0"/>
+<event active="true" eventTime="0" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 100" valueLen="0"/>
+<event active="true" eventTime="125" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="67 0" valueLen="0"/>
+<event active="true" eventTime="125" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="70 0" valueLen="0"/>
+<event active="true" eventTime="125" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 0" valueLen="0"/>
+<event active="true" eventTime="125" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 100" valueLen="0"/>
+<event active="true" eventTime="250" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 0" valueLen="0"/>
+<event active="true" eventTime="250" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="67 100" valueLen="0"/>
+<event active="true" eventTime="250" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="70 100" valueLen="0"/>
+<event active="true" eventTime="375" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="67 0" valueLen="0"/>
+<event active="true" eventTime="375" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="70 0" valueLen="0"/>
+<event active="true" eventTime="500" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="70 100" valueLen="0"/>
+<event active="true" eventTime="500" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 100" valueLen="0"/>
+<event active="true" eventTime="500" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="67 100" valueLen="0"/>
+<event active="true" eventTime="625" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="70 0" valueLen="0"/>
+<event active="true" eventTime="625" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 0" valueLen="0"/>
+<event active="true" eventTime="625" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="67 0" valueLen="0"/>
+<event active="true" eventTime="625" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="70 100" valueLen="0"/>
+<event active="true" eventTime="750" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="70 0" valueLen="0"/>
+<event active="true" eventTime="750" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 100" valueLen="0"/>
+<event active="true" eventTime="875" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 0" valueLen="0"/>
+<event active="true" eventTime="875" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="70 100" valueLen="0"/>
+<event active="true" eventTime="1000" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="70 0" valueLen="0"/>
+<event active="true" eventTime="1000" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="70 100" valueLen="0"/>
+<event active="true" eventTime="1000" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 100" valueLen="0"/>
+<event active="true" eventTime="1000" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="67 100" valueLen="0"/>
+<event active="true" eventTime="1125" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="70 0" valueLen="0"/>
+<event active="true" eventTime="1125" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 0" valueLen="0"/>
+<event active="true" eventTime="1125" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="67 0" valueLen="0"/>
+<event active="true" eventTime="1125" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="70 100" valueLen="0"/>
+<event active="true" eventTime="1125" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 100" valueLen="0"/>
+<event active="true" eventTime="1125" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="67 100" valueLen="0"/>
+<event active="true" eventTime="1125" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="67 100" valueLen="0"/>
+<event active="true" eventTime="1250" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="70 0" valueLen="0"/>
+<event active="true" eventTime="1250" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 0" valueLen="0"/>
+<event active="true" eventTime="1250" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="67 0" valueLen="0"/>
+<event active="true" eventTime="1250" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="67 0" valueLen="0"/>
+<event active="true" eventTime="1250" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 100" valueLen="0"/>
+<event active="true" eventTime="1375" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 0" valueLen="0"/>
+<event active="true" eventTime="1375" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="70 100" valueLen="0"/>
+<event active="true" eventTime="1500" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="70 0" valueLen="0"/>
+<event active="true" eventTime="1500" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="70 100" valueLen="0"/>
+<event active="true" eventTime="1500" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 100" valueLen="0"/>
+<event active="true" eventTime="1500" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="67 100" valueLen="0"/>
+<event active="true" eventTime="1625" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="70 0" valueLen="0"/>
+<event active="true" eventTime="1625" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 0" valueLen="0"/>
+<event active="true" eventTime="1625" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="67 0" valueLen="0"/>
+<event active="true" eventTime="1750" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="70 100" valueLen="0"/>
+<event active="true" eventTime="1750" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 100" valueLen="0"/>
+<event active="true" eventTime="1875" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="70 0" valueLen="0"/>
+<event active="true" eventTime="1875" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 0" valueLen="0"/>
+</timeline>
+<timeline beatLength="2" beatPerBar="4" color="255 0 0" currentEvent="8" displayEnd="2000" displayStart="0" followOnExpr="" height="100" id="drums-4" lastSelEvent="8" oscIndex="0" pitch="1.0" playMode="" quantize="125" timeLineLength="2000" typeDisplay="false">
+<event active="true" eventTime="0" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="68 100" valueLen="0"/>
+<event active="true" eventTime="0" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="70 100" valueLen="0"/>
+<event active="true" eventTime="0" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 100" valueLen="0"/>
+<event active="true" eventTime="125" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="68 0" valueLen="0"/>
+<event active="true" eventTime="125" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="70 0" valueLen="0"/>
+<event active="true" eventTime="125" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 0" valueLen="0"/>
+<event active="true" eventTime="125" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="70 100" valueLen="0"/>
+<event active="true" eventTime="125" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 100" valueLen="0"/>
+<event active="true" eventTime="250" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="70 0" valueLen="0"/>
+<event active="true" eventTime="250" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 0" valueLen="0"/>
+<event active="true" eventTime="250" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 100" valueLen="0"/>
+<event active="true" eventTime="250" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="67 100" valueLen="0"/>
+<event active="true" eventTime="375" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 0" valueLen="0"/>
+<event active="true" eventTime="375" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="67 0" valueLen="0"/>
+<event active="true" eventTime="500" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="70 100" valueLen="0"/>
+<event active="true" eventTime="500" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 100" valueLen="0"/>
+<event active="true" eventTime="625" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="70 0" valueLen="0"/>
+<event active="true" eventTime="625" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 0" valueLen="0"/>
+<event active="true" eventTime="750" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 100" valueLen="0"/>
+<event active="true" eventTime="750" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="67 100" valueLen="0"/>
+<event active="true" eventTime="875" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 0" valueLen="0"/>
+<event active="true" eventTime="875" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="67 0" valueLen="0"/>
+<event active="true" eventTime="1000" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="70 100" valueLen="0"/>
+<event active="true" eventTime="1000" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 100" valueLen="0"/>
+<event active="true" eventTime="1125" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="70 0" valueLen="0"/>
+<event active="true" eventTime="1125" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 0" valueLen="0"/>
+<event active="true" eventTime="1125" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="67 100" valueLen="0"/>
+<event active="true" eventTime="1250" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="67 0" valueLen="0"/>
+<event active="true" eventTime="1250" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="67 100" valueLen="0"/>
+<event active="true" eventTime="1375" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="67 0" valueLen="0"/>
+<event active="true" eventTime="1500" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="70 100" valueLen="0"/>
+<event active="true" eventTime="1625" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="70 0" valueLen="0"/>
+<event active="true" eventTime="1625" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="67 100" valueLen="0"/>
+<event active="true" eventTime="1750" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="67 0" valueLen="0"/>
+<event active="true" eventTime="1750" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 100" valueLen="0"/>
+<event active="true" eventTime="1875" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 0" valueLen="0"/>
+</timeline>
+<timeline beatLength="2" beatPerBar="4" color="255 0 0" currentEvent="7" displayEnd="2000" displayStart="0" followOnExpr="" height="100" id="drums-5" lastSelEvent="7" oscIndex="0" pitch="1.0" playMode="" quantize="125" timeLineLength="2000" typeDisplay="false">
+<event active="true" eventTime="0" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="70 100" valueLen="0"/>
+<event active="true" eventTime="0" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="67 100" valueLen="0"/>
+<event active="true" eventTime="125" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="70 0" valueLen="0"/>
+<event active="true" eventTime="125" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="67 0" valueLen="0"/>
+<event active="true" eventTime="250" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 100" valueLen="0"/>
+<event active="true" eventTime="375" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 0" valueLen="0"/>
+<event active="true" eventTime="375" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="70 100" valueLen="0"/>
+<event active="true" eventTime="500" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="70 0" valueLen="0"/>
+<event active="true" eventTime="500" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="70 100" valueLen="0"/>
+<event active="true" eventTime="500" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="67 100" valueLen="0"/>
+<event active="true" eventTime="625" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="70 0" valueLen="0"/>
+<event active="true" eventTime="625" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="67 0" valueLen="0"/>
+<event active="true" eventTime="625" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 100" valueLen="0"/>
+<event active="true" eventTime="750" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 0" valueLen="0"/>
+<event active="true" eventTime="750" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="70 100" valueLen="0"/>
+<event active="true" eventTime="750" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 100" valueLen="0"/>
+<event active="true" eventTime="875" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="70 0" valueLen="0"/>
+<event active="true" eventTime="875" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 0" valueLen="0"/>
+<event active="true" eventTime="1000" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="70 100" valueLen="0"/>
+<event active="true" eventTime="1000" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="67 100" valueLen="0"/>
+<event active="true" eventTime="1125" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="70 0" valueLen="0"/>
+<event active="true" eventTime="1125" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="67 0" valueLen="0"/>
+<event active="true" eventTime="1125" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="70 100" valueLen="0"/>
+<event active="true" eventTime="1250" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="70 0" valueLen="0"/>
+<event active="true" eventTime="1500" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="70 100" valueLen="0"/>
+<event active="true" eventTime="1500" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="67 100" valueLen="0"/>
+<event active="true" eventTime="1625" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="70 0" valueLen="0"/>
+<event active="true" eventTime="1625" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="67 0" valueLen="0"/>
+<event active="true" eventTime="1625" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="70 100" valueLen="0"/>
+<event active="true" eventTime="1750" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="70 0" valueLen="0"/>
+</timeline>
+<timeline beatLength="2" beatPerBar="4" color="255 0 0" currentEvent="6" displayEnd="2000" displayStart="0" followOnExpr="" height="100" id="drums-6" lastSelEvent="6" oscIndex="0" pitch="1.0" playMode="" quantize="125" timeLineLength="2000" typeDisplay="false">
+<event active="true" eventTime="0" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="70 100" valueLen="0"/>
+<event active="true" eventTime="0" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="67 100" valueLen="0"/>
+<event active="true" eventTime="125" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="70 0" valueLen="0"/>
+<event active="true" eventTime="125" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="67 0" valueLen="0"/>
+<event active="true" eventTime="500" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="67 100" valueLen="0"/>
+<event active="true" eventTime="500" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="70 100" valueLen="0"/>
+<event active="true" eventTime="625" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="67 0" valueLen="0"/>
+<event active="true" eventTime="625" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="70 0" valueLen="0"/>
+<event active="true" eventTime="625" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="67 100" valueLen="0"/>
+<event active="true" eventTime="750" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="67 0" valueLen="0"/>
+<event active="true" eventTime="1000" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="67 100" valueLen="0"/>
+<event active="true" eventTime="1000" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 100" valueLen="0"/>
+<event active="true" eventTime="1125" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="67 0" valueLen="0"/>
+<event active="true" eventTime="1125" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 0" valueLen="0"/>
+<event active="true" eventTime="1125" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 100" valueLen="0"/>
+<event active="true" eventTime="1250" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 0" valueLen="0"/>
+<event active="true" eventTime="1500" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="67 100" valueLen="0"/>
+<event active="true" eventTime="1500" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="70 100" valueLen="0"/>
+<event active="true" eventTime="1500" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 100" valueLen="0"/>
+<event active="true" eventTime="1625" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="67 0" valueLen="0"/>
+<event active="true" eventTime="1625" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="70 0" valueLen="0"/>
+<event active="true" eventTime="1625" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 0" valueLen="0"/>
+<event active="true" eventTime="1625" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="67 100" valueLen="0"/>
+<event active="true" eventTime="1750" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="67 0" valueLen="0"/>
+</timeline>
+<timeline beatLength="2" beatPerBar="4" color="255 0 0" currentEvent="13" displayEnd="2000" displayStart="0" followOnExpr="" height="100" id="drums-7" lastSelEvent="13" oscIndex="0" pitch="1.0" playMode="" quantize="125" timeLineLength="2000" typeDisplay="false">
+<event active="true" eventTime="0" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="67 100" valueLen="0"/>
+<event active="true" eventTime="0" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 100" valueLen="0"/>
+<event active="true" eventTime="125" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="67 0" valueLen="0"/>
+<event active="true" eventTime="125" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 0" valueLen="0"/>
+<event active="true" eventTime="250" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="67 100" valueLen="0"/>
+<event active="true" eventTime="250" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 100" valueLen="0"/>
+<event active="true" eventTime="375" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="67 0" valueLen="0"/>
+<event active="true" eventTime="375" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 0" valueLen="0"/>
+<event active="true" eventTime="500" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="67 100" valueLen="0"/>
+<event active="true" eventTime="500" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 100" valueLen="0"/>
+<event active="true" eventTime="625" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="67 0" valueLen="0"/>
+<event active="true" eventTime="625" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 0" valueLen="0"/>
+<event active="true" eventTime="625" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="67 100" valueLen="0"/>
+<event active="true" eventTime="750" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="67 0" valueLen="0"/>
+<event active="true" eventTime="1000" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="67 100" valueLen="0"/>
+<event active="true" eventTime="1000" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 100" valueLen="0"/>
+<event active="true" eventTime="1125" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="67 0" valueLen="0"/>
+<event active="true" eventTime="1125" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 0" valueLen="0"/>
+<event active="true" eventTime="1500" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="67 100" valueLen="0"/>
+<event active="true" eventTime="1500" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 100" valueLen="0"/>
+<event active="true" eventTime="1625" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="67 0" valueLen="0"/>
+<event active="true" eventTime="1625" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 0" valueLen="0"/>
+<event active="true" eventTime="1625" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 100" valueLen="0"/>
+<event active="true" eventTime="1750" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 0" valueLen="0"/>
+<event active="true" eventTime="1750" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="67 100" valueLen="0"/>
+<event active="true" eventTime="1875" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="67 0" valueLen="0"/>
+</timeline>
+<timeline beatLength="2" beatPerBar="4" color="255 0 0" currentEvent="8" displayEnd="2000" displayStart="0" followOnExpr="" height="100" id="drums-8" lastSelEvent="8" oscIndex="0" pitch="1.0" playMode="" quantize="125" timeLineLength="2000" typeDisplay="false">
+<event active="true" eventTime="0" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="67 100" valueLen="0"/>
+<event active="true" eventTime="125" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="67 0" valueLen="0"/>
+<event active="true" eventTime="125" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="67 100" valueLen="0"/>
+<event active="true" eventTime="250" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="67 0" valueLen="0"/>
+<event active="true" eventTime="250" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 100" valueLen="0"/>
+<event active="true" eventTime="375" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 0" valueLen="0"/>
+<event active="true" eventTime="500" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="67 100" valueLen="0"/>
+<event active="true" eventTime="500" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 100" valueLen="0"/>
+<event active="true" eventTime="625" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="67 0" valueLen="0"/>
+<event active="true" eventTime="625" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 0" valueLen="0"/>
+<event active="true" eventTime="1000" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="67 100" valueLen="0"/>
+<event active="true" eventTime="1000" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 100" valueLen="0"/>
+<event active="true" eventTime="1125" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="67 0" valueLen="0"/>
+<event active="true" eventTime="1125" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 0" valueLen="0"/>
+<event active="true" eventTime="1250" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="67 100" valueLen="0"/>
+<event active="true" eventTime="1375" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="67 0" valueLen="0"/>
+<event active="true" eventTime="1500" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="67 100" valueLen="0"/>
+<event active="true" eventTime="1500" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 100" valueLen="0"/>
+<event active="true" eventTime="1625" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="67 0" valueLen="0"/>
+<event active="true" eventTime="1625" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 0" valueLen="0"/>
+</timeline>
+<timeline beatLength="2" beatPerBar="4" color="255 0 0" currentEvent="8" displayEnd="2000" displayStart="0" followOnExpr="" height="100" id="drums-9" lastSelEvent="8" oscIndex="0" pitch="1.0" playMode="" quantize="125" timeLineLength="2000" typeDisplay="false">
+<event active="true" eventTime="0" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="67 100" valueLen="0"/>
+<event active="true" eventTime="0" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 100" valueLen="0"/>
+<event active="true" eventTime="125" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="67 0" valueLen="0"/>
+<event active="true" eventTime="125" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 0" valueLen="0"/>
+<event active="true" eventTime="125" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="67 100" valueLen="0"/>
+<event active="true" eventTime="250" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="67 0" valueLen="0"/>
+<event active="true" eventTime="500" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="67 100" valueLen="0"/>
+<event active="true" eventTime="500" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 100" valueLen="0"/>
+<event active="true" eventTime="625" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="67 0" valueLen="0"/>
+<event active="true" eventTime="625" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 0" valueLen="0"/>
+<event active="true" eventTime="750" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 100" valueLen="0"/>
+<event active="true" eventTime="875" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 0" valueLen="0"/>
+<event active="true" eventTime="1000" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="67 100" valueLen="0"/>
+<event active="true" eventTime="1000" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 100" valueLen="0"/>
+<event active="true" eventTime="1125" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="67 0" valueLen="0"/>
+<event active="true" eventTime="1125" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 0" valueLen="0"/>
+<event active="true" eventTime="1125" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="67 100" valueLen="0"/>
+<event active="true" eventTime="1125" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 100" valueLen="0"/>
+<event active="true" eventTime="1250" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="67 0" valueLen="0"/>
+<event active="true" eventTime="1250" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 0" valueLen="0"/>
+<event active="true" eventTime="1375" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 100" valueLen="0"/>
+<event active="true" eventTime="1500" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 0" valueLen="0"/>
+<event active="true" eventTime="1500" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="67 100" valueLen="0"/>
+<event active="true" eventTime="1500" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 100" valueLen="0"/>
+<event active="true" eventTime="1625" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="67 0" valueLen="0"/>
+<event active="true" eventTime="1625" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 0" valueLen="0"/>
+</timeline>
+<timeline beatLength="2" beatPerBar="4" color="255 0 0" currentEvent="8" displayEnd="2000" displayStart="0" followOnExpr="" height="100" id="drums-10" lastSelEvent="8" oscIndex="0" pitch="1.0" playMode="" quantize="125" timeLineLength="2000" typeDisplay="false">
+<event active="true" eventTime="0" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="67 100" valueLen="0"/>
+<event active="true" eventTime="0" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 100" valueLen="0"/>
+<event active="true" eventTime="125" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="67 0" valueLen="0"/>
+<event active="true" eventTime="125" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 0" valueLen="0"/>
+<event active="true" eventTime="125" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="67 100" valueLen="0"/>
+<event active="true" eventTime="250" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="67 0" valueLen="0"/>
+<event active="true" eventTime="250" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 100" valueLen="0"/>
+<event active="true" eventTime="375" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 0" valueLen="0"/>
+<event active="true" eventTime="500" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="67 100" valueLen="0"/>
+<event active="true" eventTime="500" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 100" valueLen="0"/>
+<event active="true" eventTime="625" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="67 0" valueLen="0"/>
+<event active="true" eventTime="625" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 0" valueLen="0"/>
+<event active="true" eventTime="625" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="67 100" valueLen="0"/>
+<event active="true" eventTime="750" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="67 0" valueLen="0"/>
+<event active="true" eventTime="750" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="67 100" valueLen="0"/>
+<event active="true" eventTime="750" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 100" valueLen="0"/>
+<event active="true" eventTime="875" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="67 0" valueLen="0"/>
+<event active="true" eventTime="875" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 0" valueLen="0"/>
+<event active="true" eventTime="1000" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="67 100" valueLen="0"/>
+<event active="true" eventTime="1000" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 100" valueLen="0"/>
+<event active="true" eventTime="1125" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="67 0" valueLen="0"/>
+<event active="true" eventTime="1125" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 0" valueLen="0"/>
+<event active="true" eventTime="1125" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 100" valueLen="0"/>
+<event active="true" eventTime="1250" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 0" valueLen="0"/>
+<event active="true" eventTime="1250" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 100" valueLen="0"/>
+<event active="true" eventTime="1375" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 0" valueLen="0"/>
+<event active="true" eventTime="1500" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="67 100" valueLen="0"/>
+<event active="true" eventTime="1625" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="67 0" valueLen="0"/>
+<event active="true" eventTime="1625" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 100" valueLen="0"/>
+<event active="true" eventTime="1750" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 0" valueLen="0"/>
+</timeline>
+<timeline beatLength="2" beatPerBar="4" color="255 0 0" currentEvent="7" displayEnd="2000" displayStart="0" followOnExpr="" height="100" id="drums-11" lastSelEvent="7" oscIndex="0" pitch="1.0" playMode="" quantize="125" timeLineLength="2000" typeDisplay="false">
+<event active="true" eventTime="0" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="67 100" valueLen="0"/>
+<event active="true" eventTime="0" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 100" valueLen="0"/>
+<event active="true" eventTime="125" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="67 0" valueLen="0"/>
+<event active="true" eventTime="125" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 0" valueLen="0"/>
+<event active="true" eventTime="250" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="67 100" valueLen="0"/>
+<event active="true" eventTime="375" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="67 0" valueLen="0"/>
+<event active="true" eventTime="500" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="67 100" valueLen="0"/>
+<event active="true" eventTime="625" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="67 0" valueLen="0"/>
+<event active="true" eventTime="625" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="67 100" valueLen="0"/>
+<event active="true" eventTime="750" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="67 0" valueLen="0"/>
+<event active="true" eventTime="1000" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="67 100" valueLen="0"/>
+<event active="true" eventTime="1000" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 100" valueLen="0"/>
+<event active="true" eventTime="1125" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="67 0" valueLen="0"/>
+<event active="true" eventTime="1125" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 0" valueLen="0"/>
+<event active="true" eventTime="1500" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="67 100" valueLen="0"/>
+<event active="true" eventTime="1625" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="67 0" valueLen="0"/>
+</timeline>
+<timeline beatLength="2" beatPerBar="4" color="255 0 0" currentEvent="5" displayEnd="2000" displayStart="0" followOnExpr="" height="100" id="drums-12" lastSelEvent="5" oscIndex="0" pitch="1.0" playMode="" quantize="125" timeLineLength="2000" typeDisplay="false">
+<event active="true" eventTime="0" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="67 100" valueLen="0"/>
+<event active="true" eventTime="0" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 100" valueLen="0"/>
+<event active="true" eventTime="125" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="67 0" valueLen="0"/>
+<event active="true" eventTime="125" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 0" valueLen="0"/>
+<event active="true" eventTime="500" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="67 100" valueLen="0"/>
+<event active="true" eventTime="625" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="67 0" valueLen="0"/>
+<event active="true" eventTime="1000" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 100" valueLen="0"/>
+<event active="true" eventTime="1125" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 0" valueLen="0"/>
+<event active="true" eventTime="1125" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 100" valueLen="0"/>
+<event active="true" eventTime="1250" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 0" valueLen="0"/>
+<event active="true" eventTime="1250" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 100" valueLen="0"/>
+<event active="true" eventTime="1375" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 0" valueLen="0"/>
+<event active="true" eventTime="1500" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="67 100" valueLen="0"/>
+<event active="true" eventTime="1625" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="67 0" valueLen="0"/>
+<event active="true" eventTime="1625" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 100" valueLen="0"/>
+<event active="true" eventTime="1750" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 0" valueLen="0"/>
+<event active="true" eventTime="1875" id="" oscIndex="0" oscMsgName="/midi3/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 100" valueLen="0"/>
+</timeline>
+<timeline beatLength="2" beatPerBar="4" color="255 0 0" currentEvent="0" displayEnd="2000" displayStart="0" followOnExpr="" height="100" id="init" lastSelEvent="0" oscIndex="0" pitch="1.0" playMode="" quantize="125" timeLineLength="2000" typeDisplay="false">
+<event active="true" eventTime="0" id="" oscIndex="0" oscMsgName="$e:vctl:b1:f" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="" valueLen="0"/>
+</timeline>
+<timeline beatLength="10" beatPerBar="4" color="255 0 0" currentEvent="0" displayEnd="8000" displayStart="0" followOnExpr="" height="100" id="spare" lastSelEvent="0" oscIndex="0" pitch="1.0" playMode="" quantize="50" timeLineLength="8000" typeDisplay="false"/>
+<timeline beatLength="2" beatPerBar="4" color="255 0 0" currentEvent="0" displayEnd="2000" displayStart="0" followOnExpr="" height="100" id="drumsq-1" lastSelEvent="0" oscIndex="0" pitch="1.0" playMode="l" quantize="125" timeLineLength="2000" typeDisplay="false">
+<event active="true" eventTime="0" id="" oscIndex="0" oscMsgName="$t:drums-{$f:std:rnd::[4,1]}:p" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="$f:std:rnd::[24,1]" value1="1" valueLen="2"/>
+</timeline>
+<timeline beatLength="2" beatPerBar="4" color="255 0 0" currentEvent="0" displayEnd="2000" displayStart="0" followOnExpr="" height="100" id="drumsq-2" lastSelEvent="0" oscIndex="0" pitch="1.0" playMode="" quantize="125" timeLineLength="2000" typeDisplay="false">
+<event active="true" eventTime="0" id="" oscIndex="0" oscMsgName="$t:drums-{$f:std:rnd::[6,5]}:p" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="$f:std:rnd::[24,1]" value1="1" valueLen="2"/>
+</timeline>
+<view visible="drums-1,drums-12,drums-11,voice_sq1,drums-7,vctl,init,vidrndpt,spare,drumsq-1,drumsq-2"/>
+</timelines>

@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<timelines version="1.0">
+<source>
+<objects/>
+</source>
+<description/>
+<colors type="osc">
+<color for="" value="255:255:255"/>
+<color for="/mb/aplha" value="0:0:195"/>
+<color for="/mb/alha" value="0:180:0"/>
+<color for="/v" value="225:0:0"/>
+<color for="/vid/x" value="0:225:0"/>
+<color for="/v1/pos" value="0:195:0"/>
+<color for="/mb/aha" value="0:180:180"/>
+<color for="/mb/rot" value="225:225:225"/>
+<color for="/mb" value="240:0:240"/>
+<color for="/v2/" value="0:165:165"/>
+<color for="/mb/r" value="0:240:240"/>
+<color for="/v1/film" value="0:210:0"/>
+<color for="/mb/apl" value="195:0:195"/>
+<color for="/v2/show" value="150:0:150"/>
+<color for="/mb/" value="0:0:240"/>
+<color for="/v/x" value="210:0:0"/>
+<color for="/v2/sh" value="150:150:150"/>
+<color for="/mb/alpha" value="165:165:165"/>
+<color for="/v1/fil" value="0:210:210"/>
+<color for="/vi" value="225:0:225"/>
+<color for="/v1/y" value="165:0:165"/>
+<color for="/mb/ro" value="0:240:0"/>
+<color for="/mb/apha" value="0:0:180"/>
+<color for="/mb/a" value="195:195:195"/>
+<color for="/vi/x" value="210:210:210"/>
+<color for="/v1/wi" value="0:255:0"/>
+<color for="/v1/wid" value="240:240:240"/>
+<color for="/v1/fi" value="0:0:210"/>
+<color for="/" value="255:0:0"/>
+<color for="/v1/w" value="0:255:255"/>
+<color for="/v1/x" value="210:0:210"/>
+<color for="/v1" value="255:0:255"/>
+<color for="/v2" value="0:0:165"/>
+<color for="/m" value="240:0:0"/>
+<color for="/vid/" value="0:225:225"/>
+<color for="/v1/fr" value="180:0:180"/>
+<color for="/v1/" value="0:0:255"/>
+<color for="/v1/p" value="0:195:195"/>
+<color for="/v2/s" value="0:165:0"/>
+<color for="/vid" value="0:0:225"/>
+<color for="/v1/po" value="180:180:180"/>
+<color for="/v2/sho" value="150:0:0"/>
+<color for="/v1/f" value="180:0:0"/>
+<color for="/mb/ap" value="195:0:0"/>
+<color for="/v2/film" value="165:0:0"/>
+</colors>
+<colors type="expr">
+<color for="" value="255:255:255"/>
+<color for="$t:vid_chg:nuc0:" value="0:0:225"/>
+<color for="$t:v:p" value="0:0:255"/>
+<color for="$t:vid_chg:n" value="0:240:0"/>
+<color for="$t:vid_chg:nuc0" value="225:0:225"/>
+<color for="$t:vid_ch:p" value="240:0:240"/>
+<color for="$t:vid_chg:" value="0:240:240"/>
+<color for="$t:vid_chg:nuc" value="225:0:0"/>
+<color for="$:vid_chg:nuc0:f" value="0:225:0"/>
+<color for="$t:films-1:p" value="255:0:255"/>
+<color for="$t:vid:p" value="0:255:0"/>
+<color for="$e:films:{}:f" value="210:0:0"/>
+<color for="$e:films:current:f" value="255:0:0"/>
+<color for="$t:vid_chg:nuc0:f" value="0:225:225"/>
+<color for="$e:films:{" value="210:0:210"/>
+<color for="$t:vid_c:p" value="240:0:0"/>
+<color for="$t:vid_chg:nu" value="225:225:225"/>
+<color for="$e:vid_chg:nuc0:f" value="210:210:210"/>
+<color for="$t:vid_chg:p" value="0:0:240"/>
+<color for="$t:vi:p" value="0:255:255"/>
+<color for="$e:films:{$f:std:rnd::[0,37]}:f" value="0:0:210"/>
+<color for="$t:vid_:p" value="240:240:240"/>
+</colors>
+<filters/>
+<midiKeys/>
+<timeline beatLength="10" beatPerBar="4" color="255 0 0" currentEvent="-1" displayEnd="8000" displayStart="0" followOnExpr="" height="100" id="init" lastSelEvent="-1" oscIndex="0" pitch="1.0" playMode="" quantize="50" timeLineLength="8000" typeDisplay="false">
+<event active="true" eventTime="50" id="" oscIndex="0" oscMsgName="/v1/wid" oscMsgName1="/v1/hgt" oscMsgName2="/v1/play" oscMsgName3="/v1/show" oscMsgName4="/mb/alpha" oscMsgName5="/mb/size" oscMsgNameLen="6" target="" targetData="" targetPlayMode="" value="5.5" value1="4" value2="1" value3="1" value4="0.95" value5="3.7" valueLen="6"/>
+<event active="true" eventTime="150" id="" oscIndex="0" oscMsgName="" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="" valueLen="0"/>
+<event active="true" eventTime="150" id="" oscIndex="0" oscMsgName="" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="" valueLen="0"/>
+<event active="false" eventTime="1050" id="resetX" oscIndex="0" oscMsgName="/v1/x" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="0" valueLen="0"/>
+<event active="true" eventTime="2000" id="" oscIndex="0" oscMsgName="/v1/film" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="/media/disk1/media/video/drive/IMGP0197.AVI.mpgt" value1="" value2="" value3="" value4="" valueLen="5"/>
+<event active="true" eventTime="2950" id="basePath" oscIndex="0" oscMsgName="" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="/media/disk1/media/video/" valueLen="0"/>
+</timeline>
+<timeline beatLength="10" beatPerBar="4" color="255 0 0" currentEvent="5" displayEnd="8000" displayStart="0" followOnExpr="" height="100" id="rotateSeq" lastSelEvent="5" oscIndex="0" pitch="8.0" playMode="l" quantize="50" timeLineLength="8000" typeDisplay="false">
+<event active="true" eventTime="50" id="" oscIndex="0" oscMsgName="/mb/rot" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="$f:std:rnd::[180]" valueLen="0"/>
+<event active="true" eventTime="250" id="" oscIndex="0" oscMsgName="" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="" valueLen="0"/>
+<event active="false" eventTime="1050" id="" oscIndex="0" oscMsgName="/v1/x" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="$f:std:rnd::[6,-3]" valueLen="0"/>
+<event active="false" eventTime="3100" id="" oscIndex="0" oscMsgName="/mb/rot" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="$f:std:rnd::[180]" valueLen="0"/>
+<event active="false" eventTime="3500" id="" oscIndex="0" oscMsgName="/v1/pos" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="$f:std:rnd::[3000]" valueLen="0"/>
+<event active="true" eventTime="6550" id="" oscIndex="0" oscMsgName="/v1/pos" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="$f:std:rnd::[1000]" valueLen="0"/>
+</timeline>
+<timeline beatLength="10" beatPerBar="4" color="255 0 0" currentEvent="37" displayEnd="20000" displayStart="0" followOnExpr="" height="100" id="films" lastSelEvent="37" oscIndex="0" pitch="1.0" playMode="" quantize="50" timeLineLength="20000" typeDisplay="false">
+<event active="true" eventTime="100" id="" oscIndex="0" oscMsgName="/v1/film" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="/media/disk1/media/video/drive/IMGP0197.AVI.mpgt" value1="" value2="" value3="" value4="" valueLen="5"/>
+<event active="true" eventTime="400" id="" oscIndex="0" oscMsgName="/v1/film" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="/media/disk1/media/video/london/can_wharf/mpg/smooth_lights.mpgt" value1="" value2="" value3="" value4="" valueLen="5"/>
+<event active="true" eventTime="750" id="" oscIndex="0" oscMsgName="/v1/film" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="/media/disk1/media/video/london/mpg/carousel_far.mpgt" value1="" value2="" value3="" value4="" valueLen="5"/>
+<event active="true" eventTime="1050" id="" oscIndex="0" oscMsgName="/v1/film" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="/media/disk1/media/video/london/can_wharf/mpg/light_under_fountain2.mpgt" value1="" value2="" value3="" value4="" valueLen="5"/>
+<event active="true" eventTime="1350" id="" oscIndex="0" oscMsgName="/v1/film" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="/media/disk1/media/video/london/can_wharf/mpg/can_twr_pan_up2.mpgt" value1="" value2="" value3="" value4="" valueLen="5"/>
+<event active="true" eventTime="1750" id="" oscIndex="0" oscMsgName="/v1/film" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="/media/disk1/media/video/london/can_wharf/mpg/light_lifesaver.mpgt" value1="" value2="" value3="" value4="" valueLen="5"/>
+<event active="true" eventTime="2150" id="" oscIndex="0" oscMsgName="/v1/film" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="/media/disk1/media/video/london/can_wharf/mpg/cw_lightface_2.mpgt" value1="" value2="" value3="" value4="" valueLen="5"/>
+<event active="true" eventTime="2550" id="" oscIndex="0" oscMsgName="/v1/film" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="/media/disk1/media/video/drive/IMGP0197.AVI.mpgt" value1="" value2="" value3="" value4="" valueLen="5"/>
+<event active="true" eventTime="2900" id="" oscIndex="0" oscMsgName="/v1/film" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="/media/disk1/media/video/london/can_wharf/mpg/cw_clock_2.mpgt" value1="" value2="" value3="" value4="" valueLen="5"/>
+<event active="true" eventTime="3250" id="" oscIndex="0" oscMsgName="/v1/film" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="/media/disk1/media/video/london/can_wharf/mpg/can_twr_busstop_lights.mpgt" value1="" value2="" value3="" value4="" valueLen="5"/>
+<event active="true" eventTime="3750" id="" oscIndex="0" oscMsgName="/v1/film" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="/media/disk1/media/video/london/mpg/london_treelights_blue3_cpk_ky5.mpgt" value1="" value2="" value3="" value4="" valueLen="5"/>
+<event active="true" eventTime="4250" id="" oscIndex="0" oscMsgName="/v1/film" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="/media/disk1/media/video/london/mpg/mass_attack_lcd.mpgt" value1="" value2="" value3="" value4="" valueLen="5"/>
+<event active="true" eventTime="4600" id="" oscIndex="0" oscMsgName="/v1/film" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="/media/disk1/media/video/london/mpg/london_eye_night_across_cpk_ky5.mpgt" value1="" value2="" value3="" value4="" valueLen="5"/>
+<event active="true" eventTime="4950" id="" oscIndex="0" oscMsgName="/v1/film" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="/media/disk1/media/video/london/mpg/london_oxo_fluro_1_cpk_ky5.mpgt" value1="" value2="" value3="" value4="" valueLen="5"/>
+<event active="true" eventTime="5800" id="" oscIndex="0" oscMsgName="/v1/film" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="/media/disk1/media/video/london/transvision/mpg/light_array2_cpk_ky1_400x300_out.mpgt" value1="" value2="" value3="" value4="" valueLen="5"/>
+<event active="true" eventTime="6150" id="" oscIndex="0" oscMsgName="/v1/film" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="/media/disk1/media/video/london/transvision/mpg/light_array_cpk_ky1_400x300_out.mpgt" value1="" value2="" value3="" value4="" valueLen="5"/>
+<event active="true" eventTime="6600" id="" oscIndex="0" oscMsgName="/v1/film" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="/media/disk1/media/video/london/transvision/mpg/prox_light_cpk_ky1_400x300_out.mpgt" value1="" value2="" value3="" value4="" valueLen="5"/>
+<event active="true" eventTime="8550" id="" oscIndex="0" oscMsgName="/v1/film" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="/media/disk1/media/video/nuc_vid/avi/nuc_doorstep_ky5.mpgt" value1="" value2="" value3="" value4="" valueLen="5"/>
+<event active="true" eventTime="8950" id="" oscIndex="0" oscMsgName="/v1/film" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="/media/disk1/media/video/nuc_vid/avi/nuc_dominic_ky5.mpgt" value1="" value2="" value3="" value4="" valueLen="5"/>
+<event active="true" eventTime="9450" id="" oscIndex="0" oscMsgName="/v1/film" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="/media/disk1/media/video/nuc_vid/avi/nuc_orange_ky5.mpgt" value1="" value2="" value3="" value4="" valueLen="5"/>
+<event active="true" eventTime="9950" id="" oscIndex="0" oscMsgName="/v1/film" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="/media/disk1/media/video/nuc_vid/avi/nuc_teapot_ky5.mpgt" value1="" value2="" value3="" value4="" valueLen="5"/>
+<event active="true" eventTime="10200" id="" oscIndex="0" oscMsgName="/v1/film" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="/media/disk1/media/video/nuc_vid/avi/nuc_xmas_islands_ky5.mpgt" value1="" value2="" value3="" value4="" valueLen="5"/>
+<event active="true" eventTime="10500" id="" oscIndex="0" oscMsgName="/v1/film" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="/media/disk1/media/video/nuc_vid/avi/nuc_plowshare_ky5.mpgt" value1="" value2="" value3="" value4="" valueLen="5"/>
+<event active="true" eventTime="10800" id="" oscIndex="0" oscMsgName="/v1/film" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="/media/disk1/media/video/nuc_vid/avi/nuc_troop_involvement_ky5.mpgt" value1="" value2="" value3="" value4="" valueLen="5"/>
+<event active="true" eventTime="11100" id="" oscIndex="0" oscMsgName="/v1/film" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="/media/disk1/media/video/nuc_vid/avi/nuc_high_alt2_ky5.mpgt" value1="" value2="" value3="" value4="" valueLen="5"/>
+<event active="true" eventTime="12050" id="" oscIndex="0" oscMsgName="/v1/film" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="/media/disk1/media/video/buckrogers/avi/buck_rgr_500yrs_old_cpk_400x300_ky1.mpgt" value1="" value2="" value3="" value4="" valueLen="5"/>
+<event active="true" eventTime="12500" id="" oscIndex="0" oscMsgName="/v1/film" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="/media/disk1/media/video/buckrogers/avi/buck_rgr_av_maachine_cpk_400x300_ky1.mpgt" value1="" value2="" value3="" value4="" valueLen="5"/>
+<event active="true" eventTime="13400" id="" oscIndex="0" oscMsgName="/v1/film" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="/media/disk1/media/video/fachist/nazi.mpgt" value1="" value2="" value3="" value4="" valueLen="5"/>
+<event active="true" eventTime="13800" id="" oscIndex="0" oscMsgName="/v1/film" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="/media/disk1/media/video/fachist/hitler1.mpgt" value1="" value2="" value3="" value4="" valueLen="5"/>
+<event active="true" eventTime="14200" id="" oscIndex="0" oscMsgName="/v1/film" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="/media/disk1/media/video/fachist/bush1.mpgt" value1="" value2="" value3="" value4="" valueLen="5"/>
+<event active="true" eventTime="14650" id="" oscIndex="0" oscMsgName="/v1/film" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="/media/disk1/media/video/fachist/bush2.mpgt" value1="" value2="" value3="" value4="" valueLen="5"/>
+<event active="true" eventTime="16600" id="" oscIndex="0" oscMsgName="/v1/film" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="/media/disk1/media/video/robots/cockroach_robot.mpgt" value1="" value2="" value3="" value4="" valueLen="5"/>
+<event active="true" eventTime="16950" id="" oscIndex="0" oscMsgName="/v1/film" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="/media/disk1/media/video/robots/fighting_robots2.mpgt" value1="" value2="" value3="" value4="" valueLen="5"/>
+<event active="true" eventTime="17250" id="" oscIndex="0" oscMsgName="/v1/film" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="/media/disk1/media/video/robots/jellyfish_robots1.mpgt" value1="" value2="" value3="" value4="" valueLen="5"/>
+<event active="true" eventTime="17600" id="" oscIndex="0" oscMsgName="/v1/film" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="/media/disk1/media/video/robots/jellyfish_robots2.mpgt" value1="" value2="" value3="" value4="" valueLen="5"/>
+<event active="true" eventTime="17950" id="" oscIndex="0" oscMsgName="/v1/film" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="/media/disk1/media/video/robots/speaking_robot.mpgt" value1="" value2="" value3="" value4="" valueLen="5"/>
+<event active="true" eventTime="18350" id="" oscIndex="0" oscMsgName="/v1/film" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="/media/disk1/media/video/robots/speaking_robot.mpgt" value1="" value2="" value3="" value4="" valueLen="5"/>
+<event active="true" eventTime="19100" id="" oscIndex="0" oscMsgName="/v1/film" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="/media/disk1/media/video/beano_130810/diamonds_4eva.mpgt" value1="" value2="" value3="" value4="" valueLen="5"/>
+</timeline>
+<timeline beatLength="10" beatPerBar="4" color="255 0 0" currentEvent="5" displayEnd="20000" displayStart="0" followOnExpr="" height="100" id="films-1" lastSelEvent="37" oscIndex="0" pitch="1.0" playMode="" quantize="50" timeLineLength="20000" typeDisplay="false">
+<event active="true" eventTime="100" id="" oscIndex="0" oscMsgName="/v2/film" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="/media/disk1/media/video/drive/IMGP0197.AVI.mpgt" value1="" value2="" value3="" value4="" valueLen="5"/>
+<event active="true" eventTime="400" id="" oscIndex="0" oscMsgName="/v2/film" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="/media/disk1/media/video/london/can_wharf/mpg/smooth_lights.mpgt" value1="" value2="" value3="" value4="" valueLen="5"/>
+<event active="true" eventTime="750" id="" oscIndex="0" oscMsgName="/v2/film" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="/media/disk1/media/video/london/mpg/carousel_far.mpgt" value1="" value2="" value3="" value4="" valueLen="5"/>
+<event active="true" eventTime="1050" id="" oscIndex="0" oscMsgName="/v2/film" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="/media/disk1/media/video/london/can_wharf/mpg/light_under_fountain2.mpgt" value1="" value2="" value3="" value4="" valueLen="5"/>
+<event active="true" eventTime="1350" id="" oscIndex="0" oscMsgName="/v2/film" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="/media/disk1/media/video/london/can_wharf/mpg/can_twr_pan_up2.mpgt" value1="" value2="" value3="" value4="" valueLen="5"/>
+<event active="true" eventTime="1750" id="" oscIndex="0" oscMsgName="/v2/film" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="/media/disk1/media/video/london/can_wharf/mpg/light_lifesaver.mpgt" value1="" value2="" value3="" value4="" valueLen="5"/>
+<event active="true" eventTime="2150" id="" oscIndex="0" oscMsgName="/v2/film" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="/media/disk1/media/video/london/can_wharf/mpg/cw_lightface_2.mpgt" value1="" value2="" value3="" value4="" valueLen="5"/>
+<event active="true" eventTime="2550" id="" oscIndex="0" oscMsgName="/v2/film" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="/media/disk1/media/video/drive/IMGP0197.AVI.mpgt" value1="" value2="" value3="" value4="" valueLen="5"/>
+<event active="true" eventTime="2900" id="" oscIndex="0" oscMsgName="/v2/film" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="/media/disk1/media/video/london/can_wharf/mpg/cw_clock_2.mpgt" value1="" value2="" value3="" value4="" valueLen="5"/>
+<event active="true" eventTime="3250" id="" oscIndex="0" oscMsgName="/v2/film" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="/media/disk1/media/video/london/can_wharf/mpg/can_twr_busstop_lights.mpgt" value1="" value2="" value3="" value4="" valueLen="5"/>
+<event active="true" eventTime="3750" id="" oscIndex="0" oscMsgName="/v2/film" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="/media/disk1/media/video/london/mpg/london_treelights_blue3_cpk_ky5.mpgt" value1="" value2="" value3="" value4="" valueLen="5"/>
+<event active="true" eventTime="4250" id="" oscIndex="0" oscMsgName="/v2/film" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="/media/disk1/media/video/london/mpg/mass_attack_lcd.mpgt" value1="" value2="" value3="" value4="" valueLen="5"/>
+<event active="true" eventTime="4600" id="" oscIndex="0" oscMsgName="/v2/film" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="/media/disk1/media/video/london/mpg/london_eye_night_across_cpk_ky5.mpgt" value1="" value2="" value3="" value4="" valueLen="5"/>
+<event active="true" eventTime="4950" id="" oscIndex="0" oscMsgName="/v2/film" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="/media/disk1/media/video/london/mpg/london_oxo_fluro_1_cpk_ky5.mpgt" value1="" value2="" value3="" value4="" valueLen="5"/>
+<event active="true" eventTime="5800" id="" oscIndex="0" oscMsgName="/v2/film" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="/media/disk1/media/video/london/transvision/mpg/light_array2_cpk_ky1_400x300_out.mpgt" value1="" value2="" value3="" value4="" valueLen="5"/>
+<event active="true" eventTime="6150" id="" oscIndex="0" oscMsgName="/v2/film" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="/media/disk1/media/video/london/transvision/mpg/light_array_cpk_ky1_400x300_out.mpgt" value1="" value2="" value3="" value4="" valueLen="5"/>
+<event active="true" eventTime="6600" id="" oscIndex="0" oscMsgName="/v2/film" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="/media/disk1/media/video/london/transvision/mpg/prox_light_cpk_ky1_400x300_out.mpgt" value1="" value2="" value3="" value4="" valueLen="5"/>
+<event active="true" eventTime="8550" id="" oscIndex="0" oscMsgName="/v2/film" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="/media/disk1/media/video/nuc_vid/avi/nuc_doorstep_ky5.mpgt" value1="" value2="" value3="" value4="" valueLen="5"/>
+<event active="true" eventTime="8950" id="" oscIndex="0" oscMsgName="/v2/film" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="/media/disk1/media/video/nuc_vid/avi/nuc_dominic_ky5.mpgt" value1="" value2="" value3="" value4="" valueLen="5"/>
+<event active="true" eventTime="9450" id="" oscIndex="0" oscMsgName="/v2/film" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="/media/disk1/media/video/nuc_vid/avi/nuc_orange_ky5.mpgt" value1="" value2="" value3="" value4="" valueLen="5"/>
+<event active="true" eventTime="9950" id="" oscIndex="0" oscMsgName="/v2/film" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="/media/disk1/media/video/nuc_vid/avi/nuc_teapot_ky5.mpgt" value1="" value2="" value3="" value4="" valueLen="5"/>
+<event active="true" eventTime="10200" id="" oscIndex="0" oscMsgName="/v2/film" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="/media/disk1/media/video/nuc_vid/avi/nuc_xmas_islands_ky5.mpgt" value1="" value2="" value3="" value4="" valueLen="5"/>
+<event active="true" eventTime="10500" id="" oscIndex="0" oscMsgName="/v2/film" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="/media/disk1/media/video/nuc_vid/avi/nuc_plowshare_ky5.mpgt" value1="" value2="" value3="" value4="" valueLen="5"/>
+<event active="true" eventTime="10800" id="" oscIndex="0" oscMsgName="/v2/film" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="/media/disk1/media/video/nuc_vid/avi/nuc_troop_involvement_ky5.mpgt" value1="" value2="" value3="" value4="" valueLen="5"/>
+<event active="true" eventTime="11100" id="" oscIndex="0" oscMsgName="/v2/film" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="/media/disk1/media/video/nuc_vid/avi/nuc_high_alt2_ky5.mpgt" value1="" value2="" value3="" value4="" valueLen="5"/>
+<event active="true" eventTime="12050" id="" oscIndex="0" oscMsgName="/v2/film" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="/media/disk1/media/video/buckrogers/avi/buck_rgr_500yrs_old_cpk_400x300_ky1.mpgt" value1="" value2="" value3="" value4="" valueLen="5"/>
+<event active="true" eventTime="12500" id="" oscIndex="0" oscMsgName="/v2/film" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="/media/disk1/media/video/buckrogers/avi/buck_rgr_av_maachine_cpk_400x300_ky1.mpgt" value1="" value2="" value3="" value4="" valueLen="5"/>
+<event active="true" eventTime="13400" id="" oscIndex="0" oscMsgName="/v2/film" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="/media/disk1/media/video/fachist/nazi.mpgt" value1="" value2="" value3="" value4="" valueLen="5"/>
+<event active="true" eventTime="13800" id="" oscIndex="0" oscMsgName="/v2/film" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="/media/disk1/media/video/fachist/hitler1.mpgt" value1="" value2="" value3="" value4="" valueLen="5"/>
+<event active="true" eventTime="14200" id="" oscIndex="0" oscMsgName="/v2/film" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="/media/disk1/media/video/fachist/bush1.mpgt" value1="" value2="" value3="" value4="" valueLen="5"/>
+<event active="true" eventTime="14650" id="" oscIndex="0" oscMsgName="/v2/film" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="/media/disk1/media/video/fachist/bush2.mpgt" value1="" value2="" value3="" value4="" valueLen="5"/>
+<event active="true" eventTime="16600" id="" oscIndex="0" oscMsgName="/v2/film" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="/media/disk1/media/video/robots/cockroach_robot.mpgt" value1="" value2="" value3="" value4="" valueLen="5"/>
+<event active="true" eventTime="16950" id="" oscIndex="0" oscMsgName="/v2/film" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="/media/disk1/media/video/robots/fighting_robots2.mpgt" value1="" value2="" value3="" value4="" valueLen="5"/>
+<event active="true" eventTime="17250" id="" oscIndex="0" oscMsgName="/v2/film" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="/media/disk1/media/video/robots/jellyfish_robots1.mpgt" value1="" value2="" value3="" value4="" valueLen="5"/>
+<event active="true" eventTime="17600" id="" oscIndex="0" oscMsgName="/v2/film" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="/media/disk1/media/video/robots/jellyfish_robots2.mpgt" value1="" value2="" value3="" value4="" valueLen="5"/>
+<event active="true" eventTime="17950" id="" oscIndex="0" oscMsgName="/v2/film" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="/media/disk1/media/video/robots/speaking_robot.mpgt" value1="" value2="" value3="" value4="" valueLen="5"/>
+<event active="true" eventTime="18350" id="" oscIndex="0" oscMsgName="/v2/film" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="/media/disk1/media/video/robots/speaking_robot.mpgt" value1="" value2="" value3="" value4="" valueLen="5"/>
+<event active="true" eventTime="19100" id="" oscIndex="0" oscMsgName="/v2/film" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="/media/disk1/media/video/beano_130810/diamonds_4eva.mpgt" value1="" value2="" value3="" value4="" valueLen="5"/>
+</timeline>
+<timeline beatLength="10" beatPerBar="4" color="255 0 0" currentEvent="2" displayEnd="8000" displayStart="0" followOnExpr="" height="100" id="setEvents" lastSelEvent="2" oscIndex="0" pitch="1.0" playMode="" quantize="50" timeLineLength="8000" typeDisplay="false">
+<event active="true" eventTime="50" id="" oscIndex="0" oscMsgName="/mb/rot" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="90" valueLen="0"/>
+<event active="true" eventTime="200" id="" oscIndex="0" oscMsgName="/mb/rot" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="90" valueLen="0"/>
+<event active="true" eventTime="500" id="" oscIndex="0" oscMsgName="/mb/alpha" oscMsgName1="/mb/size" oscMsgNameLen="2" target="" targetData="" targetPlayMode="" value="1" value1="4.4" valueLen="2"/>
+<event active="true" eventTime="850" id="" oscIndex="0" oscMsgName="/mb/alpha" oscMsgName1="/mb/size" oscMsgNameLen="2" target="" targetData="" targetPlayMode="" value="0.9" value1="3.7" valueLen="2"/>
+<event active="false" eventTime="1200" id="" oscIndex="0" oscMsgName="/v1/fr" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="29" valueLen="0"/>
+</timeline>
+<timeline beatLength="10" beatPerBar="4" color="255 0 0" currentEvent="3" displayEnd="4000" displayStart="0" followOnExpr="" height="100" id="vid_chg" lastSelEvent="3" oscIndex="0" pitch="1.0" playMode="l" quantize="50" timeLineLength="4000" typeDisplay="false">
+<event active="false" eventTime="50" id="lights" oscIndex="0" oscMsgName="$e:films:current:f" oscMsgName1="$t:films:c" oscMsgNameLen="2" target="" targetData="" targetPlayMode="" value="" value1="$f:std:rnd::[16,0]" valueLen="2"/>
+<event active="false" eventTime="100" id="nuc" oscIndex="0" oscMsgName="$e:films:current:f" oscMsgName1="$t:films:c" oscMsgNameLen="2" target="" targetData="" targetPlayMode="" value="" value1="$f:std:rnd::[7,17]" valueLen="2"/>
+<event active="false" eventTime="150" id="robots" oscIndex="0" oscMsgName="$e:films:current:f" oscMsgName1="$t:films:c" oscMsgNameLen="2" target="" targetData="" targetPlayMode="" value="" value1="$f:std:rnd::[6,31]" valueLen="2"/>
+<event active="true" eventTime="300" id="nuc0" oscIndex="0" oscMsgName="$e:films:{$f:std:rnd::[0,37]}:f" oscMsgName1="$t:films:c" oscMsgName2="$e:films-1:current:f" oscMsgName3="$t:films-1:c" oscMsgNameLen="4" target="" targetData="" targetPlayMode="" value="" value1="$f:std:rnd::[0,37]" value2="" value3="$f:std:rnd::[0,37]" valueLen="4"/>
+<event active="true" eventTime="1300" id="double_h" oscIndex="0" oscMsgName="/v2/show" oscMsgName1="/v1/y" oscMsgName2="/v2/y" oscMsgName3="/v1/hgt" oscMsgName4="/v2/hgt" oscMsgNameLen="5" target="" targetData="" targetPlayMode="" value="1" value1="2" value2="-2" value3="2" value4="2" valueLen="5"/>
+<event active="true" eventTime="1550" id="single" oscIndex="0" oscMsgName="/v2/show" oscMsgName1="/v1/y" oscMsgName2="/v2/y" oscMsgName3="/v1/hgt" oscMsgName4="/v2/hgt" oscMsgNameLen="5" target="" targetData="" targetPlayMode="" value="0" value1="0" value2="0" value3="4" value4="0" valueLen="5"/>
+</timeline>
+<timeline beatLength="10" beatPerBar="4" color="255 0 0" currentEvent="-1" displayEnd="8000" displayStart="0" followOnExpr="" height="100" id="8443046" lastSelEvent="-1" oscIndex="0" pitch="2.0" playMode="" quantize="50" timeLineLength="8000" typeDisplay="false">
+<event active="true" eventTime="500" id="" oscIndex="0" oscMsgName="$e:vid_chg:nuc0:f" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="" valueLen="0"/>
+</timeline>
+<view visible="init,rotateSeq,films,setEvents,films-1,vid_chg,8443046"/>
+</timelines>

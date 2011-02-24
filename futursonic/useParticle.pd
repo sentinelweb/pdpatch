@@ -1,0 +1,10 @@
+#N canvas 26 57 458 308 10;
+#X obj 133 74 dumpOSC 10002;
+#X obj 132 107 OSCroute /particle;
+#X obj 132 142 particle;
+#X obj 218 152 sphereosc;
+#X obj 221 128 OSCroute /sphere;
+#X connect 0 0 1 0;
+#X connect 0 0 4 0;
+#X connect 1 0 2 0;
+#X connect 4 0 3 0;

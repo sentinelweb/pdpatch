@@ -1,0 +1,38 @@
+#N canvas 256 82 671 584 10;
+#X obj 52 43 openpanel;
+#X obj 53 12 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X obj 49 100 soundfiler;
+#X msg 49 69 read -resize \$1 sample1;
+#X obj 259 40 table sample1;
+#X floatatom 80 145 10 0 0 0 - - -;
+#X obj 53 387 dac~;
+#X obj 63 315 tabread4~ sample1;
+#X text 194 317 reads from the table "sample1";
+#X obj 66 207 phasor~;
+#X obj 64 240 *~;
+#X floatatom 65 161 5 0 0 0 - - -;
+#X obj 80 121 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X text 94 243 multiply by sample rate.;
+#X obj 346 281 line~;
+#X msg 344 252 5000 500;
+#X msg 425 250 0;
+#X obj 64 181 / 100;
+#X text 122 202 outputs 0 to 1 at a set frequency - like a line object
+that repeats at a certain frequency.;
+#X connect 0 0 3 0;
+#X connect 1 0 0 0;
+#X connect 2 0 5 0;
+#X connect 3 0 2 0;
+#X connect 5 0 10 1;
+#X connect 7 0 6 0;
+#X connect 7 0 6 1;
+#X connect 9 0 10 0;
+#X connect 10 0 7 0;
+#X connect 11 0 17 0;
+#X connect 12 0 5 0;
+#X connect 14 0 7 0;
+#X connect 15 0 14 0;
+#X connect 16 0 14 0;
+#X connect 17 0 9 0;

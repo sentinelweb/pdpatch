@@ -1,0 +1,148 @@
+#N canvas 1283 97 943 782 10;
+#X floatatom 52 100 5 0 0 0 - - -;
+#X floatatom 103 100 5 0 0 0 - - -;
+#X floatatom 174 103 5 0 0 0 - - -;
+#X obj 381 756 dac~;
+#X obj 55 358 *~ 1;
+#X obj 63 165 poly 4 1;
+#X obj 63 191 pack 0 0 0;
+#X obj 63 221 route 1 2 3 4;
+#X obj 232 218 hsl 128 15 5 500 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X floatatom 325 217 5 0 0 0 - - -;
+#X obj 257 310 synth1;
+#X obj 411 267 pack f f f f;
+#X obj 414 236 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 413 213 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 413 192 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 6300 1;
+#X obj 413 173 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 4600 1;
+#X obj 391 236 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 58 308 synth1;
+#X obj 126 309 synth1;
+#X obj 194 310 synth1;
+#X obj 56 388 *~ 1;
+#X obj 321 559 ../cmp/mixer;
+#X obj 348 384 noise~;
+#X obj 347 454 vcf~;
+#X obj 381 419 sig~;
+#X obj 451 397 hsl 128 15 0 10 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 8400 1;
+#X floatatom 545 396 5 0 0 0 - - -;
+#X obj 418 359 hsl 128 15 20 10000 1 0 empty empty empty -2 -8 0 10
+-262144 -1 -1 0 1;
+#X obj 416 317 mtof;
+#X obj 415 337 spigot;
+#X obj 454 319 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 367 498 delaySet;
+#X obj 832 120 ../cmp/multi_osc1;
+#X obj 892 34 osc~;
+#X obj 893 10 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 3200 1;
+#X obj 892 82 +~;
+#X obj 932 79 hsl 128 15 20 300 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 1400 0;
+#X obj 931 58 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 1300 1;
+#X floatatom 1022 56 5 0 0 0 - - -;
+#X floatatom 1025 77 5 0 0 0 - - -;
+#X floatatom 985 11 5 0 0 0 - - -;
+#X obj 877 231 *~ 1;
+#X obj 892 57 *~;
+#X obj 438 499 *~ 1;
+#X obj 59 32 notein 1;
+#X obj 644 30 notein 2;
+#X obj 631 310 pack 0 0 0;
+#X floatatom 703 61 5 0 0 0 - - -;
+#X obj 724 401 StringSynth;
+#X obj 744 355 hsl 128 15 5 500 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 1100 1;
+#X floatatom 837 354 5 0 0 0 - - -;
+#X floatatom 528 25 5 0 0 0 - - -;
+#X obj 631 284 poly 2 1;
+#X obj 631 340 route 1 2;
+#X obj 635 402 StringSynth;
+#X connect 0 0 5 0;
+#X connect 1 0 5 1;
+#X connect 4 0 20 0;
+#X connect 5 0 6 0;
+#X connect 5 1 6 1;
+#X connect 5 2 6 2;
+#X connect 6 0 7 0;
+#X connect 7 0 17 0;
+#X connect 7 1 18 0;
+#X connect 7 1 28 0;
+#X connect 7 2 19 0;
+#X connect 7 3 10 0;
+#X connect 8 0 9 0;
+#X connect 8 0 10 1;
+#X connect 8 0 17 1;
+#X connect 8 0 18 1;
+#X connect 8 0 19 1;
+#X connect 10 0 4 0;
+#X connect 11 0 10 2;
+#X connect 11 0 17 2;
+#X connect 11 0 18 2;
+#X connect 11 0 19 2;
+#X connect 12 0 11 0;
+#X connect 13 0 11 1;
+#X connect 13 0 16 0;
+#X connect 14 0 11 2;
+#X connect 14 0 16 0;
+#X connect 15 0 11 3;
+#X connect 15 0 16 0;
+#X connect 16 0 12 0;
+#X connect 17 0 4 0;
+#X connect 18 0 4 0;
+#X connect 19 0 4 0;
+#X connect 20 0 21 0;
+#X connect 20 0 21 1;
+#X connect 20 0 31 0;
+#X connect 20 0 31 1;
+#X connect 21 0 3 0;
+#X connect 21 1 3 1;
+#X connect 22 0 23 0;
+#X connect 23 0 21 2;
+#X connect 23 0 21 3;
+#X connect 24 0 23 1;
+#X connect 25 0 23 2;
+#X connect 25 0 26 0;
+#X connect 27 0 24 0;
+#X connect 28 0 29 0;
+#X connect 29 0 27 0;
+#X connect 30 0 29 1;
+#X connect 31 0 21 4;
+#X connect 31 1 21 5;
+#X connect 32 0 41 0;
+#X connect 33 0 42 0;
+#X connect 34 0 33 0;
+#X connect 34 0 40 0;
+#X connect 35 0 32 3;
+#X connect 36 0 35 1;
+#X connect 36 0 39 0;
+#X connect 37 0 38 0;
+#X connect 37 0 42 1;
+#X connect 42 0 35 0;
+#X connect 43 0 21 6;
+#X connect 43 0 21 7;
+#X connect 44 0 0 0;
+#X connect 44 1 1 0;
+#X connect 45 0 47 0;
+#X connect 45 0 52 0;
+#X connect 45 1 52 1;
+#X connect 46 0 53 0;
+#X connect 48 0 43 0;
+#X connect 49 0 50 0;
+#X connect 49 0 48 1;
+#X connect 49 0 54 1;
+#X connect 52 0 46 0;
+#X connect 52 1 46 1;
+#X connect 52 2 46 2;
+#X connect 53 0 54 0;
+#X connect 53 1 48 0;
+#X connect 54 0 43 0;

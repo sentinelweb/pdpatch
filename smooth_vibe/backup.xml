@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<timelines version="1.0">
+<source>
+<objects/>
+</source>
+<description><![CDATA[note0-1: 
+note1-1 : is the better riff, play with spring coeffs and bitcrush for variance.
+base-1: not really base at all quite high though, not bass. play with wave shaper and chopping for some irregular beating.
+screetch: table feedback.
+
+MIDI:
+keys on part 0 are for /note0 and /note1 (via notes1tirg:sendNote0)
+keys on part 1 are for /base (via notes1tirg:sendBase)]]></description>
+<colors type="osc">
+<color for="/drm/dd" value="180:0:180"/>
+<color for="/drm/d2/t" value="180:180:180"/>
+<color for="/scr/screetch/trig" value="0:0:240"/>
+<color for="/base/f" value="240:0:0"/>
+<color for="/mix/ch1" value="255:255:255"/>
+<color for="/base/port" value="255:0:255"/>
+<color for="/drm/" value="195:0:0"/>
+<color for="/drm/d1" value="0:0:195"/>
+<color for="/mix/ch2" value="225:0:0"/>
+<color for="/mix/ch" value="0:0:210"/>
+<color for="/note1/f" value="0:240:0"/>
+<color for="/note1/osc/s" value="0:0:255"/>
+<color for="/dr" value="0:210:0"/>
+<color for="/drm/d1/t" value="0:195:0"/>
+<color for="/drm/d" value="195:0:195"/>
+<color for="/drm/dd1" value="0:0:180"/>
+<color for="/note0/f" value="0:240:240"/>
+<color for="/" value="0:0:225"/>
+<color for="/mix/" value="210:0:0"/>
+<color for="/mix/ch4" value="225:225:225"/>
+<color for="/note0/osc/s" value="0:255:255"/>
+<color for="/scr/screetch/read" value="240:0:240"/>
+<color for="/m" value="0:225:225"/>
+<color for="/d" value="0:210:210"/>
+<color for="/mix" value="210:210:210"/>
+<color for="/note1/bits" value="240:240:240"/>
+<color for="/drm/d1/" value="0:195:195"/>
+<color for="/mix/c" value="210:0:210"/>
+<color for="/drm" value="195:195:195"/>
+<color for="/drm/d1/f1" value="0:180:180"/>
+<color for="/mi" value="0:225:0"/>
+<color for="/x" value="0:255:0"/>
+<color for="/drm/d2" value="180:0:0"/>
+<color for="/mix/ch3" value="225:0:225"/>
+<color for="" value="255:0:0"/>
+</colors>
+<colors type="expr">
+<color for="$t:note0-1:p" value="0:255:255"/>
+<color for="$t:note0-{$f:std:rnd::[2,1]}:p" value="0:255:0"/>
+<color for="$f:nSc:setScale::" value="255:255:255"/>
+<color for="$f:scale:setKey" value="255:0:255"/>
+<color for="$f:nSc:setKey" value="255:0:0"/>
+<color for="$t:note0-{$f:std:rnd::[1,1]}:p" value="240:0:0"/>
+<color for="$t:note0-{$f:std:rnd::[,1]}:p" value="240:240:240"/>
+<color for="$f:note0_sc:setKey" value="0:0:255"/>
+</colors>
+<filters>
+<filter target="/base/f"/>
+<filter target="/note1/f">
+<expression active="true" text="$e:notes1trig:bitcrush:f"/>
+</filter>
+</filters>
+<midiKeys/>
+<midinotes default="true" device="PCR" id="new">
+<midipart note_0="0,*$e:notes1trig:sendNote:f" note_1="0,*$e:notes1trig:sendNote:f" note_10="0,*$e:notes1trig:sendNote:f" note_100="0,*$e:notes1trig:sendNote:f" note_101="0,*$e:notes1trig:sendNote:f" note_102="0,*$e:notes1trig:sendNote:f" note_103="0,*$e:notes1trig:sendNote:f" note_104="0,*$e:notes1trig:sendNote:f" note_105="0,*$e:notes1trig:sendNote:f" note_106="0,*$e:notes1trig:sendNote:f" note_107="0,*$e:notes1trig:sendNote:f" note_108="0,*$e:notes1trig:sendNote:f" note_109="0,*$e:notes1trig:sendNote:f" note_11="0,*$e:notes1trig:sendNote:f" note_110="0,*$e:notes1trig:sendNote:f" note_111="0,*$e:notes1trig:sendNote:f" note_112="0,*$e:notes1trig:sendNote:f" note_113="0,*$e:notes1trig:sendNote:f" note_114="0,*$e:notes1trig:sendNote:f" note_115="0,*$e:notes1trig:sendNote:f" note_116="0,*$e:notes1trig:sendNote:f" note_117="0,*$e:notes1trig:sendNote:f" note_118="0,*$e:notes1trig:sendNote:f" note_119="0,*$e:notes1trig:sendNote:f" note_12="0,*$e:notes1trig:sendNote:f" note_120="0,*$e:notes1trig:sendNote:f" note_121="0,*$e:notes1trig:sendNote:f" note_122="0,*$e:notes1trig:sendNote:f" note_123="0,*$e:notes1trig:sendNote:f" note_124="0,*$e:notes1trig:sendNote:f" note_125="0,*$e:notes1trig:sendNote:f" note_126="0,*$e:notes1trig:sendNote:f" note_127="0,*$e:notes1trig:sendNote:f" note_13="0,*$e:notes1trig:sendNote:f" note_14="0,*$e:notes1trig:sendNote:f" note_15="0,*$e:notes1trig:sendNote:f" note_16="0,*$e:notes1trig:sendNote:f" note_17="0,*$e:notes1trig:sendNote:f" note_18="0,*$e:notes1trig:sendNote:f" note_19="0,*$e:notes1trig:sendNote:f" note_2="0,*$e:notes1trig:sendNote:f" note_20="0,*$e:notes1trig:sendNote:f" note_21="0,*$e:notes1trig:sendNote:f" note_22="0,*$e:notes1trig:sendNote:f" note_23="0,*$e:notes1trig:sendNote:f" note_24="0,*$e:notes1trig:sendNote:f" note_25="0,*$e:notes1trig:sendNote:f" note_26="0,*$e:notes1trig:sendNote:f" note_27="0,*$e:notes1trig:sendNote:f" note_28="0,*$e:notes1trig:sendNote:f" note_29="0,*$e:notes1trig:sendNote:f" note_3="0,*$e:notes1trig:sendNote:f" note_30="0,*$e:notes1trig:sendNote:f" note_31="0,*$e:notes1trig:sendNote:f" note_32="0,*$e:notes1trig:sendNote:f" note_33="0,*$e:notes1trig:sendNote:f" note_34="0,*$e:notes1trig:sendNote:f" note_35="0,*$e:notes1trig:sendNote:f" note_36="0,*$e:notes1trig:sendNote:f" note_37="0,*$e:notes1trig:sendNote:f" note_38="0,*$e:notes1trig:sendNote:f" note_39="0,*$e:notes1trig:sendNote:f" note_4="0,*$e:notes1trig:sendNote:f" note_40="0,*$e:notes1trig:sendNote:f" note_41="0,*$e:notes1trig:sendNote:f" note_42="0,*$e:notes1trig:sendNote:f" note_43="0,*$e:notes1trig:sendNote:f" note_44="0,*$e:notes1trig:sendNote:f" note_45="0,*$e:notes1trig:sendNote:f" note_46="0,*$e:notes1trig:sendNote:f" note_47="0,*$e:notes1trig:sendNote:f" note_48="0,*$e:notes1trig:sendNote:f" note_49="0,*$e:notes1trig:sendNote:f" note_5="0,*$e:notes1trig:sendNote:f" note_50="0,*$e:notes1trig:sendNote:f" note_51="0,*$e:notes1trig:sendNote:f" note_52="0,*$e:notes1trig:sendNote:f" note_53="0,*$e:notes1trig:sendNote:f" note_54="0,*$e:notes1trig:sendNote:f" note_55="0,*$e:notes1trig:sendNote:f" note_56="0,*$e:notes1trig:sendNote:f" note_57="0,*$e:notes1trig:sendNote:f" note_58="0,*$e:notes1trig:sendNote:f" note_59="0,*$e:notes1trig:sendNote:f" note_6="0,*$e:notes1trig:sendNote:f" note_60="0,*$e:notes1trig:sendNote:f" note_61="0,*$e:notes1trig:sendNote:f" note_62="0,*$e:notes1trig:sendNote:f" note_63="0,*$e:notes1trig:sendNote:f" note_64="0,*$e:notes1trig:sendNote:f" note_65="0,*$e:notes1trig:sendNote:f" note_66="0,*$e:notes1trig:sendNote:f" note_67="0,*$e:notes1trig:sendNote:f" note_68="0,*$e:notes1trig:sendNote:f" note_69="0,*$e:notes1trig:sendNote:f" note_7="0,*$e:notes1trig:sendNote:f" note_70="0,*$e:notes1trig:sendNote:f" note_71="0,*$e:notes1trig:sendNote:f" note_72="0,*$e:notes1trig:sendNote:f" note_73="0,*$e:notes1trig:sendNote:f" note_74="0,*$e:notes1trig:sendNote:f" note_75="0,*$e:notes1trig:sendNote:f" note_76="0,*$e:notes1trig:sendNote:f" note_77="0,*$e:notes1trig:sendNote:f" note_78="0,*$e:notes1trig:sendNote:f" note_79="0,*$e:notes1trig:sendNote:f" note_8="0,*$e:notes1trig:sendNote:f" note_80="0,*$e:notes1trig:sendNote:f" note_81="0,*$e:notes1trig:sendNote:f" note_82="0,*$e:notes1trig:sendNote:f" note_83="0,*$e:notes1trig:sendNote:f" note_84="0,*$e:notes1trig:sendNote:f" note_85="0,*$e:notes1trig:sendNote:f" note_86="0,*$e:notes1trig:sendNote:f" note_87="0,*$e:notes1trig:sendNote:f" note_88="0,*$e:notes1trig:sendNote:f" note_89="0,*$e:notes1trig:sendNote:f" note_9="0,*$e:notes1trig:sendNote:f" note_90="0,*$e:notes1trig:sendNote:f" note_91="0,*$e:notes1trig:sendNote:f" note_92="0,*$e:notes1trig:sendNote:f" note_93="0,*$e:notes1trig:sendNote:f" note_94="0,*$e:notes1trig:sendNote:f" note_95="0,*$e:notes1trig:sendNote:f" note_96="0,*$e:notes1trig:sendNote:f" note_97="0,*$e:notes1trig:sendNote:f" note_98="0,*$e:notes1trig:sendNote:f" note_99="0,*$e:notes1trig:sendNote:f" part="0"/>
+<midipart note_0="0,*$e:notes1trig:sendBase:f" note_1="0,*$e:notes1trig:sendBase:f" note_10="0,*$e:notes1trig:sendBase:f" note_100="0,*$e:notes1trig:sendBase:f" note_101="0,*$e:notes1trig:sendBase:f" note_102="0,*$e:notes1trig:sendBase:f" note_103="0,*$e:notes1trig:sendBase:f" note_104="0,*$e:notes1trig:sendBase:f" note_105="0,*$e:notes1trig:sendBase:f" note_106="0,*$e:notes1trig:sendBase:f" note_107="0,*$e:notes1trig:sendBase:f" note_108="0,*$e:notes1trig:sendBase:f" note_109="0,*$e:notes1trig:sendBase:f" note_11="0,*$e:notes1trig:sendBase:f" note_110="0,*$e:notes1trig:sendBase:f" note_111="0,*$e:notes1trig:sendBase:f" note_112="0,*$e:notes1trig:sendBase:f" note_113="0,*$e:notes1trig:sendBase:f" note_114="0,*$e:notes1trig:sendBase:f" note_115="0,*$e:notes1trig:sendBase:f" note_116="0,*$e:notes1trig:sendBase:f" note_117="0,*$e:notes1trig:sendBase:f" note_118="0,*$e:notes1trig:sendBase:f" note_119="0,*$e:notes1trig:sendBase:f" note_12="0,*$e:notes1trig:sendBase:f" note_120="0,*$e:notes1trig:sendBase:f" note_121="0,*$e:notes1trig:sendBase:f" note_122="0,*$e:notes1trig:sendBase:f" note_123="0,*$e:notes1trig:sendBase:f" note_124="0,*$e:notes1trig:sendBase:f" note_125="0,*$e:notes1trig:sendBase:f" note_126="0,*$e:notes1trig:sendBase:f" note_127="0,*$e:notes1trig:sendBase:f" note_13="0,*$e:notes1trig:sendBase:f" note_14="0,*$e:notes1trig:sendBase:f" note_15="0,*$e:notes1trig:sendBase:f" note_16="0,*$e:notes1trig:sendBase:f" note_17="0,*$e:notes1trig:sendBase:f" note_18="0,*$e:notes1trig:sendBase:f" note_19="0,*$e:notes1trig:sendBase:f" note_2="0,*$e:notes1trig:sendBase:f" note_20="0,*$e:notes1trig:sendBase:f" note_21="0,*$e:notes1trig:sendBase:f" note_22="0,*$e:notes1trig:sendBase:f" note_23="0,*$e:notes1trig:sendBase:f" note_24="0,*$e:notes1trig:sendBase:f" note_25="0,*$e:notes1trig:sendBase:f" note_26="0,*$e:notes1trig:sendBase:f" note_27="0,*$e:notes1trig:sendBase:f" note_28="0,*$e:notes1trig:sendBase:f" note_29="0,*$e:notes1trig:sendBase:f" note_3="0,*$e:notes1trig:sendBase:f" note_30="0,*$e:notes1trig:sendBase:f" note_31="0,*$e:notes1trig:sendBase:f" note_32="0,*$e:notes1trig:sendBase:f" note_33="0,*$e:notes1trig:sendBase:f" note_34="0,*$e:notes1trig:sendBase:f" note_35="0,*$e:notes1trig:sendBase:f" note_36="0,*$e:notes1trig:sendBase:f" note_37="0,*$e:notes1trig:sendBase:f" note_38="0,*$e:notes1trig:sendBase:f" note_39="0,*$e:notes1trig:sendBase:f" note_4="0,*$e:notes1trig:sendBase:f" note_40="0,*$e:notes1trig:sendBase:f" note_41="0,*$e:notes1trig:sendBase:f" note_42="0,*$e:notes1trig:sendBase:f" note_43="0,*$e:notes1trig:sendBase:f" note_44="0,*$e:notes1trig:sendBase:f" note_45="0,*$e:notes1trig:sendBase:f" note_46="0,*$e:notes1trig:sendBase:f" note_47="0,*$e:notes1trig:sendBase:f" note_48="0,*$e:notes1trig:sendBase:f" note_49="0,*$e:notes1trig:sendBase:f" note_5="0,*$e:notes1trig:sendBase:f" note_50="0,*$e:notes1trig:sendBase:f" note_51="0,*$e:notes1trig:sendBase:f" note_52="0,*$e:notes1trig:sendBase:f" note_53="0,*$e:notes1trig:sendBase:f" note_54="0,*$e:notes1trig:sendBase:f" note_55="0,*$e:notes1trig:sendBase:f" note_56="0,*$e:notes1trig:sendBase:f" note_57="0,*$e:notes1trig:sendBase:f" note_58="0,*$e:notes1trig:sendBase:f" note_59="0,*$e:notes1trig:sendBase:f" note_6="0,*$e:notes1trig:sendBase:f" note_60="0,*$e:notes1trig:sendBase:f" note_61="0,*$e:notes1trig:sendBase:f" note_62="0,*$e:notes1trig:sendBase:f" note_63="0,*$e:notes1trig:sendBase:f" note_64="0,*$e:notes1trig:sendBase:f" note_65="0,*$e:notes1trig:sendBase:f" note_66="0,*$e:notes1trig:sendBase:f" note_67="0,*$e:notes1trig:sendBase:f" note_68="0,*$e:notes1trig:sendBase:f" note_69="0,*$e:notes1trig:sendBase:f" note_7="0,*$e:notes1trig:sendBase:f" note_70="0,*$e:notes1trig:sendBase:f" note_71="0,*$e:notes1trig:sendBase:f" note_72="0,*$e:notes1trig:sendBase:f" note_73="0,*$e:notes1trig:sendBase:f" note_74="0,*$e:notes1trig:sendBase:f" note_75="0,*$e:notes1trig:sendBase:f" note_76="0,*$e:notes1trig:sendBase:f" note_77="0,*$e:notes1trig:sendBase:f" note_78="0,*$e:notes1trig:sendBase:f" note_79="0,*$e:notes1trig:sendBase:f" note_8="0,*$e:notes1trig:sendBase:f" note_80="0,*$e:notes1trig:sendBase:f" note_81="0,*$e:notes1trig:sendBase:f" note_82="0,*$e:notes1trig:sendBase:f" note_83="0,*$e:notes1trig:sendBase:f" note_84="0,*$e:notes1trig:sendBase:f" note_85="0,*$e:notes1trig:sendBase:f" note_86="0,*$e:notes1trig:sendBase:f" note_87="0,*$e:notes1trig:sendBase:f" note_88="0,*$e:notes1trig:sendBase:f" note_89="0,*$e:notes1trig:sendBase:f" note_9="0,*$e:notes1trig:sendBase:f" note_90="0,*$e:notes1trig:sendBase:f" note_91="0,*$e:notes1trig:sendBase:f" note_92="0,*$e:notes1trig:sendBase:f" note_93="0,*$e:notes1trig:sendBase:f" note_94="0,*$e:notes1trig:sendBase:f" note_95="0,*$e:notes1trig:sendBase:f" note_96="0,*$e:notes1trig:sendBase:f" note_97="0,*$e:notes1trig:sendBase:f" note_98="0,*$e:notes1trig:sendBase:f" note_99="0,*$e:notes1trig:sendBase:f" part="1"/>
+</midinotes>
+<midicontrols default="true" device="PCR" id="new"/>
+<timeline beatLength="6" beatPerBar="4" color="255 0 0" currentEvent="10" displayEnd="500" displayStart="0" followOnExpr="" height="80" id="init" lastSelEvent="10" oscIndex="0" pitch="1.0" playMode="" quantize="50" timeLineLength="500" typeDisplay="false">
+<event active="true" eventTime="0" id="" oscIndex="0" oscMsgName="/mix/ch1" oscMsgName1="/mix/ch2" oscMsgName2="/mix/ch3" oscMsgName3="/mix/ch4" oscMsgNameLen="4" target="" targetData="" targetPlayMode="" value="0 0" value1="0 0" value2="0 0" value3="0 0" valueLen="4"/>
+<event active="true" eventTime="50" id="" oscIndex="0" oscMsgName="" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="$f:note0_sc=com.silicontransit.timeline.obj.Scales::n:[]" valueLen="0"/>
+<event active="true" eventTime="50" id="" oscIndex="0" oscMsgName="" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="$f:nSc=com.silicontransit.timeline.obj.Scales::n:[]" valueLen="0"/>
+<event active="true" eventTime="100" id="" oscIndex="0" oscMsgName="$f:nSc:setScale::" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="major" valueLen="0"/>
+<event active="true" eventTime="100" id="" oscIndex="0" oscMsgName="$f:nSc:setScale::" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="minor" valueLen="0"/>
+<event active="true" eventTime="100" id="" oscIndex="0" oscMsgName="$f:nSc:setScale::" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="harmonicMinor" valueLen="0"/>
+<event active="true" eventTime="200" id="" oscIndex="0" oscMsgName="$f:nSc:setKey" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="0" valueLen="0"/>
+<event active="true" eventTime="250" id="" oscIndex="0" oscMsgName="$f:scale:setKey" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="2" valueLen="0"/>
+<event active="true" eventTime="300" id="" oscIndex="0" oscMsgName="$f:note0_sc:setKey" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="4" valueLen="0"/>
+<event active="true" eventTime="350" id="gen3init" oscIndex="0" oscMsgName="/base/port" oscMsgName1="/base/fdiff" oscMsgName2="/base/osc1/s" oscMsgName3="/base/osc2/s" oscMsgName4="/base/ws/shape" oscMsgName5="/base/ws/idx" oscMsgName6="/base/bits" oscMsgName7="/base/chop/env/s" oscMsgName8="/base/chop/f" oscMsgName9="/base/chop/on" oscMsgNameLen="10" target="" targetData="" targetPlayMode="" value="33" value1="1.65" value2="0 0 56 0.5" value3="0 0 46 0.5" value4="6" value5="95" value6="2" value7="7 7 8 40 7" value8="8" value9="1" valueLen="10"/>
+<event active="true" eventTime="400" id="gen1init" oscIndex="0" oscMsgName="/note1/osc/s" oscMsgName1="/note1/env/s" oscMsgName2="/note1/echo/del" oscMsgName3="/note1/echo/amp" oscMsgName4="/note1/spring/K" oscMsgName5="/note1/spring/D" oscMsgName6="/note1/spring/D2" oscMsgName7="/note1/bits" oscMsgNameLen="8" target="" targetData="" targetPlayMode="" value="0 57 76 0.5" value1="10 5 5 100 100" value2="50" value3="1" value4="3835" value5="185" value6="1220" value7="5" valueLen="8"/>
+<event active="true" eventTime="450" id="gen2init" oscIndex="0" oscMsgName="/note0/osc/s" oscMsgName1="/note0/env/s" oscMsgName2="/note0/echo/del" oscMsgName3="/note0/echo/amp" oscMsgName4="/note0/spring/K" oscMsgName5="/note0/spring/D" oscMsgName6="/note0/spring/D2" oscMsgName7="/note0/bits" oscMsgNameLen="8" target="" targetData="" targetPlayMode="" value="0 0 50 0.5" value1="10 5 5 100 100" value2="107" value3="1" value4="2521" value5="107" value6="3622" value7="2" valueLen="8"/>
+</timeline>
+<timeline beatLength="6" beatPerBar="4" color="255 153 0" currentEvent="2" displayEnd="1200" displayStart="0" followOnExpr="" height="60" id="note0-1" lastSelEvent="2" oscIndex="0" pitch="1.0" playMode="" quantize="50" timeLineLength="1200" typeDisplay="false">
+<event active="true" eventTime="100" id="" oscIndex="0" oscMsgName="/note0/f" oscMsgName1="/note0/t" oscMsgNameLen="2" target="" targetData="" targetPlayMode="" value="$f:note0_sc:getNoteFreq::[6]" value1="0" valueLen="2"/>
+<event active="true" eventTime="400" id="" oscIndex="0" oscMsgName="/note0/f" oscMsgName1="/note0/t" oscMsgNameLen="2" target="" targetData="" targetPlayMode="" value="$f:note0_sc:getNoteFreq::[7]" value1="0" valueLen="2"/>
+<event active="true" eventTime="700" id="" oscIndex="0" oscMsgName="/note0/f" oscMsgName1="/note0/t" oscMsgNameLen="2" target="" targetData="" targetPlayMode="" value="$f:note0_sc:getNoteFreq::[9]" value1="0" valueLen="2"/>
+<event active="true" eventTime="850" id="" oscIndex="0" oscMsgName="/note0/f" oscMsgName1="/note0/t" oscMsgNameLen="2" target="" targetData="" targetPlayMode="" value="$f:note0_sc:getNoteFreq::[9]" value1="0" valueLen="2"/>
+<event active="true" eventTime="1000" id="" oscIndex="0" oscMsgName="/note0/f" oscMsgName1="/note0/t" oscMsgNameLen="2" target="" targetData="" targetPlayMode="" value="$f:note0_sc:getNoteFreq::[7]" value1="0" valueLen="2"/>
+</timeline>
+<timeline beatLength="6" beatPerBar="4" color="255 153 0" currentEvent="3" displayEnd="1200" displayStart="0" followOnExpr="" height="60" id="note0-2" lastSelEvent="3" oscIndex="0" pitch="1.0" playMode="" quantize="50" timeLineLength="1200" typeDisplay="false">
+<event active="true" eventTime="100" id="" oscIndex="0" oscMsgName="/note0/f" oscMsgName1="/note0/t" oscMsgNameLen="2" target="" targetData="" targetPlayMode="" value="$f:note0_sc:getNoteFreq::[6]" value1="0" valueLen="2"/>
+<event active="true" eventTime="250" id="" oscIndex="0" oscMsgName="/note0/f" oscMsgName1="/note0/t" oscMsgNameLen="2" target="" targetData="" targetPlayMode="" value="$f:note0_sc:getNoteFreq::[{$f:std:rnd::[15,28]}]" value1="0" valueLen="2"/>
+<event active="true" eventTime="400" id="" oscIndex="0" oscMsgName="/note0/f" oscMsgName1="/note0/t" oscMsgNameLen="2" target="" targetData="" targetPlayMode="" value="$f:note0_sc:getNoteFreq::[7]" value1="0" valueLen="2"/>
+<event active="true" eventTime="550" id="" oscIndex="0" oscMsgName="/note0/f" oscMsgName1="/note0/t" oscMsgNameLen="2" target="" targetData="" targetPlayMode="" value="$f:note0_sc:getNoteFreq::[{$f:std:rnd::[20,10]}]" value1="0" valueLen="2"/>
+<event active="true" eventTime="700" id="" oscIndex="0" oscMsgName="/note0/f" oscMsgName1="/note0/t" oscMsgNameLen="2" target="" targetData="" targetPlayMode="" value="$f:note0_sc:getNoteFreq::[9]" value1="0" valueLen="2"/>
+<event active="true" eventTime="1000" id="" oscIndex="0" oscMsgName="/note0/f" oscMsgName1="/note0/t" oscMsgNameLen="2" target="" targetData="" targetPlayMode="" value="$f:note0_sc:getNoteFreq::[7]" value1="0" valueLen="2"/>
+</timeline>
+<timeline beatLength="6" beatPerBar="4" color="255 0 0" currentEvent="2" displayEnd="9600" displayStart="0" followOnExpr="" height="100" id="note0seq" lastSelEvent="2" oscIndex="0" pitch="1.0" playMode="" quantize="50" timeLineLength="9600" typeDisplay="false">
+<event active="true" eventTime="0" id="" oscIndex="0" oscMsgName="$f:note0_sc:setKey" oscMsgNameLen="0" target="note0-1" targetData="" targetPlayMode="p" value="0" valueLen="0"/>
+<event active="true" eventTime="1200" id="" oscIndex="0" oscMsgName="$f:note0_sc:setKey" oscMsgNameLen="0" target="note0-2" targetData="" targetPlayMode="p" value="2" valueLen="0"/>
+<event active="true" eventTime="2400" id="" oscIndex="0" oscMsgName="$f:note0_sc:setKey" oscMsgNameLen="0" target="note0-2" targetData="" targetPlayMode="p" value="6" valueLen="0"/>
+<event active="true" eventTime="3600" id="" oscIndex="0" oscMsgName="$f:note0_sc:setKey" oscMsgNameLen="0" target="note0-1" targetData="" targetPlayMode="p" value="5" valueLen="0"/>
+<event active="true" eventTime="4800" id="" oscIndex="0" oscMsgName="$f:note0_sc:setKey" oscMsgNameLen="0" target="note0-2" targetData="" targetPlayMode="p" value="5" valueLen="0"/>
+<event active="true" eventTime="6000" id="" oscIndex="0" oscMsgName="$t:note0-{$f:std:rnd::[1,1]}:p" oscMsgNameLen="0" target="note0-1" targetData="" targetPlayMode="" value="3" valueLen="0"/>
+<event active="true" eventTime="7200" id="" oscIndex="0" oscMsgName="$f:note0_sc:setKey" oscMsgNameLen="0" target="note0-1" targetData="" targetPlayMode="p" value="3" valueLen="0"/>
+<event active="true" eventTime="8400" id="" oscIndex="0" oscMsgName="$t:note0-{$f:std:rnd::[1,1]}:p" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="3" valueLen="0"/>
+</timeline>
+<timeline beatLength="6" beatPerBar="4" color="255 153 0" currentEvent="1" displayEnd="1200" displayStart="0" followOnExpr="" height="60" id="note1-1" lastSelEvent="1" oscIndex="0" pitch="1.0" playMode="" quantize="50" timeLineLength="1200" typeDisplay="false">
+<event active="true" eventTime="100" id="" oscIndex="0" oscMsgName="/note1/f" oscMsgName1="/note1/t" oscMsgNameLen="2" target="" targetData="" targetPlayMode="" value="$f:nSc:getNoteFreq::[4]" value1="0" valueLen="2"/>
+<event active="false" eventTime="250" id="" oscIndex="0" oscMsgName="/note1/f" oscMsgName1="/note1/t" oscMsgNameLen="2" target="" targetData="" targetPlayMode="" value="$f:nSc:getNoteFreq::[9]" value1="0" valueLen="2"/>
+<event active="true" eventTime="400" id="" oscIndex="0" oscMsgName="/note1/f" oscMsgName1="/note1/t" oscMsgNameLen="2" target="" targetData="" targetPlayMode="" value="$f:nSc:getNoteFreq::[5]" value1="0" valueLen="2"/>
+<event active="true" eventTime="700" id="" oscIndex="0" oscMsgName="/note1/f" oscMsgName1="/note1/t" oscMsgNameLen="2" target="" targetData="" targetPlayMode="" value="$f:nSc:getNoteFreq::[7]" value1="0" valueLen="2"/>
+<event active="true" eventTime="1000" id="" oscIndex="0" oscMsgName="/note1/f" oscMsgName1="/note1/t" oscMsgNameLen="2" target="" targetData="" targetPlayMode="" value="$f:nSc:getNoteFreq::[5]" value1="0" valueLen="2"/>
+</timeline>
+<timeline beatLength="6" beatPerBar="4" color="255 153 0" currentEvent="1" displayEnd="1200" displayStart="0" followOnExpr="" height="60" id="note1-2" lastSelEvent="1" oscIndex="0" pitch="1.0" playMode="" quantize="50" timeLineLength="1200" typeDisplay="false">
+<event active="true" eventTime="100" id="" oscIndex="0" oscMsgName="/note1/f" oscMsgName1="/note1/t" oscMsgNameLen="2" target="" targetData="" targetPlayMode="" value="$f:nSc:getNoteFreq::[4]" value1="0" valueLen="2"/>
+<event active="true" eventTime="250" id="" oscIndex="0" oscMsgName="/note1/f" oscMsgName1="/note1/t" oscMsgNameLen="2" target="" targetData="" targetPlayMode="" value="$f:nSc:getNoteFreq::[9]" value1="0" valueLen="2"/>
+<event active="true" eventTime="400" id="" oscIndex="0" oscMsgName="/note1/f" oscMsgName1="/note1/t" oscMsgNameLen="2" target="" targetData="" targetPlayMode="" value="$f:nSc:getNoteFreq::[5]" value1="0" valueLen="2"/>
+<event active="true" eventTime="700" id="" oscIndex="0" oscMsgName="/note1/f" oscMsgName1="/note1/t" oscMsgNameLen="2" target="" targetData="" targetPlayMode="" value="$f:nSc:getNoteFreq::[7]" value1="0" valueLen="2"/>
+<event active="true" eventTime="1000" id="" oscIndex="0" oscMsgName="/note1/f" oscMsgName1="/note1/t" oscMsgNameLen="2" target="" targetData="" targetPlayMode="" value="$f:nSc:getNoteFreq::[5]" value1="0" valueLen="2"/>
+</timeline>
+<timeline beatLength="6" beatPerBar="4" color="255 0 0" currentEvent="2" displayEnd="9600" displayStart="0" followOnExpr="" height="100" id="note1seq" lastSelEvent="2" oscIndex="0" pitch="1.0" playMode="" quantize="50" timeLineLength="9600" typeDisplay="false">
+<event active="true" eventTime="0" id="" oscIndex="0" oscMsgName="$f:nSc:setKey" oscMsgNameLen="0" target="note1-1" targetData="" targetPlayMode="p" value="0" valueLen="0"/>
+<event active="true" eventTime="1200" id="" oscIndex="0" oscMsgName="$f:nSc:setKey" oscMsgNameLen="0" target="note1-2" targetData="" targetPlayMode="p" value="2" valueLen="0"/>
+<event active="true" eventTime="2400" id="" oscIndex="0" oscMsgName="$f:nSc:setKey" oscMsgNameLen="0" target="note1-2" targetData="" targetPlayMode="p" value="6" valueLen="0"/>
+<event active="true" eventTime="3600" id="" oscIndex="0" oscMsgName="$f:nSc:setKey" oscMsgNameLen="0" target="note1-2" targetData="" targetPlayMode="p" value="5" valueLen="0"/>
+<event active="true" eventTime="4800" id="" oscIndex="0" oscMsgName="$f:nSc:setKey" oscMsgNameLen="0" target="note1-1" targetData="" targetPlayMode="p" value="5" valueLen="0"/>
+<event active="true" eventTime="6000" id="" oscIndex="0" oscMsgName="$f:nSc:setKey" oscMsgNameLen="0" target="note1-1" targetData="" targetPlayMode="p" value="3" valueLen="0"/>
+<event active="true" eventTime="7200" id="" oscIndex="0" oscMsgName="$f:nSc:setKey" oscMsgNameLen="0" target="note1-1" targetData="" targetPlayMode="p" value="3" valueLen="0"/>
+<event active="true" eventTime="8400" id="" oscIndex="0" oscMsgName="$f:nSc:setKey" oscMsgNameLen="0" target="note1-1" targetData="" targetPlayMode="p" value="0" valueLen="0"/>
+</timeline>
+<timeline beatLength="1" beatPerBar="4" color="255 0 0" currentEvent="1" displayEnd="10" displayStart="0" followOnExpr="" height="100" id="notes1trig" lastSelEvent="1" oscIndex="0" pitch="1.0" playMode="" quantize="50" timeLineLength="10" typeDisplay="false">
+<event active="true" eventTime="1" id="sendNote0" oscIndex="0" oscMsgName="/x" oscMsgName1="/note{$f:poly:index::}/f" oscMsgName2="/note{$f:poly:index::}/t" oscMsgNameLen="3" target="" targetData="" targetPlayMode="" value="" value1="$f:nSc:getNoteFreq::[$0] $1" value2="0" valueLen="3"/>
+<event active="true" eventTime="3" id="sendBase" oscIndex="0" oscMsgName="/x" oscMsgName1="/base/f" oscMsgNameLen="2" target="" targetData="" targetPlayMode="" value="" value1="$f:scale:getNoteFreq::[$0] $1" valueLen="2"/>
+<event active="true" eventTime="5" id="bitcrush" oscIndex="0" oscMsgName="/note1/bits" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="$f:std:rnd::[20,1] 300" valueLen="0"/>
+</timeline>
+<timeline beatLength="6" beatPerBar="4" color="255 0 0" currentEvent="3" displayEnd="1200" displayStart="0" followOnExpr="" height="100" id="base-1" lastSelEvent="3" oscIndex="0" pitch="1.0" playMode="" quantize="50" timeLineLength="1200" typeDisplay="false">
+<event active="true" eventTime="0" id="" oscIndex="0" oscMsgName="/base/f" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="$f:scale:getNoteFreq::[41]" valueLen="0"/>
+<event active="true" eventTime="100" id="" oscIndex="0" oscMsgName="/base/f" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="$f:scale:getNoteFreq::[35]" valueLen="0"/>
+<event active="true" eventTime="200" id="" oscIndex="0" oscMsgName="/base/f" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="$f:scale:getNoteFreq::[34]" valueLen="0"/>
+<event active="true" eventTime="300" id="" oscIndex="0" oscMsgName="/base/f" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="$f:scale:getNoteFreq::[51]" valueLen="0"/>
+<event active="true" eventTime="600" id="" oscIndex="0" oscMsgName="/base/f" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="$f:scale:getNoteFreq::[36]" valueLen="0"/>
+<event active="true" eventTime="750" id="" oscIndex="0" oscMsgName="/base/f" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="$f:scale:getNoteFreq::[35]" valueLen="0"/>
+<event active="true" eventTime="900" id="" oscIndex="0" oscMsgName="/base/f" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="$f:scale:getNoteFreq::[34]" valueLen="0"/>
+</timeline>
+<timeline beatLength="6" beatPerBar="4" color="255 0 0" currentEvent="3" displayEnd="1200" displayStart="0" followOnExpr="" height="75" id="base-2" lastSelEvent="3" oscIndex="0" pitch="1.0" playMode="" quantize="50" timeLineLength="1200" typeDisplay="false">
+<event active="true" eventTime="0" id="" oscIndex="0" oscMsgName="/base/f" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="$f:scale:getNoteFreq::[41]" valueLen="0"/>
+<event active="true" eventTime="200" id="" oscIndex="0" oscMsgName="/base/f" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="$f:scale:getNoteFreq::[35]" valueLen="0"/>
+<event active="true" eventTime="300" id="" oscIndex="0" oscMsgName="/base/f" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="$f:scale:getNoteFreq::[34]" valueLen="0"/>
+<event active="true" eventTime="350" id="" oscIndex="0" oscMsgName="/base/f" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="$f:scale:getNoteFreq::[45]" valueLen="0"/>
+<event active="true" eventTime="450" id="" oscIndex="0" oscMsgName="/base/f" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="$f:scale:getNoteFreq::[{$f:std:rnd::[5,38]}]" valueLen="0"/>
+<event active="true" eventTime="550" id="" oscIndex="0" oscMsgName="/base/f" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="$f:scale:getNoteFreq::[{$f:std:rnd::[10,30]}]" valueLen="0"/>
+<event active="true" eventTime="750" id="" oscIndex="0" oscMsgName="/base/f" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="$f:scale:getNoteFreq::[35]" valueLen="0"/>
+<event active="true" eventTime="900" id="" oscIndex="0" oscMsgName="/base/f" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="$f:scale:getNoteFreq::[34]" valueLen="0"/>
+</timeline>
+<timeline beatLength="6" beatPerBar="4" color="255 0 0" currentEvent="2" displayEnd="9600" displayStart="0" followOnExpr="" height="100" id="baseSeq" lastSelEvent="2" oscIndex="0" pitch="1.0" playMode="" quantize="50" timeLineLength="9600" typeDisplay="false">
+<event active="true" eventTime="0" id="" oscIndex="0" oscMsgName="$f:scale:setKey" oscMsgNameLen="0" target="base-1" targetData="" targetPlayMode="p" value="2" valueLen="0"/>
+<event active="true" eventTime="1200" id="" oscIndex="0" oscMsgName="$f:scale:setKey" oscMsgNameLen="0" target="base-1" targetData="" targetPlayMode="p" value="4" valueLen="0"/>
+<event active="true" eventTime="2400" id="" oscIndex="0" oscMsgName="$f:scale:setKey" oscMsgNameLen="0" target="base-1" targetData="" targetPlayMode="p" value="40" valueLen="0"/>
+<event active="true" eventTime="3600" id="" oscIndex="0" oscMsgName="$f:scale:setKey" oscMsgNameLen="0" target="base-1" targetData="" targetPlayMode="p" value="4" valueLen="0"/>
+<event active="true" eventTime="4800" id="" oscIndex="0" oscMsgName="$f:scale:setKey" oscMsgNameLen="0" target="base-2" targetData="" targetPlayMode="p" value="3" valueLen="0"/>
+<event active="true" eventTime="6000" id="" oscIndex="0" oscMsgName="$f:scale:setKey" oscMsgNameLen="0" target="base-1" targetData="" targetPlayMode="p" value="2" valueLen="0"/>
+<event active="true" eventTime="7200" id="" oscIndex="0" oscMsgName="$f:scale:setKey" oscMsgNameLen="0" target="base-1" targetData="" targetPlayMode="p" value="2" valueLen="0"/>
+<event active="true" eventTime="8400" id="" oscIndex="0" oscMsgName="$f:scale:setKey" oscMsgNameLen="0" target="base-1" targetData="" targetPlayMode="p" value="2" valueLen="0"/>
+</timeline>
+<timeline beatLength="6" beatPerBar="4" color="255 0 0" currentEvent="0" displayEnd="4800" displayStart="0" followOnExpr="" height="100" id="screech" lastSelEvent="0" oscIndex="0" pitch="1.0" playMode="" quantize="50" timeLineLength="4800" typeDisplay="false">
+<event active="true" eventTime="0" id="" oscIndex="0" oscMsgName="/scr/screetch/read" oscMsgName1="/scr/screetch/trig" oscMsgNameLen="2" target="" targetData="" targetPlayMode="" value="$f:std:rnd::[3000,700] 2000" value1="1" valueLen="2"/>
+<event active="false" eventTime="1200" id="" oscIndex="0" oscMsgName="/scr/screetch/trig" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="1" valueLen="0"/>
+<event active="false" eventTime="1500" id="" oscIndex="0" oscMsgName="/scr/screetch/trig" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="1" valueLen="0"/>
+</timeline>
+<timeline beatLength="4" beatPerBar="4" color="255 0 0" currentEvent="26" displayEnd="96000" displayStart="0" followOnExpr="" height="80" id="track1" lastSelEvent="26" oscIndex="0" pitch="1.0" playMode="" quantize="600" timeLineLength="192000" typeDisplay="true">
+<event active="true" eventTime="0" id="" oscIndex="0" oscMsgName="" oscMsgNameLen="0" target="baseSeq" targetData="" targetPlayMode="p" value="" valueLen="0"/>
+<event active="true" eventTime="0" id="" oscIndex="0" oscMsgName="/mix/ch2" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="95 4000" valueLen="0"/>
+<event active="true" eventTime="0" id="" oscIndex="0" oscMsgName="/mix/ch4" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="85 0" valueLen="0"/>
+<event active="true" eventTime="9600" id="" oscIndex="0" oscMsgName="/scr/screetch/read" oscMsgName1="/scr/screetch/trig" oscMsgNameLen="2" target="" targetData="" targetPlayMode="" value="$f:std:rnd::[3000,700] 2000" value1="1" valueLen="2"/>
+<event active="true" eventTime="9600" id="" oscIndex="0" oscMsgName="" oscMsgNameLen="0" target="baseSeq" targetData="" targetPlayMode="p" value="" valueLen="0"/>
+<event active="true" eventTime="10800" id="" oscIndex="0" oscMsgName="/scr/screetch/read" oscMsgName1="/scr/screetch/trig" oscMsgNameLen="2" target="" targetData="" targetPlayMode="" value="$f:std:rnd::[3000,700] 2000" value1="1" valueLen="2"/>
+<event active="true" eventTime="14400" id="" oscIndex="0" oscMsgName="/scr/screetch/read" oscMsgName1="/scr/screetch/trig" oscMsgNameLen="2" target="" targetData="" targetPlayMode="" value="$f:std:rnd::[3000,700] 2000" value1="1" valueLen="2"/>
+<event active="true" eventTime="19200" id="" oscIndex="0" oscMsgName="/scr/screetch/read" oscMsgName1="/scr/screetch/trig" oscMsgNameLen="2" target="" targetData="" targetPlayMode="" value="$f:std:rnd::[3000,700] 2000" value1="1" valueLen="2"/>
+<event active="true" eventTime="19200" id="" oscIndex="0" oscMsgName="" oscMsgNameLen="0" target="baseSeq" targetData="" targetPlayMode="p" value="" valueLen="0"/>
+<event active="true" eventTime="24000" id="" oscIndex="0" oscMsgName="/scr/screetch/read" oscMsgName1="/scr/screetch/trig" oscMsgNameLen="2" target="" targetData="" targetPlayMode="" value="$f:std:rnd::[3000,700] 2000" value1="1" valueLen="2"/>
+<event active="true" eventTime="25800" id="" oscIndex="0" oscMsgName="/scr/screetch/read" oscMsgName1="/scr/screetch/trig" oscMsgNameLen="2" target="" targetData="" targetPlayMode="" value="$f:std:rnd::[3000,700] 2000" value1="1" valueLen="2"/>
+<event active="true" eventTime="28800" id="" oscIndex="0" oscMsgName="" oscMsgNameLen="0" target="baseSeq" targetData="" targetPlayMode="p" value="" valueLen="0"/>
+<event active="true" eventTime="33600" id="" oscIndex="0" oscMsgName="/scr/screetch/read" oscMsgName1="/scr/screetch/trig" oscMsgNameLen="2" target="" targetData="" targetPlayMode="" value="$f:std:rnd::[3000,700] 2000" value1="1" valueLen="2"/>
+<event active="true" eventTime="38400" id="" oscIndex="0" oscMsgName="" oscMsgNameLen="0" target="baseSeq" targetData="" targetPlayMode="p" value="" valueLen="0"/>
+<event active="true" eventTime="38400" id="" oscIndex="0" oscMsgName="/scr/screetch/read" oscMsgName1="/scr/screetch/trig" oscMsgNameLen="2" target="" targetData="" targetPlayMode="" value="$f:std:rnd::[3000,700] 2000" value1="1" valueLen="2"/>
+<event active="true" eventTime="39000" id="" oscIndex="0" oscMsgName="/scr/screetch/read" oscMsgName1="/scr/screetch/trig" oscMsgNameLen="2" target="" targetData="" targetPlayMode="" value="$f:std:rnd::[3000,700] 2000" value1="1" valueLen="2"/>
+<event active="true" eventTime="48000" id="" oscIndex="0" oscMsgName="" oscMsgNameLen="0" target="baseSeq" targetData="" targetPlayMode="p" value="" valueLen="0"/>
+<event active="true" eventTime="48000" id="" oscIndex="0" oscMsgName="/mix/ch3" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="80 4000" valueLen="0"/>
+<event active="true" eventTime="48000" id="" oscIndex="0" oscMsgName="/mix/ch3" oscMsgNameLen="0" target="note0seq" targetData="" targetPlayMode="p" value="85 4000" valueLen="0"/>
+<event active="true" eventTime="57600" id="" oscIndex="0" oscMsgName="" oscMsgNameLen="0" target="baseSeq" targetData="" targetPlayMode="p" value="" valueLen="0"/>
+<event active="true" eventTime="57600" id="" oscIndex="0" oscMsgName="" oscMsgNameLen="0" target="note0seq" targetData="" targetPlayMode="p" value="" valueLen="0"/>
+<event active="true" eventTime="67200" id="" oscIndex="0" oscMsgName="" oscMsgNameLen="0" target="baseSeq" targetData="" targetPlayMode="p" value="" valueLen="0"/>
+<event active="true" eventTime="67200" id="" oscIndex="0" oscMsgName="" oscMsgNameLen="0" target="note0seq" targetData="" targetPlayMode="p" value="" valueLen="0"/>
+<event active="true" eventTime="67200" id="" oscIndex="0" oscMsgName="/mix/ch1" oscMsgNameLen="0" target="note1seq" targetData="" targetPlayMode="p" value="90 4000" valueLen="0"/>
+<event active="true" eventTime="67200" id="" oscIndex="0" oscMsgName="/scr/screetch/read" oscMsgName1="/scr/screetch/trig" oscMsgNameLen="2" target="" targetData="" targetPlayMode="" value="$f:std:rnd::[3000,700] 2000" value1="1" valueLen="2"/>
+<event active="true" eventTime="67800" id="" oscIndex="0" oscMsgName="/scr/screetch/read" oscMsgName1="/scr/screetch/trig" oscMsgNameLen="2" target="" targetData="" targetPlayMode="" value="$f:std:rnd::[3000,700] 2000" value1="1" valueLen="2"/>
+<event active="true" eventTime="76800" id="" oscIndex="0" oscMsgName="" oscMsgNameLen="0" target="baseSeq" targetData="" targetPlayMode="p" value="" valueLen="0"/>
+<event active="true" eventTime="76800" id="" oscIndex="0" oscMsgName="" oscMsgNameLen="0" target="note0seq" targetData="" targetPlayMode="p" value="" valueLen="0"/>
+<event active="true" eventTime="76800" id="" oscIndex="0" oscMsgName="/mix/ch1" oscMsgNameLen="0" target="note1seq" targetData="" targetPlayMode="p" value="90 4000" valueLen="0"/>
+<event active="true" eventTime="86400" id="" oscIndex="0" oscMsgName="/mix/ch1" oscMsgNameLen="0" target="note1seq" targetData="" targetPlayMode="p" value="90 4000" valueLen="0"/>
+<event active="true" eventTime="86400" id="" oscIndex="0" oscMsgName="" oscMsgNameLen="0" target="baseSeq" targetData="" targetPlayMode="p" value="" valueLen="0"/>
+<event active="true" eventTime="86400" id="" oscIndex="0" oscMsgName="" oscMsgNameLen="0" target="note0seq" targetData="" targetPlayMode="p" value="" valueLen="0"/>
+<event active="true" eventTime="86400" id="" oscIndex="0" oscMsgName="/scr/screetch/read" oscMsgName1="/scr/screetch/trig" oscMsgNameLen="2" target="" targetData="" targetPlayMode="" value="$f:std:rnd::[3000,700] 2000" value1="1" valueLen="2"/>
+<event active="true" eventTime="87600" id="" oscIndex="0" oscMsgName="/scr/screetch/read" oscMsgName1="/scr/screetch/trig" oscMsgNameLen="2" target="" targetData="" targetPlayMode="" value="$f:std:rnd::[3000,700] 2000" value1="1" valueLen="2"/>
+<event active="true" eventTime="96000" id="" oscIndex="0" oscMsgName="" oscMsgNameLen="0" target="note0seq" targetData="" targetPlayMode="p" value="" valueLen="0"/>
+<event active="true" eventTime="96000" id="" oscIndex="0" oscMsgName="" oscMsgNameLen="0" target="baseSeq" targetData="" targetPlayMode="p" value="" valueLen="0"/>
+<event active="true" eventTime="96000" id="" oscIndex="0" oscMsgName="/mix/ch1" oscMsgNameLen="0" target="note1seq" targetData="" targetPlayMode="p" value="90 4000" valueLen="0"/>
+<event active="true" eventTime="105600" id="" oscIndex="0" oscMsgName="" oscMsgNameLen="0" target="baseSeq" targetData="" targetPlayMode="p" value="" valueLen="0"/>
+<event active="true" eventTime="105600" id="" oscIndex="0" oscMsgName="/mix/ch1" oscMsgNameLen="0" target="note1seq" targetData="" targetPlayMode="p" value="90 4000" valueLen="0"/>
+<event active="true" eventTime="105600" id="" oscIndex="0" oscMsgName="/scr/screetch/read" oscMsgName1="/scr/screetch/trig" oscMsgNameLen="2" target="" targetData="" targetPlayMode="" value="$f:std:rnd::[3000,700] 2000" value1="1" valueLen="2"/>
+<event active="true" eventTime="106800" id="" oscIndex="0" oscMsgName="/scr/screetch/read" oscMsgName1="/scr/screetch/trig" oscMsgNameLen="2" target="" targetData="" targetPlayMode="" value="$f:std:rnd::[3000,700] 2000" value1="1" valueLen="2"/>
+<event active="true" eventTime="110400" id="" oscIndex="0" oscMsgName="/scr/screetch/read" oscMsgName1="/scr/screetch/trig" oscMsgNameLen="2" target="" targetData="" targetPlayMode="" value="$f:std:rnd::[3000,700] 2000" value1="1" valueLen="2"/>
+<event active="true" eventTime="111000" id="" oscIndex="0" oscMsgName="/scr/screetch/read" oscMsgName1="/scr/screetch/trig" oscMsgNameLen="2" target="" targetData="" targetPlayMode="" value="$f:std:rnd::[3000,700] 2000" value1="1" valueLen="2"/>
+<event active="true" eventTime="115200" id="" oscIndex="0" oscMsgName="/scr/screetch/read" oscMsgName1="/scr/screetch/trig" oscMsgNameLen="2" target="" targetData="" targetPlayMode="" value="$f:std:rnd::[3000,700] 2000" value1="1" valueLen="2"/>
+<event active="true" eventTime="115200" id="" oscIndex="0" oscMsgName="" oscMsgNameLen="0" target="baseSeq" targetData="" targetPlayMode="p" value="" valueLen="0"/>
+<event active="true" eventTime="115200" id="" oscIndex="0" oscMsgName="/mix/ch1" oscMsgNameLen="0" target="note1seq" targetData="" targetPlayMode="p" value="90 4000" valueLen="0"/>
+<event active="true" eventTime="115800" id="" oscIndex="0" oscMsgName="/scr/screetch/read" oscMsgName1="/scr/screetch/trig" oscMsgNameLen="2" target="" targetData="" targetPlayMode="" value="$f:std:rnd::[3000,700] 2000" value1="1" valueLen="2"/>
+<event active="true" eventTime="124800" id="" oscIndex="0" oscMsgName="/mix/ch1" oscMsgNameLen="0" target="note1seq" targetData="" targetPlayMode="p" value="90 4000" valueLen="0"/>
+<event active="true" eventTime="124800" id="" oscIndex="0" oscMsgName="" oscMsgNameLen="0" target="baseSeq" targetData="" targetPlayMode="p" value="" valueLen="0"/>
+<event active="true" eventTime="134400" id="" oscIndex="0" oscMsgName="" oscMsgNameLen="0" target="baseSeq" targetData="" targetPlayMode="p" value="" valueLen="0"/>
+<event active="true" eventTime="144000" id="" oscIndex="0" oscMsgName="" oscMsgNameLen="0" target="baseSeq" targetData="" targetPlayMode="p" value="" valueLen="0"/>
+<event active="true" eventTime="153600" id="" oscIndex="0" oscMsgName="" oscMsgNameLen="0" target="baseSeq" targetData="" targetPlayMode="p" value="" valueLen="0"/>
+<event active="true" eventTime="163200" id="" oscIndex="0" oscMsgName="" oscMsgNameLen="0" target="baseSeq" targetData="" targetPlayMode="p" value="" valueLen="0"/>
+<event active="true" eventTime="172800" id="" oscIndex="0" oscMsgName="" oscMsgNameLen="0" target="baseSeq" targetData="" targetPlayMode="p" value="" valueLen="0"/>
+<event active="true" eventTime="182400" id="" oscIndex="0" oscMsgName="/mix/ch2" oscMsgNameLen="0" target="baseSeq" targetData="" targetPlayMode="p" value="0 5000" valueLen="0"/>
+<event active="true" eventTime="191400" id="" oscIndex="0" oscMsgName="/mix/ch1" oscMsgName1="/mix/ch2" oscMsgName2="/mix/ch3" oscMsgName3="/mix/ch4" oscMsgNameLen="4" target="" targetData="" targetPlayMode="" value="0 0" value1="0 0" value2="0 0" value3="0 0" valueLen="4"/>
+</timeline>
+<timeline beatLength="6" beatPerBar="4" color="255 0 0" currentEvent="9" displayEnd="2400" displayStart="0" followOnExpr="" height="80" id="drum-1" lastSelEvent="9" oscIndex="0" pitch="1.0" playMode="" quantize="50" timeLineLength="2400" typeDisplay="false">
+<event active="true" eventTime="0" id="" oscIndex="0" oscMsgName="/drm/d1/f1" oscMsgName1="/drm/d1/f2" oscMsgName2="/drm/d1/t" oscMsgNameLen="3" target="" targetData="" targetPlayMode="" value="30" value1="30" value2="0" valueLen="3"/>
+<event active="true" eventTime="300" id="" oscIndex="0" oscMsgName="/drm/d1/f1" oscMsgName1="/drm/d1/f2" oscMsgName2="/drm/d1/t" oscMsgNameLen="3" target="" targetData="" targetPlayMode="" value="30" value1="30" value2="0" valueLen="3"/>
+<event active="true" eventTime="450" id="" oscIndex="0" oscMsgName="/drm/d1/f1" oscMsgName1="/drm/d1/f2" oscMsgName2="/drm/d1/t" oscMsgNameLen="3" target="" targetData="" targetPlayMode="" value="30" value1="30" value2="0" valueLen="3"/>
+<event active="true" eventTime="600" id="" oscIndex="0" oscMsgName="/drm/d1/f1" oscMsgName1="/drm/d1/f2" oscMsgName2="/drm/d1/t" oscMsgNameLen="3" target="" targetData="" targetPlayMode="" value="30" value1="30" value2="0" valueLen="3"/>
+<event active="true" eventTime="900" id="" oscIndex="0" oscMsgName="/drm/d1/f1" oscMsgName1="/drm/d1/f2" oscMsgName2="/drm/d1/t" oscMsgNameLen="3" target="" targetData="" targetPlayMode="" value="30" value1="30" value2="0" valueLen="3"/>
+<event active="true" eventTime="1200" id="" oscIndex="0" oscMsgName="/drm/d1/f1" oscMsgName1="/drm/d1/f2" oscMsgName2="/drm/d1/t" oscMsgNameLen="3" target="" targetData="" targetPlayMode="" value="30" value1="30" value2="0" valueLen="3"/>
+<event active="true" eventTime="1350" id="" oscIndex="0" oscMsgName="/drm/d1/f1" oscMsgName1="/drm/d1/f2" oscMsgName2="/drm/d1/t" oscMsgNameLen="3" target="" targetData="" targetPlayMode="" value="30" value1="30" value2="0" valueLen="3"/>
+<event active="true" eventTime="1500" id="" oscIndex="0" oscMsgName="/drm/d1/f1" oscMsgName1="/drm/d1/f2" oscMsgName2="/drm/d1/t" oscMsgNameLen="3" target="" targetData="" targetPlayMode="" value="30" value1="30" value2="0" valueLen="3"/>
+<event active="true" eventTime="1650" id="" oscIndex="0" oscMsgName="/drm/d1/f1" oscMsgName1="/drm/d1/f2" oscMsgName2="/drm/d1/t" oscMsgNameLen="3" target="" targetData="" targetPlayMode="" value="30" value1="30" value2="0" valueLen="3"/>
+<event active="true" eventTime="1650" id="" oscIndex="0" oscMsgName="/drm/d1/f1" oscMsgName1="/drm/d1/f2" oscMsgName2="/drm/d1/t" oscMsgNameLen="3" target="" targetData="" targetPlayMode="" value="30" value1="30" value2="0" valueLen="3"/>
+</timeline>
+<view visible="init,base-1,screech,base-2,baseSeq,note1seq,note0-2,track1,drum-1"/>
+</timelines>

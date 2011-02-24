@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<timelines version="1.0">
+<source>
+<objects/>
+</source>
+<description><![CDATA[* fire buzzVars: setup to set buzz sound
+* ]]></description>
+<colors type="osc">
+<color for="/snare1" value="0:0:180"/>
+<color for="/glass/on" value="30:30:30"/>
+<color for="/buzz/osc2/f" value="60:0:0"/>
+<color for="/osc1/s" value="75:0:0"/>
+<color for="/bell/" value="240:240:240"/>
+<color for="/b/osc1/s" value="0:0:75"/>
+<color for="/bass" value="0:120:0"/>
+<color for="/mblur/on" value="15:15:15"/>
+<color for="/bell/p" value="240:0:0"/>
+<color for="/base" value="0:0:150"/>
+<color for="/ro1/new" value="0:45:45"/>
+<color for="/os" value="90:90:90"/>
+<color for="/be" value="0:0:255"/>
+<color for="/bu/osc1/s" value="0:75:75"/>
+<color for="/bell/pi" value="0:0:240"/>
+<color for="/drm2/" value="0:210:210"/>
+<color for="/drm1/" value="150:150:150"/>
+<color for="/base/f/fre" value="0:135:0"/>
+<color for="/particle/sweep" value="0:0:45"/>
+<color for="/pi" value="225:0:0"/>
+<color for="/osc1 4" value="0:90:0"/>
+<color for="/drm1" value="150:0:0"/>
+<color for="/sna" value="180:0:0"/>
+<color for="/base/f" value="0:150:0"/>
+<color for="/osc1 46" value="0:90:90"/>
+<color for="/buzz/osc1/s" value="60:60:60"/>
+<color for="/ping/t" value="0:225:0"/>
+<color for="/ping/f" value="210:210:210"/>
+<color for="/base/f/tm" value="0:0:120"/>
+<color for="/base/fr" value="135:0:135"/>
+<color for="/sj/pos" value="45:45:45"/>
+<color for="/s" value="180:180:180"/>
+<color for="/snare" value="180:0:180"/>
+<color for="/base//n" value="0:105:105"/>
+<color for="/video/file" value="0:0:30"/>
+<color for="//osc1/s" value="75:0:75"/>
+<color for="/osc1/" value="75:75:75"/>
+<color for="/sj/space" value="0:60:0"/>
+<color for="/buzz/nG" value="0:60:60"/>
+<color for="/bel" value="0:255:255"/>
+<color for="/snare1/trig" value="0:195:0"/>
+<color for="/video/stop" value="0:30:0"/>
+<color for="/v1" value="0:240:0"/>
+<color for="/ping/" value="0:225:225"/>
+<color for="/bell/f" value="0:105:0"/>
+<color for="/bas" value="150:0:150"/>
+<color for="/buz/osc1/s" value="0:75:0"/>
+<color for="/osc1" value="90:0:90"/>
+<color for="/drm1/t" value="0:165:0"/>
+<color for="/bas/n" value="105:0:105"/>
+<color for="/bell" value="0:255:0"/>
+<color for="/base/f/freq" value="0:135:135"/>
+<color for="/base/" value="0:150:150"/>
+<color for="/drm1/trig" value="195:0:195"/>
+<color for="/snare1/s" value="0:180:0"/>
+<color for="/osc1 " value="0:0:90"/>
+<color for="/vp/pos" value="30:0:0"/>
+<color for="/sj/rotVel" value="45:0:0"/>
+<color for="/" value="255:0:0"/>
+<color for="/v" value="0:240:240"/>
+<color for="/pin" value="225:0:225"/>
+<color for="/snare1/se" value="165:165:165"/>
+<color for="/base/fre" value="135:135:135"/>
+<color for="/vp/alpha" value="30:0:30"/>
+<color for="/snar1/trig" value="0:195:195"/>
+<color for="/particle/new" value="45:0:45"/>
+<color for="/drm2" value="0:0:210"/>
+<color for="/base/f/f" value="120:120:120"/>
+<color for="/snare1/set" value="165:0:0"/>
+<color for="/buzz/n" value="0:0:60"/>
+<color for="/bass/" value="105:105:105"/>
+<color for="/drm2/tr" value="0:210:0"/>
+<color for="/sj/on" value="0:45:0"/>
+<color for="/b" value="255:0:255"/>
+<color for="/video/play" value="0:30:30"/>
+<color for="/p" value="225:225:225"/>
+<color for="/ba" value="0:120:120"/>
+<color for="/buzz/osc1/f" value="60:0:60"/>
+<color for="/base/freq" value="135:0:0"/>
+<color for="/base/n" value="0:0:105"/>
+<color for="/d" value="210:0:0"/>
+<color for="/bell/pit" value="240:0:240"/>
+<color for="/osc" value="90:0:0"/>
+<color for="/xx" value="0:0:165"/>
+<color for="/drm2/tri" value="195:195:195"/>
+<color for="/base/f/" value="120:0:0"/>
+<color for="/base/ffreq" value="0:0:135"/>
+<color for="/sna1/trig" value="0:0:195"/>
+<color for="/drm" value="210:0:210"/>
+<color for="/ping" value="0:0:225"/>
+<color for="/base/f/t" value="120:0:120"/>
+<color for="/drm2/trig" value="195:0:0"/>
+<color for="/x" value="165:0:165"/>
+<color for="/bass/n" value="105:0:0"/>
+<color for="/drm1/tr" value="0:165:165"/>
+<color for="/snare1/" value="0:180:180"/>
+<color for="" value="255:255:255"/>
+</colors>
+<colors type="expr">
+<color for="$t:bell-1:p" value="255:0:0"/>
+<color for="$t:baseSlide-:p" value="240:0:240"/>
+<color for="$e:buzzVars:setup:f" value="0:240:240"/>
+<color for="$e:drumVars:drm2:f" value="0:255:0"/>
+<color for="$e:drumVars:snare:f" value="0:0:255"/>
+<color for="$e:drumVars:drm1:f" value="0:255:255"/>
+<color for="$t:baseSlide-1:p" value="240:0:0"/>
+<color for="$t:baseSlide-2:p" value="0:0:240"/>
+<color for="$t:baseSlide:p" value="240:240:240"/>
+<color for="$t:bell-1:l" value="255:0:255"/>
+<color for="" value="255:255:255"/>
+</colors>
+<filters>
+<filter target="/base/n"/>
+<filter target=""/>
+</filters>
+<midiKeys/>
+<timeline beatLength="6" beatPerBar="4" color="255 0 0" currentEvent="0" displayEnd="1000" displayStart="0" followOnExpr="" height="60" id="pingVars" lastSelEvent="0" oscIndex="0" pitch="1.0" playMode="" quantize="50" timeLineLength="1000" typeDisplay="false">
+<event active="true" eventTime="50" id="baseFreq" oscIndex="0" oscMsgName="/v1" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="$f:std:rnd::[2,69]" valueLen="0"/>
+</timeline>
+<timeline beatLength="4" beatPerBar="4" color="255 0 0" currentEvent="11" displayEnd="3840" displayStart="0" followOnExpr="" height="60" id="drm2-1" lastSelEvent="11" oscIndex="0" pitch="1.0" playMode="l" quantize="30" timeLineLength="3840" typeDisplay="false">
+<event active="true" eventTime="0" id="" oscIndex="0" oscMsgName="$e:drumVars:drm2:f" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="1" valueLen="0"/>
+<event active="true" eventTime="0" id="" oscIndex="0" oscMsgName="$e:drumVars:drm2:f" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="1" valueLen="0"/>
+<event active="true" eventTime="480" id="" oscIndex="0" oscMsgName="$e:drumVars:drm2:f" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="1" valueLen="0"/>
+<event active="true" eventTime="720" id="" oscIndex="0" oscMsgName="$e:drumVars:drm2:f" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="1" valueLen="0"/>
+<event active="true" eventTime="1440" id="" oscIndex="0" oscMsgName="$e:drumVars:drm2:f" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="1" valueLen="0"/>
+<event active="true" eventTime="1560" id="" oscIndex="0" oscMsgName="$e:drumVars:drm2:f" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="1" valueLen="0"/>
+<event active="true" eventTime="1920" id="" oscIndex="0" oscMsgName="$e:drumVars:drm2:f" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="1" valueLen="0"/>
+<event active="false" eventTime="2040" id="" oscIndex="0" oscMsgName="$e:drumVars:drm2:f" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="1" valueLen="0"/>
+<event active="false" eventTime="2400" id="" oscIndex="0" oscMsgName="$e:drumVars:drm2:f" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="1" valueLen="0"/>
+<event active="true" eventTime="2640" id="" oscIndex="0" oscMsgName="$e:drumVars:drm2:f" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="1" valueLen="0"/>
+<event active="true" eventTime="3360" id="" oscIndex="0" oscMsgName="$e:drumVars:drm2:f" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="1" valueLen="0"/>
+<event active="true" eventTime="3480" id="" oscIndex="0" oscMsgName="$e:drumVars:drm2:f" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="1" valueLen="0"/>
+</timeline>
+<timeline beatLength="4" beatPerBar="4" color="255 0 0" currentEvent="5" displayEnd="3840" displayStart="0" followOnExpr="" height="60" id="drm2-2" lastSelEvent="5" oscIndex="0" pitch="1.0" playMode="" quantize="30" timeLineLength="3840" typeDisplay="false">
+<event active="true" eventTime="0" id="" oscIndex="0" oscMsgName="$e:drumVars:drm2:f" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="1" valueLen="0"/>
+<event active="true" eventTime="480" id="" oscIndex="0" oscMsgName="$e:drumVars:drm2:f" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="1" valueLen="0"/>
+<event active="true" eventTime="960" id="" oscIndex="0" oscMsgName="$e:drumVars:drm2:f" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="1" valueLen="0"/>
+<event active="true" eventTime="1920" id="" oscIndex="0" oscMsgName="$e:drumVars:drm2:f" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="1" valueLen="0"/>
+<event active="true" eventTime="2400" id="" oscIndex="0" oscMsgName="$e:drumVars:drm2:f" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="1" valueLen="0"/>
+<event active="true" eventTime="3360" id="" oscIndex="0" oscMsgName="$e:drumVars:drm2:f" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="1" valueLen="0"/>
+</timeline>
+<timeline beatLength="4" beatPerBar="4" color="255 0 0" currentEvent="8" displayEnd="3840" displayStart="0" followOnExpr="" height="70" id="drm1-1" lastSelEvent="8" oscIndex="0" pitch="1.0" playMode="l" quantize="30" timeLineLength="3840" typeDisplay="false">
+<event active="true" eventTime="0" id="" oscIndex="0" oscMsgName="$e:drumVars:drm1:f" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="1" valueLen="0"/>
+<event active="true" eventTime="480" id="" oscIndex="0" oscMsgName="$e:drumVars:drm1:f" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="1" valueLen="0"/>
+<event active="true" eventTime="960" id="" oscIndex="0" oscMsgName="$e:drumVars:drm1:f" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="1" valueLen="0"/>
+<event active="true" eventTime="1200" id="" oscIndex="0" oscMsgName="$e:drumVars:drm1:f" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="1" valueLen="0"/>
+<event active="true" eventTime="1440" id="" oscIndex="0" oscMsgName="$e:drumVars:drm1:f" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="1" valueLen="0"/>
+<event active="true" eventTime="1920" id="" oscIndex="0" oscMsgName="$e:drumVars:drm1:f" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="1" valueLen="0"/>
+<event active="true" eventTime="2400" id="" oscIndex="0" oscMsgName="$e:drumVars:drm1:f" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="1" valueLen="0"/>
+<event active="true" eventTime="2880" id="" oscIndex="0" oscMsgName="$e:drumVars:drm1:f" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="1" valueLen="0"/>
+<event active="true" eventTime="3360" id="" oscIndex="0" oscMsgName="$e:drumVars:drm1:f" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="1" valueLen="0"/>
+</timeline>
+<timeline beatLength="4" beatPerBar="4" color="255 0 0" currentEvent="10" displayEnd="3840" displayStart="0" followOnExpr="" height="70" id="snare1-1" lastSelEvent="10" oscIndex="0" pitch="1.0" playMode="l" quantize="30" timeLineLength="3840" typeDisplay="false">
+<event active="true" eventTime="0" id="" oscIndex="0" oscMsgName="$e:drumVars:snare:f" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="" valueLen="0"/>
+<event active="true" eventTime="450" id="" oscIndex="0" oscMsgName="$e:drumVars:snare:f" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="" valueLen="0"/>
+<event active="true" eventTime="720" id="" oscIndex="0" oscMsgName="$e:drumVars:snare:f" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="" valueLen="0"/>
+<event active="true" eventTime="840" id="" oscIndex="0" oscMsgName="$e:drumVars:snare:f" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="" valueLen="0"/>
+<event active="true" eventTime="1440" id="" oscIndex="0" oscMsgName="$e:drumVars:snare:f" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="" valueLen="0"/>
+<event active="true" eventTime="1560" id="" oscIndex="0" oscMsgName="$e:drumVars:snare:f" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="" valueLen="0"/>
+<event active="true" eventTime="1680" id="" oscIndex="0" oscMsgName="$e:drumVars:snare:f" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="" valueLen="0"/>
+<event active="true" eventTime="2160" id="" oscIndex="0" oscMsgName="$e:drumVars:snare:f" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="" valueLen="0"/>
+<event active="true" eventTime="2640" id="" oscIndex="0" oscMsgName="$e:drumVars:snare:f" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="" valueLen="0"/>
+<event active="true" eventTime="2730" id="" oscIndex="0" oscMsgName="$e:drumVars:snare:f" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="" valueLen="0"/>
+<event active="true" eventTime="2880" id="" oscIndex="0" oscMsgName="$e:drumVars:snare:f" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="" valueLen="0"/>
+<event active="true" eventTime="3090" id="" oscIndex="0" oscMsgName="$e:drumVars:snare:f" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="" valueLen="0"/>
+<event active="true" eventTime="3330" id="" oscIndex="0" oscMsgName="$e:drumVars:snare:f" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="" valueLen="0"/>
+</timeline>
+<timeline beatLength="6" beatPerBar="4" color="255 0 0" currentEvent="0" displayEnd="9600" displayStart="0" followOnExpr="" height="100" id="drumVars" lastSelEvent="0" oscIndex="0" pitch="1.0" playMode="" quantize="50" timeLineLength="9600" typeDisplay="false">
+<event active="true" eventTime="550" id="snare" oscIndex="0" oscMsgName="/snare1" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="bang" valueLen="0"/>
+<event active="true" eventTime="850" id="snareVars" oscIndex="0" oscMsgName="/xx" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="800" valueLen="0"/>
+<event active="true" eventTime="1440" id="drm1_old" oscIndex="0" oscMsgName="/drm1/trig" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="1" valueLen="0"/>
+<event active="true" eventTime="1600" id="drm1" oscIndex="0" oscMsgName="/drm1" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="bang" valueLen="0"/>
+<event active="true" eventTime="2400" id="drm2" oscIndex="0" oscMsgName="/drm2/trig" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="1" valueLen="0"/>
+</timeline>
+<timeline beatLength="6" beatPerBar="4" color="255 0 0" currentEvent="2" displayEnd="1000" displayStart="0" followOnExpr="" height="100" id="buzzVars" lastSelEvent="2" oscIndex="0" pitch="1.0" playMode="" quantize="50" timeLineLength="1000" typeDisplay="false">
+<event active="true" eventTime="100" id="setup" oscIndex="0" oscMsgName="/buzz/osc1/s" oscMsgName1="/buzz/osc2/s" oscMsgName2="/buzz/osc3/s" oscMsgName3="/buzz/osc2/f" oscMsgName4="/buzz/osc3/f" oscMsgNameLen="5" target="" targetData="" targetPlayMode="" value="28 47 29 0.6" value1="0 0 47 0.77" value2="110 0 97 0" value3="2" value4="1" valueLen="5"/>
+<event active="true" eventTime="200" id="osc2_2" oscIndex="0" oscMsgName="/buzz/osc2/f" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="2" valueLen="0"/>
+<event active="true" eventTime="250" id="osc2_4" oscIndex="0" oscMsgName="/buzz/osc2/f" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="4" valueLen="0"/>
+<event active="true" eventTime="300" id="osc2_8" oscIndex="0" oscMsgName="/buzz/osc2/f" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="8" valueLen="0"/>
+<group eventIndexes="1" id="osc2_2"/>
+<group eventIndexes="3" id="osc2_8"/>
+<group eventIndexes="2" id="osc2_4"/>
+</timeline>
+<timeline beatLength="4" beatPerBar="4" color="255 0 0" currentEvent="0" displayEnd="1920" displayStart="0" followOnExpr="" height="60" id="buzzSq-1" lastSelEvent="0" oscIndex="0" pitch="1.0" playMode="" quantize="30" timeLineLength="1920" typeDisplay="false">
+<event active="true" eventTime="0" id="" oscIndex="0" oscMsgName="/buzz/n" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="46" valueLen="0"/>
+<event active="true" eventTime="480" id="" oscIndex="0" oscMsgName="/buzz/n" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="42" valueLen="0"/>
+<event active="true" eventTime="960" id="" oscIndex="0" oscMsgName="/buzz/n" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="36" valueLen="0"/>
+<event active="true" eventTime="1440" id="" oscIndex="0" oscMsgName="/buzz/n" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="31" valueLen="0"/>
+<event active="true" eventTime="1890" id="" oscIndex="0" oscMsgName="/buzz/n" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="42" valueLen="0"/>
+</timeline>
+<timeline beatLength="4" beatPerBar="4" color="255 0 0" currentEvent="0" displayEnd="1920" displayStart="0" followOnExpr="" height="60" id="buzzSq-2" lastSelEvent="0" oscIndex="0" pitch="1.0" playMode="" quantize="30" timeLineLength="1920" typeDisplay="false">
+<event active="true" eventTime="0" id="" oscIndex="0" oscMsgName="/buzz/n" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="54" valueLen="0"/>
+<event active="true" eventTime="480" id="" oscIndex="0" oscMsgName="/buzz/n" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="46" valueLen="0"/>
+<event active="true" eventTime="960" id="" oscIndex="0" oscMsgName="/buzz/n" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="36" valueLen="0"/>
+<event active="true" eventTime="1440" id="" oscIndex="0" oscMsgName="/buzz/n" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="29" valueLen="0"/>
+<event active="true" eventTime="1890" id="" oscIndex="0" oscMsgName="/buzz/n" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="42" valueLen="0"/>
+</timeline>
+<timeline beatLength="4" beatPerBar="4" color="255 0 0" currentEvent="2" displayEnd="1920" displayStart="0" followOnExpr="" height="60" id="buzzSq-3" lastSelEvent="2" oscIndex="0" pitch="1.0" playMode="" quantize="30" timeLineLength="1920" typeDisplay="false">
+<event active="true" eventTime="0" id="" oscIndex="0" oscMsgName="/buzz/n" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="86" valueLen="0"/>
+<event active="true" eventTime="480" id="" oscIndex="0" oscMsgName="/buzz/n" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="71" valueLen="0"/>
+<event active="true" eventTime="960" id="" oscIndex="0" oscMsgName="/buzz/n" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="58" valueLen="0"/>
+<event active="true" eventTime="1440" id="" oscIndex="0" oscMsgName="/buzz/n" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="45" valueLen="0"/>
+</timeline>
+<timeline beatLength="4" beatPerBar="4" color="255 0 0" currentEvent="1" displayEnd="1920" displayStart="0" followOnExpr="" height="60" id="buzzSq-4" lastSelEvent="1" oscIndex="0" pitch="1.0" playMode="" quantize="30" timeLineLength="1920" typeDisplay="false">
+<event active="true" eventTime="0" id="" oscIndex="0" oscMsgName="/buzz/n" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="40" valueLen="0"/>
+<event active="true" eventTime="480" id="" oscIndex="0" oscMsgName="/buzz/n" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="36" valueLen="0"/>
+<event active="true" eventTime="960" id="" oscIndex="0" oscMsgName="/buzz/n" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="29" valueLen="0"/>
+<event active="true" eventTime="1440" id="" oscIndex="0" oscMsgName="/buzz/n" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="24" valueLen="0"/>
+</timeline>
+<timeline beatLength="4" beatPerBar="4" color="255 0 0" currentEvent="4" displayEnd="1920" displayStart="0" followOnExpr="" height="60" id="buzzSq-5" lastSelEvent="4" oscIndex="0" pitch="1.0" playMode="" quantize="30" timeLineLength="1920" typeDisplay="false">
+<event active="true" eventTime="0" id="" oscIndex="0" oscMsgName="/buzz/n" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="80" valueLen="0"/>
+<event active="true" eventTime="480" id="" oscIndex="0" oscMsgName="/buzz/n" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="71" valueLen="0"/>
+<event active="true" eventTime="960" id="" oscIndex="0" oscMsgName="/buzz/n" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="80" valueLen="0"/>
+<event active="true" eventTime="1440" id="" oscIndex="0" oscMsgName="/buzz/n" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="75" valueLen="0"/>
+<event active="true" eventTime="1890" id="" oscIndex="0" oscMsgName="/buzz/n" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="46" valueLen="0"/>
+</timeline>
+<timeline beatLength="6" beatPerBar="4" color="255 0 0" currentEvent="7" displayEnd="9600" displayStart="0" followOnExpr="" height="100" id="video" lastSelEvent="7" oscIndex="0" pitch="1.0" playMode="" quantize="50" timeLineLength="9600" typeDisplay="false">
+<event active="true" eventTime="700" id="" oscIndex="1" oscMsgName="/sj/space" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="100 100 0.0 300" valueLen="0"/>
+<event active="true" eventTime="1000" id="" oscIndex="1" oscMsgName="/sj/space" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="0 0.0 0.0 300" valueLen="0"/>
+<event active="true" eventTime="1250" id="" oscIndex="1" oscMsgName="/sj/space" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="0 100 0.0 300" valueLen="0"/>
+<event active="true" eventTime="1450" id="" oscIndex="1" oscMsgName="/sj/pos" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="0 0.0 -1000 300" valueLen="0"/>
+<event active="true" eventTime="1600" id="" oscIndex="1" oscMsgName="/sj/rotVel" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="0 0 0.2 1" valueLen="0"/>
+<event active="true" eventTime="1950" id="video" oscIndex="1" oscMsgName="/particle/new" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="0" valueLen="0"/>
+<event active="true" eventTime="2150" id="" oscIndex="1" oscMsgName="/particle/sweep" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="0" valueLen="0"/>
+<event active="true" eventTime="2450" id="" oscIndex="1" oscMsgName="/ro1/new" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="1" valueLen="0"/>
+<event active="true" eventTime="2600" id="" oscIndex="1" oscMsgName="/mblur/on" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="0" valueLen="0"/>
+<event active="true" eventTime="2950" id="" oscIndex="1" oscMsgName="/sj/on" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="0" valueLen="0"/>
+<event active="true" eventTime="3100" id="" oscIndex="1" oscMsgName="/sj/on" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="1" valueLen="0"/>
+<event active="true" eventTime="3300" id="" oscIndex="1" oscMsgName="/glass/on" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="0" valueLen="0"/>
+<event active="true" eventTime="3550" id="" oscIndex="1" oscMsgName="/glass/on" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="1" valueLen="0"/>
+<event active="true" eventTime="3750" id="" oscIndex="1" oscMsgName="/vp/pos" oscMsgName1="/vp/alpha" oscMsgNameLen="2" target="" targetData="" targetPlayMode="" value="$f:std:rnd::[400,-200] $f:std:rnd::[400,-200] $f:std:rnd::[200,-300] 100" value1="0.6 100" valueLen="2"/>
+<event active="true" eventTime="4000" id="" oscIndex="1" oscMsgName="/vp/alpha" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="0 100" valueLen="0"/>
+<event active="true" eventTime="4250" id="" oscIndex="1" oscMsgName="/video/file" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="/home/robm/media/video/60_com/avi/toppercamel.avi" valueLen="0"/>
+<event active="true" eventTime="4550" id="" oscIndex="1" oscMsgName="/video/file" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="/home/robm/media/video/60_com/avi/TONYTIGER.avi" valueLen="0"/>
+<event active="true" eventTime="4750" id="" oscIndex="1" oscMsgName="/video/play" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="" valueLen="0"/>
+<event active="true" eventTime="5050" id="" oscIndex="1" oscMsgName="/video/stop" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="" valueLen="0"/>
+</timeline>
+<timeline beatLength="6" beatPerBar="4" color="255 0 0" currentEvent="2" displayEnd="9600" displayStart="0" followOnExpr="" height="100" id="init" lastSelEvent="2" oscIndex="0" pitch="1.0" playMode="" quantize="50" timeLineLength="9600" typeDisplay="false">
+<event active="true" eventTime="200" id="" oscIndex="0" oscMsgName="$e:buzzVars:setup:f" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="1" valueLen="0"/>
+<event active="true" eventTime="550" id="" oscIndex="1" oscMsgName="/mblur/on" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="0" valueLen="0"/>
+<event active="true" eventTime="800" id="" oscIndex="0" oscMsgName="/buzz/n" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="31" valueLen="0"/>
+</timeline>
+<view visible="drm1-1,drm2-1,pingVars,drumVars,snare1-1,buzzVars,buzzSq-1,buzzSq-2,buzzSq-3,buzzSq-5,buzzSq-4,video,init"/>
+</timelines>

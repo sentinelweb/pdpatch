@@ -1,0 +1,7 @@
+#N canvas 679 331 454 373 10;
+#X obj 21 60 nm-grainer;
+#X obj 16 24 dumpOSC 10002;
+#X obj 32 312 dac~;
+#X connect 0 0 2 0;
+#X connect 0 1 2 1;
+#X connect 1 0 0 0;

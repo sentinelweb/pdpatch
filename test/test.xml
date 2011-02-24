@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<timelines version="1.0">
+<source>
+<objects/>
+</source>
+<description/>
+<colors type="osc">
+<color for="" value="255:255:255"/>
+</colors>
+<colors type="expr">
+<color for="" value="255:255:255"/>
+</colors>
+<filters/>
+<midiKeys/>
+<timeline beatLength="10" beatPerBar="4" color="255 0 0" currentEvent="0" displayEnd="8000" displayStart="0" followOnExpr="" height="100" id="t1" lastSelEvent="0" oscIndex="0" pitch="1.0" playMode="" quantize="50" timeLineLength="8000" typeDisplay="false">
+<event active="true" eventTime="600" id="" oscIndex="0" oscMsgName="" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="10" valueLen="0"/>
+</timeline>
+<view visible="t1"/>
+<interface path="/home/robm/patch/test/iface.xml"/>
+</timelines>

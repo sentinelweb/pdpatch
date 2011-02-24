@@ -1,0 +1,73 @@
+#N canvas 488 34 389 249 10;
+#X obj 158 77 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X obj 22 77 OSCroute /mov_kgrep_x;
+#X obj 159 100 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X obj 159 121 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X obj 23 100 OSCroute /mov_kgrep_y;
+#X obj 23 121 OSCroute /mov_kgrep_z;
+#X obj 150 14 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X obj 151 35 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X obj 153 58 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X obj 14 14 OSCroute /mov_kgrep_rx;
+#X obj 15 35 OSCroute /mov_kgrep_ry;
+#X obj 15 56 OSCroute /mov_kgrep_rz;
+#X obj 151 144 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X obj 153 167 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X obj 15 144 OSCroute /mov_kgrep_sc;
+#X obj 15 165 OSCroute /mov_kgrep_tm;
+#X obj 26 209 outlet;
+#X obj 71 207 outlet;
+#X obj 117 207 outlet;
+#X obj 162 205 outlet;
+#X obj 204 203 outlet;
+#X obj 247 204 outlet;
+#X obj 292 200 outlet;
+#X obj 336 196 outlet;
+#X obj 39 -10 inlet;
+#X obj 353 10 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X obj 217 10 OSCroute /mov_kgrepeat;
+#X obj 216 82 unpack f f f f f f f f;
+#X connect 1 0 0 0;
+#X connect 1 0 19 0;
+#X connect 4 0 2 0;
+#X connect 4 0 20 0;
+#X connect 5 0 3 0;
+#X connect 5 0 21 0;
+#X connect 9 0 6 0;
+#X connect 9 0 16 0;
+#X connect 10 0 7 0;
+#X connect 10 0 17 0;
+#X connect 11 0 8 0;
+#X connect 11 0 18 0;
+#X connect 14 0 12 0;
+#X connect 14 0 22 0;
+#X connect 15 0 13 0;
+#X connect 15 0 23 0;
+#X connect 24 0 9 0;
+#X connect 24 0 10 0;
+#X connect 24 0 11 0;
+#X connect 24 0 1 0;
+#X connect 24 0 4 0;
+#X connect 24 0 5 0;
+#X connect 24 0 14 0;
+#X connect 24 0 15 0;
+#X connect 24 0 26 0;
+#X connect 26 0 25 0;
+#X connect 26 0 27 0;
+#X connect 27 0 16 0;
+#X connect 27 1 17 0;
+#X connect 27 2 18 0;
+#X connect 27 3 19 0;
+#X connect 27 4 20 0;
+#X connect 27 5 21 0;
+#X connect 27 6 22 0;
+#X connect 27 7 23 0;

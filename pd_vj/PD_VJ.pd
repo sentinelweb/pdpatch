@@ -1,0 +1,339 @@
+#N canvas -179 51 991 649 10;
+#X obj -1 -1 cnv 15 840 800 empty empty empty 20 12 0 14 -203904 -66577
+0;
+#X obj 380 426 pix_texture;
+#N canvas 210 22 1028 732 color 0;
+#X obj 139 495 color;
+#X obj 177 461 hsv2rgb;
+#X floatatom 99 406 0 0 1 0 - - -;
+#X floatatom 185 337 0 0 1 0 - - -;
+#X obj 179 369 t b f;
+#X floatatom 256 359 0 0 1 0 - - -;
+#X obj 253 392 t b f;
+#X text 103 223 hue;
+#X obj 179 423 pack 0 1 1;
+#X obj 106 120 vsl 15 100 0 1 0 0 empty empty empty 0 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 136 120 vsl 15 100 0 1 0 0 empty empty empty 0 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 169 121 vsl 15 100 0 1 0 0 empty empty empty 0 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 139 528 outlet;
+#X obj 121 461 inlet;
+#X text 133 223 sat;
+#X msg 491 422 1 1 1;
+#X msg 353 332 1 0 0;
+#X obj 352 442 rgb2hsv;
+#X obj 413 459 unpack 0 0 0;
+#X floatatom 413 559 0 0 0 0 - - -;
+#X floatatom 458 523 0 0 0 0 - - -;
+#X floatatom 504 485 0 0 0 0 - - -;
+#X msg 369 379 0 1 0;
+#X text 418 580 hue;
+#X text 514 507 value;
+#X text 355 305 red;
+#X text 495 402 white;
+#X text 371 357 green;
+#X text 460 540 saturation;
+#X msg 417 413 0 0 1;
+#X text 417 394 blue;
+#X text 112 264 R;
+#X text 141 264 G;
+#X text 168 263 B;
+#X obj 136 242 bng 20 250 50 0 empty empty empty 0 -6 0 10 -4034 -1
+-1;
+#X obj 108 242 bng 20 250 50 0 empty empty empty 0 -6 0 10 -258113
+-1 -1;
+#X obj 163 242 bng 20 250 50 0 empty empty empty 0 -6 0 10 -4160 -1
+-1;
+#X msg 77 286 0;
+#X msg 111 287 0.333333;
+#X msg 174 287 0.666666;
+#X text 165 223 val;
+#X connect 0 0 12 0;
+#X connect 1 0 0 1;
+#X connect 2 0 8 0;
+#X connect 3 0 4 0;
+#X connect 4 0 8 0;
+#X connect 4 1 8 1;
+#X connect 5 0 6 0;
+#X connect 6 0 8 0;
+#X connect 6 1 8 2;
+#X connect 8 0 1 0;
+#X connect 9 0 2 0;
+#X connect 10 0 3 0;
+#X connect 11 0 5 0;
+#X connect 13 0 0 0;
+#X connect 15 0 17 0;
+#X connect 16 0 17 0;
+#X connect 17 0 18 0;
+#X connect 17 0 1 0;
+#X connect 18 0 19 0;
+#X connect 18 1 20 0;
+#X connect 18 2 21 0;
+#X connect 22 0 17 0;
+#X connect 29 0 17 0;
+#X connect 34 0 22 0;
+#X connect 34 0 38 0;
+#X connect 35 0 16 0;
+#X connect 35 0 37 0;
+#X connect 36 0 29 0;
+#X connect 36 0 39 0;
+#X connect 37 0 9 0;
+#X connect 38 0 9 0;
+#X connect 39 0 9 0;
+#X coords 0 -1 1 1 90 180 1 100 100;
+#X restore 370 443 pd color;
+#X obj 310 211 cnv 15 215 215 empty empty empty 20 12 0 14 -261682
+-66577 0;
+#X obj 310 211 crossfade_;
+#X obj 534 84 cnv 15 250 130 empty empty empty 20 12 0 14 -233458 -66577
+0;
+#X obj 49 84 cnv 15 250 130 empty empty empty 20 12 0 14 -233458 -66577
+0;
+#N canvas 12 140 1012 628 videoplayer 0;
+#X obj 569 -1 cnv 15 250 350 empty empty empty 20 12 0 14 -228992 -66577
+0;
+#X obj 571 30 cnv 15 155 250 empty empty empty 20 12 0 14 -24198 -66577
+0;
+#X obj 571 5 gemhead;
+#X obj 573 398 pix_texture;
+#X obj 109 126 bng 25 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X obj 596 229 unpack 0 0 0;
+#X floatatom 593 253 5 0 0 3 length - -;
+#X floatatom 635 252 5 0 0 3 width - -;
+#X floatatom 685 252 5 0 0 3 height - -;
+#X floatatom 622 175 5 0 10000 1 frame# - -;
+#X obj 583 64 openpanel;
+#X msg 583 84 open \$1;
+#X obj 571 193 pix_film;
+#X msg 600 151 colorspace Grey;
+#X obj 215 196 hsl 128 15 0 1 0 0 empty empty scratch 50 8 1 12 -262144
+-1 -1 0 1;
+#X obj 573 365 pix_alpha;
+#X obj 494 312 vsl 15 50 0 1 0 0 empty empty alpha -3 -8 0 8 -1 -261234
+-1 0 1;
+#X obj 573 320 alpha;
+#X obj 571 296 pix_rgba;
+#X obj 761 158 counter 0 90;
+#X obj 744 69 * 90;
+#X obj 327 105 tgl 15 0 empty empty Auto -25 7 0 10 -262144 -1 -1 0
+1;
+#X obj 808 127 metro 40;
+#X obj 889 191 / 90;
+#X obj 215 214 hsl 128 8 0 1 0 0 empty empty empty -2 -6 0 10 -99865
+-1 -1 4199 1;
+#X obj 214 158 hsl 128 15 2 -1 0 0 empty empty speed 50 8 1 12 -262144
+-1 -1 5600 1;
+#X obj 869 89 * 40;
+#X text 139 128 LOAD FILE;
+#X obj 331 69 loadbang;
+#X obj 573 426 outlet;
+#X obj 304 370 outlet;
+#X obj 469 50 r video1;
+#X obj 869 110 + 20;
+#X text 302 387 preview;
+#X connect 2 0 12 0;
+#X connect 3 0 29 0;
+#X connect 4 0 10 0;
+#X connect 5 0 6 0;
+#X connect 5 1 7 0;
+#X connect 5 2 8 0;
+#X connect 6 0 23 1;
+#X connect 6 0 20 1;
+#X connect 6 0 19 4;
+#X connect 9 0 12 1;
+#X connect 10 0 11 0;
+#X connect 11 0 12 0;
+#X connect 12 0 18 0;
+#X connect 12 0 30 0;
+#X connect 12 1 5 0;
+#X connect 13 0 12 0;
+#X connect 14 0 20 0;
+#X connect 15 0 3 0;
+#X connect 16 0 15 1;
+#X connect 16 0 15 2;
+#X connect 17 0 15 0;
+#X connect 18 0 17 0;
+#X connect 19 0 9 0;
+#X connect 19 0 23 0;
+#X connect 20 0 19 3;
+#X connect 21 0 22 0;
+#X connect 22 0 19 0;
+#X connect 23 0 24 0;
+#X connect 25 0 26 0;
+#X connect 26 0 32 0;
+#X connect 28 0 21 0;
+#X connect 31 0 11 0;
+#X connect 32 0 22 1;
+#X coords 0 -1 1 1 250 130 1 100 100;
+#X restore 49 84 pd videoplayer;
+#N canvas 0 0 1012 649 videoplayer 0;
+#X obj 569 -1 cnv 15 250 350 empty empty empty 20 12 0 14 -228992 -66577
+0;
+#X obj 571 30 cnv 15 155 250 empty empty empty 20 12 0 14 -24198 -66577
+0;
+#X obj 571 5 gemhead;
+#X obj 573 400 pix_texture;
+#X obj 318 123 bng 25 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X obj 596 229 unpack 0 0 0;
+#X floatatom 593 253 5 0 0 3 length - -;
+#X floatatom 635 252 5 0 0 3 width - -;
+#X floatatom 685 252 5 0 0 3 height - -;
+#X floatatom 622 175 5 0 10000 1 frame# - -;
+#X obj 583 64 openpanel;
+#X msg 583 84 open \$1;
+#X obj 571 193 pix_film;
+#X msg 600 151 colorspace Grey;
+#X obj 114 196 hsl 128 15 0 1 0 0 empty empty scratch 50 8 1 12 -262144
+-1 -1 0 1;
+#X obj 573 368 pix_alpha;
+#X obj 534 315 vsl 15 50 0 1 0 0 empty empty alpha -3 -8 0 8 -1 -261234
+-1 0 1;
+#X obj 573 315 alpha;
+#X obj 571 291 pix_rgba;
+#X obj 761 158 counter 0 90;
+#X obj 744 69 * 90;
+#X obj 327 104 tgl 15 0 empty empty Auto -25 7 0 10 -262144 -1 -1 1
+1;
+#X obj 808 127 metro 40;
+#X obj 889 191 / 90;
+#X obj 114 214 hsl 128 8 0 1 0 0 empty empty empty -2 -6 0 10 -99865
+-1 -1 7124 1;
+#X obj 114 160 hsl 128 15 2 -1 0 0 empty empty speed 50 8 1 12 -262144
+-1 -1 0 1;
+#X obj 949 84 * 40;
+#X obj 949 105 + 20;
+#X text 258 127 LOAD FILE;
+#X obj 331 69 loadbang;
+#X obj 573 431 outlet;
+#X obj 330 361 outlet;
+#X obj 456 68 r video2;
+#X text 327 380 preview;
+#X connect 2 0 12 0;
+#X connect 3 0 30 0;
+#X connect 4 0 10 0;
+#X connect 5 0 6 0;
+#X connect 5 1 7 0;
+#X connect 5 2 8 0;
+#X connect 6 0 23 1;
+#X connect 6 0 20 1;
+#X connect 6 0 19 4;
+#X connect 9 0 12 1;
+#X connect 10 0 11 0;
+#X connect 11 0 12 0;
+#X connect 12 0 18 0;
+#X connect 12 0 31 0;
+#X connect 12 1 5 0;
+#X connect 13 0 12 0;
+#X connect 14 0 20 0;
+#X connect 15 0 3 0;
+#X connect 16 0 15 1;
+#X connect 16 0 15 2;
+#X connect 17 0 15 0;
+#X connect 18 0 17 0;
+#X connect 19 0 9 0;
+#X connect 19 0 23 0;
+#X connect 20 0 19 3;
+#X connect 21 0 22 0;
+#X connect 22 0 19 0;
+#X connect 23 0 24 0;
+#X connect 25 0 26 0;
+#X connect 26 0 27 0;
+#X connect 27 0 22 1;
+#X connect 29 0 21 0;
+#X connect 32 0 11 0;
+#X coords 0 -1 1 1 250 130 1 100 100;
+#X restore 534 84 pd videoplayer;
+#X obj 340 124 pix_preview;
+#X obj 299 177 metro 140;
+#X obj 302 162 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 494 124 pix_preview;
+#X obj 516 163 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 300 194 pix_resize 80 80;
+#X obj 433 194 pix_resize 80 80;
+#N canvas 170 327 494 344 window 0;
+#X obj 235 283 gemwin;
+#X msg 35 147 create;
+#X msg 153 197 destroy;
+#X obj 112 127 bng 20 250 50 0 empty empty empty 0 -6 0 10 -228856
+-1 -1;
+#X obj 153 127 bng 20 250 50 0 empty empty empty 0 -6 0 10 -1 -262144
+-262144;
+#X msg 347 162 dimen 320 240;
+#X msg 372 181 dimen 640 480;
+#X msg 362 266 fullscreen 0;
+#X msg 362 248 fullscreen 1;
+#X msg 200 27 border 1;
+#X msg 216 51 border 0;
+#X msg 371 204 dimen 1024 768;
+#X msg 302 107 offset 1440 -50;
+#X obj 133 163 tgl 15 0 empty empty oN-oFF -5 -6 2 10 -262144 -1 -1
+0 1;
+#X text 272 27 Pintar o no el borde de la ventana;
+#X text 301 145 Tamaño de la ventana de salida;
+#X text 233 88 En que pixel empieza la salida de Video???;
+#X connect 1 0 0 0;
+#X connect 2 0 0 0;
+#X connect 3 0 1 0;
+#X connect 4 0 2 0;
+#X connect 5 0 0 0;
+#X connect 6 0 0 0;
+#X connect 7 0 0 0;
+#X connect 8 0 0 0;
+#X connect 9 0 0 0;
+#X connect 10 0 0 0;
+#X connect 11 0 0 0;
+#X connect 12 0 0 0;
+#X connect 13 0 0 0;
+#X coords 0 -1 1 1 85 80 1 100 100;
+#X restore 366 0 pd window;
+#X text 325 28 CREATE;
+#X text 454 26 DESTROY;
+#X floatatom 321 163 5 0 0 0 - - -;
+#X obj 476 177 metro 260;
+#X floatatom 476 163 5 0 0 0 - - -;
+#X obj 8 306 videogrid videogrid1 3 5 #F0F0F0 #0F0F0F /home/lituz/Desktop/PDVideo/Dance_14.mov|/home/lituz/Desktop/PDVideo/RADIADOR_test.mov|/home/lituz/Desktop/PDVideo/Texto2.mov|/home/lituz/Desktop/PDVideo/Dance_10_v2.mov|/home/lituz/Desktop/PDVideo/capturedfsdf.dv.mov|/home/lituz/Desktop/PDVideo/Space_invaders_small.mov|/home/lituz/Desktop/PDVideo/Cuadraditos.mov|
+;
+#X obj 527 306 videogrid videogrid2 3 5 #F0F0F0 #0F0F0F /home/lituz/Desktop/PDVideo/Dance_14.mov|/home/lituz/Desktop/PDVideo/RADIADOR_test.mov|/home/lituz/Desktop/PDVideo/Texto2.mov|/home/lituz/Desktop/PDVideo/Dance_10_v2.mov|/home/lituz/Desktop/PDVideo/capturedfsdf.dv.mov|/home/lituz/Desktop/PDVideo/Space_invaders_small.mov|/home/lituz/Desktop/PDVideo/Cuadraditos.mov|
+;
+#X text 5 240 ADD VIDEO;
+#X text 6 275 ADD VIDEOS FROM FOLDER;
+#X msg 7 254 putvideo /usr/lib/dscn0241.mov;
+#X symbolatom -2 427 60 0 0 0 - - -;
+#X symbolatom 470 427 60 0 0 0 - - -;
+#X text 764 240 ADD VIDEO;
+#X text 693 275 ADD VIDEOS FROM FOLDER;
+#X msg 634 254 putvideo /usr/lib/dscn0241.mov;
+#X msg 8 289 putvideodir /home/lituz/Desktop/PDVideo;
+#X msg 587 289 putvideodir /home/lituz/Desktop/PDVideo;
+#X obj 470 441 s video2;
+#X obj 308 441 s video1;
+#X obj 392 623 square 4;
+#X connect 1 0 2 0;
+#X connect 2 0 36 0;
+#X connect 4 0 1 0;
+#X connect 7 0 4 0;
+#X connect 7 1 14 0;
+#X connect 8 0 4 1;
+#X connect 8 1 15 0;
+#X connect 10 0 9 0;
+#X connect 11 0 10 0;
+#X connect 13 0 20 0;
+#X connect 14 0 9 0;
+#X connect 15 0 12 0;
+#X connect 19 0 10 1;
+#X connect 20 0 12 0;
+#X connect 21 0 20 1;
+#X connect 22 0 27 0;
+#X connect 23 0 28 0;
+#X connect 26 0 22 0;
+#X connect 27 0 35 0;
+#X connect 28 0 34 0;
+#X connect 31 0 23 0;
+#X connect 32 0 22 0;
+#X connect 33 0 23 0;

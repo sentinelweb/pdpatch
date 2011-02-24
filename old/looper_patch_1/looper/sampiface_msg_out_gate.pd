@@ -1,0 +1,27 @@
+#N canvas 254 54 466 316 10;
+#X obj 81 15 r sampler_select_i;
+#X floatatom 81 60 5 0 0 0 - - -;
+#X obj 80 82 gate 1;
+#X obj 81 127 * 1;
+#X obj 111 125 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X floatatom 43 153 5 0 0 0 - - -;
+#X obj 81 37 == \$1;
+#X obj 83 150 s \$2;
+#X obj 171 36 inlet;
+#X floatatom 171 59 5 0 0 0 - - -;
+#X obj 122 59 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X obj 123 36 delay 1;
+#X connect 0 0 6 0;
+#X connect 0 0 11 0;
+#X connect 1 0 2 0;
+#X connect 2 0 3 0;
+#X connect 3 0 4 0;
+#X connect 3 0 5 0;
+#X connect 3 0 7 0;
+#X connect 6 0 1 0;
+#X connect 8 0 9 0;
+#X connect 9 0 2 1;
+#X connect 10 0 9 0;
+#X connect 11 0 10 0;

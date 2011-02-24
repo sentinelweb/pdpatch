@@ -1,0 +1,15 @@
+#N canvas 804 155 192 181 10;
+#X obj 28 133 outlet;
+#X obj 74 132 print;
+#X obj 27 36 inlet;
+#X msg 28 106 send /in \$1;
+#X msg 129 26 /key;
+#X obj 129 5 t b f;
+#X obj 129 47 pack s f;
+#X text 136 62 comment;
+#X connect 2 0 3 0;
+#X connect 3 0 0 0;
+#X connect 3 0 1 0;
+#X connect 4 0 6 0;
+#X connect 5 0 4 0;
+#X connect 5 1 6 1;

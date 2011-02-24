@@ -1,0 +1,15 @@
+#N canvas 470 1 202 96 10;
+#N canvas 0 0 450 300 wrap 0;
+#X obj 100 100 wifeswap-receiver;
+#X obj 148 206 s mainkey;
+#X obj 244 207 s localtime;
+#X obj 197 231 s control;
+#X obj 100 232 s tempo;
+#X obj 293 237 s harmonics;
+#X connect 0 0 4 0;
+#X connect 0 1 1 0;
+#X connect 0 2 3 0;
+#X connect 0 3 2 0;
+#X connect 0 4 5 0;
+#X coords 0 -1 1 1 200 100 1 100 100;
+#X restore 0 -4 pd wrap;

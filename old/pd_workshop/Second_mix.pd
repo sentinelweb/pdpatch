@@ -1,0 +1,79 @@
+#N canvas 248 82 626 543 10;
+#X msg 446 29 dim 16 240;
+#X obj 429 51 pdp_noise;
+#X obj 33 193 metro 40;
+#X obj 55 236 pdp_reg;
+#X obj 90 283 pdp_zoom;
+#X obj 54 332 pdp_scale 320 240;
+#X obj 55 388 pdp_mix;
+#X obj 170 224 hsl 128 15 0 70 0 0 empty empty empty -2 -6 0 8 -258699
+-1 -1 0 1;
+#X obj 302 186 pdp_noise;
+#X obj 307 159 metro 40;
+#X obj 14 93 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 0 1
+;
+#X obj 318 135 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 0
+1;
+#X obj 129 382 hsl 128 15 0 1 0 0 empty empty empty -2 -6 0 8 -241291
+-1 -1 0 1;
+#X obj 95 469 pdp_glx;
+#X msg 406 27 bang;
+#X obj 401 382 pdp_warhol;
+#X obj 378 313 hsl 128 15 0 20 0 0 empty empty empty -2 -6 0 8 -24198
+-1 -1 0 1;
+#X obj 382 338 / 5;
+#X floatatom 381 361 5 0 0 0 - - -;
+#X obj 516 299 vradio 15 1 0 8 empty empty empty 0 -6 0 8 -262144 -1
+-1 0;
+#X obj 377 291 hradio 15 1 0 8 empty empty empty 0 -6 0 8 -262144 -1
+-1 0;
+#X obj 54 431 pdp_mix;
+#X obj 120 430 pdp_del;
+#X obj 131 404 hsl 128 15 0 1 0 0 empty empty empty -2 -6 0 8 -241291
+-1 -1 0 1;
+#X text 369 405 this is an effect;
+#X obj 16 410 pdp_add;
+#X text 447 12 screen packet dimensions;
+#X text 121 241 stores video frames;
+#X obj 59 32 openpanel;
+#X msg 64 59 open \$1;
+#X msg 56 7 bang;
+#X obj 94 131 pdp_qt;
+#X text 146 129 quicktime stream;
+#X text 501 51 noisegen;
+#X obj 83 161 pdp_glx;
+#X msg 212 50 fullscreen;
+#X msg 157 24 dim 320 240;
+#X text 225 67 make fullscreen;
+#X text 240 23 size to 320x240;
+#X connect 0 0 1 0;
+#X connect 1 0 3 1;
+#X connect 2 0 3 0;
+#X connect 3 0 4 0;
+#X connect 4 0 5 0;
+#X connect 5 0 6 0;
+#X connect 6 0 25 0;
+#X connect 7 0 4 1;
+#X connect 8 0 6 1;
+#X connect 9 0 8 0;
+#X connect 10 0 2 0;
+#X connect 11 0 9 0;
+#X connect 12 0 6 2;
+#X connect 14 0 1 0;
+#X connect 16 0 17 0;
+#X connect 16 0 15 3;
+#X connect 17 0 18 0;
+#X connect 19 0 15 2;
+#X connect 20 0 15 1;
+#X connect 21 0 22 0;
+#X connect 21 0 13 0;
+#X connect 22 0 21 1;
+#X connect 22 0 25 1;
+#X connect 23 0 21 2;
+#X connect 25 0 21 0;
+#X connect 28 0 29 0;
+#X connect 29 0 31 0;
+#X connect 30 0 28 0;
+#X connect 31 0 34 0;
+#X connect 35 0 13 0;
+#X connect 36 0 13 0;

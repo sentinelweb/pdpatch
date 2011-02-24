@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<frame title="interface title">
+	<button id="butt" output="$e:t1:0:v:0" value="10" title="Buton 10" width="200" tooltip="Press me" />
+	<slider id="slider1" output="$e:t1:0:v:0" value="butt" title="SLIDE ME" width="200" 
+		tooltip="A General Slider" log="false" input="$e:t1:0:v:0" step="1" min="1" max="100" />
+	<file id="file1" output="$e:t1:0:v:0" value="/home" title="Audio file" width="200" tooltip="A file input" input="$e:t1:0:v:0" />
+	<text id="text1" output="$e:t1:0:v:0" value="Sol" title="Sun" width="200" tooltip="A Text input" input="$e:t1:0:v:0" />
+</frame>

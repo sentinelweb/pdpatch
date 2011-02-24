@@ -1,0 +1,351 @@
+#N canvas 826 54 578 754 10;
+#X obj -58 315 hsl 128 15 0 127 0 0 empty empty empty -2 -6 0 8 -262144
+-1 -1 0 1;
+#X obj -57 336 hsl 128 15 0 100 0 0 empty empty empty -2 -6 0 8 -262144
+-1 -1 0 1;
+#X obj -58 356 hsl 128 15 1 400 1 0 empty empty empty -2 -6 0 8 -262144
+-1 -1 0 1;
+#X obj -58 410 hsl 128 15 0 127 0 0 empty empty empty -2 -6 0 8 -262144
+-1 -1 0 1;
+#X text -48 408 volume;
+#X text -57 354 offset;
+#X text -52 335 LFO Freq;
+#X text -58 314 depth;
+#X obj -59 374 hsl 128 15 0 127 0 0 empty empty empty -2 -6 0 8 -262144
+-1 -1 0 1;
+#X text -54 373 feedback;
+#X obj -59 392 hsl 128 15 0 127 0 0 empty empty empty -2 -6 0 8 -262144
+-1 -1 0 1;
+#X text -56 390 feedback delay;
+#X floatatom 38 317 5 0 0 0 - - -;
+#X floatatom 39 336 5 0 0 0 - - -;
+#X floatatom 38 357 5 0 0 0 - - -;
+#X floatatom 39 376 5 0 0 0 - - -;
+#X floatatom 40 391 5 0 0 0 - - -;
+#X floatatom 38 409 5 0 0 0 - - -;
+#X obj 216 547 dac~;
+#X obj 113 312 hsl 128 15 0 127 0 0 empty empty empty -2 -6 0 8 -262144
+-1 -1 0 1;
+#X obj 114 333 hsl 128 15 0 100 0 0 empty empty empty -2 -6 0 8 -262144
+-1 -1 0 1;
+#X obj 113 353 hsl 128 15 1 400 1 0 empty empty empty -2 -6 0 8 -262144
+-1 -1 0 1;
+#X obj 111 407 hsl 128 15 0 127 0 0 empty empty empty -2 -6 0 8 -262144
+-1 -1 0 1;
+#X text 123 405 volume;
+#X text 114 351 offset;
+#X text 119 332 LFO Freq;
+#X text 113 311 depth;
+#X obj 112 371 hsl 128 15 0 127 0 0 empty empty empty -2 -6 0 8 -262144
+-1 -1 0 1;
+#X text 117 370 feedback;
+#X obj 112 389 hsl 128 15 0 127 0 0 empty empty empty -2 -6 0 8 -262144
+-1 -1 0 1;
+#X text 115 387 feedback delay;
+#X floatatom 209 314 5 0 0 0 - - -;
+#X floatatom 210 333 5 0 0 0 - - -;
+#X floatatom 209 354 5 0 0 0 - - -;
+#X floatatom 210 373 5 0 0 0 - - -;
+#X floatatom 211 388 5 0 0 0 - - -;
+#X floatatom 209 406 5 0 0 0 - - -;
+#X obj -91 188 ../openlab_radio/bird_chirp;
+#X obj -92 317 *~ 1;
+#X obj -72 297 hsl 128 15 0 1 0 0 empty empty empty -2 -6 0 8 -262144
+-1 -1 0 1;
+#X obj -48 217 OSCroute /bird_vol;
+#X obj -65 504 print ---------------------;
+#X obj -67 482 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X obj -54 87 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X obj -86 87 OSCroute /bird;
+#X obj -35 245 pack f f;
+#X obj -35 266 line;
+#X obj -44 -33 dumpOSC 10001;
+#X obj 107 36 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X obj 103 36 OSCroute /audio;
+#X obj 109 58 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X obj 105 199 ../openlab_radio/sampler;
+#X obj 105 57 OSCroute /audio_state;
+#X obj 129 129 unpack f f f f f;
+#X obj 129 174 * 1;
+#X obj 145 152 hsl 128 15 0 1 0 0 empty empty empty -2 -6 0 8 -262144
+-1 -1 0 1;
+#X floatatom 242 153 5 0 0 0 - - -;
+#X obj 197 174 del 1;
+#X floatatom 138 267 10 0 0 0 - - -;
+#X text 244 136 0.716;
+#X obj -57 -13 hsl 500 15 0 8e+006 0 0 empty empty empty -2 -6 0 8
+-262144 -1 -1 0 1;
+#X obj 179 174 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X floatatom 369 -15 10 0 0 0 - - -;
+#X obj 104 79 OSCroute /audio_flange;
+#X obj 110 290 unpack f f f f f f;
+#X obj 109 80 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X obj 218 518 hip~ 30;
+#X obj -83 43 OSCroute /bird_mult;
+#X obj -68 43 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X obj -76 65 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X obj -86 65 OSCroute /bird_offset;
+#X obj 103 178 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X obj 48 152 pack f f f;
+#X obj -74 123 unpack f f f f f f f f f f f f;
+#X obj 257 1 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X obj 257 22 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X obj 256 202 ../openlab_radio/sampler;
+#X obj 280 132 unpack f f f f f;
+#X obj 280 177 * 1;
+#X obj 296 155 hsl 128 15 0 1 0 0 empty empty empty -2 -6 0 8 -262144
+-1 -1 700 1;
+#X obj 348 177 del 1;
+#X floatatom 289 222 10 0 0 0 - - -;
+#X obj 256 173 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X obj 248 43 OSCroute /audio2_flange;
+#X obj 246 22 OSCroute /audio2_state;
+#X obj 246 -1 OSCroute /audio2;
+#X obj -64 257 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X text -1 298 bird_vol;
+#X obj 286 300 hsl 128 15 0 127 0 0 empty empty empty -2 -6 0 8 -262144
+-1 -1 5433 1;
+#X obj 287 321 hsl 128 15 0 100 0 0 empty empty empty -2 -6 0 8 -262144
+-1 -1 2032 1;
+#X obj 286 341 hsl 128 15 1 400 1 0 empty empty empty -2 -6 0 8 -262144
+-1 -1 1800 1;
+#X obj 284 395 hsl 128 15 0 127 0 0 empty empty empty -2 -6 0 8 -262144
+-1 -1 2900 1;
+#X text 296 393 volume;
+#X text 287 339 offset;
+#X text 292 320 LFO Freq;
+#X text 286 299 depth;
+#X obj 285 359 hsl 128 15 0 127 0 0 empty empty empty -2 -6 0 8 -262144
+-1 -1 11500 1;
+#X text 290 358 feedback;
+#X obj 285 377 hsl 128 15 0 127 0 0 empty empty empty -2 -6 0 8 -262144
+-1 -1 4400 1;
+#X text 288 375 feedback delay;
+#X floatatom 382 302 5 0 0 0 - - -;
+#X floatatom 383 321 5 0 0 0 - - -;
+#X floatatom 382 342 5 0 0 0 - - -;
+#X floatatom 383 361 5 0 0 0 - - -;
+#X floatatom 384 376 5 0 0 0 - - -;
+#X floatatom 382 394 5 0 0 0 - - -;
+#X obj 262 416 ../openlab_radio/flanger;
+#X obj 284 278 unpack f f f f f f;
+#X obj 323 239 hsl 128 15 -50 50 0 0 empty empty empty -2 -6 0 8 -262144
+-1 -1 7112 1;
+#X obj 63 241 ../openlab_radio/tape_pitchshift;
+#X obj 125 223 hsl 128 15 -50 50 0 0 empty empty empty -2 -6 0 8 -262144
+-1 -1 0 1;
+#X obj 395 14 cnv 15 60 100 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 439 64 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X obj 409 83 genin;
+#X obj 422 64 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 1 1
+;
+#X obj 416 38 r in;
+#X obj 110 103 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X obj 105 102 OSCroute /audio_pitch;
+#X obj 250 65 OSCroute /audio2_pitch;
+#X obj 259 67 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X obj 258 44 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X text 330 238 PITCH;
+#X text 167 223 pitch;
+#X floatatom 215 223 5 0 0 0 - - -;
+#X obj 261 257 ../openlab_radio/tape_pitchshift;
+#X obj -84 436 ../openlab_radio/flanger;
+#X obj 107 428 ../openlab_radio/flanger;
+#X obj 408 20 r in8;
+#X obj 331 178 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X floatatom 409 240 5 0 0 0 - - -;
+#X floatatom 400 125 10 0 0 0 - - -;
+#X obj 260 90 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X obj 251 88 OSCroute /audio2_pitch_n;
+#X obj 400 104 * -1;
+#X obj 86 483 s in8;
+#X obj -69 18 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X obj -84 18 OSCroute /bird_env;
+#X obj -18 549 OSCroute /grain1;
+#X text -18 569 nick grainer here... cpu.;
+#X obj 304 445 hsl 128 15 0 2 0 0 empty empty empty -2 -6 0 8 -262144
+-1 -1 10600 1;
+#X obj 261 487 ../openlab_radio/eq;
+#X obj 256 111 OSCroute /audio2_eq;
+#X obj 266 111 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X connect 0 0 12 0;
+#X connect 0 0 125 2;
+#X connect 1 0 13 0;
+#X connect 1 0 125 1;
+#X connect 2 0 14 0;
+#X connect 2 0 125 3;
+#X connect 3 0 17 0;
+#X connect 3 0 125 6;
+#X connect 8 0 15 0;
+#X connect 8 0 125 4;
+#X connect 10 0 16 0;
+#X connect 10 0 125 5;
+#X connect 19 0 31 0;
+#X connect 19 0 126 2;
+#X connect 20 0 32 0;
+#X connect 20 0 126 1;
+#X connect 21 0 33 0;
+#X connect 21 0 126 3;
+#X connect 22 0 36 0;
+#X connect 22 0 126 6;
+#X connect 27 0 34 0;
+#X connect 27 0 126 4;
+#X connect 29 0 35 0;
+#X connect 29 0 126 5;
+#X connect 37 0 38 0;
+#X connect 37 1 134 0;
+#X connect 38 0 125 0;
+#X connect 39 0 38 1;
+#X connect 40 0 46 0;
+#X connect 40 0 86 0;
+#X connect 42 0 41 0;
+#X connect 44 0 43 0;
+#X connect 44 0 73 0;
+#X connect 45 0 46 0;
+#X connect 46 0 39 0;
+#X connect 47 0 40 0;
+#X connect 47 0 44 0;
+#X connect 47 0 49 0;
+#X connect 47 0 52 0;
+#X connect 47 0 63 0;
+#X connect 47 0 67 0;
+#X connect 47 0 70 0;
+#X connect 47 0 83 0;
+#X connect 47 0 84 0;
+#X connect 47 0 85 0;
+#X connect 47 0 117 0;
+#X connect 47 0 118 0;
+#X connect 47 0 132 0;
+#X connect 47 0 137 0;
+#X connect 47 0 141 0;
+#X connect 49 0 48 0;
+#X connect 49 0 51 0;
+#X connect 51 0 109 0;
+#X connect 52 0 50 0;
+#X connect 52 0 53 0;
+#X connect 53 0 54 0;
+#X connect 53 1 51 2;
+#X connect 53 2 51 3;
+#X connect 53 3 57 0;
+#X connect 53 4 51 5;
+#X connect 54 0 51 1;
+#X connect 54 0 58 0;
+#X connect 55 0 54 1;
+#X connect 55 0 56 0;
+#X connect 57 0 51 4;
+#X connect 60 0 51 1;
+#X connect 60 0 62 0;
+#X connect 60 0 136 0;
+#X connect 61 0 51 4;
+#X connect 63 0 64 0;
+#X connect 63 0 65 0;
+#X connect 64 0 19 0;
+#X connect 64 1 20 0;
+#X connect 64 2 21 0;
+#X connect 64 3 27 0;
+#X connect 64 4 29 0;
+#X connect 64 5 22 0;
+#X connect 66 0 18 0;
+#X connect 66 0 18 1;
+#X connect 67 0 68 0;
+#X connect 67 0 37 2;
+#X connect 70 0 69 0;
+#X connect 70 0 37 1;
+#X connect 71 0 51 0;
+#X connect 72 0 37 5;
+#X connect 73 0 37 0;
+#X connect 73 1 37 2;
+#X connect 73 2 37 1;
+#X connect 73 4 37 3;
+#X connect 73 5 37 4;
+#X connect 73 6 45 0;
+#X connect 73 7 45 1;
+#X connect 73 8 72 0;
+#X connect 73 9 72 1;
+#X connect 73 10 72 2;
+#X connect 73 11 37 6;
+#X connect 76 0 124 0;
+#X connect 77 0 78 0;
+#X connect 77 1 76 2;
+#X connect 77 2 76 3;
+#X connect 77 3 80 0;
+#X connect 77 4 76 5;
+#X connect 78 0 76 1;
+#X connect 78 0 81 0;
+#X connect 79 0 78 1;
+#X connect 80 0 76 4;
+#X connect 82 0 76 0;
+#X connect 83 0 120 0;
+#X connect 83 0 107 0;
+#X connect 84 0 75 0;
+#X connect 84 0 77 0;
+#X connect 85 0 74 0;
+#X connect 85 0 76 0;
+#X connect 88 0 100 0;
+#X connect 88 0 106 2;
+#X connect 89 0 101 0;
+#X connect 89 0 106 1;
+#X connect 90 0 102 0;
+#X connect 90 0 106 3;
+#X connect 91 0 105 0;
+#X connect 91 0 106 6;
+#X connect 96 0 103 0;
+#X connect 96 0 106 4;
+#X connect 98 0 104 0;
+#X connect 98 0 106 5;
+#X connect 106 0 140 0;
+#X connect 107 0 88 0;
+#X connect 107 1 89 0;
+#X connect 107 2 90 0;
+#X connect 107 3 96 0;
+#X connect 107 4 98 0;
+#X connect 107 5 91 0;
+#X connect 108 0 124 1;
+#X connect 108 0 129 0;
+#X connect 109 0 126 0;
+#X connect 110 0 109 1;
+#X connect 110 0 123 0;
+#X connect 112 0 113 3;
+#X connect 114 0 113 2;
+#X connect 115 0 113 1;
+#X connect 117 0 116 0;
+#X connect 117 0 110 0;
+#X connect 118 0 119 0;
+#X connect 118 0 108 0;
+#X connect 118 0 130 0;
+#X connect 124 0 106 0;
+#X connect 125 0 66 0;
+#X connect 126 0 66 0;
+#X connect 127 0 113 0;
+#X connect 128 0 80 0;
+#X connect 132 0 131 0;
+#X connect 132 0 133 0;
+#X connect 133 0 130 0;
+#X connect 133 0 108 0;
+#X connect 136 0 135 0;
+#X connect 136 0 37 7;
+#X connect 140 0 66 0;
+#X connect 141 0 142 0;
+#X connect 141 0 140 1;

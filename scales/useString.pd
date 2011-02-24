@@ -1,0 +1,9 @@
+#N canvas 264 291 450 300 10;
+#X obj 148 165 Strings;
+#X obj 95 79 OSCroute /s1;
+#X obj 126 23 dumpOSC 10001;
+#X obj 135 235 dac~;
+#X connect 0 0 3 0;
+#X connect 0 0 3 1;
+#X connect 1 0 0 0;
+#X connect 2 0 1 0;

@@ -1,0 +1,223 @@
+#N canvas 0 165 1028 798 10;
+#X floatatom 32 -50 5 0 0 0 - - -;
+#X floatatom 115 -92 5 0 0 0 - - -;
+#X obj 28 -114 inlet;
+#X obj 124 -122 inlet;
+#X text 76 -82 note;
+#X obj 49 -1 select 1;
+#X obj 51 20 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 49 138 select 1;
+#X obj 51 159 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 47 68 select 1;
+#X obj 51 89 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 821 626 outlet~;
+#X obj 363 -109 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 389 -110 0 100000 71632 0 1;
+#X obj 370 -23 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 396 -24 0 100000 80000 0 1;
+#X obj 368 67 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 822 326 *~ 1;
+#X obj 48 228 select 1;
+#X obj 50 249 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 367 157 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 364 220 instrument.7.player;
+#X obj 49 314 select 1;
+#X obj 51 335 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 368 243 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 394 242 0 100000 40000 0 1;
+#X obj 49 402 select 1;
+#X obj 51 423 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 368 331 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 394 330 0 100000 40000 0 1;
+#X obj 47 487 select 1;
+#X obj 47 509 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 366 416 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 392 415 0 100000 40000 0 1;
+#X obj 46 581 select 1;
+#X obj 45 605 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 365 510 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 365 532 /home/robm/media/samples/PlatinumSelection/BonusBeats/Hits/Kicks/03.wav
+;
+#X msg 393 156 0 100000 80000 0 1;
+#X obj 234 -106 bang;
+#X obj 234 -126 loadbang;
+#X obj 212 -123 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 48 -23 == 10;
+#X obj 47 46 == 11;
+#X obj 48 116 == 12;
+#X obj 48 206 == 13;
+#X obj 48 292 == 20;
+#X obj 48 380 == 21;
+#X obj 46 465 == 22;
+#X obj 45 559 == 23;
+#X obj 360 -46 instrument.7.player;
+#X obj 367 40 instrument.7.player;
+#X obj 365 130 instrument.7.player;
+#X obj 365 306 instrument.7.player;
+#X obj 365 394 instrument.7.player;
+#X obj 363 479 instrument.7.player;
+#X obj 362 573 instrument.7.player;
+#X obj 74 -100 != 0;
+#X obj 27 -83 spigot;
+#X msg 197 195 1;
+#X msg 394 66 4000 8000 80000 0 0.8;
+#X msg 391 509 1000 100000 44100 0 0.7;
+#X obj 820 575 hip~ 5;
+#X obj 820 600 hip~ 5;
+#X obj 921 640 outlet;
+#X msg 160 622 send /drm/trig \$1;
+#X msg 123 0 10;
+#X msg 118 67 11;
+#X msg 117 139 12;
+#X msg 120 228 13;
+#X msg 121 313 20;
+#X msg 120 404 21;
+#X msg 114 487 22;
+#X msg 113 580 23;
+#X msg 362 -87 /mnt/home/robm/media/samples/PlatinumSelection/BonusBeats/Hits/Hats/02.wav
+;
+#X msg 369 -1 /mnt/home/robm/media/samples/PlatinumSelection/BonusBeats/Hits/Hats/20.wav
+;
+#X msg 367 89 /mnt/home/robm/media/samples/PlatinumSelection/BonusBeats/Hits/Hats/25.wav
+;
+#X msg 366 179 /mnt/home/robm/media/samples/PlatinumSelection/BonusBeats/Hits/Hats/30.wav
+;
+#X msg 367 265 /mnt/home/robm/media/samples/PlatinumSelection/BonusBeats/Hits/Kicks/39.wav
+;
+#X msg 367 353 /mnt/home/robm/media/samples/PlatinumSelection/BonusBeats/Hits/Kicks/20.wav
+;
+#X msg 365 439 /mnt/home/robm/media/samples/PlatinumSelection/BonusBeats/Hits/Kicks/09.wav
+;
+#X obj 826 533 *~ 1;
+#X connect 0 0 42 0;
+#X connect 0 0 43 0;
+#X connect 0 0 44 0;
+#X connect 0 0 45 0;
+#X connect 0 0 46 0;
+#X connect 0 0 47 0;
+#X connect 0 0 48 0;
+#X connect 0 0 49 0;
+#X connect 2 0 58 0;
+#X connect 3 0 1 0;
+#X connect 3 0 57 0;
+#X connect 5 0 6 0;
+#X connect 6 0 50 1;
+#X connect 6 0 66 0;
+#X connect 7 0 8 0;
+#X connect 8 0 52 1;
+#X connect 8 0 68 0;
+#X connect 9 0 10 0;
+#X connect 10 0 51 1;
+#X connect 10 0 67 0;
+#X connect 12 0 13 0;
+#X connect 12 0 74 0;
+#X connect 13 0 50 2;
+#X connect 14 0 15 0;
+#X connect 14 0 75 0;
+#X connect 15 0 51 2;
+#X connect 16 0 60 0;
+#X connect 16 0 76 0;
+#X connect 17 0 81 0;
+#X connect 18 0 19 0;
+#X connect 19 0 21 1;
+#X connect 19 0 69 0;
+#X connect 20 0 38 0;
+#X connect 20 0 77 0;
+#X connect 21 0 17 0;
+#X connect 22 0 23 0;
+#X connect 23 0 53 1;
+#X connect 23 0 70 0;
+#X connect 24 0 25 0;
+#X connect 24 0 78 0;
+#X connect 25 0 53 2;
+#X connect 26 0 27 0;
+#X connect 27 0 54 1;
+#X connect 27 0 71 0;
+#X connect 28 0 29 0;
+#X connect 28 0 79 0;
+#X connect 29 0 54 2;
+#X connect 30 0 31 0;
+#X connect 31 0 55 1;
+#X connect 31 0 72 0;
+#X connect 32 0 33 0;
+#X connect 32 0 80 0;
+#X connect 33 0 55 2;
+#X connect 34 0 35 0;
+#X connect 35 0 73 0;
+#X connect 36 0 61 0;
+#X connect 36 0 37 0;
+#X connect 37 0 56 0;
+#X connect 38 0 21 2;
+#X connect 39 0 12 0;
+#X connect 39 0 16 0;
+#X connect 39 0 20 0;
+#X connect 39 0 14 0;
+#X connect 39 0 24 0;
+#X connect 39 0 28 0;
+#X connect 39 0 32 0;
+#X connect 39 0 36 0;
+#X connect 40 0 39 0;
+#X connect 41 0 39 0;
+#X connect 42 0 5 0;
+#X connect 43 0 9 0;
+#X connect 44 0 7 0;
+#X connect 45 0 18 0;
+#X connect 46 0 22 0;
+#X connect 47 0 26 0;
+#X connect 48 0 30 0;
+#X connect 49 0 34 0;
+#X connect 50 0 17 0;
+#X connect 51 0 17 0;
+#X connect 52 0 17 0;
+#X connect 53 0 17 0;
+#X connect 54 0 17 0;
+#X connect 55 0 17 0;
+#X connect 56 0 17 0;
+#X connect 57 0 58 1;
+#X connect 58 0 0 0;
+#X connect 59 0 5 1;
+#X connect 59 0 9 1;
+#X connect 59 0 7 1;
+#X connect 59 0 18 1;
+#X connect 59 0 22 1;
+#X connect 59 0 26 1;
+#X connect 59 0 30 1;
+#X connect 59 0 34 1;
+#X connect 60 0 52 2;
+#X connect 61 0 56 2;
+#X connect 62 0 63 0;
+#X connect 63 0 11 0;
+#X connect 65 0 64 0;
+#X connect 66 0 65 0;
+#X connect 67 0 65 0;
+#X connect 68 0 65 0;
+#X connect 69 0 65 0;
+#X connect 70 0 65 0;
+#X connect 71 0 65 0;
+#X connect 72 0 65 0;
+#X connect 73 0 65 0;
+#X connect 74 0 50 0;
+#X connect 75 0 51 0;
+#X connect 76 0 52 0;
+#X connect 77 0 21 0;
+#X connect 78 0 53 0;
+#X connect 79 0 54 0;
+#X connect 80 0 55 0;
+#X connect 81 0 62 0;

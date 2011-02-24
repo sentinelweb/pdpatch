@@ -1,0 +1,2 @@
+0 360276 46.0039 1 8110.07 127 10 8110.7 F:/samples/SynthBitz/BooRise.wav
+;

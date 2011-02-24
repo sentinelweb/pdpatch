@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<timelines version="1.0">
+<source>
+<objects/>
+</source>
+<description/>
+<colors type="osc">
+<color for="" value="255:255:255"/>
+<color for="/vid/r" value="240:0:240"/>
+<color for="/vid/dela" value="0:210:210"/>
+<color for="/vid/vol" value="0:210:0"/>
+<color for="/vid/ede" value="210:0:0"/>
+<color for="/vid/m" value="225:225:225"/>
+<color for="/vid/mix" value="225:0:225"/>
+<color for="/vi" value="0:255:255"/>
+<color for="/vid/o" value="0:240:240"/>
+<color for="/vid/o2" value="0:240:0"/>
+<color for="/vid/edel" value="210:0:210"/>
+<color for="/noise/note" value="255:0:0"/>
+<color for="/vid/edela" value="0:0:210"/>
+<color for="/vid/ed" value="210:210:210"/>
+<color for="/v" value="0:0:255"/>
+<color for="/" value="255:0:255"/>
+<color for="/vid/d" value="0:0:225"/>
+<color for="/vid/" value="240:240:240"/>
+<color for="/vid" value="0:255:0"/>
+<color for="/vid/o1" value="0:0:240"/>
+<color for="/vid/del" value="0:225:225"/>
+<color for="/vid/mi" value="225:0:0"/>
+<color for="/vid/f" value="240:0:0"/>
+<color for="/vid/e" value="0:225:0"/>
+</colors>
+<colors type="expr">
+<color for="" value="255:255:255"/>
+<color for="$T:poly::poly" value="255:0:0"/>
+<color for="$e:test:0:v:1" value="255:0:255"/>
+</colors>
+<filters>
+<filter target="/noise/f"/>
+</filters>
+<midiKeys key_1="noise" key_2="mixer" key_3="blast" key_4="tick"/>
+<midinotes device="v2" id="tick">
+<midipart note_10="0,*/tick/{$f:poly:index::}/note" note_100="0,*/tick/{$f:poly:index::}/note" note_101="0,*/tick/{$f:poly:index::}/note" note_102="0,*/tick/{$f:poly:index::}/note" note_103="0,*/tick/{$f:poly:index::}/note" note_104="0,*/tick/{$f:poly:index::}/note" note_105="0,*/tick/{$f:poly:index::}/note" note_106="0,*/tick/{$f:poly:index::}/note" note_107="0,*/tick/{$f:poly:index::}/note" note_108="0,*/tick/{$f:poly:index::}/note" note_109="0,*/tick/{$f:poly:index::}/note" note_11="0,*/tick/{$f:poly:index::}/note" note_110="0,*/tick/{$f:poly:index::}/note" note_111="0,*/tick/{$f:poly:index::}/note" note_112="0,*/tick/{$f:poly:index::}/note" note_113="0,*/tick/{$f:poly:index::}/note" note_114="0,*/tick/{$f:poly:index::}/note" note_115="0,*/tick/{$f:poly:index::}/note" note_116="0,*/tick/{$f:poly:index::}/note" note_117="0,*/tick/{$f:poly:index::}/note" note_118="0,*/tick/{$f:poly:index::}/note" note_119="0,*/tick/{$f:poly:index::}/note" note_12="0,*/tick/{$f:poly:index::}/note" note_120="0,*/tick/{$f:poly:index::}/note" note_121="0,*/tick/{$f:poly:index::}/note" note_122="0,*/tick/{$f:poly:index::}/note" note_123="0,*/tick/{$f:poly:index::}/note" note_124="0,*/tick/{$f:poly:index::}/note" note_125="0,*/tick/{$f:poly:index::}/note" note_126="0,*/tick/{$f:poly:index::}/note" note_13="0,*/tick/{$f:poly:index::}/note" note_14="0,*/tick/{$f:poly:index::}/note" note_15="0,*/tick/{$f:poly:index::}/note" note_16="0,*/tick/{$f:poly:index::}/note" note_17="0,*/tick/{$f:poly:index::}/note" note_18="0,*/tick/{$f:poly:index::}/note" note_19="0,*/tick/{$f:poly:index::}/note" note_2="0,*/tick/{$f:poly:index::}/note" note_20="0,*/tick/{$f:poly:index::}/note" note_21="0,*/tick/{$f:poly:index::}/note" note_22="0,*/tick/{$f:poly:index::}/note" note_23="0,*/tick/{$f:poly:index::}/note" note_24="0,*/tick/{$f:poly:index::}/note" note_25="0,*/tick/{$f:poly:index::}/note" note_26="0,*/tick/{$f:poly:index::}/note" note_27="0,*/tick/{$f:poly:index::}/note" note_28="0,*/tick/{$f:poly:index::}/note" note_29="0,*/tick/{$f:poly:index::}/note" note_3="0,*/tick/{$f:poly:index::}/note" note_30="0,*/tick/{$f:poly:index::}/note" note_31="0,*/tick/{$f:poly:index::}/note" note_32="0,*/tick/{$f:poly:index::}/note" note_33="0,*/tick/{$f:poly:index::}/note" note_34="0,*/tick/{$f:poly:index::}/note" note_35="0,*/tick/{$f:poly:index::}/note" note_36="0,*/tick/{$f:poly:index::}/note" note_37="0,*/tick/{$f:poly:index::}/note" note_38="0,*/tick/{$f:poly:index::}/note" note_39="0,*/tick/{$f:poly:index::}/note" note_4="0,*/tick/{$f:poly:index::}/note" note_40="0,*/tick/{$f:poly:index::}/note" note_41="0,*/tick/{$f:poly:index::}/note" note_42="0,*/tick/{$f:poly:index::}/note" note_43="0,*/tick/{$f:poly:index::}/note" note_44="0,*/tick/{$f:poly:index::}/note" note_45="0,*/tick/{$f:poly:index::}/note" note_46="0,*/tick/{$f:poly:index::}/note" note_47="0,*/tick/{$f:poly:index::}/note" note_48="0,*/tick/{$f:poly:index::}/note" note_49="0,*/tick/{$f:poly:index::}/note" note_5="0,*/tick/{$f:poly:index::}/note" note_50="0,*/tick/{$f:poly:index::}/note" note_51="0,*/tick/{$f:poly:index::}/note" note_52="0,*/tick/{$f:poly:index::}/note" note_53="0,*/tick/{$f:poly:index::}/note" note_54="0,*/tick/{$f:poly:index::}/note" note_55="0,*/tick/{$f:poly:index::}/note" note_56="0,*/tick/{$f:poly:index::}/note" note_57="0,*/tick/{$f:poly:index::}/note" note_58="0,*/tick/{$f:poly:index::}/note" note_59="0,*/tick/{$f:poly:index::}/note" note_6="0,*/tick/{$f:poly:index::}/note" note_60="0,*/tick/{$f:poly:index::}/note" note_61="0,*/tick/{$f:poly:index::}/note" note_62="0,*/tick/{$f:poly:index::}/note" note_63="0,*/tick/{$f:poly:index::}/note" note_64="0,*/tick/{$f:poly:index::}/note" note_65="0,*/tick/{$f:poly:index::}/note" note_66="0,*/tick/{$f:poly:index::}/note" note_67="0,*/tick/{$f:poly:index::}/note" note_68="0,*/tick/{$f:poly:index::}/note" note_69="0,*/tick/{$f:poly:index::}/note" note_7="0,*/tick/{$f:poly:index::}/note" note_70="0,*/tick/{$f:poly:index::}/note" note_71="0,*/tick/{$f:poly:index::}/note" note_72="0,*/tick/{$f:poly:index::}/note" note_73="0,*/tick/{$f:poly:index::}/note" note_74="0,*/tick/{$f:poly:index::}/note" note_75="0,*/tick/{$f:poly:index::}/note" note_76="0,*/tick/{$f:poly:index::}/note" note_77="0,*/tick/{$f:poly:index::}/note" note_78="0,*/tick/{$f:poly:index::}/note" note_79="0,*/tick/{$f:poly:index::}/note" note_8="0,*/tick/{$f:poly:index::}/note" note_80="0,*/tick/{$f:poly:index::}/note" note_81="0,*/tick/{$f:poly:index::}/note" note_82="0,*/tick/{$f:poly:index::}/note" note_83="0,*/tick/{$f:poly:index::}/note" note_84="0,*/tick/{$f:poly:index::}/note" note_85="0,*/tick/{$f:poly:index::}/note" note_86="0,*/tick/{$f:poly:index::}/note" note_87="0,*/tick/{$f:poly:index::}/note" note_88="0,*/tick/{$f:poly:index::}/note" note_89="0,*/tick/{$f:poly:index::}/note" note_9="0,*/tick/{$f:poly:index::}/note" note_90="0,*/tick/{$f:poly:index::}/note" note_91="0,*/tick/{$f:poly:index::}/note" note_92="0,*/tick/{$f:poly:index::}/note" note_93="0,*/tick/{$f:poly:index::}/note" note_94="0,*/tick/{$f:poly:index::}/note" note_95="0,*/tick/{$f:poly:index::}/note" note_96="0,*/tick/{$f:poly:index::}/note" note_97="0,*/tick/{$f:poly:index::}/note" note_98="0,*/tick/{$f:poly:index::}/note" note_99="0,*/tick/{$f:poly:index::}/note" part="0"/>
+</midinotes>
+<midinotes default="true" device="v2" id="noise">
+<midipart note_0="0,/noise/note" note_1="0,/noise/note" note_10="0,/noise/note" note_100="0,/noise/note" note_101="0,/noise/note" note_102="0,/noise/note" note_103="0,/noise/note" note_104="0,/noise/note" note_105="0,/noise/note" note_106="0,/noise/note" note_107="0,/noise/note" note_108="0,/noise/note" note_109="0,/noise/note" note_11="0,/noise/note" note_110="0,/noise/note" note_111="0,/noise/note" note_112="0,/noise/note" note_113="0,/noise/note" note_114="0,/noise/note" note_115="0,/noise/note" note_116="0,/noise/note" note_117="0,/noise/note" note_118="0,/noise/note" note_119="0,/noise/note" note_12="0,/noise/note" note_120="0,/noise/note" note_13="0,/noise/note" note_14="0,/noise/note" note_15="0,/noise/note" note_16="0,/noise/note" note_17="0,/noise/note" note_18="0,/noise/note" note_19="0,/noise/note" note_2="0,/noise/note" note_20="0,/noise/note" note_21="0,/noise/note" note_22="0,/noise/note" note_23="0,/noise/note" note_24="0,/noise/note" note_25="0,/noise/note" note_26="0,/noise/note" note_27="0,/noise/note" note_28="0,/noise/note" note_29="0,/noise/note" note_3="0,/noise/note" note_30="0,/noise/note" note_31="0,/noise/note" note_32="0,/noise/note" note_33="0,/noise/note" note_34="0,/noise/note" note_35="0,/noise/note" note_36="0,/noise/note" note_37="0,/noise/note" note_38="0,/noise/note" note_39="0,/noise/note" note_4="0,/noise/note" note_40="0,/noise/note" note_41="0,/noise/note" note_42="0,/noise/note" note_43="0,/noise/note" note_44="0,/noise/note" note_45="0,/noise/note" note_46="0,/noise/note" note_47="0,/noise/note" note_48="0,/noise/note" note_49="0,/noise/note" note_5="0,/noise/note" note_50="0,/noise/note" note_51="0,/noise/note" note_52="0,/noise/note" note_53="0,/noise/note" note_54="0,/noise/note" note_55="0,/noise/note" note_56="0,/noise/note" note_57="0,/noise/note" note_58="0,/noise/note" note_59="0,/noise/note" note_6="0,/noise/note" note_60="0,/noise/note" note_61="0,/noise/note" note_62="0,/noise/note" note_63="0,/noise/note" note_64="0,/noise/note" note_65="0,/noise/note" note_66="0,/noise/note" note_67="0,/noise/note" note_68="0,/noise/note" note_69="0,/noise/note" note_7="0,/noise/note" note_70="0,/noise/note" note_71="0,/noise/note" note_72="0,/noise/note" note_73="0,/noise/note" note_74="0,/noise/note" note_75="0,/noise/note" note_76="0,/noise/note" note_77="0,/noise/note" note_78="0,/noise/note" note_79="0,/noise/note" note_8="0,/noise/note" note_80="0,/noise/note" note_81="0,/noise/note" note_82="0,/noise/note" note_83="0,/noise/note" note_84="0,/noise/note" note_85="0,/noise/note" note_86="0,/noise/note" note_87="0,/noise/note" note_88="0,/noise/note" note_89="0,/noise/note" note_9="0,/noise/note" note_90="0,/noise/note" note_91="0,/noise/note" note_92="0,/noise/note" note_93="0,/noise/note" note_94="0,/noise/note" note_95="0,/noise/note" note_96="0,/noise/note" note_97="0,/noise/note" note_98="0,/noise/note" note_99="0,/noise/note" part="0"/>
+</midinotes>
+<midicontrols default="true" device="" id="new2"/>
+<midicontrols default="true" device="" id="new3"/>
+<midicontrols default="true" device="" id="new0"/>
+<midicontrols default="true" device="" id="new"/>
+<midicontrols default="true" device="" id="new1"/>
+<midicontrols default="true" device="" id="new4"/>
+<midicontrols default="true" device="v2" id="tick"/>
+<midicontrols default="true" device="v2" id="noise"/>
+<midicontrols default="true" device="BCF2000" id="blast">
+<midicontrol size="0"/>
+<midicontrol ctlstring_0="0 83 0 /blast/bits 1.0 0.0 n" size="1"/>
+<midicontrol ctlstring_0="0 65 0 /blast/trig 1.0 0.0 b" size="1"/>
+<midicontrol ctlstring_0="0 73 0 /blast/sq 1.0 0.0 n" size="1"/>
+<midicontrol ctlstring_0="0 82 0 /blast/osc/dut 0.016 -1.0 n" size="1"/>
+<midicontrol ctlstring_0="0 81 0 /blast/freq 1.03 0.0 l" size="1"/>
+<midicontrol ctlstring_0="0 86 0 /blast/del/t 1.05 0.01 l" size="1"/>
+<midicontrol ctlstring_0="0 6 0 /blast/del/a 0.0080 0.0 n" size="1"/>
+</midicontrols>
+<midicontrols device="BCF2000" id="mixer">
+<midicontrol ctlstring_0="0 84 0 /mixer/mix/ch4 1.0 0.0 n" size="1"/>
+<midicontrol size="0"/>
+<midicontrol ctlstring_0="0 83 0 /mixer/mix/ch3 1.0 0.0 n" size="1"/>
+<midicontrol ctlstring_0="0 82 0 /mixer/mix/ch2 1.0 0.0 n" size="1"/>
+<midicontrol ctlstring_0="0 81 0 /mixer/mix/ch1 1.0 0.0 n" size="1"/>
+</midicontrols>
+<midicontrols device="BCF2000" id="noise">
+<midicontrol ctlstring_0="0 84 0 /noise/osc2 1.04 0.0 l" ctlstring_1="0 84 0 $e:vid:o2send:v:0:0 4.0 -256.0 n" ctlstring_2="0 84 1 $e:vid:o2send:f 0.0 0.0 n" size="3"/>
+<midicontrol size="0"/>
+<midicontrol ctlstring_0="0 83 0 /noise/osc1 1.04 0.0 l" ctlstring_1="0 83 0 $e:vid:o1send:v:0:0 4.0 -256.0 n" ctlstring_2="0 83 1 $e:vid:o1send:f 0.0 0.0 n" size="3"/>
+<midicontrol ctlstring_0="0 82 0 /noise/r 1.0 0.0 n" ctlstring_1="0 82 0 $e:vid:rsend:v:0:0 4.0 -256.0 n" ctlstring_2="0 82 1 $e:vid:rsend:f 0.0 0.0 n" size="3"/>
+<midicontrol ctlstring_0="0 81 0 /noise/f 1.08 20.0 l" ctlstring_1="0 81 0 $e:vid:fsend:v:0:0 4.0 -256.0 n" ctlstring_2="0 81 1 $e:vid:fsend:f 0.0 0.0 n" size="3"/>
+<midicontrol ctlstring_0="0 87 0 /mixer/mix/ch1 1.0 0.0 n" ctlstring_1="0 87 0 $e:vid:vsend:v:0:0 4.0 -256.0 n" ctlstring_2="0 87 1 $e:vid:vsend:f 0.0 0.0 n" size="3"/>
+<midicontrol ctlstring_0="0 86 0 /noise/del/t 1.05 0.01 l" ctlstring_1="0 86 0 $e:vid:dsend:v:0:0 4.0 -256.0 n" ctlstring_2="0 86 1 $e:vid:dsend:f 0.0 0.0 n" size="3"/>
+<midicontrol ctlstring_0="0 85 0 /noise/mix 0.0080 0.0 n" ctlstring_1="0 85 0 $e:vid:msend:v:0:0 4.0 -256.0 n" ctlstring_2="0 85 1 $e:vid:msend:f 0.0 0.0 n" size="3"/>
+<midicontrol ctlstring_0="0 1 0 /noise/notebase 1.0 -62.0 n" size="1"/>
+<midicontrol ctlstring_0="0 6 0 /noise/del/a 0.0080 0.0 n" ctlstring_1="0 6 0 $e:vid:asend:v:0:0 4.0 -256.0 n" ctlstring_2="0 6 1 $e:vid:asend:f 0.0 0.0 n" size="3"/>
+</midicontrols>
+<timeline beatLength="10" beatPerBar="4" color="255 0 0" currentEvent="-1" displayEnd="8000" displayStart="0" followOnExpr="" height="100" id="n_prg1" lastSelEvent="-1" oscIndex="0" pitch="1.0" playMode="" quantize="50" timeLineLength="8000" typeDisplay="false">
+<event active="true" eventTime="2000" id="" oscIndex="0" oscMsgName="/noise/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="65 40" valueLen="0"/>
+<event active="true" eventTime="2500" id="" oscIndex="0" oscMsgName="/noise/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="64 41" valueLen="0"/>
+<event active="true" eventTime="3500" id="" oscIndex="0" oscMsgName="/noise/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="62 40" valueLen="0"/>
+<event active="true" eventTime="4000" id="" oscIndex="0" oscMsgName="/noise/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="60 48" valueLen="0"/>
+<event active="true" eventTime="5000" id="" oscIndex="0" oscMsgName="/noise/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="64 31" valueLen="0"/>
+<event active="true" eventTime="6000" id="" oscIndex="0" oscMsgName="/noise/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="65 55" valueLen="0"/>
+</timeline>
+<timeline beatLength="10" beatPerBar="4" color="255 0 0" currentEvent="0" displayEnd="8000" displayStart="0" followOnExpr="" height="100" id="test" lastSelEvent="0" oscIndex="0" pitch="1.0" playMode="" quantize="50" timeLineLength="8000" typeDisplay="false">
+<event active="true" eventTime="1600" id="" oscIndex="0" oscMsgName="$e:test:0:v:1" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="$f:poly:reset:: 2" valueLen="0"/>
+</timeline>
+<timeline beatLength="10" beatPerBar="4" color="255 0 0" currentEvent="7" displayEnd="8000" displayStart="0" followOnExpr="" height="100" id="vid" lastSelEvent="7" oscIndex="0" pitch="1.0" playMode="" quantize="50" timeLineLength="8000" typeDisplay="false">
+<event active="true" eventTime="250" id="fsend" oscIndex="1" oscMsgName="/vid/f" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="-12.0" valueLen="0"/>
+<event active="true" eventTime="700" id="rsend" oscIndex="1" oscMsgName="/vid/r" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="144.0" valueLen="0"/>
+<event active="true" eventTime="1000" id="o1send" oscIndex="1" oscMsgName="/vid/o1" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="-32.0" valueLen="0"/>
+<event active="true" eventTime="1350" id="o2send" oscIndex="1" oscMsgName="/vid/o2" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="0.0" valueLen="0"/>
+<event active="true" eventTime="1750" id="msend" oscIndex="1" oscMsgName="/vid/mix" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="-256.0" valueLen="0"/>
+<event active="true" eventTime="2050" id="dsend" oscIndex="1" oscMsgName="/vid/del" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="116.0" valueLen="0"/>
+<event active="true" eventTime="2400" id="asend" oscIndex="1" oscMsgName="/vid/dela" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="100.0" valueLen="0"/>
+<event active="true" eventTime="2750" id="vsend" oscIndex="1" oscMsgName="/vid/vol" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="192.0" valueLen="0"/>
+</timeline>
+<view visible="vid,n_prg1"/>
+</timelines>

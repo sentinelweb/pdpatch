@@ -1,0 +1,158 @@
+#N canvas 399 440 682 613 10;
+#X obj 13 570 *~ 1;
+#X obj 12 593 dac~;
+#X obj 50 570 hsl 128 15 0.0001 10 1 0 empty empty empty -2 -8 0 10
+-262144 -1 -1 11500 1;
+#X floatatom 146 570 5 0 0 0 - - -;
+#X text 59 571 vol;
+#N canvas 0 0 450 300 (subpatch) 0;
+#X array \$0-tab 235199 float 0;
+#X coords 0 1 235198 -1 200 140 1;
+#X restore 457 23 graph;
+#X obj 448 251 soundfiler;
+#X obj 448 196 symbol \$0-tab;
+#X obj 456 177 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 12 116 metro 1000;
+#X obj 12 93 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1 1
+;
+#X obj 12 138 tabplay~ \$0-tab;
+#X obj 12 188 *~ 1;
+#X obj 49 168 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 13 169 *~ 0;
+#N canvas 323 643 280 330 delay-reader 0;
+#X obj 89 267 outlet~;
+#X obj 112 163 inlet~;
+#X obj 89 237 +~;
+#X obj 112 198 vd~ \$0-del;
+#X connect 1 0 3 0;
+#X connect 2 0 0 0;
+#X connect 3 0 2 1;
+#X restore 27 453 pd delay-reader;
+#X obj 27 474 *~ 1;
+#X obj 61 474 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X floatatom 158 474 5 0 0 0 - - -;
+#N canvas 206 632 600 400 delay-writer 0;
+#X obj 96 107 inlet~;
+#X obj 116 144 delwrite~ \$0-del 1000;
+#X connect 0 0 1 0;
+#X restore 25 232 pd delay-writer;
+#X obj 12 540 +~;
+#X obj 24 209 +~;
+#X msg 448 217 read -resize 90reg_e2.wav \$1;
+#X obj 26 274 osc~;
+#X obj 29 253 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 200 1;
+#X floatatom 127 254 5 0 0 0 - - -;
+#X obj 26 295 +~ 1;
+#X text 31 253 lfo freq;
+#X obj 26 389 *~ 1;
+#X obj 26 410 +~ 0;
+#X obj 62 409 hsl 128 15 1 70 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 900 1;
+#X floatatom 157 410 5 0 0 0 - - -;
+#X text 65 409 delay;
+#X obj 61 389 hsl 128 15 0 50 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 1100 1;
+#X floatatom 156 390 5 0 0 0 - - -;
+#X text 64 389 sweep depth;
+#X obj 127 125 hsl 128 15 20 22050 1 0 empty empty empty -2 -8 0 10
+-262144 -1 -1 0 1;
+#X floatatom 223 126 5 0 0 0 - - -;
+#X text 125 105 test freq;
+#X obj 163 166 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 127 167 *~ 0;
+#X obj 126 146 osc~ 100;
+#X floatatom 83 541 5 0 0 0 - - -;
+#X obj 50 542 env~;
+#X text 8 2 simple flanger;
+#X text 9 16 if we set the lfo freq to zero and use the "test freq"
+the notches introduced by the delay line can be seen \, note that the
+slider only has some values so the amplitude does not go to zero;
+#X text 67 474 mix;
+#X text 117 536 <-- we can see dead point if freq resp here by using
+the test freq slider (set lfo freq to 0 and delay >0);
+#X text 200 407 <-- as delay goes over 50ms we get an echo effect instead
+;
+#X obj 27 496 *~ 1;
+#X msg 168 494 -1;
+#X msg 63 495 1;
+#X text 84 495 normal phase;
+#X text 199 495 inverted phase (first notch at DC so more high pass
+sound);
+#X obj 26 432 lop~ 5;
+#X obj 82 273 phasor~;
+#X obj 82 294 -~ 0.5;
+#X obj 82 315 abs~;
+#X obj 83 336 *~ 2;
+#X obj 63 319 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 27 320 *~ 0;
+#X obj 119 356 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 83 357 *~ 0;
+#X text 60 306 sin;
+#X text 119 338 triangle;
+#X obj 234 255 *~ 0;
+#X obj 269 255 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X floatatom 366 256 5 0 0 0 - - -;
+#X text 272 255 feedback;
+#X text 271 270 also called regeneration;
+#X connect 0 0 1 0;
+#X connect 0 0 1 1;
+#X connect 2 0 0 1;
+#X connect 2 0 3 0;
+#X connect 7 0 22 0;
+#X connect 8 0 7 0;
+#X connect 9 0 11 0;
+#X connect 10 0 9 0;
+#X connect 11 0 14 0;
+#X connect 12 0 20 0;
+#X connect 12 0 21 0;
+#X connect 13 0 14 1;
+#X connect 14 0 12 0;
+#X connect 15 0 16 0;
+#X connect 16 0 49 0;
+#X connect 17 0 16 1;
+#X connect 17 0 18 0;
+#X connect 20 0 0 0;
+#X connect 20 0 43 0;
+#X connect 21 0 19 0;
+#X connect 22 0 6 0;
+#X connect 23 0 26 0;
+#X connect 24 0 23 0;
+#X connect 24 0 25 0;
+#X connect 24 0 55 0;
+#X connect 26 0 60 0;
+#X connect 28 0 29 0;
+#X connect 29 0 54 0;
+#X connect 30 0 29 1;
+#X connect 30 0 31 0;
+#X connect 33 0 34 0;
+#X connect 33 0 28 1;
+#X connect 36 0 37 0;
+#X connect 36 0 41 0;
+#X connect 39 0 40 1;
+#X connect 40 0 12 0;
+#X connect 41 0 40 0;
+#X connect 43 0 42 0;
+#X connect 49 0 20 1;
+#X connect 49 0 65 0;
+#X connect 50 0 49 1;
+#X connect 51 0 49 1;
+#X connect 54 0 15 0;
+#X connect 55 0 56 0;
+#X connect 56 0 57 0;
+#X connect 57 0 58 0;
+#X connect 58 0 62 0;
+#X connect 59 0 60 1;
+#X connect 60 0 28 0;
+#X connect 61 0 62 1;
+#X connect 62 0 28 0;
+#X connect 65 0 19 0;
+#X connect 66 0 65 1;
+#X connect 66 0 67 0;

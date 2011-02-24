@@ -1,0 +1,134 @@
+#N canvas 1111 54 682 530 10;
+#X obj 55 480 *~ 1;
+#X obj 55 505 dac~;
+#X obj 92 480 hsl 128 15 0.001 10 1 0 empty empty empty -2 -8 0 10
+-262144 -1 -1 0 1;
+#X floatatom 188 480 5 0 0 0 - - -;
+#X text 101 481 vol;
+#N canvas 0 0 450 300 (subpatch) 0;
+#X array \$0-tab 235199 float 0;
+#X coords 0 1 235198 -1 100 100 1;
+#X restore 538 22 graph;
+#X obj 358 54 soundfiler;
+#X obj 358 12 symbol \$0-tab;
+#X obj 448 10 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 51 46 metro 1000;
+#X obj 51 26 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+;
+#X obj 51 68 tabplay~ \$0-tab;
+#X obj 51 118 *~ 1;
+#X obj 88 98 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+;
+#X obj 52 99 *~ 0;
+#N canvas 329 687 280 330 delay-reader 0;
+#X obj 89 267 outlet~;
+#X obj 112 163 inlet~;
+#X obj 89 237 +~;
+#X obj 112 198 vd~ \$0-del;
+#X connect 1 0 3 0;
+#X connect 2 0 0 0;
+#X connect 3 0 2 1;
+#X restore 86 371 pd delay-reader;
+#X obj 86 392 *~ 1;
+#X obj 120 392 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 7300 1;
+#X floatatom 217 392 5 0 0 0 - - -;
+#X text 126 392 del level;
+#N canvas 212 676 600 400 delay-writer 0;
+#X obj 96 107 inlet~;
+#X obj 116 144 delwrite~ \$0-del 100000;
+#X connect 0 0 1 0;
+#X restore 89 167 pd delay-writer;
+#X obj 54 450 +~;
+#X obj 85 417 +~;
+#X obj 88 147 +~;
+#X msg 358 33 read -resize 90reg_e2.wav \$1;
+#X obj 159 88 osc~;
+#X obj 161 67 hsl 128 15 0 1000 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 10900 1;
+#X floatatom 258 69 5 0 0 0 - - -;
+#X obj 195 109 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 159 110 *~ 0;
+#X obj 291 116 hsl 128 15 -100 100 0 0 empty empty empty -2 -8 0 10
+-262144 -1 -1 5100 1;
+#X floatatom 390 117 5 0 0 0 - - -;
+#X text 421 174 c = speed of sound (336m/s);
+#X text 422 187 vls = velocity source to listener;
+#X text 293 115 vls;
+#X text 421 161 Dt' = -vls/c;
+#X obj 84 301 biquad~;
+#X msg 132 263 0 1 0 1 0;
+#X obj 132 241 loadbang;
+#X text 193 307;
+#X text 133 301 x[t_n] = x[t_n-1] + k;
+#X msg 214 130 200;
+#X msg 134 282 clear;
+#X obj 45 282 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 333 338 snapshot~;
+#X obj 333 291 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 1
+1;
+#X obj 333 370 nbx 12 14 -1e+37 1e+37 0 0 empty empty position 0 -6
+0 10 -241291 -1 -1 848861 256;
+#X obj 333 312 metro 19;
+#X obj 333 267 loadbang;
+#X obj 86 221 line~ 0 10;
+#X obj 87 247 /~ 336;
+#X obj 3 173 t b b b;
+#X obj -16 172 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 84 324 /~ 10;
+#X obj 85 345 +~ 10000;
+#X msg 62 195 200;
+#X msg 98 196 100 20000;
+#X text -35 4 not working yet - need to convert the velocities to delay.
+;
+#X text -35 14 integrator should work i think but i am missing something...
+;
+#X connect 0 0 1 0;
+#X connect 0 0 1 1;
+#X connect 2 0 0 1;
+#X connect 2 0 3 0;
+#X connect 7 0 24 0;
+#X connect 8 0 7 0;
+#X connect 9 0 11 0;
+#X connect 10 0 9 0;
+#X connect 11 0 14 0;
+#X connect 12 0 23 0;
+#X connect 13 0 14 1;
+#X connect 14 0 12 0;
+#X connect 15 0 16 0;
+#X connect 16 0 22 0;
+#X connect 17 0 16 1;
+#X connect 17 0 18 0;
+#X connect 21 0 0 0;
+#X connect 22 0 21 1;
+#X connect 23 0 20 0;
+#X connect 24 0 6 0;
+#X connect 25 0 29 0;
+#X connect 26 0 25 0;
+#X connect 26 0 27 0;
+#X connect 28 0 29 1;
+#X connect 29 0 23 0;
+#X connect 30 0 31 0;
+#X connect 36 0 53 0;
+#X connect 37 0 36 0;
+#X connect 38 0 37 0;
+#X connect 42 0 36 0;
+#X connect 43 0 42 0;
+#X connect 44 0 46 0;
+#X connect 45 0 47 0;
+#X connect 47 0 44 0;
+#X connect 48 0 45 0;
+#X connect 49 0 50 0;
+#X connect 50 0 36 0;
+#X connect 51 1 55 0;
+#X connect 51 2 43 0;
+#X connect 52 0 51 0;
+#X connect 53 0 54 0;
+#X connect 54 0 44 0;
+#X connect 54 0 15 0;
+#X connect 55 0 49 0;
+#X connect 56 0 49 0;

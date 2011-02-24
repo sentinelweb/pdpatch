@@ -1,0 +1,18 @@
+#N canvas 128 66 466 406 10;
+#X obj 127 68 bng 32 250 50 0 empty empty empty 0 -6 0 8 -62784 -1
+-1;
+#X obj 33 67 tgl 32 0 empty empty empty 0 -6 0 8 -24198 -1 -1 0 1;
+#X text 165 182 A simple sampler to use.;
+#X text 164 201 Not so simple to program.;
+#X text 163 222 Look inside for details.;
+#X text 67 9 First click the [bang] to load a soundfile;
+#X text 13 36 Then click the toggle to start and stop playback;
+#X msg 330 63 \; pd dsp 1 \;;
+#X msg 330 103 \; pd dsp 0 \;;
+#X text 162 269 derek@x-i.net;
+#X obj 33 140 dac~;
+#X obj 33 104 simple_sampler;
+#X connect 0 0 11 1;
+#X connect 1 0 11 0;
+#X connect 11 0 10 0;
+#X connect 11 0 10 1;

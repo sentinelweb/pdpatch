@@ -1,0 +1,117 @@
+#N canvas 606 166 646 508 10;
+#X obj 40 300 gemwin;
+#X msg 40 97 create;
+#X msg 60 135 destroy;
+#X obj 198 50 gemhead;
+#X obj 198 82 part_head;
+#X obj 198 136 part_color;
+#X obj 198 447 part_draw;
+#X msg 103 158 1;
+#X msg 121 185 0;
+#X text 305 8 set the color range;
+#X text 299 126 set the size;
+#X obj 198 331 part_gravity 0 -0.01 0;
+#X obj 198 206 part_velsphere 0 0.2 0 0.2;
+#X text 310 269 set the number per frame;
+#X text 309 378 set the age to kill at;
+#X text 366 327 gravity to affect the particles;
+#X text 287 180 the velocity domain;
+#X text 295 190 a sphere at 0 \, 0.2 \, 0;
+#X msg 219 413 draw line;
+#X msg 298 413 draw point;
+#X msg 309 151 2;
+#X text 302 198 radius = 0.2;
+#N canvas 87 154 247 179 Gem.init 0;
+#X obj 118 46 loadbang;
+#X msg 118 81 reset;
+#X obj 118 113 outlet;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X restore 95 271 pd Gem.init;
+#X obj 353 146 hsl 128 15 0 10 0 0 empty empty empty -2 -6 0 8 -262144
+-1 -1 3500 1;
+#X obj 198 381 part_killold 45;
+#X obj 198 270 part_source 6;
+#X msg 126 51 speed 1;
+#X msg 319 98 1 1 1;
+#X msg 377 98 1 0 1;
+#X obj 197 172 part_size 1;
+#X obj 372 65 hsl 128 15 0 1 0 0 empty empty empty -2 -6 0 8 -262144
+-1 -1 0 1;
+#X obj 303 31 hsl 128 15 0 1 0 0 empty empty empty -2 -6 0 8 -262144
+-1 -1 12700 1;
+#X obj 302 69 pack 0 0 0;
+#X obj 267 32 t b;
+#X obj 330 47 hsl 128 15 0 1 0 0 empty empty empty -2 -6 0 8 -262144
+-1 -1 11800 1;
+#X obj 364 278 hsl 128 15 -0.5 0.5 0 0 empty empty empty -2 -6 0 8
+-262144 -1 -1 7000 1;
+#X obj 416 296 hsl 128 15 -0.5 0.5 0 0 empty empty empty -2 -6 0 8
+-262144 -1 -1 5200 1;
+#X obj 422 314 hsl 128 15 -0.5 0.5 0 0 empty empty empty -2 -6 0 8
+-262144 -1 -1 7200 1;
+#X obj 340 307 pack 0 0 0;
+#X obj 335 287 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X obj 443 180 hsl 128 15 -0.5 0.5 0 0 empty empty empty -2 -6 0 8
+-262144 -1 -1 1900 1;
+#X obj 453 190 hsl 128 15 -0.5 0.5 0 0 empty empty empty -2 -6 0 8
+-262144 -1 -1 12700 1;
+#X obj 463 200 hsl 128 15 -0.5 0.5 0 0 empty empty empty -2 -6 0 8
+-262144 -1 -1 3900 1;
+#X obj 474 211 hsl 128 15 -0.5 0.5 0 0 empty empty empty -2 -6 0 8
+-262144 -1 -1 9700 1;
+#X obj 428 235 pack 0 0 0 0;
+#X obj 403 213 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X floatatom 542 181 5 0 0 0 - - -;
+#X floatatom 551 191 5 0 0 0 - - -;
+#X floatatom 561 200 5 0 0 0 - - -;
+#X floatatom 572 211 5 0 0 0 - - -;
+#X connect 1 0 0 0;
+#X connect 2 0 0 0;
+#X connect 3 0 4 0;
+#X connect 4 0 5 0;
+#X connect 5 0 29 0;
+#X connect 7 0 0 0;
+#X connect 8 0 0 0;
+#X connect 11 0 24 0;
+#X connect 12 0 25 0;
+#X connect 18 0 6 0;
+#X connect 19 0 6 0;
+#X connect 20 0 29 1;
+#X connect 22 0 0 0;
+#X connect 23 0 29 1;
+#X connect 24 0 6 0;
+#X connect 25 0 11 0;
+#X connect 26 0 4 0;
+#X connect 27 0 5 1;
+#X connect 28 0 5 2;
+#X connect 29 0 12 0;
+#X connect 30 0 32 2;
+#X connect 30 0 33 0;
+#X connect 31 0 32 0;
+#X connect 32 0 5 1;
+#X connect 33 0 32 0;
+#X connect 34 0 32 1;
+#X connect 34 0 33 0;
+#X connect 35 0 38 0;
+#X connect 36 0 39 0;
+#X connect 36 0 38 1;
+#X connect 37 0 39 0;
+#X connect 37 0 38 2;
+#X connect 38 0 11 1;
+#X connect 39 0 38 0;
+#X connect 40 0 44 0;
+#X connect 40 0 46 0;
+#X connect 41 0 44 1;
+#X connect 41 0 45 0;
+#X connect 41 0 47 0;
+#X connect 42 0 44 2;
+#X connect 42 0 45 0;
+#X connect 42 0 48 0;
+#X connect 43 0 44 3;
+#X connect 43 0 45 0;
+#X connect 43 0 49 0;
+#X connect 44 0 12 1;
+#X connect 45 0 44 0;

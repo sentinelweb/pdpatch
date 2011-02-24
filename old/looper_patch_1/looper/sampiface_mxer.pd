@@ -1,0 +1,81 @@
+#N canvas 957 25 421 205 10;
+#X obj 3 1 vsl 15 128 0 127 0 0 mix_pre1_i mix_pre1_c empty 0 -8 0
+8 -113664 -1 -1 6400 1;
+#X obj 40 0 vsl 15 128 0 127 0 0 mix_pre2_i mix_pre2_c empty 0 -8 0
+8 -76479 -1 -1 6400 1;
+#X obj 79 0 vsl 15 128 0 127 0 0 mix_pre3_i mix_pre3_c empty 0 -8 0
+8 -10495 -1 -1 11200 1;
+#X obj 116 0 vsl 15 128 0 127 0 0 mix_pre4_i mix_pre4_c empty 0 -8
+0 8 -6202 -1 -1 12200 1;
+#X obj 152 1 vsl 15 128 0 127 0 0 mix_pre_out_i mix_pre_out_c empty
+0 -8 0 8 -5741 -1 -1 0 1;
+#X obj 21 1 vu 15 120 mix_pre1_vu_c empty -1 -8 0 8 -66577 -1 0 0;
+#X obj 59 0 vu 15 120 mix_pre2_vu_c empty -1 -8 0 8 -66577 -1 0 0;
+#X obj 97 0 vu 15 120 mix_pre3_vu_c empty -1 -8 0 8 -66577 -1 0 0;
+#X obj 134 1 vu 15 120 mix_pre4_vu_c empty -1 -8 0 8 -66577 -1 0 0
+;
+#X obj 171 1 vu 15 120 mix_pre_out_vu_c empty -1 -8 0 8 -66577 -1 0
+0;
+#X obj 206 1 vsl 15 128 0 127 0 0 mix_out1_i mix_out1_c empty 0 -8
+0 8 -260442 -1 -1 6400 1;
+#X obj 243 1 vsl 15 128 0 127 0 0 mix_out2_i mix_out2_c empty 0 -8
+0 8 -259985 -1 -1 6400 1;
+#X obj 282 1 vsl 15 128 0 127 0 0 mix_out3_i mix_out3_c empty 0 -8
+0 8 -259723 -1 -1 12700 1;
+#X obj 319 1 vsl 15 128 0 127 0 0 mix_out4_i mix_out4_c empty 0 -8
+0 8 -234561 -1 -1 10900 1;
+#X obj 355 1 vsl 15 128 0 127 0 0 mix_out_out_i mix_out_out_c empty
+0 -8 0 8 -218113 -1 -1 0 1;
+#X obj 224 1 vu 15 120 mix_out1_vu_c empty -1 -8 0 8 -66577 -1 0 0
+;
+#X obj 262 1 vu 15 120 mix_out2_vu_c empty -1 -8 0 8 -66577 -1 0 0
+;
+#X obj 300 1 vu 15 120 mix_out3_vu_c empty -1 -8 0 8 -66577 -1 0 0
+;
+#X obj 337 1 vu 15 120 mix_out4_vu_c empty -1 -8 0 8 -66577 -1 0 0
+;
+#X obj 374 1 vu 15 120 mix_out_out_vu_c empty -1 -8 0 8 -66577 -1 0
+0;
+#X obj 4 137 hsl 128 15 0 127 0 0 mix_cross_i mix_cross_c empty -2
+-6 0 8 -262144 -1 -1 0 1;
+#X text 137 134 crossfade;
+#X obj 3 -23 bng 15 250 50 0 mix_pre1_solo_i empty empty 0 -6 0 8 -262144
+-1 -1;
+#X obj 20 -23 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X obj 40 -23 bng 15 250 50 0 mix_pre2_solo_i empty empty 0 -6 0 8
+-262144 -1 -1;
+#X obj 57 -23 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X obj 79 -22 bng 15 250 50 0 mix_pre3_solo_i empty empty 0 -6 0 8
+-262144 -1 -1;
+#X obj 96 -22 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X obj 116 -22 bng 15 250 50 0 mix_pre4_solo_i empty empty 0 -6 0 8
+-262144 -1 -1;
+#X obj 133 -22 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X obj 152 -22 bng 15 250 50 0 mix_pre_0_i empty empty 0 -6 0 8 -262144
+-1 -1;
+#X obj 169 -22 bng 15 250 50 0 mix_pre_1_i empty empty 0 -6 0 8 -262144
+-1 -1;
+#X obj 206 -21 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X obj 223 -21 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X obj 243 -21 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X obj 260 -21 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X obj 282 -20 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X obj 299 -20 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X obj 319 -20 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X obj 336 -20 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X obj 355 -20 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X obj 372 -20 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;

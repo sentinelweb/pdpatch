@@ -1,0 +1,157 @@
+#N canvas 729 49 816 390 10;
+#X text 16 -208 AM: is used for tremolo;
+#X obj 56 -112 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 11500 1;
+#X floatatom 156 -111 5 0 0 0 - - -;
+#X obj 20 -134 osc~;
+#X obj 23 -154 hsl 128 15 0 20 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 4500 1;
+#X floatatom 118 -153 5 0 0 0 - - -;
+#X obj 20 -113 *~ 1;
+#X text 58 -113 alpha;
+#X obj 68 -51 osc~;
+#X obj 71 -71 hsl 128 15 20 10000 1 0 empty empty empty -2 -8 0 10
+-262144 -1 -1 2300 1;
+#X floatatom 166 -70 5 0 0 0 - - -;
+#X text 66 -84 carrier;
+#X text 129 -83 <- would be the music signal;
+#X obj 20 -93 +~ 1;
+#X obj 20 35 dac~;
+#X obj 20 11 *~ 1;
+#X obj 56 10 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X floatatom 153 11 5 0 0 0 - - -;
+#X obj 21 -12 *~;
+#X text 55 9 volume;
+#X text 17 -182 0<=alpha<=1 : modulation index;
+#X text 19 -167 modulator am(t);
+#N canvas 0 0 450 300 (subpatch) 0;
+#X array \$0-tab 235199 float 0;
+#X coords 0 1 235198 -1 50 50 1;
+#X restore 337 -201 graph;
+#X obj 305 -88 soundfiler;
+#X obj 305 -143 symbol \$0-tab;
+#X obj 313 -162 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 207 -69 metro 1000;
+#X obj 275 -70 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 207 -47 tabplay~ \$0-tab;
+#X obj 244 -17 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 208 -16 *~ 0;
+#X msg 305 -122 read -resize 90reg_e2.wav \$1;
+#X obj 103 -32 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 67 -31 *~ 0;
+#X obj 524 -101 hsl 128 15 0.1 2000 1 0 empty empty empty -2 -8 0 10
+-262144 -1 -1 11300 1;
+#X floatatom 619 -100 5 0 0 0 - - -;
+#X text 520 -114 modulator am(t);
+#X text 517 -212 Ring modulator;
+#X obj 567 -5 osc~;
+#X obj 570 -25 hsl 128 15 20 10000 1 0 empty empty empty -2 -8 0 10
+-262144 -1 -1 2100 1;
+#X floatatom 665 -24 5 0 0 0 - - -;
+#X text 644 -39 <- would be the music signal;
+#X obj 534 153 dac~;
+#X obj 522 34 *~;
+#X obj 706 -23 metro 1000;
+#X obj 776 -22 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 706 -1 tabplay~ \$0-tab;
+#X obj 743 29 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 707 30 *~ 0;
+#X obj 602 14 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 566 15 *~ 0;
+#X obj 557 -59 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 12700 1;
+#X floatatom 652 -58 5 0 0 0 - - -;
+#X obj 521 -81 osc~;
+#X obj 521 -60 *~ 1;
+#X text 559 -60 amplitude;
+#X obj 523 60 *~ 1;
+#X obj 559 59 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 12700 1;
+#X floatatom 656 60 5 0 0 0 - - -;
+#X obj 572 39 *~ 1;
+#X obj 533 107 +~;
+#X obj 534 129 *~ 1;
+#X obj 570 128 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 2100 1;
+#X floatatom 667 129 5 0 0 0 - - -;
+#X text 569 127 volume;
+#X obj 571 83 *~ 1;
+#X obj 607 82 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 8400 1;
+#X floatatom 704 83 5 0 0 0 - - -;
+#X text 606 81 carrier (nusic);
+#X text 558 58 modulator;
+#X text 565 -38 carrier xc(t);
+#X text 18 -195 xm(t) = [1+alpha*am(t)]*Ac*sin(wc*t+phic);
+#X text 46 -9 xm(t);
+#X text 490 37 xm(t);
+#X text 518 -173 with carrier;
+#X text 519 -196 xm(t)= sin(wmt)*xc(t);
+#X text 519 -135 xm(t)= [cos((wm-wc)t)-cos((wm+wc)t))]/2;
+#X text 518 -146 if carrier \, xc(t) = sin(wct) is a sinusoid;
+#X text 519 -182 * creates inharmonic sound \, can be good when mixed
+;
+#X text 519 -158 * we get sum and difference artifacts:;
+#X connect 1 0 2 0;
+#X connect 1 0 6 1;
+#X connect 3 0 6 0;
+#X connect 4 0 5 0;
+#X connect 4 0 3 0;
+#X connect 6 0 13 0;
+#X connect 8 0 33 0;
+#X connect 9 0 10 0;
+#X connect 9 0 8 0;
+#X connect 13 0 18 0;
+#X connect 15 0 14 0;
+#X connect 15 0 14 1;
+#X connect 16 0 15 1;
+#X connect 16 0 17 0;
+#X connect 18 0 15 0;
+#X connect 24 0 31 0;
+#X connect 25 0 24 0;
+#X connect 26 0 28 0;
+#X connect 27 0 26 0;
+#X connect 28 0 30 0;
+#X connect 29 0 30 1;
+#X connect 30 0 18 1;
+#X connect 31 0 23 0;
+#X connect 32 0 33 1;
+#X connect 33 0 18 1;
+#X connect 34 0 35 0;
+#X connect 34 0 53 0;
+#X connect 38 0 50 0;
+#X connect 39 0 40 0;
+#X connect 39 0 38 0;
+#X connect 43 0 56 0;
+#X connect 44 0 46 0;
+#X connect 45 0 44 0;
+#X connect 46 0 48 0;
+#X connect 47 0 48 1;
+#X connect 48 0 59 0;
+#X connect 49 0 50 1;
+#X connect 50 0 59 0;
+#X connect 51 0 52 0;
+#X connect 51 0 54 1;
+#X connect 53 0 54 0;
+#X connect 54 0 43 0;
+#X connect 56 0 60 0;
+#X connect 57 0 56 1;
+#X connect 57 0 58 0;
+#X connect 59 0 43 1;
+#X connect 59 0 65 0;
+#X connect 60 0 61 0;
+#X connect 61 0 42 0;
+#X connect 61 0 42 1;
+#X connect 62 0 61 1;
+#X connect 62 0 63 0;
+#X connect 65 0 60 1;
+#X connect 66 0 65 1;
+#X connect 66 0 67 0;

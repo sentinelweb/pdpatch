@@ -1,0 +1,127 @@
+#N canvas 103 62 588 682 10;
+#X obj 16 92 gemwin;
+#X msg 17 25 create;
+#X msg 68 25 1;
+#X msg 69 48 0;
+#X msg 17 44 destroy;
+#X text 97 22 start rendering;
+#X text 100 45 stop render;
+#X msg 128 62 offset 1440 -1;
+#X msg 19 70 dimen 800 601;
+#X text 108 34 makes window on second screen with title bar hidden
+;
+#X obj 236 90 gemhead;
+#X obj 35 194 rotateXYZ;
+#X obj 54 128 hsl 128 15 -256 256 0 0 empty empty empty -2 -6 0 8 -262144
+-1 -1 4800 1;
+#X obj 70 146 hsl 128 15 -256 256 0 0 empty empty empty -2 -6 0 8 -262144
+-1 -1 2400 1;
+#X obj 87 164 hsl 128 15 -256 256 0 0 empty empty empty -2 -6 0 8 -262144
+-1 -1 6400 1;
+#X obj 35 277 translateXYZ;
+#X obj 91 216 hsl 128 15 -256 256 0 0 empty empty empty -2 -6 0 8 -262144
+-1 -1 0 1;
+#X obj 57 214 / 50;
+#X obj 113 237 hsl 128 15 -256 256 0 0 empty empty empty -2 -6 0 8
+-262144 -1 -1 0 1;
+#X obj 79 235 / 50;
+#X obj 136 257 hsl 128 15 -256 256 0 0 empty empty empty -2 -6 0 8
+-262144 -1 -1 0 1;
+#X obj 102 255 / 50;
+#X obj 36 342 sphere;
+#X obj 36 304 color 0.8 0.2 0.2;
+#X obj 239 313 color 0.8 0.2 0.9;
+#X obj 239 353 sphere;
+#X obj 287 274 rotateXYZ;
+#X obj 306 209 hsl 128 15 -256 256 0 0 empty empty empty -2 -6 0 8
+-262144 -1 -1 3100 1;
+#X obj 322 226 hsl 128 15 -256 256 0 0 empty empty empty -2 -6 0 8
+-262144 -1 -1 4700 1;
+#X obj 339 243 hsl 128 15 -256 256 0 0 empty empty empty -2 -6 0 8
+-262144 -1 -1 7400 1;
+#X obj 287 174 translateXYZ;
+#X obj 343 112 hsl 128 15 -256 256 0 0 empty empty empty -2 -6 0 8
+-262144 -1 -1 0 1;
+#X obj 309 110 / 50;
+#X obj 365 134 hsl 128 15 -256 256 0 0 empty empty empty -2 -6 0 8
+-262144 -1 -1 0 1;
+#X obj 331 132 / 50;
+#X obj 388 154 hsl 128 15 -256 256 0 0 empty empty empty -2 -6 0 8
+-262144 -1 -1 0 1;
+#X obj 354 152 / 50;
+#X msg 174 301 draw line;
+#X obj 380 338 hsl 128 15 0 127 0 0 empty empty empty -2 -6 0 8 -262144
+-1 -1 0 1;
+#X msg 174 281 draw fill;
+#X obj -202 193 rotateXYZ;
+#X obj -183 129 hsl 128 15 -256 256 0 0 empty empty empty -2 -6 0 8
+-262144 -1 -1 1500 1;
+#X obj -167 148 hsl 128 15 -256 256 0 0 empty empty empty -2 -6 0 8
+-262144 -1 -1 3800 1;
+#X obj -150 167 hsl 128 15 -256 256 0 0 empty empty empty -2 -6 0 8
+-262144 -1 -1 3500 1;
+#X obj -202 279 translateXYZ;
+#X obj -146 218 hsl 128 15 -256 256 0 0 empty empty empty -2 -6 0 8
+-262144 -1 -1 6300 1;
+#X obj -180 216 / 50;
+#X obj -124 239 hsl 128 15 -256 256 0 0 empty empty empty -2 -6 0 8
+-262144 -1 -1 0 1;
+#X obj -158 237 / 50;
+#X obj -101 259 hsl 128 15 -256 256 0 0 empty empty empty -2 -6 0 8
+-262144 -1 -1 6300 1;
+#X obj -135 257 / 50;
+#X obj -202 341 sphere;
+#X obj -202 303 color 0.8 0.8 0.2;
+#X connect 1 0 0 0;
+#X connect 2 0 0 0;
+#X connect 3 0 0 0;
+#X connect 4 0 0 0;
+#X connect 7 0 0 0;
+#X connect 8 0 0 0;
+#X connect 10 0 11 0;
+#X connect 10 0 30 0;
+#X connect 10 0 40 0;
+#X connect 11 0 15 0;
+#X connect 12 0 11 1;
+#X connect 13 0 11 2;
+#X connect 14 0 11 3;
+#X connect 15 0 23 0;
+#X connect 16 0 17 0;
+#X connect 17 0 15 1;
+#X connect 18 0 19 0;
+#X connect 19 0 15 2;
+#X connect 20 0 21 0;
+#X connect 21 0 15 3;
+#X connect 23 0 22 0;
+#X connect 24 0 25 0;
+#X connect 26 0 24 0;
+#X connect 27 0 26 1;
+#X connect 28 0 26 2;
+#X connect 29 0 26 3;
+#X connect 30 0 26 0;
+#X connect 31 0 32 0;
+#X connect 32 0 30 1;
+#X connect 33 0 34 0;
+#X connect 34 0 30 2;
+#X connect 35 0 36 0;
+#X connect 36 0 30 3;
+#X connect 37 0 25 0;
+#X connect 37 0 22 0;
+#X connect 37 0 51 0;
+#X connect 38 0 25 2;
+#X connect 38 0 22 2;
+#X connect 39 0 25 0;
+#X connect 39 0 22 0;
+#X connect 39 0 51 0;
+#X connect 40 0 44 0;
+#X connect 41 0 40 1;
+#X connect 42 0 40 2;
+#X connect 43 0 40 3;
+#X connect 44 0 52 0;
+#X connect 45 0 46 0;
+#X connect 46 0 44 1;
+#X connect 47 0 48 0;
+#X connect 48 0 44 2;
+#X connect 49 0 50 0;
+#X connect 50 0 44 3;
+#X connect 52 0 51 0;

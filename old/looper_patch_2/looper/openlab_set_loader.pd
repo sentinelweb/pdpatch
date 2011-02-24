@@ -1,0 +1,16 @@
+#N canvas 611 360 466 316 10;
+#X obj 38 159 symbol;
+#X msg 12 24 F:/pd/pd_patch/looper/texts/loungey/evening_piano_t3;
+#X msg 12 48 F:/pd/pd_patch/looper/texts/loungey/lounge1;
+#X msg 12 69 F:/pd/pd_patch/looper/texts/soundscape/static_burst;
+#X msg 12 91 F:/pd/pd_patch/looper/texts/trance1;
+#X msg 12 120 F:/pd/pd_patch/looper/texts/breaks/break1_hip_hop_with_guitar
+;
+#X obj 40 182 s open_song_i;
+#X text 12 6 songs;
+#X connect 0 0 6 0;
+#X connect 1 0 0 0;
+#X connect 2 0 0 0;
+#X connect 3 0 0 0;
+#X connect 4 0 0 0;
+#X connect 5 0 0 0;

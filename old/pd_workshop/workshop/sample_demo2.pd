@@ -1,0 +1,61 @@
+#N canvas 298 129 683 596 10;
+#X obj 52 43 openpanel;
+#X obj 53 12 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X obj 49 100 soundfiler;
+#X msg 49 69 read -resize \$1 sample1;
+#X obj 259 40 table sample1;
+#X floatatom 80 145 10 0 0 0 - - -;
+#X obj 53 387 dac~;
+#X obj 63 315 tabread4~ sample1;
+#X text 194 317 reads from the table "sample1";
+#X obj 66 207 phasor~;
+#X obj 64 240 *~;
+#X floatatom 65 161 5 0 0 0 - - -;
+#X obj 80 121 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X text 94 243 multiply by sample rate.;
+#X obj 332 259 line~;
+#X msg 475 342 5000 500;
+#X obj 64 181 / 100;
+#X obj 323 168 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 1
+1;
+#X obj 342 166 metro 1000;
+#X obj 467 57 vsl 15 128 150 3000 0 0 empty empty empty 0 -8 0 8 -258699
+-1 -1 100 1;
+#X obj 333 189 delay 1;
+#X obj 294 65 hsl 128 15 200 500000 0 0 empty empty empty -2 -6 0 8
+-260818 -1 -1 2400 1;
+#X obj 309 213 pack 5000 500;
+#X obj 310 86 hsl 128 15 50 4000 0 0 empty empty empty -2 -6 0 8 -123526
+-1 -1 3300 1;
+#X text 112 210;
+#X obj 318 104 hsl 128 15 0 200000 0 0 empty empty empty -2 -6 0 8
+-24198 -1 -1 0 1;
+#X obj 391 189 + 0;
+#X obj 302 189 + 0;
+#X connect 0 0 3 0;
+#X connect 1 0 0 0;
+#X connect 2 0 5 0;
+#X connect 3 0 2 0;
+#X connect 5 0 10 1;
+#X connect 7 0 6 0;
+#X connect 7 0 6 1;
+#X connect 9 0 10 0;
+#X connect 10 0 7 0;
+#X connect 11 0 16 0;
+#X connect 12 0 5 0;
+#X connect 14 0 7 0;
+#X connect 16 0 9 0;
+#X connect 17 0 18 0;
+#X connect 18 0 20 0;
+#X connect 18 0 26 0;
+#X connect 19 0 18 1;
+#X connect 20 0 27 0;
+#X connect 21 0 27 0;
+#X connect 22 0 14 0;
+#X connect 23 0 22 1;
+#X connect 25 0 26 1;
+#X connect 25 0 27 1;
+#X connect 26 0 14 0;
+#X connect 27 0 22 0;

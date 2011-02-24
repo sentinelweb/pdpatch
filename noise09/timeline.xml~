@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<timelines version="1.0">
+<source>
+<objects/>
+</source>
+<description/>
+<colors type="osc">
+<color for="" value="255:255:255"/>
+<color for="/osc1/note" value="255:0:0"/>
+</colors>
+<colors type="expr">
+<color for="" value="255:255:255"/>
+</colors>
+<filters/>
+<midiKeys/>
+<midinotes default="true" device="v2" id="new">
+<midipart note_48="0,/osc1/note" note_49="0,/osc1/note" note_50="0,/osc1/note" note_51="0,/osc1/note" note_52="0,/osc1/note" note_53="0,/osc1/note" note_54="0,/osc1/note" note_55="0,/osc1/note" note_56="0,/osc1/note" note_57="0,/osc1/note" note_58="0,/osc1/note" note_59="0,/osc1/note" note_60="0,/osc1/note" note_61="0,/osc1/note" note_62="0,/osc1/note" note_63="0,/osc1/note" note_64="0,/osc1/note" note_65="0,/osc1/note" note_66="0,/osc1/note" note_67="0,/osc1/note" note_68="0,/osc1/note" note_69="0,/osc1/note" note_70="0,/osc1/note" note_71="0,/osc1/note" note_72="0,/osc1/note" part="0"/>
+</midinotes>
+<timeline beatLength="10" beatPerBar="4" color="255 0 0" currentEvent="0" displayEnd="8000" displayStart="0" followOnExpr="" height="100" id="25232872" lastSelEvent="0" oscIndex="0" pitch="1.0" playMode="" quantize="50" timeLineLength="8000" typeDisplay="false">
+<event active="true" eventTime="800" id="" oscIndex="0" oscMsgName="" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="$gc" valueLen="0"/>
+<event active="true" eventTime="1150" id="" oscIndex="0" oscMsgName="" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="" valueLen="0"/>
+</timeline>
+<timeline beatLength="10" beatPerBar="4" color="255 0 0" currentEvent="0" displayEnd="8000" displayStart="0" followOnExpr="" height="100" id="5345672" lastSelEvent="0" oscIndex="0" pitch="1.0" playMode="r" quantize="50" timeLineLength="8000" typeDisplay="false">
+<event active="true" eventTime="795" id="" oscIndex="0" oscMsgName="/osc1/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="64 77" valueLen="0"/>
+<event active="true" eventTime="942" id="" oscIndex="0" oscMsgName="/osc1/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="64 0" valueLen="0"/>
+<event active="true" eventTime="1837" id="" oscIndex="0" oscMsgName="/osc1/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="64 76" valueLen="0"/>
+<event active="true" eventTime="1981" id="" oscIndex="0" oscMsgName="/osc1/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="64 0" valueLen="0"/>
+<event active="true" eventTime="3187" id="" oscIndex="0" oscMsgName="/osc1/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="67 60" valueLen="0"/>
+<event active="true" eventTime="3548" id="" oscIndex="0" oscMsgName="/osc1/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="67 0" valueLen="0"/>
+<event active="true" eventTime="4280" id="" oscIndex="0" oscMsgName="/osc1/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 48" valueLen="0"/>
+<event active="true" eventTime="4654" id="" oscIndex="0" oscMsgName="/osc1/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="69 0" valueLen="0"/>
+<event active="true" eventTime="5399" id="" oscIndex="0" oscMsgName="/osc1/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="65 61" valueLen="0"/>
+<event active="true" eventTime="5636" id="" oscIndex="0" oscMsgName="/osc1/note" oscMsgNameLen="0" target="" targetData="" targetPlayMode="" value="65 0" valueLen="0"/>
+</timeline>
+<view visible="25232872,5345672"/>
+</timelines>
